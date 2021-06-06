@@ -1,5 +1,5 @@
-# OSCPprep
-Recon - 
+# OSCPprep 
+Recon - /n
 nmap -A -T 4
 nmap -sV -p- 
 autorecon [ip]
