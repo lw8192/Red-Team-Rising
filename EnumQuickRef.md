@@ -2,7 +2,7 @@
 ## Recon   
 ### Network Enum:  
 Ping sweep:   
-for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "
+    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
 Port Forwading:
 
 
@@ -13,10 +13,10 @@ autorecon <ip>
 	results/[ip]/scans   
 	_quick_tcp_nmap.txt		_patterns.log		_manual_commands.txt
 
-nmap -A -T 4  
-nmap -sV -p-   
+    nmap -A -T 4  
+    nmap -sV -p-   
 
-nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
+    nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
 
 ### Service Enum   
 
