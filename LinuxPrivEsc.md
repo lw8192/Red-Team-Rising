@@ -37,5 +37,7 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
     
 
 # Resources
-## Cheat Sheets
+## Cheat Sheets 
+https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+
 ## Learn More
