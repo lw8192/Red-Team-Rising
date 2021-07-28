@@ -1,9 +1,7 @@
 # Quick Reference for Enumerating Network / Host / Services
 ## Recon   
 ### Network Enum:  
-Ping sweep:   
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
-Port Forwading:
 
 
 ### Host enum:   
