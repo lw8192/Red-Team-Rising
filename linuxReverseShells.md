@@ -17,11 +17,12 @@ Nesting shells
   bash -p    /bin/sh -p 
 
 
-Upgrading to a pseudo terminal / tty
-   python -c 'import pty;pty.spawn("/bin/bash")' 
-  echo os.system('/bin/bash')
-   /bin/sh -i
-   vi -> :sh or :!UNIX_command
+Upgrading to a pseudo terminal / tty     
+    python -c 'import pty;pty.spawn("/bin/bash")' 
+    echo os.system('/bin/bash')
+    /bin/sh -i
+    vi -> :sh or :!UNIX_command
+    perl —e 'exec "/bin/sh";'
   
   
   SHELL=/bin/bash script -q /dev/null        Ctrl-Z        stty raw -echo        fg    reset    xterm
