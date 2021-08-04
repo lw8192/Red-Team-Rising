@@ -14,11 +14,10 @@
     run lse.sh, linpeas.sh 
 ## Checklists
 [Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
-[g0tmi1k Linux Priv Esc Checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
   
 # Exploits
 ## Cronjobs    
-look for scripts you can write to or exploit using gtfobins
+look for scripts you can write to or exploit using [gtfobins](https://gtfobins.github.io/) 
     cat /etc/cronjobs   
     crontab -l    
 ## SUID Binaries
@@ -39,6 +38,6 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 
 # Resources
 ## Cheat Sheets 
-https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+[g0tmi1k Linux Priv Esc Checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)  
 
 ## Learn More
