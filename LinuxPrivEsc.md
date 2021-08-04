@@ -13,7 +13,8 @@
 ## Scripts
     run lse.sh, linpeas.sh 
 ## Checklists
-[Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)    
+[Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
+[g0tmi1k Linux Priv Esc Checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
   
 # Exploits
 ## Cronjobs    
