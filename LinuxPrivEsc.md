@@ -18,6 +18,7 @@
 # Exploits
 ## Cronjobs    
 look for scripts you can write to or exploit using [gtfobins](https://gtfobins.github.io/) 
+
     cat /etc/cronjobs   
     crontab -l    
 ## SUID Binaries
