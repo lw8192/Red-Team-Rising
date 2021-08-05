@@ -69,7 +69,8 @@ sudo -l, see (ALL,!root)
 
     sudo -u#-1 [binary escape]  
 ## CVE-2019-16634 
-sudo su root, type password, see ******: passwd feedback enabled 
+sudo su root, type password, see ******: passwd feedback enabled  
+
 [proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634) 
 ## CVE-2021-3156 - Baron Samedit 
 [proof of concept](https://github.com/stong/CVE-2021-3156) 
