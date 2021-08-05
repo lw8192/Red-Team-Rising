@@ -123,6 +123,7 @@ Possible misconfigurations and attack vectors
 [Python for Pentesters](http://www.pentesteracademy.com/course?id=1)  
 [learnpythonthehardway](https://learnpythonthehardway.org/)  
 **Ruby 101**  
+[Ruby Fu](https://rubyfu.net/)  
 **Powershell**  
 **Assembly 101**    
 [Hacking the Metal: Intro to Assembly](https://github.com/eigentourist/defcon29) 
