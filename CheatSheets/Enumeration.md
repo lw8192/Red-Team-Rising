@@ -79,11 +79,16 @@ check for unauthenticated login, enum with smbmap
 	
     dirb http://127.0.0.1/   (default word list: common.txt) 
 	
+Local File Include  
+	/etc/passwd, etc.
+	can you include a remote file?
+	?test=php://filter/convert.base64-encode/resource=/filepath  base64 encode /decode 
 	
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
 	
 Local File Inclusion 
-http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html  
+http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref 
+	http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html  
 Web vulnerabilities to gain access to the system - paper 
 https://www.exploit-db.com/papers/13017/  
 Bypassing File Upload Restrictions 
