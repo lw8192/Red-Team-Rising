@@ -90,15 +90,16 @@ Possible misconfigurations and attack vectors
 [Client Side Attacks](https://www.offensive-security.com/metasploit-unleashed/client-side-attacks/)  
 
 ### **Programming**  
-**1. Bash 101**  
+**Bash 101**  
 [Bash Handbook](https://github.com/denysdovhan/bash-handbook)  
 [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
-**2. Python 101**  
+**Python 101**  
 [Python for Pentesters](http://www.pentesteracademy.com/course?id=1)  
 [learnpythonthehardway](https://learnpythonthehardway.org/)  
-**3. Ruby 101**  
-**4. Powershell**  
-**5. Assembly 101**    
+**Ruby 101**  
+**Powershell**  
+**Assembly 101**    
+[Hacking the Metal: Intro to Assembly](https://github.com/eigentourist/defcon29) 
 Security Tube:  
 [Assembly Language Megaprimer for Linux](http://www.securitytube.net/groups?operation=view&groupId=5)  
 [Windows Assembly Language Megaprimer](http://www.securitytube.net/groups?operation=view&groupId=6)  
@@ -109,7 +110,7 @@ Security Tube:
 [Fixing Exploits](https://sploitfun.wordpress.com/2015/06/26/linux-x86-exploit-development-tutorial-series/) 
 
 
-**1. Privilige Escalation**  
+**Privilige Escalation**  
 Privilige Escalation     
 [This challenge was built to promote the Windows / Linux Local Privilege](https://github.com/sagishahar/challenges#k2)        
 [MySQL Root to System Root with lib_mysqludf_sys for Windows and Linux](https://www.adampalmer.me/iodigitalsec/2013/08/13/mysql-root-to-system-root-with-udf-for-windows-and-linux/)   
@@ -128,13 +129,22 @@ Windows Privilige Escalation
 [Windows 10 - Task Scheduler - Priv Esc Thru DLL Planting](http://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html) 
 [DLL Proxying](https://itm4n.github.io/dll-proxying/) 
 [Windows Process Injection](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf) 
+[Process Injection Fundamentals](https://blog.thecybersecuritytutor.com/process-injection-fundamentals/)  
+[Windows Obfuscation Reference](https://www.bc-security.org/blog/)  
 			 
-**2. Pivoting / Tunneling**  	   
+**Pivoting / Tunneling**  	   
 [SSH Tunneling Explained](https://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/)      
 [Port Forwarding in Windows](http://woshub.com/port-forwarding-in-windows/)    
 [Tunneling, Pivoting, and Web Application Penetration Testing](https://www.sans.org/white-papers/36117/) 
 
 
-**3. Post Exploitation**  
+**Post Exploitation**  
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
+
+
+**Bug Bounties**
+Live Recon and Distributed Recon Automation Using Axiom with @pry0cc (https://bit.ly/3gPsonz)  
+The Bug Hunter's Methodology Full 2-hour Training by Jason Haddix (https://bit.ly/2PzHUsr)  
+Finding Your First Bug: Choosing Your Target by InsiderPhD (https://bit.ly/3uiF3n7)  
+HOW TO GET STARTED IN BUG BOUNTY (9x PRO TIPS) by STÖK (https://bit.ly/3u81U4m) 
 
