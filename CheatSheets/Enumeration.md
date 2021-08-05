@@ -57,7 +57,11 @@ check for unauthenticated login, enum with smbmap
     /usr/bin/smbclient \\\\<IP>\\share <HOST>  
 	
 **Port 2049: NFS**  
-	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting) 
+	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
+	
+    showmount -e 127.0.0.1
+    mkdir /mnt/share   
+    sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
 ## Web Enum 
 - [ ] Scan for sub directories and pages 
