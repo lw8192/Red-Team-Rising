@@ -1,7 +1,7 @@
 # OSCPprep 
 Workflow: 
 
-Enumeration  
+[Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration.md)   
 &rarr; Linux Reverse Shells 
 
 &rarr; &rarr; Linux Privilige Escalation 
