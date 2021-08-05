@@ -61,6 +61,8 @@ Possible misconfigurations and attack vectors
 [DNS 101](http://www.opsschool.org/dns_101.html)  
 [DNS 201](http://www.opsschool.org/dns_201.html)  
 [DNS Hacking (Beginner to Advanced)](http://resources.infosecinstitute.com/dns-hacking/)  
+[An Intro to DNS](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts)   
+[ENS Enum](https://resources.infosecinstitute.com/topic/dns-enumeration-techniques-in-linux/#gref)  
 
 **SMB Ports 139, 445 (SMB Enumeration,Null Session Enumeration, NetBIOS)**  
 Null sessions, smb vulns, other info gained
@@ -82,6 +84,7 @@ Possible misconfigurations and attack vectors
 [Hacking Articles:NMAP](http://www.hackingarticles.in/category/nmap/)  
 [NMAP - Port-Scanning: A Practical Approach Modified for better](https://www.exploit-db.com/papers/35425/)   
 [nmap cheat sheet](https://highon.coffee/blog/nmap-cheat-sheet/) 
+[nmap: RTFM](https://blog.zsec.uk/nmap-rtfm/)   
 
 **Wireshark 101(Capture and display filters, filters)**  
 **TCPDump (Filtering Traffic, Advanced header filtering)**  
