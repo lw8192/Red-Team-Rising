@@ -74,7 +74,10 @@ https://lolbas-project.github.io/#
     %SYSTEMROOT%\repair\system
     %SYSTEMROOT%\System32\config\SYSTEM
     %SYSTEMROOT%\System32\config\RegBack\system 
-### Extracting SAM and SYSTEM 
+### Extracting SAM and SYSTEM   
+
+[CVE-2021-36934, the SeriousSAM local privilege escalation](https://github.com/HuskyHacks/ShadowSteal)  
+
 Manually or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
 
 Manually:
