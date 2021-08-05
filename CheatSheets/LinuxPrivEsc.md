@@ -13,9 +13,11 @@
 - [ ] Is the kernel vulnerable  (last resort priv esc) 
 - [ ] Further access into the network / post exploitation 
 
-[Tiberius Linux Privilige Escalation](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux.rst)  
+[Tiberius Linux Privilige Escalation](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux.rst)     
+[PayloadAllTheThings Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)   
 
-[PayloadAllTheThings Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
+[Linux Explain Shell](https://www.explainshell.com/)   
+
 
 ## Quick Enumeration Commands  
     hostname; ip addr;    
