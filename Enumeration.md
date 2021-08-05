@@ -43,6 +43,11 @@ nmap --script <name>    --script-help
 	
 	
 ## Web Enum 
+- [ ] Scan for sub directories and pages 
+- [ ] Log in pages - guess default creds, admin:admin, admin:password 
+- [ ] File upload (what types of files are accepted) 
+- [ ] Intercept HTTP requests with Burp 	
+	
 	
 	nmap http scripts 
 	nikto -h http://127.0.0.1:80/ 
