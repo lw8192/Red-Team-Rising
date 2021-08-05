@@ -62,6 +62,8 @@ nmap --script <name>    --script-help
 - [ ] Intercept HTTP requests with Burp 	
 	
 	
-	nmap http scripts 
-	nikto -h http://127.0.0.1:80/ 
-	dirb http://127.0.0.1/   (default word list: common.txt) 
+    nmap http scripts 
+	
+    nikto -h http://127.0.0.1:80/ 
+	
+    dirb http://127.0.0.1/   (default word list: common.txt) 
