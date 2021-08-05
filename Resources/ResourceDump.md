@@ -3,7 +3,8 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 # Resources  
 ## Contents  
 - [ ] Repos 
-- [ ] Books
+- [ ] Books  
+- [ ] Blogs  
 - [ ] Podcasts 
 - [ ] Videos 
 - [ ] Services 
@@ -22,6 +23,9 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
 [Ebook Repo](https://github.com/Scr1ptK1ddie/CySecBooks)  
+## Blogs  
+[Trusted Security](https://www.trustedsec.com/blog/)   
+
 ## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
 ## Videos  
@@ -163,7 +167,8 @@ Windows Privilige Escalation
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
 
 
-## Bug Bounties
+## Bug Bounties   
+[Bug Bounty Basics](https://docs.google.com/presentation/d/1MWWXXRvvesWL8V-GiwGssvg4iDM58_RMeI_SZ65VXwQ/edit#slide=id.p)   
 Live Recon and Distributed Recon Automation Using Axiom with @pry0cc (https://bit.ly/3gPsonz)  
 The Bug Hunter's Methodology Full 2-hour Training by Jason Haddix (https://bit.ly/2PzHUsr)  
 Finding Your First Bug: Choosing Your Target by InsiderPhD (https://bit.ly/3uiF3n7)  
