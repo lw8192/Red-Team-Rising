@@ -144,9 +144,13 @@ Windows Privilige Escalation
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
 
 
-**Bug Bounties**
+**Bug Bounties**  
 Live Recon and Distributed Recon Automation Using Axiom with @pry0cc (https://bit.ly/3gPsonz)  
 The Bug Hunter's Methodology Full 2-hour Training by Jason Haddix (https://bit.ly/2PzHUsr)  
 Finding Your First Bug: Choosing Your Target by InsiderPhD (https://bit.ly/3uiF3n7)  
 HOW TO GET STARTED IN BUG BOUNTY (9x PRO TIPS) by STÖK (https://bit.ly/3u81U4m) 
+
+The Web Application Hacker's Handbook, 2nd Edition     
+Hands-On Bug Hunting for Penetration Testers (Joseph E. Marshall)    
+Web Hacking 101 (Peter Yaworski)
 
