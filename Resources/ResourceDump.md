@@ -134,6 +134,7 @@ Security Tube:
 
 ## Post Shell 
 [Fixing Exploits](https://sploitfun.wordpress.com/2015/06/26/linux-x86-exploit-development-tutorial-series/) 
+[Modern Binary Exploitation](http://security.cs.rpi.edu/courses/binexp-spring2015/)  
 
 
 **Privilige Escalation**  
