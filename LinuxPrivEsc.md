@@ -26,9 +26,9 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 - [ ] Is the kernel vulnerable? (last resort priv esc) 
 - [ ] Further access into the network? 
 
-[g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
+[Tiberius Linux Privilige Escalation](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux.rst) 
 [Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
-[Tiberius Linux Privilige Escalation](
+
 
 # Exploits
 ## Upgrade to a fully functional TTY 
@@ -148,7 +148,8 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 ## Learn More 
 [Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation) 
 [Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop) 
-[A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation) ) 
+[A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation)
+[g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
 https://guif.re/linuxeop
 https://zweilosec.gitbook.io/hackers-rest/linux-1/linux-redteam/enumeration
 
