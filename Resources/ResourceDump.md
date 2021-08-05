@@ -5,12 +5,15 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 [seclists](https://github.com/danielmiessler/SecLists) 
 
+
 **Books**  
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)  
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
 **Cheat Sheets**  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/) 
+[Huge list of cheat sheets](https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/) 
+[noobsec OSCP cheatsheet](https://www.noobsec.net/oscp-cheatsheet/) 
 
 ### **Services**  
 [What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/) 
