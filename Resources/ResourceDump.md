@@ -13,9 +13,11 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 ## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
 ## Video  
+
 [The Cyber Mentor Youtube[(https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
 [DEFCON Youtube](https://www.youtube.com/channel/UC6Om9kAkl32dWlDSNlDS9Iw)   
-[IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)    
+[IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)  
+
 ## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
 [Huge list of cheat sheets](https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/)      
@@ -54,18 +56,18 @@ Null sessions, smb vulns, other info gained
 Possible misconfigurations and attack vectors  
 [SNMP enumeration with snmpenum and snmpwalk](http://carnal0wnage.attackresearch.com/2007/07/over-in-lso-chat-we-were-talking-about.html)  
 
-### **Tools**  
-**1. NMAP 101 Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)**   
+## Tools 
+**NMAP 101 Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)**   
 /usr/share/nmap/scripts 
 [Hacking Articles:NMAP](http://www.hackingarticles.in/category/nmap/)  
 [NMAP - Port-Scanning: A Practical Approach Modified for better](https://www.exploit-db.com/papers/35425/)   
 [nmap cheat sheet](https://highon.coffee/blog/nmap-cheat-sheet/) 
 
-**2. Wireshark 101(Capture and display filters, filters)**  
-**3  TCPDump (Filtering Traffic, Advanced header filtering)**  
+**Wireshark 101(Capture and display filters, filters)**  
+**TCPDump (Filtering Traffic, Advanced header filtering)**  
 [tcpdump cheat sheet](https://packetlife.net/media/library/12/tcpdump.pdf) 
 
-**4. Reverse and Bind shell, Transferring Files, Types of shells(tty,pty)**  
+**Reverse and Bind shell, Transferring Files, Types of shells(tty,pty)**  
 [Netcat Tutorials for Beginner](http://www.hackingarticles.in/netcat-tutorials-beginner/)  
 [Reverse Shell Cheat Sheet](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)  
 [Reverse Shell Cheat Sheet](https://highon.coffee/blog/reverse-shell-cheat-sheet/)  
@@ -76,16 +78,16 @@ Possible misconfigurations and attack vectors
 [Netcat without -e? No Problem!](https://pen-testing.sans.org/blog/2013/05/06/netcat-without-e-no-problem/)  
 [Socat cheat sheet](https://www.redhat.com/sysadmin/getting-started-socat) 
 
-**5. Recon-NG**  
+**Recon-NG**  
 [Recon cheat sheet](https://pentester.land/cheatsheets/2019/04/15/recon-resources.html) 
 [Intro to Recon-ng](https://warroom.securestate.com/recon-ng-tutorial/)  
 [Recon-ng: Usage Guide](https://bitbucket.org/LaNMaSteR53/recon-ng/wiki/Usage%20Guide)  
 
-**6. Metasploit**   
+**Metasploit**   
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
 [Creating Metasploit Payloads](https://netsec.ws/?p=331)
 
-### **Web App Pentesting**  
+## Web App Pentesting
 **1. LFI(LFI to RCE)**  
 [LFI Cheat Sheet](https://highon.coffee/blog/lfi-cheat-sheet/)  
 [Upgrade from LFI to RCE via PHP Sessions](https://www.rcesecurity.com/2017/08/from-lfi-to-rce-via-php-sessions/)  
@@ -95,7 +97,7 @@ Possible misconfigurations and attack vectors
 [Full SQL Injection Tutorial (MySQL)](https://www.exploit-db.com/papers/13045/)  
 [Client Side Attacks](https://www.offensive-security.com/metasploit-unleashed/client-side-attacks/)  
 
-### **Programming**  
+## Programming
 **Bash 101**  
 [Bash Handbook](https://github.com/denysdovhan/bash-handbook)  
 [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
@@ -112,7 +114,7 @@ Security Tube:
 
 
 
-### **Post Shell**  
+## Post Shell 
 [Fixing Exploits](https://sploitfun.wordpress.com/2015/06/26/linux-x86-exploit-development-tutorial-series/) 
 
 
@@ -148,7 +150,7 @@ Windows Privilige Escalation
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
 
 
-**Bug Bounties**  
+## Bug Bounties
 Live Recon and Distributed Recon Automation Using Axiom with @pry0cc (https://bit.ly/3gPsonz)  
 The Bug Hunter's Methodology Full 2-hour Training by Jason Haddix (https://bit.ly/2PzHUsr)  
 Finding Your First Bug: Choosing Your Target by InsiderPhD (https://bit.ly/3uiF3n7)  
