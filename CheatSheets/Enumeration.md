@@ -15,6 +15,8 @@
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
 Dierce, DNSenum, DNSrecon <-automated tools  
+[The Harvester](https://github.com/laramies/theharvester)  
+[Recon-ng](https://github.com/lanmaster53/recon-ng)  
 
     nslookup -type=any <DOMAIN>   
     host -t axfr -l <DOMAIN> <DNSSERVER>   
