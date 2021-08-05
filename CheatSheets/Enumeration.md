@@ -70,7 +70,7 @@ check for unauthenticated login, enum with smbmap
 - [ ] Intercept HTTP requests with Burp 	
 	
 	
-	
+    Wappanalyzer firefox extension  
     nmap http scripts 
 	
     nikto -h http://127.0.0.1:80/ 
