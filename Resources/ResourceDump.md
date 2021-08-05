@@ -34,6 +34,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [DEFCON Youtube](https://www.youtube.com/channel/UC6Om9kAkl32dWlDSNlDS9Iw)   
 [IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)  
 [nahamsec Youtube](https://www.youtube.com/nahamsec)   
+[John Hammond](https://www.youtube.com/johnhammond010)   
 
 ## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
