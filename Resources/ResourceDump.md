@@ -14,6 +14,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/) 
 [Huge list of cheat sheets](https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/) 
 [noobsec OSCP cheatsheet](https://www.noobsec.net/oscp-cheatsheet/) 
+[ceso oscp cheatsheet](https://ceso.github.io/posts/2020/04/hacking/oscp-cheatsheet/) 
 
 ### **Services**  
 [What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/) 
