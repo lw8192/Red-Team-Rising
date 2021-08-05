@@ -45,6 +45,7 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
     /bin/sh -i 
     
 [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
+[Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V 
