@@ -4,8 +4,11 @@ Basics:
 [Exploit writing tutorial part 1 : Stack Based Overflows](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/)  
 [Useful resources for Learning and Hands on practice for buffer overflows](https://github.com/security-prince/PWK-OSCP-Preparation-Roadmap/blob/master/BOF)  
 [Buffer overflow for Dummies Whitepaper](https://www.sans.org/white-papers/481/)  
+[Basic Reverse Engineering with Immunity Debugger](https://www.sans.org/white-papers/36982/)   
 https://thor-sec.com/tutorial/oscp/basic_bufferoverflows/    
-http://0xdeadcode.se/archives/178 <-- minishare
+http://0xdeadcode.se/archives/178 <-- minishare   
+[PWK OSCP Stack Overflow Practice](https://www.vortex.id.au/2017/05/pwkoscp-stack-buffer-overflow-practice/)   
+[Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf)   
 
 Examples: 
 http://camelinc.info/blog/2014/05/Aviosoft-Digital-TV-Player-Professional-1.0-Stack-Buffer-Overflow/   
