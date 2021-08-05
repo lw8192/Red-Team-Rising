@@ -3,7 +3,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 ### **General Resources** 
 [Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
 [seclists](https://github.com/danielmiessler/SecLists)    
-[Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming) 
+[Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming)     
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)   
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
