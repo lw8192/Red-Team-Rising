@@ -42,7 +42,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash') 
     /bin/sh -i 
-    [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
+    
+[Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins 
 sudo -V 
