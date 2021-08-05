@@ -71,9 +71,21 @@ check for unauthenticated login, enum with smbmap
 - [ ] Intercept HTTP requests with Burp 	
 	
 	
-    Wappanalyzer firefox extension  
+    [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
+	
     nmap http scripts 
 	
     nikto -h http://127.0.0.1:80/ 
 	
     dirb http://127.0.0.1/   (default word list: common.txt) 
+	
+	
+	
+Local File Inclusion 
+http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html  
+Web vulnerabilities to gain access to the system - paper 
+https://www.exploit-db.com/papers/13017/  
+Bypassing File Upload Restrictions 
+http://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html  
+Basic SQLi 
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html http://www.sqlinjection.net/login/
