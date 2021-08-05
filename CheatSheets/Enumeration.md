@@ -80,6 +80,7 @@ check for unauthenticated login, enum with smbmap
     dirb http://127.0.0.1/   (default word list: common.txt) 
 	
 	
+[SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
 	
 Local File Inclusion 
 http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html  
