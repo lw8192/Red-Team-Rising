@@ -125,6 +125,7 @@ Possible misconfigurations and attack vectors
 **Ruby 101**  
 [Ruby Fu](https://rubyfu.net/)  
 **Powershell**  
+[pS 101](https://grimmie.net/ps-101-an-intro-to-powershell/)  
 **Assembly 101**    
 [Hacking the Metal: Intro to Assembly](https://github.com/eigentourist/defcon29) 
 Security Tube:  
