@@ -157,6 +157,7 @@ Windows Privilige Escalation
 [Windows Process Injection](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf) |  [Video for Talk](https://www.youtube.com/watch?v=xewv122qxnk)   
 [Process Injection Fundamentals](https://blog.thecybersecuritytutor.com/process-injection-fundamentals/)  
 [Windows Obfuscation Reference](https://www.bc-security.org/blog/)  
+[Evading Detecting: A Begineer's Guide to Obfuscation](https://www.youtube.com/watch?v=lP2KF7_Kwxk)   
 			 
 **Pivoting / Tunneling**  	   
 [SSH Tunneling Explained](https://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/)      
