@@ -144,6 +144,7 @@ set PATH variable to current directory and run suid binary
     cat ~/.ssh  
 ## Capabilities 
 check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
+
     getcap -r / 2>/dev/null  
     
 ## Kernel Exploits 
