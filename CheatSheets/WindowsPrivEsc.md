@@ -201,8 +201,7 @@ https://securism.wordpress.com/oscp-notes-privilege-escalation-windows/
 
 ## Learn More
 https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/      
-https://github.com/frizb/Windows-Privilege-Escalation 
-
+https://github.com/frizb/Windows-Privilege-Escalation    
 https://toshellandback.com/2015/11/24/ms-priv-esc/
 
   
