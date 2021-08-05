@@ -14,7 +14,8 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 - [ ] Post Shell 
 - [ ] Bug Bounty 
 
-## Repos
+## Repos  
+[OSCP - Hacker's stop](https://hackerstop.org/oscp)  
 [Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
 [seclists](https://github.com/danielmiessler/SecLists)    
 [Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming)  
