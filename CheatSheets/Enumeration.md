@@ -49,11 +49,15 @@ nmap --script <name>    --script-help
 	smtp-user-enum -M VRF -u <user.txt> -t <ip> 
 	
 **Port 139: SMB** 
+check for unauthenticated login, enum with smbmap 
 	
     smbclient -L <IP>
     rpcclient -U "" <IP>
     smbclient -U <HOST> -L <IP>
-    /usr/bin/smbclient \\\\<IP>\\share <HOST>
+    /usr/bin/smbclient \\\\<IP>\\share <HOST>  
+	
+**Port 2049: NFS**  
+	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting) 
 	
 ## Web Enum 
 - [ ] Scan for sub directories and pages 
