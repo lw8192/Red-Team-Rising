@@ -11,7 +11,9 @@
 - [ ] Web enum (see checklist below) 
 - [ ] Brute force any services / log in pages 
 ## Recon   
-    DNS look up, The Harvester 
+### DNS Look Up 
+whois, nslookup, dig, host <-manual tools 
+Dierce, DNSenum, DNSrecon <-automated tools 
     
 ## Network Enum:  
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
