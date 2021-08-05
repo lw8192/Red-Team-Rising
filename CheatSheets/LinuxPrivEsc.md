@@ -164,6 +164,8 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 
 [Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop) 
 
+[Basic Linux Priv Esc](https://github.com/RoqueNight/Linux-Privilege-Escalation-Basics) 
+
 [A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation)
 
 [g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
