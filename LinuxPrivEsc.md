@@ -161,9 +161,14 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 # Resources 
 ## Learn More 
 [Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation) 
+
 [Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop) 
+
 [A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation)
+
 [g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
+
 [Linux elevation of privileges ToC](https://guif.re/linuxeop) 
+
 [Linux Enumeration](https://zweilosec.gitbook.io/hackers-rest/linux-1/linux-redteam/enumeration) 
 
