@@ -196,8 +196,7 @@ Use wrapper files to call static executables (such as nc)
 # Resources
 ## Cheat Sheets and Guides 
 https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts  
-https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/ 
-
+https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/   
 https://securism.wordpress.com/oscp-notes-privilege-escalation-windows/ 
 
 ## Learn More
