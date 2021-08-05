@@ -1,24 +1,28 @@
 Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, updated with the different things I've read / to read 
 
-### **General Resources** 
+# General Resources 
+## Repos
 [Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
 [seclists](https://github.com/danielmiessler/SecLists)    
-[Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming)     
+[Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming)  
+## Books 
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)   
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
-[Ebook Repo](https://github.com/Scr1ptK1ddie/CySecBooks) 
-
-**Podcasts**   
+[Ebook Repo](https://github.com/Scr1ptK1ddie/CySecBooks)  
+## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
-
-**Cheat Sheets**  
+## Video  
+[The Cyber Mentor Youtube[(https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
+[DEFCON Youtube](https://www.youtube.com/channel/UC6Om9kAkl32dWlDSNlDS9Iw)   
+[IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)    
+## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
 [Huge list of cheat sheets](https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/)      
 [noobsec OSCP cheatsheet](https://www.noobsec.net/oscp-cheatsheet/)       
 [ceso oscp cheatsheet](https://ceso.github.io/posts/2020/04/hacking/oscp-cheatsheet/) 
 
-### **Services**  
+## Services 
 [What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/)    
 [Common services](http://www.opsschool.org/common_services.html)  
 
