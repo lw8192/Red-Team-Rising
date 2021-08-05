@@ -13,9 +13,12 @@
 
 ## Recon   
 ### DNS Look Up 
-whois, nslookup, dig, host <-manual tools 
-
+whois, nslookup, dig, host <-manual tools   
 Dierce, DNSenum, DNSrecon <-automated tools 
+    nslookup -type=any <DOMAIN> 
+    host -t axfr -l <DOMAIN> <DNSSERVER>  
+    dig -t mx <DOMAIN>  
+    dig -t any <DOMAIN>
     
 ## Network Enum:  
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
