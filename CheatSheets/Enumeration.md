@@ -14,9 +14,10 @@
 ## Recon   
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
-Dierce, DNSenum, DNSrecon <-automated tools 
-    nslookup -type=any <DOMAIN> 
-    host -t axfr -l <DOMAIN> <DNSSERVER>  
+Dierce, DNSenum, DNSrecon <-automated tools  
+
+    nslookup -type=any <DOMAIN>   
+    host -t axfr -l <DOMAIN> <DNSSERVER>   
     dig -t mx <DOMAIN>  
     dig -t any <DOMAIN>
     
@@ -47,7 +48,12 @@ nmap --script <name>    --script-help
 	
 	smtp-user-enum -M VRF -u <user.txt> -t <ip> 
 	
+**Port 139: SMB** 
 	
+    smbclient -L <IP>
+    rpcclient -U "" <IP>
+    smbclient -U <HOST> -L <IP>
+    /usr/bin/smbclient \\\\<IP>\\share <HOST>
 	
 ## Web Enum 
 - [ ] Scan for sub directories and pages 
