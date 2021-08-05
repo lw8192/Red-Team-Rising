@@ -1,6 +1,18 @@
 Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, updated with the different things I've read / to read 
 
-# General Resources 
+# Resources  
+## Contents  
+- [ ] Repos 
+- [ ] Books
+- [ ] Podcasts 
+- [ ] Videos 
+- [ ] Services 
+- [ ] [Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md)    
+- [ ] Tools
+- [ ] Programming
+- [ ] Post Shell 
+- [ ] Bug Bounty 
+
 ## Repos
 [Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
 [seclists](https://github.com/danielmiessler/SecLists)    
@@ -12,11 +24,12 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [Ebook Repo](https://github.com/Scr1ptK1ddie/CySecBooks)  
 ## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
-## Video  
+## Videos  
 
 [The Cyber Mentor Youtube[(https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
 [DEFCON Youtube](https://www.youtube.com/channel/UC6Om9kAkl32dWlDSNlDS9Iw)   
 [IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)  
+[nahamsec Youtube](https://www.youtube.com/nahamsec)   
 
 ## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
