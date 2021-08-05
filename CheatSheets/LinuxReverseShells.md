@@ -48,7 +48,7 @@ Nesting shells
     
     SHELL=/bin/bash script -q /dev/null        Ctrl-Z        stty raw -echo        fg    reset    xterm
     
-    Can you upload a socat static binary and create a connection? 
+    Can you upload a [socat static binary](https://github.com/andrew-d/static-binaries)? 
     
     vi -> :sh or :!UNIX_command
     perl —e 'exec "/bin/sh";' 
