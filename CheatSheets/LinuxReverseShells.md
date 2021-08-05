@@ -1,3 +1,8 @@
+# Shells 
+- [ ] Web shell 
+- [ ] Reverse shell commands 
+- [ ] Upgrading shells 
+
 ## Web shells 
 [phpbash web shell](https://github.com/Arrexel/phpbash) 
 
@@ -35,12 +40,20 @@ Nesting shells
   bash -p    /bin/sh -p 
 
 
-Upgrading to a pseudo terminal / tty     
+## Upgrading to a pseudo terminal / TTY     
 
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash')
-    /bin/sh -i
-    vi -> :sh or :!UNIX_command
-    perl —e 'exec "/bin/sh";'
+    /bin/sh -i  
     
     SHELL=/bin/bash script -q /dev/null        Ctrl-Z        stty raw -echo        fg    reset    xterm
+    
+    Can you upload a socat static binary and create a connection? 
+    
+    vi -> :sh or :!UNIX_command
+    perl —e 'exec "/bin/sh";' 
+    perl: exec "/bin/sh"; 
+    ruby: exec "/bin/sh" 
+    lua: os.execute('/bin/sh') 
+    
+
