@@ -1,9 +1,9 @@
 Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, updated with the different things I've read / to read 
 
 ### **General Resources** 
-[Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings) 
-
-[seclists](https://github.com/danielmiessler/SecLists) 
+[Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
+[seclists](https://github.com/danielmiessler/SecLists)    
+[Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming) 
 
 
 **Books**  
@@ -127,6 +127,7 @@ Windows Privilige Escalation
 [Windows Privilege Escalation Commands](http://pwnwiki.io/#!privesc/windows/index.md)  
 [Windows 10 - Task Scheduler - Priv Esc Thru DLL Planting](http://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html) 
 [DLL Proxying](https://itm4n.github.io/dll-proxying/) 
+[Windows Process Injection](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf) 
 			 
 **2. Pivoting / Tunneling**  	   
 [SSH Tunneling Explained](https://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/)      
