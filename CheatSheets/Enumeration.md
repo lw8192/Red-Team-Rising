@@ -10,9 +10,11 @@
 - [ ] Exploitable services versions (searchsploit, github, google) 
 - [ ] Web enum (see checklist below) 
 - [ ] Brute force any services / log in pages 
+
 ## Recon   
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools 
+
 Dierce, DNSenum, DNSrecon <-automated tools 
     
 ## Network Enum:  
