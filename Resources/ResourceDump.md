@@ -19,7 +19,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [ceso oscp cheatsheet](https://ceso.github.io/posts/2020/04/hacking/oscp-cheatsheet/) 
 
 ### **Services**  
-[What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/) 
+[What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/)    
 [Common services](http://www.opsschool.org/common_services.html)  
 
 **FTP Port 21**  
@@ -129,8 +129,8 @@ Windows Privilige Escalation
 [Windows Privilege Escalation Fundamentals](http://www.fuzzysecurity.com/tutorials/16.html)  
 [Windows Privilege Escalation Commands](http://pwnwiki.io/#!privesc/windows/index.md)  
 [Windows 10 - Task Scheduler - Priv Esc Thru DLL Planting](http://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html) 
-[DLL Proxying](https://itm4n.github.io/dll-proxying/) 
-[Windows Process Injection](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf) 
+[DLL Proxying](https://itm4n.github.io/dll-proxying/)   
+[Windows Process Injection](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf) |  [Video for Talk](https://www.youtube.com/watch?v=xewv122qxnk)   
 [Process Injection Fundamentals](https://blog.thecybersecuritytutor.com/process-injection-fundamentals/)  
 [Windows Obfuscation Reference](https://www.bc-security.org/blog/)  
 			 
