@@ -24,4 +24,5 @@ Perl
     
 ## Obfuscating Payloads 
 [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
+
 [Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807) 
