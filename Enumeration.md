@@ -1,4 +1,4 @@
-# Quick Reference for Enumerating Network / Host / Services
+# Enumeration Quick Reference
 ## Recon   
 ### Network Enum:  
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
@@ -29,3 +29,6 @@ nmap --script <name>    --script-help
 **Port 25: SMTP**   
 	
 	smtp-user-enum -M VRF -u <user.txt> -t <ip>
+**Port 80: Web** 
+	nikto -h http://127.0.0.1:80/ 
+	dirb http://127.0.0.1/   (default word list: common.txt) 
