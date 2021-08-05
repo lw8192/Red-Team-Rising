@@ -156,22 +156,19 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
     gcc -m64 -o output exploit.c       #(64 bit)  
     
 ## Further Access into a Network 
+### Network Enumeration 
     netstat -antp; arp -a 
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
     cat /etc/hosts  
+### Pivoting / Tunneling  
+[Pivot cheat sheet](https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt0f228a4b9a1165e4/5ef3d602395b554cb3523e7b/pivot-cheat-sheet-v1.0.pdf) 
 # Resources 
 ## Learn More 
-[Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation) 
-
-[Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop) 
-
-[Basic Linux Priv Esc](https://github.com/RoqueNight/Linux-Privilege-Escalation-Basics) 
-
-[A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation)
-
-[g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/) 
-
-[Linux elevation of privileges ToC](https://guif.re/linuxeop) 
-
+[Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation)      
+[Local Priv Esc workshop](https://github.com/sagishahar/lpeworkshop)      
+[Basic Linux Priv Esc](https://github.com/RoqueNight/Linux-Privilege-Escalation-Basics)     
+[A Guide to Linux Privilige Escalation](https://payatu.com/guide-linux-privilege-escalation)   
+[g0tm1lk checklist](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)     
+[Linux elevation of privileges ToC](https://guif.re/linuxeop)       
 [Linux Enumeration](https://zweilosec.gitbook.io/hackers-rest/linux-1/linux-redteam/enumeration) 
 
