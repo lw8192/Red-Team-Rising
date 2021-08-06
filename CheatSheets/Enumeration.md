@@ -73,14 +73,19 @@ check for unauthenticated login, enum with smbmap
 - [ ] File upload (what types of files are accepted) 
 - [ ] Intercept HTTP requests with Burp 	
 	
-	
     [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
-	
+**Scan for sub directories and pages** 	
     nmap http scripts 
 	
     nikto -h http://127.0.0.1:80/ 
 	
-    dirb http://127.0.0.1/   (default word list: common.txt) 
+    dirb http://127.0.0.1/   (default word list: common.txt)   
+
+**Login pages** 
+	Default creds - admin: admin, admin:password, service specific default creds   
+	Register a new user  
+	Brute force log in  
+	SQL injection  
 	
 Local File Include  
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
