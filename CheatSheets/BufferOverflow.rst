@@ -166,7 +166,8 @@ Crash the application using this buffer, and make sure that EIP is overwritten b
 
 Finding Bad Characters
 ======================
-Common bad chars: \\x00, \\x0A, \\x0D, bad chars often corrupt the next byte after them.  
+Common bad chars: \\x00, \\x0A, \\x0D, bad chars often corrupt the next byte after them.   
+
 Generate a bytearray using mona, and exclude the null byte (\\x00) by default. Note the location of the bytearray.bin file that is generated.
 
 .. code-block:: none
