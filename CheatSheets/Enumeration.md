@@ -48,7 +48,8 @@ nmap --script <name>    --script-help
 	
 **Port 25: SMTP**   
 	
-	smtp-user-enum -M VRF -u <user.txt> -t <ip> 
+	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
+	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1
 	
 **Port 139: SMB** 
 check for unauthenticated login, enum with smbmap 
