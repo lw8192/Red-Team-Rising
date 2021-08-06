@@ -21,6 +21,8 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [Purple Team Resources](https://github.com/ch33r10/EnterprisePurpleTeaming)  
 [5 Pillars to become a Cyber Security Professional](https://github.com/DFIRmadness/5pillars/blob/master/5-Pillars.md)  
 [Vulnhub Resources](https://www.vulnhub.com/resources/)  
+[Red Tem Resources](https://github.com/yeyintminthuhtut/Awesome-Red-Teaming)   
+
 ## Books 
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)   
 [Hack Tricks](https://book.hacktricks.xyz/)  
