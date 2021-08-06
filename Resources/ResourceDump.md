@@ -182,7 +182,7 @@ Windows Privilige Escalation
 
 
 ## Bug Bounties   
-[Bug Bounty Basics](https://docs.google.com/presentation/d/1MWWXXRvvesWL8V-GiwGssvg4iDM58_RMeI_SZ65VXwQ/edit#slide=id.p) 
+[Bug Bounty Basics](https://docs.google.com/presentation/d/1MWWXXRvvesWL8V-GiwGssvg4iDM58_RMeI_SZ65VXwQ/edit#slide=id.p)     
 [Top Routinely Exploited CVEs](https://us-cert.cisa.gov/ncas/alerts/aa21-209a)   
 [Bug crowd University](https://github.com/bugcrowd/bugcrowd_university)   
 [Beginner Bug Bounty Resources](https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters)  
