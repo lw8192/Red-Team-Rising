@@ -168,6 +168,8 @@ Windows Privilige Escalation
 [Process Injection Fundamentals](https://blog.thecybersecuritytutor.com/process-injection-fundamentals/)  
 [Windows Obfuscation Reference](https://www.bc-security.org/blog/)  
 [Evading Detecting: A Begineer's Guide to Obfuscation](https://www.youtube.com/watch?v=lP2KF7_Kwxk)   
+
+[Active Directory](https://adsecurity.org/)  
 			 
 **Pivoting / Tunneling**  	   
 [SSH Tunneling Explained](https://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/)      
