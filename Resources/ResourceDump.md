@@ -115,7 +115,10 @@ Possible misconfigurations and attack vectors
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
 [Creating Metasploit Payloads](https://netsec.ws/?p=331)
 
-## Web App Pentesting
+## Web App Pentesting   
+[OWASP Top 10](https://owasp.org/www-project-web-security-testing-guide/)   
+[Art of Web App Pen Testing](https://github.com/The-Art-of-Hacking/h4cker/tree/master/web_application_testing)   
+
 **1. LFI(LFI to RCE)**  
 [LFI Cheat Sheet](https://highon.coffee/blog/lfi-cheat-sheet/)  
 [Upgrade from LFI to RCE via PHP Sessions](https://www.rcesecurity.com/2017/08/from-lfi-to-rce-via-php-sessions/)  
