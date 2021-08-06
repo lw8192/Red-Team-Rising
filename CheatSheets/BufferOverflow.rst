@@ -2,7 +2,7 @@
 Buffer Overflows
 ################   
 
-Taken from Tiberius's [buffer overflow cheatsheet](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst), my notes added   
+Taken from Tiberius's [buffer overflow cheatsheet](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst) my notes added   
 
 * https://bytesoverbombs.io/exploiting-a-64-bit-buffer-overflow-469e8b500f10
 * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
