@@ -23,6 +23,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 [Vulnhub Resources](https://www.vulnhub.com/resources/)  
 [Red Tem Resources](https://github.com/yeyintminthuhtut/Awesome-Red-Teaming)   
 [Art of Hacking Repo](https://github.com/The-Art-of-Hacking/h4cker) 
+[Pentesting Bible](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)   
 
 ## Books 
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)   
