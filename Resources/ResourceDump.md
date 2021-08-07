@@ -84,6 +84,9 @@ Possible misconfigurations and attack vectors
 [SNMP enumeration with snmpenum and snmpwalk](http://carnal0wnage.attackresearch.com/2007/07/over-in-lso-chat-we-were-talking-about.html)  
 
 ## Tools 
+**Password Cracking**  
+[DEF CON Password Cracking Village - Password Cracking 101](https://passwordvillage.org/general.html#hashing_vs_encryption)   
+
 **NMAP 101 Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)**   
 /usr/share/nmap/scripts 
 [Hacking Articles:NMAP](http://www.hackingarticles.in/category/nmap/)  
