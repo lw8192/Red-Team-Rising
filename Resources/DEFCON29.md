@@ -78,18 +78,41 @@ RE CTFd https://reversing.ctfd.io/challenges
  
 
 ## Exploit Developement  
-Course materials for Modern Binary Exploitation by RPISEC - <https://github.com/RPISEC/MBE>   
-Learn ROP - <https://ropemporium.com/>   
-For Linux binary Exploitation - <https://github.com/scwuaptx/HITCON-Training>  
-Intro to binary exploitation / reverse engineering course - <https://guyinatuxedo.github.io/>   
-A collection of pwn/CTF related utilities for Ghidra - <https://github.com/0xb0bb/pwndra>   
-Some pwn challenges selected for training and education. - <https://github.com/BrieflyX/ctf-pwns>   
-A set of Linux binary exploitation tasks for beginners on various architectures - <https://github.com/xairy/easy-linux-pwn>   
-ASM Basics - <https://asmtutor.com/#lesson1>   
-Exploit Dev Stuffs http://fuzzysecurity.com/tutorials.html  
-https://www.corelan.be/   
-OffensiveCon: https://www.youtube.com/channel/UCMNvAtT4ak2azKNk6UlB1QQ/videos 
-HITBSEC Conf: https://www.youtube.com/user/hitbsecconf/videos   
+### Courses 
+Course materials for Modern Binary Exploitation by RPISEC - https://github.com/RPISEC/MBE   
+Learn ROP - https://ropemporium.com/   
+For Linux binary Exploitation - https://github.com/scwuaptx/HITCON-Training  
+Intro to binary exploitation / reverse engineering course - https://guyinatuxedo.github.io/   
+A set of Linux binary exploitation tasks for beginners on various architectures - https://github.com/xairy/easy-linux-pwn 
+ASM Basics - https://asmtutor.com/#lesson1    
 Introduction To Software Exploits   https://opensecuritytraining.info/Exploits1.html   
-Binary Exploitation Playlist https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN   
 
+### Videos 
+Binary Exploitation Playlist https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN   
+https://www.youtube.com/channel/UCi-IXmtQLrJjg5Ji78DqvAg/videos   
+OffensiveCon: https://www.youtube.com/channel/UCMNvAtT4ak2azKNk6UlB1QQ/videos   
+HITBSEC Conf: https://www.youtube.com/user/hitbsecconf/videos     
+
+### Blogs:-
+http://fuzzysecurity.com/tutorials.html    
+https://www.corelan.be/    
+https://syedfarazabrar.com/     
+https://kileak.github.io   
+https://d4mianwayne.github.io/  
+https://ctf101.org/binary-exploitation/buffer-overflow/     
+https://blog.skullsecurity.org/category/ctfs    
+
+### CTFs   
+http://pwnable.kr/   
+http://pwnable.tw/      
+A collection of pwn/CTF related utilities for Ghidra - https://github.com/0xb0bb/pwndra       
+http://pwn.eonew.cn
+https://www.root-me.org/?lang=en   
+http://smashthestack.org/   
+https://exploit.education/  
+Some pwn challenges selected for training and education. - https://github.com/BrieflyX/ctf-pwns     
+
+### Related Stuff
+PwnTips - https://github.com/Naetw/CTF-pwn-tips    
+Quick guide - https://trailofbits.github.io/ctf/exploits/binary1.html   
+Pwn Challenge List - https://pastebin.com/uyifxgPu    
