@@ -42,5 +42,7 @@ https://github.com/fireeye/red_team_tool_countermeasures
 
 ## Reverse Engineering 
 https://jhalon.github.io/reverse-engineering-protocols/ 
+https://www.malware-traffic-analysis.net/index.html 
+
 
 
