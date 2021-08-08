@@ -63,6 +63,7 @@ https://github.com/ytisf/theZoo
 https://securityboulevard.com/2020/06/must-have-free-resources-for-malware-analysis/    
 https://malwareunicorn.org/workshops/re101.html#0    
 https://filipipires.com/tabs/presentations/    
+https://zeltser.com/malware-analysis-cheat-sheet/    
 
 ### CTFs / Practice  
 crackmes.one https://crackmes.one/   
