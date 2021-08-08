@@ -40,9 +40,29 @@ https://www.nextron-systems.com/2021/03/25/antivirus-event-analysis-cheat-sheet-
 https://github.com/fireeye/red_team_tool_countermeasures
 
 
-## Reverse Engineering 
-https://jhalon.github.io/reverse-engineering-protocols/ 
-https://www.malware-traffic-analysis.net/index.html 
+## Reverse Engineering   
+### Learn   
+https://jhalon.github.io/reverse-engineering-protocols/      
+https://www.malware-traffic-analysis.net/index.html    
+https://resources.infosecinstitute.com/topic/step-by-step-tutorial-on-reverse-engineering-malware-the-zeroaccessmaxsmiscer-crimeware-rootkit/  
+https://github.com/vxunderground/VXUG-Papers   
+https://github.com/ytisf/theZoo   
+https://securityboulevard.com/2020/06/must-have-free-resources-for-malware-analysis/    
+https://malwareunicorn.org/workshops/re101.html#0    
+https://filipipires.com/tabs/presentations/    
 
+
+### CTFs / Practice  
+crackmes.one https://crackmes.one/   
+Reverse Engineering challenges https://challenges.re/    
+Embedded Security CTF https://microcorruption.com/    
+Beginner Malware Reversing Challenges https://www.malwaretech.com/beginner-malware-reversing-challenges    
+RingZer0 https://ringzer0ctf.com/challenges    
+Reversing.kr http://reversing.kr/index.php    
+CTF Reversing Challenges List https://github.com/N4NU/Reversing-Challenges-List    
+Reverse engineering challenges https://github.com/3XPL017/Reversing-Challenges   
+Latest Reverse Engineering Challenges https://0x00sec.org/c/reverse-engineering/challenges/    
+RE CTFd https://reversing.ctfd.io/challenges   
+ 
 
 
