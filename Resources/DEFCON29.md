@@ -40,3 +40,7 @@ https://www.nextron-systems.com/2021/03/25/antivirus-event-analysis-cheat-sheet-
 https://github.com/fireeye/red_team_tool_countermeasures
 
 
+## Reverse Engineering 
+https://jhalon.github.io/reverse-engineering-protocols/ 
+
+
