@@ -30,6 +30,7 @@ https://www.youtube.com/c/HackingexposedcomputerforensicsblogBlogspot
 
 
 ## Incidence Response 
+https://github.com/ch33r10/DEFCON29-BTV-ThreatReportRoulette/blob/main/README.md    
 https://raw.githubusercontent.com/OTRF/API-To-Event/master/images/API-to-Sysmon.svg      
 https://github.com/meirwah/awesome-incident-response      
 https://www.dfir.training/      
