@@ -11,8 +11,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 - [ ] [Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md)    
 - [ ] Tools
 - [ ] Programming
-- [ ] Post Shell 
-- [ ] Bug Bounty 
+- [ ] Post Shell  
 
 ## Repos  
 [OSCP - Hacker's stop](https://hackerstop.org/oscp)  
@@ -192,17 +191,5 @@ Windows Privilige Escalation
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
 
 
-## Bug Bounties   
-[Bug Bounty Basics](https://docs.google.com/presentation/d/1MWWXXRvvesWL8V-GiwGssvg4iDM58_RMeI_SZ65VXwQ/edit#slide=id.p)     
-[Top Routinely Exploited CVEs](https://us-cert.cisa.gov/ncas/alerts/aa21-209a)   
-[Bug crowd University](https://github.com/bugcrowd/bugcrowd_university)   
-[Beginner Bug Bounty Resources](https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters)  
-Live Recon and Distributed Recon Automation Using Axiom with @pry0cc (https://bit.ly/3gPsonz)  
-The Bug Hunter's Methodology Full 2-hour Training by Jason Haddix (https://bit.ly/2PzHUsr)  
-Finding Your First Bug: Choosing Your Target by InsiderPhD (https://bit.ly/3uiF3n7)  
-HOW TO GET STARTED IN BUG BOUNTY (9x PRO TIPS) by STÖK (https://bit.ly/3u81U4m) 
 
-The Web Application Hacker's Handbook, 2nd Edition     
-Hands-On Bug Hunting for Penetration Testers (Joseph E. Marshall)    
-Web Hacking 101 (Peter Yaworski)
 
