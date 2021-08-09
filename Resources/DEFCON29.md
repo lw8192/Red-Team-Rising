@@ -3,9 +3,10 @@
 https://github.com/eigentourist/defcon29     (Intro to ASM)  
 https://github.com/surya4n6/dc29-btv-2021 (Windows Forensics 101)  
 https://hunt-for-red-apples.gitbook.io/hunt-for-red-apples/  (Threat Hunting on MAC OS)  
-https://media.blueteamvillage.org/Workshops/   
-https://labs.iotvillage.org/  
-https://samsclass.info/workshops.htm    
+https://media.blueteamvillage.org/Workshops/   (Malware Analysis workshop and others)
+https://labs.iotvillage.org/  (Quick online labs) 
+https://samsclass.info/workshops.htm (Collection of free workshops)   
+https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation (Beginners Guide to Obfuscation on Windows)   
 
 
 ## Red Team 
