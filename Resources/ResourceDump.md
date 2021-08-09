@@ -138,6 +138,7 @@ Possible misconfigurations and attack vectors
 **Python 101**  
 [Python for Pentesters](http://www.pentesteracademy.com/course?id=1)  
 [learnpythonthehardway](https://learnpythonthehardway.org/)  
+[Practical Python](https://dabeaz-course.github.io/practical-python/)   
 **Ruby 101**  
 [Ruby Fu](https://rubyfu.net/)  
 **Powershell**  
