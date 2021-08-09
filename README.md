@@ -15,4 +15,6 @@ blank template to write a customer encoder
 
 ## Resources 
 Resource link dump 
+Buffer overflow resources
+Resources from DEF CON 29 
 
