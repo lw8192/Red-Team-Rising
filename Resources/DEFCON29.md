@@ -8,6 +8,13 @@ https://labs.iotvillage.org/  (Quick online labs)
 https://samsclass.info/workshops.htm (Collection of free workshops)   
 https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation (Beginners Guide to Obfuscation on Windows)   
 
+## Talks
+https://www.youtube.com/user/DEFCONConference    
+https://www.youtube.com/redteamvillage   
+https://www.youtube.com/c/blueteamvillage  
+https://www.youtube.com/c/reconvillage/live   
+https://www.youtube.com/channel/UCOhn9WALnpb5YAbW18R1Hzg (Adversay Village)    
+
 
 ## Red Team 
 https://www.ired.team/  
