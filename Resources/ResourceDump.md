@@ -189,6 +189,7 @@ Windows Privilige Escalation
 
 **Post Exploitation**  
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
+[Mimikatz whitepaper](https://sansorg.egnyte.com/dl/XMHRwR5lRO/?)   
 
 
 
