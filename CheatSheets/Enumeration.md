@@ -68,11 +68,12 @@ check for unauthenticated login, enum with smbmap
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
 ## Web Enum 
-- [ ] Scan for sub directories and pages 
-- [ ] Log in pages - guess default creds, admin:admin, admin:password 
-- [ ] File upload (what types of files are accepted) 
-- [ ] Intercept HTTP requests with Burp 	
-	
+- [ ] Scan for sub directories and pages   
+- [ ] Log in pages - guess default creds, admin:admin, admin:password   
+- [ ] File upload (what types of files are accepted?, what checks?)   
+- [ ] Intercept HTTP requests with Burp   	
+
+	Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
     [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
 **Scan for sub directories and pages** 	
     nmap http scripts 
@@ -105,6 +106,9 @@ Log Poisoning
 	
 Local File Inclusion 
  
+	
+	
+	
 	  
 Web vulnerabilities to gain access to the system - paper 
 https://www.exploit-db.com/papers/13017/  
