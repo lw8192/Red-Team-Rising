@@ -5,6 +5,7 @@ https://github.com/surya4n6/dc29-btv-2021 (Windows Forensics 101)
 https://hunt-for-red-apples.gitbook.io/hunt-for-red-apples/  (Threat Hunting on MAC OS)  
 https://media.blueteamvillage.org/Workshops/   
 https://labs.iotvillage.org/  
+https://samsclass.info/workshops.htm    
 
 
 ## Red Team 
