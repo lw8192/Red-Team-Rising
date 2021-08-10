@@ -93,7 +93,9 @@ Possible misconfigurations and attack vectors
 [nmap cheat sheet](https://highon.coffee/blog/nmap-cheat-sheet/) 
 [nmap: RTFM](https://blog.zsec.uk/nmap-rtfm/)   
 
-**Wireshark 101(Capture and display filters, filters)**  
+**Wireshark 101(Capture and display filters, filters)**    
+[Network Hacking 101](https://www.notion.so/Network-Hacking-101-f9137337b4854b6894753df338a3942f)   
+
 **TCPDump (Filtering Traffic, Advanced header filtering)**  
 [tcpdump cheat sheet](https://packetlife.net/media/library/12/tcpdump.pdf) 
 [Tcpdump tutorial](https://danielmiessler.com/study/tcpdump/)   
