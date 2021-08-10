@@ -29,7 +29,10 @@ Bloodhound - GUI app installed on attack box, SharpHound - powershell script to 
 
 on victim, transfer file then import into Bloodhound and run queries   
     . .\SharpHound.ps1   
-    Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip         
+    Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip        
+    
+## Mimikatz  
+
     
     
 
