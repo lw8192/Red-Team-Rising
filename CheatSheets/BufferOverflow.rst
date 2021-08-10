@@ -4,6 +4,7 @@ Buffer Overflows
 
 
 Taken from Tiberius's https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst, my notes added   
+New to buffer overflows??? - start with Background Material below   
 
 * https://bytesoverbombs.io/exploiting-a-64-bit-buffer-overflow-469e8b500f10
 * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
@@ -255,9 +256,11 @@ Buffer Overflow Practice
 * https://github.com/stephenbradshaw/vulnserver
 * https://www.vortex.id.au/2017/05/pwkoscp-stack-buffer-overflow-practice/    
 
+
+
 Background Knowledge  
 ========================    
 
-[The Cyber Mentor Buffer Overflow Videos](https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G)   
-[Walkthrough Guide for TCM Videos](https://github.com/johnjhacking/Buffer-Overflow-Guide)    
+The Cyber Mentor Buffer Overflow Videos: https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G     
+Walkthrough Guide for TCM Videos: https://github.com/johnjhacking/Buffer-Overflow-Guide      
 
