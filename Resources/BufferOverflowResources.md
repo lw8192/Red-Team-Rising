@@ -1,14 +1,21 @@
-**Buffer Overflows**  
+**Buffer Overflows**     
+Start Here:   
+[The Cyber Mentor Buffer Overflow Video](https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G)    
+[Walkthrough Guide for TCM Videos](https://github.com/johnjhacking/Buffer-Overflow-Guide)   
+[Buffer overflow for Dummies Whitepaper](https://www.sans.org/white-papers/481/)  
+
+
 Basics:
 [Buffer Overflow Attack - Computerphile](https://www.youtube.com/watch?v=1S0aBV-Waeo)  
 [Exploit writing tutorial part 1 : Stack Based Overflows](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/)  
 [Useful resources for Learning and Hands on practice for buffer overflows](https://github.com/security-prince/PWK-OSCP-Preparation-Roadmap/blob/master/BOF)  
-[Buffer overflow for Dummies Whitepaper](https://www.sans.org/white-papers/481/)  
 [Basic Reverse Engineering with Immunity Debugger](https://www.sans.org/white-papers/36982/)   
 https://thor-sec.com/tutorial/oscp/basic_bufferoverflows/    
 http://0xdeadcode.se/archives/178 <-- minishare   
 [PWK OSCP Stack Overflow Practice](https://www.vortex.id.au/2017/05/pwkoscp-stack-buffer-overflow-practice/)   
 [Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf)   
+[Identifying bad characters](https://www.ins1gn1a.com/identifying-bad-characters/)   
+
 
 Examples: 
 http://camelinc.info/blog/2014/05/Aviosoft-Digital-TV-Player-Professional-1.0-Stack-Buffer-Overflow/   
@@ -30,5 +37,6 @@ http://proactivedefender.blogspot.in/2013/05/understanding-buffer-overflows.html
 https://rootisthelimit.com/first-buffer-overflow/ <-- Ability 2.34
 
 
-**Heap Overflows** 
+**Heap Overflows**   
+
 [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/) 
