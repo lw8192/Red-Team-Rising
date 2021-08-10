@@ -4,13 +4,15 @@ Buffer Overflows
 
 
 Taken from Tiberius's https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst, my notes added   
-New to buffer overflows??? - start with Background Material below   
+
+New to buffer overflows??? - start with Background Material below or see: https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md        
 
 * https://bytesoverbombs.io/exploiting-a-64-bit-buffer-overflow-469e8b500f10
 * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
 * http://www.voidcn.com/article/p-ulyzzbfx-z.html
 * https://www.securitysift.com/windows-exploit-development-part-4-locating-shellcode-jumps/
 * https://medium.com/@johntroony/a-practical-overview-of-stack-based-buffer-overflow-7572eaaa4982
+
 
 Immunity Debugger
 =================
@@ -166,7 +168,7 @@ Crash the application using this buffer, and make sure that EIP is overwritten b
 
 Finding Bad Characters
 ======================
-Common bad chars: \\x00, \\x0A, \\x0D, bad chars often corrupt the next byte after them.   
+Common bad chars: \\x00 (NULL byte), \\x0A, \\x0D, bad chars often corrupt the next byte after them so just take the first one in a sequence of 2!   
 
 Generate a bytearray using mona, and exclude the null byte (\\x00) by default. Note the location of the bytearray.bin file that is generated.
 
@@ -258,9 +260,10 @@ Buffer Overflow Practice
 
 
 
-Background Knowledge  
+Basic Background Knowledge  
 ========================    
 
 The Cyber Mentor Buffer Overflow Videos: https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G     
 Walkthrough Guide for TCM Videos: https://github.com/johnjhacking/Buffer-Overflow-Guide      
+Identifying bad characters: https://www.ins1gn1a.com/identifying-bad-characters/ 
 
