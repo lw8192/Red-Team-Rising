@@ -15,7 +15,8 @@
 ### OSINT   
 [OSINT Tools](https://www.osinttechniques.com/osint-tools.html)    
 [The Harvester](https://github.com/laramies/theharvester)  
-[Recon-ng](https://github.com/lanmaster53/recon-ng) 
+[Recon-ng](https://github.com/lanmaster53/recon-ng)    
+[hunter.io](https://hunter.io/)    
 
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
