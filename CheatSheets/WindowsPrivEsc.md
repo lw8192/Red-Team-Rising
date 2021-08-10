@@ -106,7 +106,8 @@ https://github.com/SecWiki/windows-kernel-exploits
 ____   
 
 # File Transfer     
-[Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/)   
+[Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/)     
+[Windows oneliners to download remote payload and execute arbitrary code](https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/)   
 **try certutil first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
 
     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
