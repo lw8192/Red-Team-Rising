@@ -2,6 +2,7 @@
 ## Cheatsheet Work Flow
 
 [Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/Enumeration.md)   
+[Web Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WebEnumeration.md)     
 [Linux Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/LinuxReverseShells.md)     
 [Linux Privilige Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/LinuxPrivEsc.md)     
 [Windows Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WindowsReverseShells.md)    
