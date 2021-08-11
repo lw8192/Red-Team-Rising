@@ -50,8 +50,9 @@ Log Poisoning
 	
 	
 	
-Resources:   
+References:   
 [OWASP Web App Testing Guide](https://owasp.org/www-project-web-security-testing-guide/stable/)    
+[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/Glossary.html)    
 [Bypassing File Upload Restrictions ](http://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html)      
 [Web vulnerabilities to gain access to the system - paper](https://www.exploit-db.com/papers/13017/)     
 
