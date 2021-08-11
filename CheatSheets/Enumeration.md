@@ -18,7 +18,7 @@
 [OSINT Tools](https://www.osinttechniques.com/osint-tools.html)    
 [The Harvester](https://github.com/laramies/theharvester)  
 [Recon-ng](https://github.com/lanmaster53/recon-ng)    
-[hunter.io](https://hunter.io/)    
+[hunter.io](https://hunter.io/): find email addresses for a company    
 
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
