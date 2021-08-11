@@ -15,10 +15,10 @@
 
 ## Recon   
 ### OSINT   
-[OSINT Tools](https://www.osinttechniques.com/osint-tools.html)    
-[The Harvester](https://github.com/laramies/theharvester)  
-[Recon-ng](https://github.com/lanmaster53/recon-ng)    
-[hunter.io](https://hunter.io/): find email addresses for a company    
+[OSINT Tools](https://www.osinttechniques.com/osint-tools.html)  <- List of OSINT tools for any occassion   
+[The Harvester](https://github.com/laramies/theharvester)    <- gathers emails, names, subdomains, IPs and URLs      
+[Recon-ng](https://github.com/lanmaster53/recon-ng)  <- Recon framework
+[hunter.io](https://hunter.io/)       <- find email addresses for a company    
 
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
@@ -50,7 +50,9 @@ nmap --script <name>    --script-help
 **Port 21: FTP**
 [Enumerating ftp](https://book.hacktricks.xyz/pentesting/pentesting-ftp)   
 	
-	anon log in: ftp / no password	or 	Anonymous: asdfasdf 
+	anon log in: ftp / no password	or 	Anonymous: asdfasdf           
+	nmap -sV -Pn -vv -p 21 --script=ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221     
+        hydra -C ftp/usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt -u 127.0.0.1 ftp    
 	
 **Port 25: SMTP**   
 	
