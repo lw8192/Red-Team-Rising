@@ -227,6 +227,8 @@ Popping calc.exe
 
 Not getting a shell connection: test if offset, bad chars and JMP ESP are correct by running calc.exe.  
 
+.. code-block:: none
+
     msfvenom -p windows/exec CMD=calc.exe -b "\x00" -f c         
 
 
