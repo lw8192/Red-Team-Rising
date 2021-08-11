@@ -1,6 +1,7 @@
 # Web Enum Quick Reference  
 HTTP and HTTPS Checklist   
 - [ ] Look for service name and version - searchsploit / google for exploits   
+- [ ] Service specific scanners: wpscan, sqlmap     
 - [ ] Check for a robots.txt page    
 - [ ] Scan page with Wappanalyzer  
 - [ ] Scan for sub directories and pages - admin pages?, login pages?, file upload?, user input fields?    
