@@ -48,7 +48,8 @@ Dierce, DNSenum, DNSrecon <-automated tools
 nmap scripts: /usr/share/nmap/scripts   
 nmap --script <name>    --script-help 
 	
-**Port 21: FTP**
+**Port 21: FTP**  
+	
 [Enumerating ftp](https://book.hacktricks.xyz/pentesting/pentesting-ftp)   
 	
 	anon log in: ftp / no password	or 	Anonymous: asdfasdf           
