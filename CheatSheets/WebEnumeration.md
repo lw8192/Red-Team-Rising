@@ -1,5 +1,5 @@
 # Web Enum Quick Reference  
-HTTP and HTTPS 
+HTTP and HTTPS Checklist   
 - [ ] Look for service name and version - searchsploit / google for exploits   
 - [ ] Check for a robots.txt page    
 - [ ] Scan page with Wappanalyzer  
@@ -21,14 +21,15 @@ HTTP and HTTPS
         gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z    
 
 	
-**Login pages** 
+## Login pages   
 	
 	Default creds - admin: admin, admin:password, service specific default creds   
 	Register a new user  
 	Brute force log in  
 	SQL injection  
 
-**File Upload** 
+## File Upload Pages  
+
 Local File Include  
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
 [Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
