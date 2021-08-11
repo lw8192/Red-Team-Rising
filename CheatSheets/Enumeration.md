@@ -9,7 +9,9 @@
 - [ ] FTP or SMB anon log in 
 - [ ] Exploitable services versions (searchsploit, github, google) 
 - [ ] Web enum (see checklist below) 
-- [ ] Brute force any services / log in pages 
+- [ ] Brute force any services / log in pages   
+
+[Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
 
 ## Recon   
 ### OSINT   
