@@ -222,11 +222,12 @@ The mona find command can similarly be used to find specific instructions, thoug
     
     
     
-Popping cal.exe to test offset, bad chars and JMP ESP (if needed)   
-================
+Popping calc.exe    
+================   
 
+Not getting a shell connection: test if offset, bad chars and JMP ESP are correct by running calc.exe.  
 
-     msfvenom -p windows/exec CMD=calc.exe -b "\x00" -f python -v payload     
+    msfvenom -p windows/exec CMD=calc.exe -b "\x00" -f c         
 
 
 Generate Payload
