@@ -30,15 +30,16 @@ Dierce, DNSenum, DNSrecon <-automated tools
     dig -t any <DOMAIN>
     
 ## Network Enum:  
-    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "    
-    nmap -sn 172.16.0.0/24 
+    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
+    nmap -v -s 192.168.0.0/24   
+    nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt         
 
 ## Host enum 
 **Identify os, services/ports/versions. Save results to text files. **   
 
-    autorecon 127.0.0.1  
-    nmap -A -T 4 -vv 127.0.0.1
-    nmap -sV -p- --min-rate 200 -vv 127.0.0.1  
+    autorecon 127.0.0.1 --only-scans-dir -v      
+    nmap -A -T 4 -vv 127.0.0.1    
+    nmap -sV -p- --min-rate 200 -vv 127.0.0.1     
 
     nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
 
@@ -57,8 +58,11 @@ nmap --script <name>    --script-help
 **Port 25: SMTP**   
 	
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
-	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1
+	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
 	
+** Port 389: LDAP**  
+	
+	ldapsearch -h 127.0.0.1 -p 389 -x -s base
 **Port 139: SMB** 
 check for unauthenticated login, enum with smbmap 
 	
@@ -88,7 +92,10 @@ check for unauthenticated login, enum with smbmap
 	
     nikto -h http://127.0.0.1:80/ 
 	
-    dirb http://127.0.0.1/   (default word list: common.txt)   
+    dirb http://127.0.0.1/   (default word list: common.txt)     
+	
+    gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z 
+
 
 **Login pages** 
 	Default creds - admin: admin, admin:password, service specific default creds   
