@@ -88,13 +88,14 @@ check for unauthenticated login, enum with smbmap
 	Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
     [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
 **Scan for sub directories and pages** 	
-    nmap http scripts 
 	
-    nikto -h http://127.0.0.1:80/ 
+    nmap http scripts     
+	
+    nikto -h http://127.0.0.1:80/     
 	
     dirb http://127.0.0.1/   (default word list: common.txt)     
 	
-    gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z 
+    gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z    
 
 
 **Login pages** 
