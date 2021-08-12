@@ -1,3 +1,5 @@
+[DEFCON Media](https://media.defcon.org/)    
+
 ## Workshops 
 
 https://github.com/eigentourist/defcon29     (Intro to ASM)  
