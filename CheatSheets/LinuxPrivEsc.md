@@ -141,7 +141,6 @@ set PATH variable to current directory and run suid binary
     mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)  
     ftp, telnet - tcpdump to sniff creds??
 ## Passwords / config files 
-    find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \; 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
 ## Capabilities 
