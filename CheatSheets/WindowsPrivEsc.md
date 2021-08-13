@@ -103,6 +103,10 @@ https://github.com/rasta-mouse/Watson
 ### Precompiled Kernel Exploits
 https://github.com/SecWiki/windows-kernel-exploits   
 
+## Misc  
+
+[SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
+
 ____   
 
 # File Transfer     
