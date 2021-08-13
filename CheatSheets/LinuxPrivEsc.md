@@ -143,6 +143,11 @@ set PATH variable to current directory and run suid binary
 ## Passwords / config files 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
+    
+search for strings (search for username if scripts aren't picking up creds):
+
+    grep -rwl "password" /var              
+
 ## Capabilities 
 check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
 
