@@ -3,8 +3,8 @@
 
 ## Kerberos (Port 88)   
 [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
-Kerberoasting  
 
+    ./kerbrute userenum userlist.txt -d [name] --dc [name]     
 
 
 ## Post Exploitation    
