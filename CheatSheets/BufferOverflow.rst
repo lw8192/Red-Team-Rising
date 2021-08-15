@@ -226,7 +226,7 @@ Alternate method: on attack box, search DLL file for JMP ESP (\xff\xd4)
  
  .. code-block:: none
  
-objdump -d essfunc.dll | grep 'ff e4'
+    objdump -d essfunc.dll | grep 'ff e4'
     
 Popping calc.exe    
 ================   
