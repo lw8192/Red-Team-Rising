@@ -218,9 +218,15 @@ The mona find command can similarly be used to find specific instructions, thoug
 
 .. code-block:: none
 
-    !mona find -s 'jmp esp' -type instr -cm aslr=false,rebase=false,nx=false -cpb "\x00\x0a\x0d"    
+    !mona find -s 'jmp esp' -type instr -cm aslr=false,rebase=false,nx=false -cpb "\x00\x0a\x0d"
     
     
+
+Alternate method: on attack box, search DLL file for JMP ESP (\xff\xd4)  
+ 
+ .. code-block:: none
+ 
+     objdump -d essfunc.dll | grep 'ff e4'
     
 Popping calc.exe    
 ================   
