@@ -34,7 +34,11 @@ http://sh3llc0d3r.com/vulnserver-trun-command-buffer-overflow-exploit/
 http://n01g3l.tumblr.com/post/49036035399/linux-crossfire-v190-buffer-overflow      
 http://www.securitysift.com/windows-exploit-development-part-2-intro-stack-overflow/      
 http://proactivedefender.blogspot.in/2013/05/understanding-buffer-overflows.html?m=1       
-https://rootisthelimit.com/first-buffer-overflow/ <-- Ability 2.34
+https://rootisthelimit.com/first-buffer-overflow/ <-- Ability 2.34     
+
+64 bit buffer overflows:   
+https://blog.techorganic.com/2015/04/10/64-bit-linux-stack-smashing-tutorial-part-1/     
+
 
 
 **Heap Overflows**   
