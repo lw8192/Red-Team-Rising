@@ -64,6 +64,7 @@ nmap --script <name>    --script-help
 **Port 389: LDAP**  
 	
 	ldapsearch -h 127.0.0.1 -p 389 -x -s base
+	
 **Port 139: SMB** 
 check for unauthenticated login, enum with smbmap 
 	
@@ -71,6 +72,7 @@ check for unauthenticated login, enum with smbmap
     rpcclient -U "" <IP>
     smbclient -U <HOST> -L <IP>
     /usr/bin/smbclient \\\\<IP>\\share <HOST>  
+    smbmap -H 127.0.0.1 -u username -p password   	
 	
 **Port 2049: NFS**  
 	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
