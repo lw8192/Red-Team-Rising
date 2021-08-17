@@ -51,7 +51,8 @@ https://lolbas-project.github.io/#
     accesschk.exe -uwcqv "Authenticated Users" *
     accesschk.exe -uwcqv "Users" *
 ### Scheduled Tasks
-    schtasks /query /fo LIST 2>nul | findstr TaskName
+    schtasks /query /fo LIST 2>nul | findstr TaskName  
+    dir C:\windows\tasks  
 ### DLL Search Order Hijacking
 
 ## Registry Exploits
