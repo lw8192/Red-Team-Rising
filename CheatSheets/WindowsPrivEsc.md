@@ -107,7 +107,7 @@ Mimikatz:
 
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"     
-    wmic qfe   
+    wmic qfe get Caption,Description,HotFixID,InstalledOn     
 ### Tools
 https://github.com/bitsadmin/wesng   
 https://github.com/rasta-mouse/Watson   
