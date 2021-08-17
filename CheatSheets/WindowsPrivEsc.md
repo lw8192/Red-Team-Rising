@@ -56,7 +56,8 @@ Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS
 ### Scheduled Tasks
     schtasks /query /fo LIST 2>nul | findstr TaskName  
     dir C:\windows\tasks  
-### DLL Search Order Hijacking
+### DLL Search Order Hijacking  
+[Windows Server 2008-2019](https://itm4n.github.io/windows-server-netman-dll-hijacking/)   
 
 ## Registry Exploits
 ### Autoruns
