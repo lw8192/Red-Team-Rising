@@ -39,7 +39,10 @@ https://lolbas-project.github.io/#
 ## Service Exploits 
     tasklist /svc 
     sc query 
-    net start/stop service
+    net start/stop service  
+### Insecure Service Properties   
+Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS
+    sc qc [service name]  
 ### Unquoted Service Paths
     wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" 2>nul |findstr /i /v """   
     sc qc [service name]        #to check what account service runs under 
