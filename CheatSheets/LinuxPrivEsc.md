@@ -24,7 +24,8 @@
     whoami; id   
     uname -r   
     cat /etc/passwd | grep /bin/bash   
-    ls -l /etc/shadow  
+    ls -al /etc/shadow       #crack with hashcat -m 1800  
+    ls -al /etc/passwd 
     su -, su root (no password, root, password) 
     sudo -l  
     ps -aux | grep root 
