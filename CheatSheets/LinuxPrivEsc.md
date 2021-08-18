@@ -172,9 +172,13 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
 
     getcap -r / 2>/dev/null  
     
-## NFS No Root Squashing    
+## NFS No Root Squashing   
+Allows you to mount drive onto attack box, create a SUID binary that you can run on the victim.  
 
-    cat /etc/exports
+    cat /etc/exports     
+    showmount -e [victim ip]   
+    mount -o rw,vers=2 [victim ip]:/mntFolder /mntFolder/tmp   
+
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
