@@ -85,6 +85,11 @@ Run from C:\ (recursive search). C:\Windows\Panther\Unattend.xml: base64 passwor
     dir /s *pass* == *vnc* == *.config* 2>nul    
     
     dir /s *sysprep.inf *sysprep.xml *unattended.xml *unattend.xml *unattend.txt 2>nul    
+    
+DMP Files (possible base64 passwords)  - find or create from processes
+
+    strings /root/Desktop/iexplore.DMP | grep "Authorization: Basic"    
+    
 ### Saved creds
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword" 
     cmdkey /list   
