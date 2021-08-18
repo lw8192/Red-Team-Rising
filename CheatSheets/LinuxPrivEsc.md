@@ -53,8 +53,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V 
-## Sudo LD_PRELOAD 
-sudo -l, see env_keep+=LD_PRELOAD 
+## Sudo LD_PRELOAD   
+sudo -l, see env_keep+=LD_PRELOAD. apache2
 
     #include <stdio.h> 
     #include <sys/types.h>
