@@ -64,7 +64,14 @@ Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS
     accesschk.exe /accepteula -uvqc user [service name]             #look for: SERVICE_STOP, SERVICE_START    
 
 ## Registry Exploits
-### Autoruns
+### Autoruns   
+Search
+    reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+
+Confirm perms - overwrite the program? (May need to upload accesschk) 
+
+    accesschk /accepteula -wvu "C:\Program Files\Autorun Program\program.exe"
+
 ### AlwaysInstallElevated
     reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
