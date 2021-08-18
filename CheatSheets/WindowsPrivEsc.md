@@ -251,6 +251,7 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
  Enabled WinRm as Administrator to use evil-winrm  
+ 
      WinRM quickconfig       
  
      sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .                         #only on a trusted network (no password)   
