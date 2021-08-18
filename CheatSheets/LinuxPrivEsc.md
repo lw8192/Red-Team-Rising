@@ -114,8 +114,10 @@ Overwrite binary, use [gtfobins](https://gtfobins.github.io/) exploits, insert m
     }  
 ### Shared Object Injection 
 look for missing shared objects searched for in writable directories 
+
     strace [suid binary] 2>&1 | grep -iE “open|access|no such file” 
-    [missing shared object].c 
+    [missing shared object].c  
+    
     #include <stdio.h> 
     #include <stdlib.h> 
     static void inject() __attribute__((constructor));  
