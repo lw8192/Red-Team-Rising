@@ -99,7 +99,8 @@ default /usr/bin:/bin
 [Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
 
 ## SUID Binaries 
-    overwrite binary, use gtfobins exploits, insert missing shared object, manipulate enviromental variables 
+Overwrite binary, use gtfobins exploits, insert missing shared object, manipulate enviromental variables 
+
     find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \;  2>/dev/null     
     find / -type f -a -perm -o+x -a \( -perm -u+s -o -perm -u+s \) -exec ls -l {} \; 2> /dev/null  
     
