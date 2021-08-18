@@ -1,8 +1,13 @@
 # Windows Shells 
 Remember to check for AV before uploading common payloads! 
+- [ ] Can you exec .NET commands or Powershell as well? 
 - [ ] Web Shells 
 - [ ] Reverse Shell Commands 
 - [ ] Antivirus evasion 
+## Test Connection with ping  
+    tcpdump -i [interface] icmp   
+    ping 127.0.0.1 
+    powershell -c "Test-Connection 127.0.0.1"
 
 ## Web Shells 
 [White winter wolf Linux and Windows web shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell) 
