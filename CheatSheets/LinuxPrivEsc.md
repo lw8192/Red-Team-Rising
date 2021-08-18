@@ -148,7 +148,11 @@ set PATH variable to current directory and run suid binary
     
 search for strings (search for username if scripts aren't picking up creds):
 
-    grep -rwl "password" /var              
+    grep -rwl "password" /var     
+
+### SSH Keys   
+    find / -name authorized_keys 2> /dev/null
+    find / -name id_rsa 2> /dev/null   
 
 ## Capabilities 
 check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
