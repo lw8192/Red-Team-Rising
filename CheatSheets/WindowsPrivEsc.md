@@ -24,7 +24,8 @@
 **You might want to check for AV first!**  
 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
-[JAWS](https://github.com/411Hall/JAWS) 
+[JAWS](https://github.com/411Hall/JAWS)   
+
 [Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
 
 ## Checklists    
