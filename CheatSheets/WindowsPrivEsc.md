@@ -66,6 +66,7 @@ Dangerous perms: SERVICE_CHANGE_CONFIG, SERVICE_ALL_ACCESS
 ## Registry Exploits
 ### Autoruns   
 Search
+
     reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
 
 Confirm perms - overwrite the program? (May need to upload accesschk) 
