@@ -144,6 +144,7 @@ set PATH variable to current directory and run suid binary
 ## Passwords / config files 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
+    cat ~/.bash_history | grep -i passw  
     
 search for strings (search for username if scripts aren't picking up creds):
 
