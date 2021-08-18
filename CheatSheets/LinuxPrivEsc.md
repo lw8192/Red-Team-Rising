@@ -130,6 +130,7 @@ look for missing shared objects searched for in writable directories
     run suid binary 
 ### PATH Enviromental Variables 
 SUID /SGID binary tries to execute another file without absolute path? -> change PATH var 
+
     strings [suid binary] 
     strace -v -f -e execve [suid binary] 2>&1 | grep exec 
     ltrace [suid binary]  
