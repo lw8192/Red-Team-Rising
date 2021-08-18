@@ -172,11 +172,15 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
 
     getcap -r / 2>/dev/null  
     
+## NFS No Root Squashing    
+
+    cat /etc/exports
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
 ### Cross compile 
-No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then upload 
+No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then upload   
+
     gcc -m32 -o output32 exploit.c     #(32 bit) 
     gcc -m64 -o output exploit.c       #(64 bit)  
     
