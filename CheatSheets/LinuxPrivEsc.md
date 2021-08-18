@@ -92,6 +92,7 @@ look for scripts you can write to running as a cronjob, writeable cron directory
 ## PATH variable 
 If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it is executed. 
 default /usr/bin:/bin 
+
     echo $PATH 
     cat /etc/crontab     
 ### Rootbash script 
