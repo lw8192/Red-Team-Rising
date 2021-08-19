@@ -19,7 +19,7 @@ HTTP and HTTPS Checklist
         nmap http scripts     
         nikto -h http://127.0.0.1:80/     
         dirb http://127.0.0.1/   (default word list: common.txt)     
-        gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z  
+        gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z     
 	ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -c -v  
 	feroxbuster -u http://target.com -w /usr/share/dirb/wordlists/common.txt -d [recurson depth] -t [threads] -s [status codes] 
 	
