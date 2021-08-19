@@ -44,6 +44,7 @@ Also Ruby, Java: Reverse shells cheat sheet
 
 
 ## Upgrading to a pseudo terminal / TTY     
+[Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)
 
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash')
