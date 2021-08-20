@@ -149,6 +149,7 @@ Mimikatz:
 [Online hash cracker](https://crackstation.net/) 
 
 ## Potato Exploits  
+[Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 ### Hot Potato   
 exe: [Potato](https://github.com/foxglovesec/Potato/)   
 Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
