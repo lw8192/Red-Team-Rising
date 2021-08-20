@@ -167,7 +167,7 @@ https://github.com/SecWiki/windows-kernel-exploits
 ## Misc  
 
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
-
+[CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
 ____   
 
 # File Transfer     
