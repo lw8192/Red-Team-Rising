@@ -1,4 +1,7 @@
 # Active Directory Cheatsheet     
+## Quick Commands  
+
+    net group /domain 
 ## Resources      
 [WADComs](https://wadcoms.github.io/)    
 
