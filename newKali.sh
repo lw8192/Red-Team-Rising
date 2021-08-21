@@ -1,6 +1,6 @@
 #!/bin/bash 
 #run script as sudo in new Kali to download tools needed 
-wget -O https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmykali.sh |bash
+wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmykali.sh |bash
 apt-get install feroxbuster sshuttle chisel 
 python3 -m pip install pipx
 pipx ensurepath
