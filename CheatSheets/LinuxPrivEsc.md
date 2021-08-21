@@ -50,6 +50,9 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
 
 [Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
+
+[Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)  
+
 ## Sudo exploits 
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V    
