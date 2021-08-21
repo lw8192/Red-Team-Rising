@@ -1,11 +1,23 @@
 ################
 Buffer Overflows
 ################   
-
-
 Taken from Tiberius's https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst, my notes added   
 
-New to buffer overflows??? - start with Background Material below or see: https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md        
+- [Immunity Debugger](#immunity-debugger)
+- [Mona Setup](#mona-setup)
+- [Fuzzing](#fuzzing)
+- [Crash Replication & Controlling EIP](#crash-replication---controlling-eip)
+- [Finding Bad Characters](#finding-bad-characters)
+- [Find a Jump Point](#find-a-jump-point)
+- [Popping calc.exe](#popping-calcexe)
+- [Generate Payload](#generate-payload)
+- [Prepend NOPs](#prepend-nops)
+- [Final Buffer](#final-buffer)
+- [Buffer Overflow Practice](#buffer-overflow-practice)
+- [Basic Background Knowledge](#basic-background-knowledge)
+
+New to buffer overflows??? See: 
+https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md        
 
 * https://bytesoverbombs.io/exploiting-a-64-bit-buffer-overflow-469e8b500f10
 * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
