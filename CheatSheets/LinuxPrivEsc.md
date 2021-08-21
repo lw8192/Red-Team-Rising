@@ -58,6 +58,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)  
 
 ## Sudo exploits 
+[SUDO_KILLER enum script](https://github.com/TH3xACE/SUDO_KILLER)  
+
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V    
 ## Sudo LD_PRELOAD   
