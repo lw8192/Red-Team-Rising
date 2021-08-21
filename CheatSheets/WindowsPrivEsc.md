@@ -26,6 +26,7 @@
 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
 [JAWS](https://github.com/411Hall/JAWS)   
+[PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
 
 [Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
 
