@@ -13,6 +13,7 @@ Remember to check for AV before uploading common payloads!
 [White winter wolf Linux and Windows web shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell) 
 
 [Nishang Invoke-Powershell Script](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) 
+[ConPty shell](https://github.com/antonioCoco/ConPtyShell)  
 
 ## Reverse Shell Commands 
 Powershell 
