@@ -1,6 +1,5 @@
-################
 Buffer Overflows
-################   
+=================
 Taken from Tiberius's https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst, my notes added   
 
 - [Resources](#resources) 
