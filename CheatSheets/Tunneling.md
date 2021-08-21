@@ -1,9 +1,20 @@
 # Tunneling / Port Forwarding / Pivoting  
-Gain further access into a network or expose local services   
+ Expose internal services, usually hidden due to firewall rules or gain further access into a network. 
 
 [Pivot cheat sheet](https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt0f228a4b9a1165e4/5ef3d602395b554cb3523e7b/pivot-cheat-sheet-v1.0.pdf) 
 
- Expose internal services, usually hidden due to firewall rules or gain further access into a network. 
+ 
+ - [Tunneling / Port Forwarding / Pivoting](#tunneling---port-forwarding---pivoting)
+  * [Chisel](#chisel)
+    + [Chisel socks Reverse Proxy](#chisel-socks-reverse-proxy)
+    + [Chisel socks Forward Proxy](#chisel-socks-forward-proxy)
+    + [Chisel Remote Port Forward](#chisel-remote-port-forward)
+    + [Chisel Local Port Forward](#chisel-local-port-forward)
+- [Linux Port Forwarding](#linux-port-forwarding)
+- [Windows Port Forwarding](#windows-port-forwarding)
+  * [SSH (Window 10 and newer)](#ssh--window-10-and-newer-)
+  * [Plink.exe](#plinkexe)
+
 
  ## Chisel 
 [Chisel](https://github.com/jpillora/chisel) 
