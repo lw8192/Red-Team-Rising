@@ -198,8 +198,7 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
     netstat -antp; arp -a 
     for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
     cat /etc/hosts  
-### Pivoting / Tunneling  
-[Pivot cheat sheet](https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt0f228a4b9a1165e4/5ef3d602395b554cb3523e7b/pivot-cheat-sheet-v1.0.pdf) 
+
 # Resources 
 ## Learn More 
 [Hacktricks Linux Privilige Escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation)      
