@@ -37,6 +37,7 @@
 ## Scripts
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
+[Uptux - Specialized priv esc checks](https://github.com/initstring/uptux)
 
 
  
