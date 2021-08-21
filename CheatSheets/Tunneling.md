@@ -11,6 +11,7 @@
     + [Chisel Remote Port Forward](#chisel-remote-port-forward)
     + [Chisel Local Port Forward](#chisel-local-port-forward)
 - [Linux Port Forwarding](#linux-port-forwarding)
+  * [SShuttle](#sshuttle)
 - [Windows Port Forwarding](#windows-port-forwarding)
   * [SSH (Window 10 and newer)](#ssh--window-10-and-newer-)
   * [Plink.exe](#plinkexe)
@@ -34,6 +35,8 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
     attack    ./chisel client LISTEN_IP:LISTEN_PORT LOCAL_PORT:TARGET_IP:TARGET_PORT 
  
  # Linux Port Forwarding 
+ 
+ ## SShuttle
   If pivot is a Linux box with python installed you can ssh into: can use [sshuttle](https://github.com/sshuttle/sshuttle) to connect into network. 
   
       sshuttle -r user@10.10.10.10 --ssh-cmd "ssh -i id_rsa" 10.10.0.0/24
