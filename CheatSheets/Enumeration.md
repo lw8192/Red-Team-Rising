@@ -67,7 +67,8 @@ nmap --script <name>    --script-help
 	
 **Port 139: SMB** 
 check for unauthenticated login, enum with smbmap 
-	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010)  
+	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
+	[enum4linux](https://github.com/CiscoCXSecurity/enum4linux)  
 	
     smbclient -L <IP>
     rpcclient -U "" <IP>
