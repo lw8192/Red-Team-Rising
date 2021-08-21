@@ -10,6 +10,8 @@
 - [ ] Services (running as root, only available to localhost)
 - [ ] Passwords / config files 
 - [ ] Binaries with exploitable capabilities 
+- [ ] NFS No root squashing  
+- [ ] Container escapes 
 - [ ] Is the kernel vulnerable  (last resort priv esc) 
 - [ ] Further access into the network / post exploitation 
 
@@ -180,7 +182,13 @@ search for strings (search for username if scripts aren't picking up creds):
 check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
 
     getcap -r / 2>/dev/null  
-    
+
+## Container Escapes 
+docker, lxd, 
+
+    docker ps -a 
+
+
 ## NFS No Root Squashing   
 Allows you to mount drive onto attack box, create a SUID binary that you can run on the victim.  
 
