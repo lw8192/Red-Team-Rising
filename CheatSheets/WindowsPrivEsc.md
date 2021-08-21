@@ -244,6 +244,7 @@ ____
      "C:\Program Files\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All               #Delete all rules of Defender (useful for machines without internet access)   
  ### Obfuscate Payloads
 Use wrapper files to call static executables (such as nc) 
+[Chameleon](https://github.com/klezVirus/chameleon): Powershell script obfuscator  
 
      
  ____
