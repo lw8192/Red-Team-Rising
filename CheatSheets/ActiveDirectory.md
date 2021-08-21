@@ -12,6 +12,8 @@
 
 ## Kerberos (Port 88)   
 [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
+[Kerberos Tickets](https://www.optiv.com/insights/source-zero/blog/kerberos-domains-achilles-heel)   
+
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
 
