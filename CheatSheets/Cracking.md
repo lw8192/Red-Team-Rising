@@ -6,3 +6,4 @@ Passwords, login pages, etc.
 Hydra
 John
 hashcat 
+crowbar
