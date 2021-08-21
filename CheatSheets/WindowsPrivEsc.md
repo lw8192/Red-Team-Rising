@@ -28,6 +28,7 @@
 [nishang](https://github.com/samratashok/nishang)  
 [JAWS](https://github.com/411Hall/JAWS)   
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
+[PrivEscCheck](https://github.com/itm4n/PrivescCheck)
 [Priv2Admin](https://github.com/noraj/Priv2Admin)    Autoexploitation tool
 
 [Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
