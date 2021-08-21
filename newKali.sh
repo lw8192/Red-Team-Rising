@@ -1,7 +1,7 @@
 #!/bin/bash 
 #run script as sudo in new Kali to download tools needed 
 wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmykali.sh |bash
-apt-get install feroxbuster sshuttle chisel 
+apt-get install feroxbuster sshuttle chisel gobuster nikto
 python3 -m pip install pipx
 pipx ensurepath
 pipx install crackmapexec
@@ -9,11 +9,11 @@ pipx install crackmapexec
 #download shells
 mkdir /home/kali/shells
 wget https://raw.githubusercontent.com/flozz/p0wny-shell/blob/master/shell.php -o /home/kali/shells/p0wneyWebshell.php 
-https://raw.githubusercontent.com/WhiteWinterWolf/wwwolf-php-webshell/master/webshell.php -o /home/kali/shells/wwwWebshell.php
+wget https://raw.githubusercontent.com/WhiteWinterWolf/wwwolf-php-webshell/master/webshell.php -o /home/kali/shells/wwwWebshell.php
 
 #download scripts
 mkdir /home/kali/PEScripts/Linux 
-=wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh -o /home/kali/PEScripts/Linux/linpeas.sh
+wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh -o /home/kali/PEScripts/Linux/linpeas.sh
 wget https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh -o /home/kali/PEScripts/Linux/lse.sh 
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -o /home/kali/PEScripts/Linux/LinEnum.sh
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -o /home/kali/PEScripts/Linux/les.sh
