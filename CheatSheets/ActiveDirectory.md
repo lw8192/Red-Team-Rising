@@ -5,6 +5,7 @@
 ## General Tools  
 [Impacket](https://github.com/SecureAuthCorp/impacket)   
 [evil-winrm](https://github.com/nubix/evil-winrm)    
+[ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
 ## Kerberos (Port 88)   
 [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
