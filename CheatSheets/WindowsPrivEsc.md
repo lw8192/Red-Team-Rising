@@ -10,13 +10,13 @@
     tree /a /f    
     set                               #enviromental variables
     net use                           #connected drives  
-    powershell.exe -nop -ep bypass    
     
     netstat /anto    
     netsh firewall show state 
     netsh firewall show config
     
 ## Powershell
+    powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true   
