@@ -7,6 +7,7 @@
 [phpbash web shell](https://github.com/Arrexel/phpbash)  
 [pentest monkey php shell](https://github.com/pentestmonkey/php-reverse-shell)  
 [p0wney web shell](https://github.com/flozz/p0wny-shell)  
+[white winter wolf web shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell)  
 [collection of PHP webshells](https://github.com/JohnTroony/php-webshells/tree/master/Collection)    
 
 ## Debugging Shells   
