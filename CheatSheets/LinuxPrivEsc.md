@@ -17,6 +17,7 @@
 [PayloadAllTheThings Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)   
 
 [Linux Explain Shell](https://www.explainshell.com/)   
+[Static Binaries](https://github.com/andrew-d/static-binaries)  
 
 
 ## Quick Enumeration Commands  
