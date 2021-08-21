@@ -25,6 +25,7 @@
 **You might want to check for AV first!**  
 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
+[nishang](https://github.com/samratashok/nishang)  
 [JAWS](https://github.com/411Hall/JAWS)   
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
 [Priv2Admin](https://github.com/noraj/Priv2Admin)    Autoexploitation tool
