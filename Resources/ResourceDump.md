@@ -50,6 +50,7 @@ https://www.codecademy.com/
 [nahamsec Youtube](https://www.youtube.com/nahamsec)   
 [John Hammond](https://www.youtube.com/johnhammond010)   
 [Pwn function](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)  
+[PC Secuirty](https://www.youtube.com/user/ThePCSecurity) 
 
 ## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
@@ -204,5 +205,6 @@ Windows Privilige Escalation
 [Mimikatz whitepaper](https://sansorg.egnyte.com/dl/XMHRwR5lRO/?)   
 
 
-
+## Cyber Career 
+https://www.cyberhuntingguide.net/  
 
