@@ -1,7 +1,11 @@
 # Active Directory Cheatsheet     
 ## Quick Commands  
 
-    net group /domain 
+    net group /domain  
+### Files to Check  
+    %SYSTEMROOT%\System32\ntds.dit             #AD database
+    %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup 
+
 ## Resources      
 [WADComs](https://wadcoms.github.io/)    
 
