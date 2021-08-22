@@ -134,15 +134,18 @@ Possible misconfigurations and attack vectors
 [Netcat without -e? No Problem!](https://pen-testing.sans.org/blog/2013/05/06/netcat-without-e-no-problem/)  
 [Socat cheat sheet](https://www.redhat.com/sysadmin/getting-started-socat) 
 
-**Recon-NG**  
-[Recon cheat sheet](https://pentester.land/cheatsheets/2019/04/15/recon-resources.html) 
-[Intro to Recon-ng](https://warroom.securestate.com/recon-ng-tutorial/)  
-[Recon-ng: Usage Guide](https://bitbucket.org/LaNMaSteR53/recon-ng/wiki/Usage%20Guide)  
-
 **Metasploit**   
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
 [Creating Metasploit Payloads](https://netsec.ws/?p=331)  )  
 [AV Evasion With Metasploit paper](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf/)  
+
+**Recon-NG**  
+[Recon cheat sheet](https://pentester.land/cheatsheets/2019/04/15/recon-resources.html) 
+[Intro to Recon-ng](https://warroom.securestate.com/recon-ng-tutorial/)  
+[Recon-ng: Usage Guide](https://bitbucket.org/LaNMaSteR53/recon-ng/wiki/Usage%20Guide)    
+
+**Other OSINT Tools** 
+[Tool Collection](https://cipher387.github.io/osint_stuff_tool_collection/)    
 
 ## Web App Pentesting   
 [OWASP Top 10](https://owasp.org/www-project-web-security-testing-guide/)   
