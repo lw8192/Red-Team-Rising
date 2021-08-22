@@ -13,6 +13,16 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 - [ ] Programming
 - [ ] Post Shell  
 
+## Practice 
+https://academy.hackthebox.eu/  
+https://hackthebox.eu/  
+https://overthewire.org/wargames/  
+https://pwn.college/  
+
+
+
+
+
 ## Repos  
 [OSCP - Hacker's stop](https://hackerstop.org/oscp)  
 [Payloadallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings)     
@@ -34,6 +44,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 ## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
+
 ## Videos  
 
 [The Cyber Mentor Youtube[(https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
