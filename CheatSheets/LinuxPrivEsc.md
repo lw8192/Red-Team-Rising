@@ -7,10 +7,10 @@
 - [ ] Get a fully functional TTY  
 - [ ] General host enum 
 - [ ] Transfer files and run scripts 
-- [ ] Exploitable sudo binaries or exploits  
+- [ ] Sudo exploits   
 - [ ] Exploitable cronjobs 
 - [ ] SUID/SGID binaries  
-- [ ] Services (running as root, only available to localhost)
+- [ ] Services (running as root, only available to localhost)  
 - [ ] Passwords / config files 
 - [ ] Binaries with exploitable capabilities 
 - [ ] NFS No root squashing  
@@ -23,6 +23,18 @@
 
 [Linux Explain Shell](https://www.explainshell.com/)   
 [Static Binaries](https://github.com/andrew-d/static-binaries)  
+
+## Upgrade to a fully functional TTY 
+### Check 
+    if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi 
+### Upgrade 
+    python -c 'import pty;pty.spawn("/bin/bash")' 
+    echo os.system('/bin/bash') 
+    /bin/sh -i 
+    
+[Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
+[Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
+[Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf) 
 
 
 ## Quick Enumeration Commands  
@@ -40,26 +52,13 @@
 ## File Transfer 
     which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null 
     
-## Scripts
+## Scripts   
+### General Linux Enum 
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
+### Specialized Scripts 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [Uptux - Specialized priv esc checks](https://github.com/initstring/uptux)
 
-
- 
-## Upgrade to a fully functional TTY 
-### Check 
-    if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi 
-### Upgrade 
-    python -c 'import pty;pty.spawn("/bin/bash")' 
-    echo os.system('/bin/bash') 
-    /bin/sh -i 
-    
-[Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
-
-[Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
-
-[Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)  
 
 ## Sudo exploits 
 [SUDO_KILLER enum script](https://github.com/TH3xACE/SUDO_KILLER)  
@@ -187,6 +186,7 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
 
 ## Container Escapes 
 docker, lxd, 
+[Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)  
 
     docker ps -a 
