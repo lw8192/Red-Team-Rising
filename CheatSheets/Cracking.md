@@ -1,19 +1,23 @@
 # Cracking 
 ## References 
-[Crcking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes) 
+[Cracking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes) 
 ## Resources
 Passwords, login pages, etc.
 [Ciphey](https://github.com/Ciphey/Ciphey)  
 [CyberChef](https://gchq.github.io/CyberChef/)  
 [Crackstation](https://crackstation.net/) 
 
-## Services 
+## Services   
+
 ### Hydra
 ftp, ssh, http-post 
 ### Crowbar 
 rdp  
 
 ## Offline Passwords  
+
+    hash-identifier [hash]  
+
 ### John 
 
 ### Hashcat  
