@@ -57,7 +57,8 @@
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
 ### Specialized Scripts 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
-[Uptux - Specialized priv esc checks](https://github.com/initstring/uptux)
+[SUDO Killer: sudo exploits](https://github.com/TH3xACE/SUDO_KILLER)  
+[Uptux - Specialized priv esc checks](https://github.com/initstring/uptux) 
 
 
 ## Sudo exploits 
