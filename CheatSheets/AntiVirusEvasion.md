@@ -1,6 +1,6 @@
 # AV Evasion 
 
-
+https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py
 
 
 # Resources
