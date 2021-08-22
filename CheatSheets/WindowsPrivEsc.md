@@ -18,6 +18,15 @@
     netsh firewall show state 
     netsh firewall show config
     
+### Important Files  
+
+    %SYSTEMROOT%\System32\drivers\etc\hosts                   #local DNS entries 
+    %SYSTEMROOT%\System32\drivers\etc\networks                #network config
+    %SYSTEMROOT%\Prefetch                                     #prefetch dir, exe logs
+    %WINDIR%\system32\config\AppEvent.Evt                     #application logs
+    %WINDIR%\system32\config\SecEvent.Evt                     #security logs
+
+    
 ## Powershell
     powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
