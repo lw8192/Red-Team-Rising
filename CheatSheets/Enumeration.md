@@ -65,7 +65,7 @@ nmap --script <name>    --script-help
 	
 	ldapsearch -h 127.0.0.1 -p 389 -x -s base
 	
-**Port 139: SMB** 
+**Port 139, 445: SMB** 
 check for unauthenticated login, enum with smbmap 
 	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 	[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)  
