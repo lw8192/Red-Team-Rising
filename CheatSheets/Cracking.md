@@ -1,4 +1,7 @@
 # Cracking 
+## References 
+[Crcking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes) 
+## Resources
 Passwords, login pages, etc.
 [Ciphey](https://github.com/Ciphey/Ciphey)  
 [CyberChef](https://gchq.github.io/CyberChef/)  
