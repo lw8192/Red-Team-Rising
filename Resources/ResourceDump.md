@@ -2,8 +2,20 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 # Resources  
 ## Contents  
-- [ ] [Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md)    
-
+  * [Contents](#contents)
+  * [Practice](#practice)
+  * [Repos](#repos)
+  * [Books](#books)
+  * [Blogs](#blogs)
+  * [Podcasts](#podcasts)
+  * [Videos](#videos)
+  * [Cheat sheets](#cheat-sheets)
+  * [Services](#services)
+  * [Tools](#tools)
+  * [Web App Pentesting](#web-app-pentesting)
+  * [Programming](#programming)
+  * [Post Shell](#post-shell)
+  * [Cyber Career](#cyber-career)
 
 ## Practice 
 **CTFs**   
