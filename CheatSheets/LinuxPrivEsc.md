@@ -1,5 +1,8 @@
   
 # Linux Host Enumeration   
+## Contents 
+
+
 ## Checklists / What to look for
 - [ ] Get a fully functional TTY  
 - [ ] General host enum 
@@ -44,7 +47,6 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 
 
  
-    
 ## Upgrade to a fully functional TTY 
 ### Check 
     if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi 
@@ -185,6 +187,7 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
 
 ## Container Escapes 
 docker, lxd, 
+[Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)  
 
     docker ps -a 
 
@@ -199,6 +202,7 @@ Allows you to mount drive onto attack box, create a SUID binary that you can run
 ## Kernel Exploits 
     uname -a  
     cat /etc/*-release
+    
 ### Cross compile 
 No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then upload   
 
