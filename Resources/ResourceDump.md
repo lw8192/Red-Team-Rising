@@ -2,25 +2,21 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 # Resources  
 ## Contents  
-- [ ] Repos 
-- [ ] Books  
-- [ ] Blogs  
-- [ ] Podcasts 
-- [ ] Videos 
-- [ ] Services 
 - [ ] [Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResources.md)    
-- [ ] Tools
-- [ ] Programming
-- [ ] Post Shell  
+
 
 ## Practice 
+**CTFs**
 https://academy.hackthebox.eu/  
 https://hackthebox.eu/  
 https://overthewire.org/wargames/  
 https://pwn.college/  
+https://picoctf.com/
 
-
-
+**Coding** 
+https://www.codewars.com/  
+https://www.sololearn.com/home   
+https://www.codecademy.com/   
 
 
 ## Repos  
@@ -39,6 +35,7 @@ https://pwn.college/
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
 [Ebook Repo](https://github.com/Scr1ptK1ddie/CySecBooks)  
+
 ## Blogs  
 [Trusted Security](https://www.trustedsec.com/blog/)   
 
@@ -47,11 +44,12 @@ https://pwn.college/
 
 ## Videos  
 
-[The Cyber Mentor Youtube[(https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
+[The Cyber Mentor Youtube](https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw)  
 [DEFCON Youtube](https://www.youtube.com/channel/UC6Om9kAkl32dWlDSNlDS9Iw)   
-[IppSec Youtube[(https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)  
+[IppSec Youtube](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)  
 [nahamsec Youtube](https://www.youtube.com/nahamsec)   
 [John Hammond](https://www.youtube.com/johnhammond010)   
+[Pwn function](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)  
 
 ## Cheat sheets  
 [Highoncoffee cheat sheet's](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)   
@@ -129,7 +127,8 @@ Possible misconfigurations and attack vectors
 
 **Metasploit**   
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
-[Creating Metasploit Payloads](https://netsec.ws/?p=331)
+[Creating Metasploit Payloads](https://netsec.ws/?p=331)  )  
+[AV Evasion With Metasploit paper](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf/)  
 
 ## Web App Pentesting   
 [OWASP Top 10](https://owasp.org/www-project-web-security-testing-guide/)   
@@ -192,7 +191,6 @@ Windows Privilige Escalation
 [Process Injection Fundamentals](https://blog.thecybersecuritytutor.com/process-injection-fundamentals/)  
 [Windows Obfuscation Reference](https://www.bc-security.org/blog/)  
 [Evading Detecting: A Begineer's Guide to Obfuscation](https://www.youtube.com/watch?v=lP2KF7_Kwxk)   
-
 [Active Directory](https://adsecurity.org/)  
 			 
 **Pivoting / Tunneling**  	   
