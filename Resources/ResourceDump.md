@@ -42,7 +42,8 @@ https://www.codecademy.com/
 [Art of Hacking Repo](https://github.com/The-Art-of-Hacking/h4cker) 
 [Pentesting Bible](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)   
 
-## Books 
+## Books   
+[Goalkicker books](https://books.goalkicker.com/)   
 [Red Team Field Manual](https://doc.lagout.org/rtfm-red-team-field-manual.pdf)   
 [Hack Tricks](https://book.hacktricks.xyz/)  
 [Dostoevskylabs's PenTest Notes](https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/)  
