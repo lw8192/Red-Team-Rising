@@ -15,14 +15,18 @@ ftp, ssh, http-post
 rdp  
 
 ## Offline Passwords  
+[Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes
 
     hash-identifier [hash]  
 
 ### John 
+    john --wordlist=/usr/share/wordlists/rockyou.txt shadow 
+    
+    
 
 ### Hashcat  
 [One rule to rule them all](https://github.com/NotSoSecure/password_cracking_rules)  
 
     hashcat -m [mode] hashes wordlist    
-    
-Use google colab projects: [colabcat](https://github.com/someshkar/colabcat)  
+
+Linux password files: Use google colab projects: [colabcat](https://github.com/someshkar/colabcat)  
