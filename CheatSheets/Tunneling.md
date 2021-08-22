@@ -39,6 +39,7 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
  ## SShuttle
   If pivot is a Linux box with python installed you can ssh into: can use [sshuttle](https://github.com/sshuttle/sshuttle) to connect into network. 
   
+      apt-get install sshuttle 
       sshuttle -r user@10.10.10.10 --ssh-cmd "ssh -i id_rsa" 10.10.0.0/24
  
  
