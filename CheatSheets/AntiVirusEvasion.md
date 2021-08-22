@@ -1,4 +1,11 @@
-# AV Evasion 
+# AV Evasion   
+## Overview  
+2 primary types: 
+on disk: file saved on target then executed 
+in memory: preferred for evasion, import script into memory and then executed.  
+Windows AMSI (Anti Malware Scan Interface): scans scripts as they are imported into memory, makes evasion harder. 
+
+
 
 https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py
 
