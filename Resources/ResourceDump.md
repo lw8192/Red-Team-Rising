@@ -6,14 +6,14 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 
 ## Practice 
-**CTFs**
+**CTFs**   
 https://academy.hackthebox.eu/  
 https://hackthebox.eu/  
 https://overthewire.org/wargames/  
 https://pwn.college/  
 https://picoctf.com/
 
-**Coding** 
+**Coding**    
 https://www.codewars.com/  
 https://www.sololearn.com/home   
 https://www.codecademy.com/   
