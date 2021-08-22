@@ -178,7 +178,7 @@ Privilige Escalation
 Linux Privilige Escalation  
 [Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)  
 [A GUIDE TO LINUX PRIVILEGE ESCALATION by Rashid Feroz](https://payatu.com/guide-linux-privilege-escalation/) 
-[Attack and Defend: Linux Privilege Escalation
+[Attack and Defend: Linux Privilege Escalation Whitepaper](https://sansorg.egnyte.com/dl/QQOaGDIeFM/?)  
 Techniques of 2016](https://www.sans.org/reading-room/whitepapers/linux/attack-defend-linux-privilege-escalation-techniques-2016-37562)   
 [Abusing SUDO (Linux Privilege Escalation)](http://touhidshaikh.com/blog/?p=790)  
 
