@@ -7,7 +7,13 @@ Windows AMSI (Anti Malware Scan Interface): scans scripts as they are imported i
 
 
 
-https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py
+https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
+[Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
+
+
+
+
+
 
 
 # Resources
