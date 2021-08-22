@@ -11,8 +11,8 @@ HTTP and HTTPS Checklist
 - [ ] User input fields: SQL injection, cross site scripting   
 - [ ] Intercept HTTP requests with Burp and examine    	
 
-	Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
-    [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
+Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
+[Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
 **Scan for sub directories and pages** 	
 	
 	
@@ -22,13 +22,18 @@ HTTP and HTTPS Checklist
         gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z     
 	ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -c -v  
 	feroxbuster -u http://target.com -w /usr/share/dirb/wordlists/common.txt -d [recurson depth] -t [threads] -s [status codes] 
-	
-	
-	
+
 	whatweb http://target  
 	wfuzz -c --hc=404 -R 2 -w /usr/share/dirb/wordlists/common.txt http://target/fuzz   
-
 	
+	
+## Web app specific  
+Wordpress: wpscan 
+
+
+Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
+
+
 ## Login pages   
 	
 	Default creds - admin: admin, admin:password, service specific default creds   
