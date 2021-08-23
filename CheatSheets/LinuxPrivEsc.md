@@ -95,9 +95,9 @@ sudo -l, see (ALL,!root)
     
 ## CVE-2019-16634 Buffer Overflow 
 versions of sudo earlier than 1.8.26  
-sudo su root, type password, see ******: pwfeedback enabled  
+sudo su root, type password, see ******: pwfeedback enabled in /etc/sudoers. Buffer overflow attack against password feedback.   
 
-[proof of concept](https://github.com/saleemrashid/sudo-cve-2019-18634)  
+[exploit](https://github.com/saleemrashid/sudo-cve-2019-18634)  
 
 ## CVE-2021-3156 - Baron Samedit Heap Buffer Overflow 
 [Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)  
