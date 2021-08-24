@@ -24,7 +24,9 @@ Turning off Windows Defender
     set HKLM/SOFTWARE/Policies/Microsoft/Windows Defender/DisableAntiSpyware to 1
 
 
+View Windows Defender logs   
 
+    Get-WinEvent 'Microsoft-Windows-Windows Defender/Operational' MaxEvents 10 | Where-Object Id -e 1116 | Format-List 
 
 
 # Resources  
