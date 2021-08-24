@@ -9,17 +9,25 @@ Windows AMSI (Anti Malware Scan Interface): evals commands at runtime, scans scr
 
 https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
 
-
+## Tools  
 [Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
 [Invoke-bfuscation Usage Guide](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide)  
 
 
+## Commands 
+Turning off Windows Defender 
+
+    Set-MpPreference -DisableRealtimeMonitoring $true
 
 
 
 
+# Resources  
+## Cheat sheets 
+https://github.com/sinfulz/JustEvadeBro
+https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
 
-# Resources
+## Further Reading 
 https://offensivedefence.co.uk/posts/making-amsi-jump/   
 https://i.blackhat.com/briefings/asia/2018/asia-18-Tal-Liberman-Documenting-the-Undocumented-The-Rise-and-Fall-of-AMSI.pdf   
 https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell  
@@ -30,6 +38,10 @@ https://www.redteam.cafe/red-team/powershell/using-reflection-for-amsi-bypass
 https://amsi.fail/  
 https://rastamouse.me/blog/asb-bypass-pt2/  
 https://0x00-0x00.github.io/research/2018/10/28/How-to-bypass-AMSI-and-Execute-ANY-malicious-powershell-code.html  
+https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/  
+
+
+## Videos 
 https://www.youtube.com/watch?v=F_BvtXzH4a4  
 https://www.youtube.com/watch?v=lP2KF7_Kwxk  
 https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/  
