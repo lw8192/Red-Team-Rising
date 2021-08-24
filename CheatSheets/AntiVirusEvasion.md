@@ -17,7 +17,10 @@ https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.
 ## Commands 
 Turning off Windows Defender 
 
-    Set-MpPreference -DisableRealtimeMonitoring $true
+    Set-MpPreference -DisableRealtimeMonitoring $true   
+    
+    set HKLM/SOFTWARE/Policies/Microsoft/Windows Defender/DisableAntiSpyware to 1
+
 
 
 
