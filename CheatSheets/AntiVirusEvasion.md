@@ -1,13 +1,15 @@
 # AV Evasion   
-## Overview  
+## Notes 
 2 primary types: 
 on disk: file saved on target then executed 
 in memory: preferred for evasion, import script into memory and then executed.  
-Windows AMSI (Anti Malware Scan Interface): scans scripts as they are imported into memory, makes evasion harder. 
-
+Windows AMSI (Anti Malware Scan Interface): evals commands at runtime, scans scripts as they are imported into memory, makes evasion harder. VBA, Powershell, JavaScript. 
+ AV agnostic: API any anti-virus product can use. "Identify fileless threats - at runtime most of obfuscation is removed" defeat: obfuscate code. 
 
 
 https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
+
+
 [Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
 [Invoke-bfuscation Usage Guide](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide)  
 
@@ -31,3 +33,6 @@ https://0x00-0x00.github.io/research/2018/10/28/How-to-bypass-AMSI-and-Execute-A
 https://www.youtube.com/watch?v=F_BvtXzH4a4  
 https://www.youtube.com/watch?v=lP2KF7_Kwxk  
 https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/  
+
+
+
