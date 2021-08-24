@@ -27,7 +27,8 @@ Turning off Windows Defender
 
 # Resources  
 ## Cheat sheets 
-https://github.com/sinfulz/JustEvadeBro
+https://github.com/sinfulz/JustEvadeBro   
+
 https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
 
 ## Further Reading 
