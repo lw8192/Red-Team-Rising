@@ -63,9 +63,13 @@ Log Poisoning
 	
 	
 	
-References:   
-[OWASP Web App Testing Guide](https://owasp.org/www-project-web-security-testing-guide/stable/)    
+# Resources 
+## Cheat Sheets 
+[SQLi cheat sheet](https://guif.re/sqli)  
 [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/Glossary.html)    
+
+## Further Reading 
+[OWASP Web App Testing Guide](https://owasp.org/www-project-web-security-testing-guide/stable/)    
 [Bypassing File Upload Restrictions ](http://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html)      
 [Web vulnerabilities to gain access to the system - paper](https://www.exploit-db.com/papers/13017/)     
 
