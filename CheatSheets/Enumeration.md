@@ -1,5 +1,23 @@
-# Enumeration Quick Reference 
-## Checklist 
+# Enumeration Quick Reference   
+
+## Contents 
+- [Enumeration Quick Reference](#enumeration-quick-reference)
+  * [Checklist](#checklist)
+  * [Recon](#recon)
+    + [OSINT](#osint)
+    + [DNS Look Up](#dns-look-up)
+  * [Network Enum:](#network-enum-)
+  * [Host enum](#host-enum)
+  * [Service Enum](#service-enum)
+    + [Port 21: FTP](#port-21--ftp)
+    + [Port 25: SMTP](#port-25--smtp)
+    + [Port 389: LDAP](#port-389--ldap)
+    + [Port 139, 445: SMB](#port-139--445--smb)
+    + [Port 2049: NFS](#port-2049--nfs)
+
+
+## Checklist   
+
 - [ ] Recon 
 - [ ] (If given a range): what hosts are on the network
 - [ ] Open well known ports (0-1023)
@@ -8,7 +26,8 @@
 - [ ] Operating system 
 - [ ] FTP or SMB anon log in 
 - [ ] Exploitable services versions (searchsploit, github, google) 
-- [ ] Web enum (see WebEnumeration.md cheatsheet) 
+- [ ] Web enum (see WebEnumeration.md cheatsheet)   
+- [ ] Service specific exploits 
 - [ ] Brute force any services / log in pages   
 
 [Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
@@ -25,6 +44,7 @@ whois, nslookup, dig, host <-manual tools
 Dierce, DNSenum, DNSrecon <-automated tools  
 
     nslookup -type=any <DOMAIN>   
+    whois <DOMAIN> 
     host -t axfr -l <DOMAIN> <DNSSERVER>   
     dig -t mx <DOMAIN>  
     dig -t any <DOMAIN>
@@ -48,25 +68,34 @@ Dierce, DNSenum, DNSrecon <-automated tools
 nmap scripts: /usr/share/nmap/scripts   
 nmap --script <name>    --script-help 
 	
-**Port 21: FTP**  
+### Port 21: FTP 
 	
 [Enumerating ftp](https://book.hacktricks.xyz/pentesting/pentesting-ftp)   
+Can I ...
+- [ ] Anonymously log in or use known creds?  
+- [ ] See hidden files? 
+- [ ] Download important files (ie. backup files, ssh priv keys, etc)?
+- [ ] Upload a webshell?   
+- [ ] Find FTP exploits on searchsploit / Google? 
+- [ ] Crack creds with hydra? 
 	
 	anon log in: ftp / no password	or 	Anonymous: asdfasdf           
 	nmap -sV -Pn -vv -p 21 --script=ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221     
     hydra -C ftp/usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt -u 127.0.0.1 ftp    
 	
-**Port 25: SMTP**   
+### Port 25: SMTP
 	
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
 	
-**Port 389: LDAP**  
+### Port 389: LDAP 
 	
 	ldapsearch -h 127.0.0.1 -p 389 -x -s base
 	
-**Port 139, 445: SMB** 
-check for unauthenticated login, enum with smbmap 
+### Port 139, 445: SMB 
+	
+Can I...
+Enum with smbmap, enum4linux, check for anon log in
 	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 	[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)  
 	
@@ -76,7 +105,8 @@ check for unauthenticated login, enum with smbmap
     /usr/bin/smbclient \\\\<IP>\\share <HOST>  
     smbmap -H 127.0.0.1 -u username -p password   	
 	
-**Port 2049: NFS**  
+### Port 2049: NFS 
+	
 	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
 	[No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)
 	
