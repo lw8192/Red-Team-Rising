@@ -7,13 +7,14 @@ Windows AMSI (Anti Malware Scan Interface): evals commands at runtime, scans scr
  AV agnostic: API any anti-virus product can use. "Identify fileless threats - at runtime most of obfuscation is removed" defeat: obfuscate code. 
 
 
-https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
-
-## Tools  
+## Tools     
+Testing: [Windows developer iso](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)  
 [Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
 [Invoke-bfuscation Usage Guide](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide)  
 https://github.com/tokyoneon/Chimera ( bypassing AMSI and signature based detection )   
-https://github.com/persianhydra/Xeexe-TopAntivirusEvasion
+https://github.com/persianhydra/Xeexe-TopAntivirusEvasion   
+https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
+
 
 
 ## Commands 
