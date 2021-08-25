@@ -1,11 +1,17 @@
 # Cracking 
 ## References 
-[Cracking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes) 
-## Resources
+[Cracking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes)   
+## Tools
 Passwords, login pages, etc.
 [Ciphey](https://github.com/Ciphey/Ciphey)  
 [CyberChef](https://gchq.github.io/CyberChef/)  
-[Crackstation](https://crackstation.net/) 
+[Crackstation](https://crackstation.net/)   
+Hydra
+John the Ripper 
+Hashcat 
+## Wordlists   
+[Have I Been Pwned Passwords](https://haveibeenpwned.com/Passwords)   
+[Seclists](https://github.com/danielmiessler/SecLists)  
 
 ## Services   
 
