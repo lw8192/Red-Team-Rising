@@ -23,7 +23,7 @@ Turning off Windows Defender
 
     Set-MpPreference -DisableRealtimeMonitoring $true   
 
-Need to run Powershell as admin and reboot after running command to turn off Windows Defender: 
+Need to run Powershell as admin and reboot after running command to turn off Windows Defender indefinetly: 
 
     New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -name disableantispyware -value 1 -Force
 
