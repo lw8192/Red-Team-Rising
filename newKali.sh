@@ -11,11 +11,13 @@ python3 -m pip install pipx
 pipx ensurepath
 pipx install crackmapexec  
 
-#download foxy proxy 
+#download foxy proxy, user agent switcer and wapp analyzer 
 wget https://addons.mozilla.org/firefox/downloads/file/3616824/foxyproxy_standard-7.5.1-an+fx.xpi
 firefox ./foxyproxy_standard-7.5.1-an+fx.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/3769639/user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi
-./user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi
+firefox ./user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi  
+wget https://addons.mozilla.org/firefox/downloads/file/3819588/wappalyzer-6.7.13-fx.xpi 
+firefox wappalyzer-6.7.13-fx.xpi 
 
 #download shells
 mkdir /home/kali/shells
