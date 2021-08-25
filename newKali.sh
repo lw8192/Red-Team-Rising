@@ -5,7 +5,11 @@ wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmy
 apt-get install feroxbuster sshuttle chisel gobuster nikto
 python3 -m pip install pipx
 pipx ensurepath
-pipx install crackmapexec
+pipx install crackmapexec  
+
+#download foxy proxy 
+wget https://addons.mozilla.org/firefox/downloads/file/3616824/foxyproxy_standard-7.5.1-an+fx.xpi
+firefox ./foxyproxy_standard-7.5.1-an+fx.xpi
 
 #download shells
 mkdir /home/kali/shells
