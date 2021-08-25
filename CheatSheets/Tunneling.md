@@ -18,7 +18,8 @@
 
 
  ## Chisel 
-[Chisel](https://github.com/jpillora/chisel) 
+[Chisel](https://github.com/jpillora/chisel)   
+[Pivoting with Chisel Guide](https://ap3x.github.io/posts/pivoting-with-chisel/)  
 Good for getting through firewalls, need correct copies of binaries on both target / attack box  
 Need to change /etc/proxychains4.conf socks4 to socks5 on attack box 
 ### Chisel socks Reverse Proxy 
