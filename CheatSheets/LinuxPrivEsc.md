@@ -204,7 +204,9 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
 ## Container Escapes 
 docker, lxd, 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
-[Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)  
+[Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)    
+[Docker for pen testers](https://blog.ropnop.com/docker-for-pentesters/)   
+
 
     docker ps -a 
 
