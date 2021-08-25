@@ -21,7 +21,7 @@ rdp
 # Cracking Offline Passwords  
 [Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes      
 [Name That Hash](https://nth.skerritt.blog/)   
-[Search that Hash](https://github.com/HashPals/Search-That-Hash)  
+[Search that Hash](https://github.com/HashPals/Search-That-Hash) , [Colab STH](https://github.com/vaishnavpardhi/colabsth/)  
  
     hash-identifier [hash]     
 
