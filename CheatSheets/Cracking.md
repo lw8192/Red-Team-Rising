@@ -65,7 +65,8 @@ DICTIONARY + RULES ATTACK
     
 COMBINATION ATTACK
 
-   hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt 
+    hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt 
+   
    
 
 ### Mask Attack
