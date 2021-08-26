@@ -68,18 +68,17 @@ COMBINATION ATTACK
     hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt 
    
    
-
 ### Mask Attack
 
-   hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a
+    hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a
 
 HYBRID DICTIONARY + MASK
 
-   hashcat -a 6 -m #type hash.txt wordlist.txt ?a?a?a?a
+    hashcat -a 6 -m #type hash.txt wordlist.txt ?a?a?a?a
 
 HYBRID MASK + DICTIONARY
 
-   hashcat -a 7 -m #type hash.txt ?a?a?a?a wordlist.txt  
+    hashcat -a 7 -m #type hash.txt ?a?a?a?a wordlist.txt  
    
 
 ### Increment
