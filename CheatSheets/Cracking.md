@@ -62,7 +62,7 @@ DICTIONARY + RULES ATTACK
 
     hashcat -a 0 -m #type hash.txt wordlist.txt -r rule.txt  
     
-
+    
 COMBINATION ATTACK
 
    hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt 
