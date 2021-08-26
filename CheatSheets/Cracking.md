@@ -92,9 +92,11 @@ Increment Minimum Length
     hashcat -a 3 -m #type hash.txt ?a?a?a?a?a --increment-min=4
 
 Increment Max Lenth
+
     hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a --increment-max=5
 
 Session Restore 
+
     hashcat -a 0 -m #type --restore --session <uniq_name> hash.txt wordlist.txt
 
 
