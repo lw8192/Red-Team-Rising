@@ -30,6 +30,7 @@ rdp
 
 ### Misc Crackers  
 wpscan: crack wordpress logins 
+[pwn Jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins): crack Jenkins service  
 
 # Cracking Offline Passwords  
 [Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes      
