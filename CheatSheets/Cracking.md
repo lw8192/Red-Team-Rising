@@ -48,13 +48,13 @@ Large wordlist - use google colab projects: [colabcat](https://github.com/somesh
 [One rule to rule them all](https://github.com/NotSoSecure/password_cracking_rules)  
 
     hashcat -m [mode] hashes wordlist   
-### Benchmark Test (HASH Type)
+### Benchmark Test (Hash Type)
 
     hashcat -b -m #type
 ### Show Example Hash 
 
     hashcat -m #type --example-hashes
-### DICTIONARY ATTACK
+### Dictionary Attack
 
     hashcat -a 0 -m #type hash.txt dict.txt
 
