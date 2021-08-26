@@ -64,7 +64,8 @@ DICTIONARY + RULES ATTACK
 
 COMBINATION ATTACK
 
-   hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt
+   hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt 
+   
 
 ### Mask Attack
 
@@ -76,7 +77,8 @@ HYBRID DICTIONARY + MASK
 
 HYBRID MASK + DICTIONARY
 
-   hashcat -a 7 -m #type hash.txt ?a?a?a?a dict.txt
+   hashcat -a 7 -m #type hash.txt ?a?a?a?a wordlist.txt  
+   
 
 ### Increment
 
@@ -92,7 +94,7 @@ Increment Max Lenth
     hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a --increment-max=5
 
 Session Restore 
-    hashcat -a 0 -m #type --restore --session <uniq_name> hash.txt dict.txt
+    hashcat -a 0 -m #type --restore --session <uniq_name> hash.txt wordlist.txt
 
 
 ### Cracking krb5ts Keys
