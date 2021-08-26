@@ -19,7 +19,8 @@ Make your own wordlist: [Crunch](https://sourceforge.net/projects/crunch-wordlis
 # Cracking Services   
 
 ### Hydra
-ftp, ssh, http-post, http-get
+ftp, ssh, http-post, http-get 
+
     hydra -e nsr -l username -P wordlist 10.10.10.10 service   
     -e nsr: tries no pass, same pass as usernames, passwords as backwords username  
     hydra -L user.txt -P wordlist.txt 10.10.10.10 http-get /directory  
