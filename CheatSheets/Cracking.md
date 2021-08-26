@@ -28,6 +28,9 @@ ftp, ssh, http-post, http-get
 ### Crowbar 
 rdp  
 
+### Misc Crackers  
+wpscan: crack wordpress logins 
+
 # Cracking Offline Passwords  
 [Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes      
 [Name That Hash](https://nth.skerritt.blog/)   
