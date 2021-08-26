@@ -28,25 +28,84 @@ ftp, ssh, http-post, http-get
 ### Crowbar 
 rdp  
 
-### Misc Crackers  
+### Misc Service Crackers  
 wpscan: crack wordpress logins 
 [pwn Jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins): crack Jenkins service  
+
 
 # Cracking Offline Passwords  
 [Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes      
 [Name That Hash](https://nth.skerritt.blog/)   
-[Search that Hash](https://github.com/HashPals/Search-That-Hash) , [Colab STH](https://github.com/vaishnavpardhi/colabsth/)  
+[Search that Hash](https://github.com/HashPals/Search-That-Hash)
  
     hash-identifier [hash]     
 
-### John 
-    john --wordlist=/usr/share/wordlists/rockyou.txt shadow 
-    
-    
-
-### Hashcat  
-[One rule to rule them all](https://github.com/NotSoSecure/password_cracking_rules)  
-
-    hashcat -m [mode] hashes wordlist    
 
 Large wordlist - use google colab projects: [colabcat](https://github.com/someshkar/colabcat) or [colabsth](https://github.com/vaishnavpardhi/colabsth/) 
+ 
+ 
+## Hashcat 
+[One rule to rule them all](https://github.com/NotSoSecure/password_cracking_rules)  
+
+    hashcat -m [mode] hashes wordlist   
+### Benchmark Test (HASH Type)
+
+    hashcat -b -m #type
+### Show Example Hash 
+
+    hashcat -m #type --example-hashes
+### DICTIONARY ATTACK
+
+    hashcat -a 0 -m #type hash.txt dict.txt
+
+DICTIONARY + RULES ATTACK
+
+    hashcat -a 0 -m #type hash.txt wordlist.txt -r rule.txt
+
+COMBINATION ATTACK
+
+   hashcat -a 1 -m #type hash.txt wordlist1.txt wordlist2.txt
+
+### Mask Attack
+
+   hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a
+
+HYBRID DICTIONARY + MASK
+
+   hashcat -a 6 -m #type hash.txt wordlist.txt ?a?a?a?a
+
+HYBRID MASK + DICTIONARY
+
+   hashcat -a 7 -m #type hash.txt ?a?a?a?a dict.txt
+
+### Increment
+
+Default Increment
+
+    hashcat -a 3 -m #type hash.txt ?a?a?a?a?a --increment
+
+Increment Minimum Length
+
+    hashcat -a 3 -m #type hash.txt ?a?a?a?a?a --increment-min=4
+
+Increment Max Lenth
+    hashcat -a 3 -m #type hash.txt ?a?a?a?a?a?a --increment-max=5
+
+Session Restore 
+    hashcat -a 0 -m #type --restore --session <uniq_name> hash.txt dict.txt
+
+
+### Cracking krb5ts Keys
+
+    hashcat -m 13100 --force <TGSs_file> <passwords_file>
+
+### Cracking Asrep keys
+
+    hashcat -a 0 -m 18200 <asrep_file> <password_file> 
+
+    
+    
+
+## John   
+ 
+
