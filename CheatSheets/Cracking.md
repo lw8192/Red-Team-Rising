@@ -60,7 +60,8 @@ Large wordlist - use google colab projects: [colabcat](https://github.com/somesh
 
 DICTIONARY + RULES ATTACK
 
-    hashcat -a 0 -m #type hash.txt wordlist.txt -r rule.txt
+    hashcat -a 0 -m #type hash.txt wordlist.txt -r rule.txt  
+    
 
 COMBINATION ATTACK
 
