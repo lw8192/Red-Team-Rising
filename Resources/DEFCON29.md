@@ -9,6 +9,7 @@ https://media.blueteamvillage.org/Workshops/   (Malware Analysis workshop and ot
 https://labs.iotvillage.org/  (Quick online labs) 
 https://samsclass.info/workshops.htm (Collection of free workshops)   
 https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation (Beginners Guide to Obfuscation on Windows)   
+[https://www.blackhillsinfosec.com/webcast-no-span-port-no-tap-no-problem/](No Port, No Span, No Problem) and [Guide](https://github.com/straysheep-dev/network-visibility)   
 
 ## Talks
 https://www.youtube.com/user/DEFCONConference    
