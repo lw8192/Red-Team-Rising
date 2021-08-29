@@ -4,6 +4,7 @@ Remember to check for AV before uploading common payloads!
 - [ ] Web Shells 
 - [ ] Reverse Shell Commands 
 - [ ] Antivirus evasion 
+
 ## Test Connection with ping  
     tcpdump -i [interface] icmp   
     ping 127.0.0.1 
@@ -37,3 +38,8 @@ Perl
 [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
 
 [Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807) 
+
+
+## Resources  
+https://github.com/d4t4s3c/Reverse-Shell-Cheat-Sheet
+
