@@ -138,8 +138,8 @@ Impacket:
 
 ### Port 2049: NFS 
 	
-	[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
-	[No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)
+[Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
+[No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)
 	
     showmount -e 127.0.0.1
     mkdir /mnt/share   
