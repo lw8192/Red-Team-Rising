@@ -54,6 +54,11 @@ Dierce, DNSenum, DNSrecon <-automated tools
     nmap -v -s 192.168.0.0/24   
     nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt         
 
+### NetDiscover (ARP Scanning):
+
+    netdiscover -i eth0
+    netdiscover -r 172.21.10.0/24
+
 ## Host enum 
 **Identify os, services/ports/versions. Save results to text files. **   
 
