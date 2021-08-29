@@ -25,6 +25,9 @@ ftp, ssh, http-post, http-get
     -e nsr: tries no pass, same pass as usernames, passwords as backwords username  
     hydra -L user.txt -P wordlist.txt 10.10.10.10 http-get /directory  
     
+http-post
+
+    intercept request in burp - see body. No response - :S=302
 ### Crowbar 
 rdp  
 
