@@ -150,4 +150,6 @@ Impacket:
     mkdir /mnt/share   
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
-
+### Port 3306: MySQL
+	
+	mysql -h 10.10.10.10 -u root -p
