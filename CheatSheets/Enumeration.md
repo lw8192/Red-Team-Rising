@@ -109,7 +109,9 @@ Access with smbclient or rpcclient
     smbclient -L 10.10.10.10  
     smbclient -U <HOST> -L 10.10.10.10
     smbclient \\\\10.10.10.10\\share  
-    rpcclient -U "" -N 10.10.10.10 enumdomusers
+
+# if getting error "protocol negotiation failed: NT_STATUS_CONNECTION_DISCONNECTED or box in running SMB1"	
+    smbclient -L //10.10.10.3/ --option='client min protocol=NT1'
 	
 smbmap: 
 	
