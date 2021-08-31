@@ -101,8 +101,11 @@ Can I ...
 	
 Can I...
 Enum with smbmap, enum4linux, nmap, crackmapexec, check for anon log in
-	[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
-	[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)  
+[Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
+[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
+	
+    SAMBA 3.x-4.x #  vulnerable to linux/samba/is_known_pipename
+    SAMBA 3.5.11 # vulnerable to linux/samba/is_known_pipename
 
 Access with smbclient or rpcclient
 	
