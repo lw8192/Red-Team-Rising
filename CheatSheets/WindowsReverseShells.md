@@ -37,6 +37,7 @@ Bind shell (run on Windows then connect from Kali)
     
 ### Powercat 
 Powershell version of netcat 
+[Powercat](https://github.com/besimorhino/powercat)  
 
 
 ### Socat 
