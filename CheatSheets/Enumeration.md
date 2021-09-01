@@ -113,7 +113,7 @@ Access with smbclient or rpcclient
     smbclient -U <HOST> -L 10.10.10.10
     smbclient \\\\10.10.10.10\\share  
 
-# if getting error "protocol negotiation failed: NT_STATUS_CONNECTION_DISCONNECTED or box in running SMB1"	
+if getting error "protocol negotiation failed: NT_STATUS_CONNECTION_DISCONNECTED or box in running SMB1	
     smbclient -L //10.10.10.3/ --option='client min protocol=NT1'
 	
 smbmap: 
