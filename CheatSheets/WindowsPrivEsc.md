@@ -285,6 +285,7 @@ ____
 ____ 
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
+ [Reference - Exfil Files from Windows Manually](https://isroot.nl/2018/07/09/post-exploitation-file-transfers-on-windows-the-manual-way/)  
  Enabled WinRm as Administrator to use evil-winrm  
  
      WinRM quickconfig       
