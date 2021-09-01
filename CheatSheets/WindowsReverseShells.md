@@ -42,7 +42,8 @@ Powershell version of netcat
 [Powercat](https://github.com/besimorhino/powercat)  
 
 
-### Socat 
+### Socat   
+[reference](https://erev0s.com/blog/encrypted-bind-and-reverse-shells-socat/)   
 cmd.exe,pipes
 
 ### Python  
