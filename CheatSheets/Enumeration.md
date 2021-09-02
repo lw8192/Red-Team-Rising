@@ -63,8 +63,8 @@ Dierce, DNSenum, DNSrecon <-automated tools
 **Identify os, services/ports/versions. Save results to text files. **   
 
     autorecon 127.0.0.1 --only-scans-dir -v      
-    nmap -A -T 4 -vv 127.0.0.1    
-    nmap -sV -p- --min-rate 200 -vv 127.0.0.1     
+    nmap -A -sV -T 4 -vv 127.0.0.1    
+    nmap -sV -sT -p- --min-rate 200 -vv 127.0.0.1     
 
     nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
 
