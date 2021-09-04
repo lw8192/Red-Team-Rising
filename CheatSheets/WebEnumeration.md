@@ -33,6 +33,11 @@ Wordpress: wpscan
 
 Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
 
+Tomcat (usually port 8080, /manager) 
+
+    default creds tomcat:s3cret
+    generate war reverse shell, upload and deploy 
+
 
 ## Login pages   
 	
