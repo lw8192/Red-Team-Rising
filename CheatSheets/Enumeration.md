@@ -50,7 +50,7 @@ Dierce, DNSenum, DNSrecon <-automated tools
     dig -t any <DOMAIN>
     
 ## Network Enum:  
-    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
+    for x in {1..254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
     nmap -v -s 192.168.0.0/24   
     nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt         
 
