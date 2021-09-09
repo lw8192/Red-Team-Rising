@@ -19,6 +19,7 @@ Make your own wordlist: [Crunch](https://sourceforge.net/projects/crunch-wordlis
 # Cracking Services   
 
 ### Hydra
+[Brute Force Login Pages with Hydra](https://infinitelogins.com/2020/02/22/how-to-brute-force-websites-using-hydra/)   
 ftp, ssh, http-post, http-get 
 
     hydra -e nsr -l username -P wordlist 10.10.10.10 service   
