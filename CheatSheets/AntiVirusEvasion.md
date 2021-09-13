@@ -8,7 +8,8 @@ Windows AMSI (Anti Malware Scan Interface): evals commands at runtime, scans scr
 
 
 ## Tools     
-Testing: [Windows developer iso](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)  
+Testing: [Windows 10 developer iso](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)  
+[Other Windows iso files](https://the-eye.eu/public/) 
 
 [Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
 [Invoke-bfuscation Usage Guide](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide)  
