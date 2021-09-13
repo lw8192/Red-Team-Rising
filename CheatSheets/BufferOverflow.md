@@ -26,6 +26,7 @@ https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Resources/BufferOverflowResou
 * http://www.voidcn.com/article/p-ulyzzbfx-z.html
 * https://www.securitysift.com/windows-exploit-development-part-4-locating-shellcode-jumps/
 * https://medium.com/@johntroony/a-practical-overview-of-stack-based-buffer-overflow-7572eaaa4982
+* https://strongcourage.github.io/2020/04/19/bof.html  
 
 
 Immunity Debugger
