@@ -158,4 +158,9 @@ Impacket:
 	
 ### Port 3306: MySQL
 	
-	mysql -h 10.10.10.10 -u root -p
+	mysql -h 10.10.10.10 -u root -p   
+	
+	
+## Resources  
+http://www.0daysecurity.com/penetration-testing/enumeration.html
+Backup Link: https://web.archive.org/web/20201122081447/http://www.0daysecurity.com/penetration-testing/enumeration.html
