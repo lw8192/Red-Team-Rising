@@ -138,8 +138,7 @@ Using error-bases DB enumeration
     Enumerate columns  
     
 Using order by
-
-    https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html​
+https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
 
 	 
  
