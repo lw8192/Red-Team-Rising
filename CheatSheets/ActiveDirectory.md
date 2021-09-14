@@ -66,7 +66,8 @@ on victim, transfer file then import into Bloodhound and run queries
 
 [Online Password Cracker - Crackstation](https://crackstation.net/)   
     
-
+# Resources
+[Understanding Windows Lateral Movement](https://attl4s.github.io/assets/pdf/Understanding_Windows_Lateral_Movements.pdf)  
 
 
 
