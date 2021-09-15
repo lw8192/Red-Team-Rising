@@ -15,14 +15,14 @@ Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTh
 [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
 ## Scan for sub directories and pages	
 ### Wordlists 
-Common Wordlists to use for Web Directory Scanning: 
+Common wordlists to use for web directory scanning: 
 
     /usr/share/wordlists/dirb/common.txt
     /usr/share/wordlists/dirbuster/*.txt
     /usr/share/wordlists/wfuzz/general/*.txt
     /usr/share/seclists/Discovery/Web-Content/
 
-Common Wordlists to use for User Enumeration Scanning: 
+Common wordlists to use for user enumeration scanning: 
 
     /usr/share/seclists/Usernames
     /usr/share/wordlists/dirbuster/apache-user-enum-2.0
