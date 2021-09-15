@@ -17,7 +17,24 @@
   * [SSH (Window 10 and newer)](#ssh--window-10-and-newer-)
   * [Plink.exe](#plinkexe)
 
+## SSH 
+### Local Tunnels 
+Local tunnel from Kali attack box through a pivot to a service on target 
 
+    ssh -p <port> user@pivot -L <local port on attack box>:<target host>:<target port> 
+    
+### Remote Tunnels
+Remote tunnel to Kali through a pivot from target (may need to join tunnels depending on config)  
+
+    ssh -R <Kali port>:localhost:<target port> user@<pivot ip> 
+### Dynamic Tunnels 
+To scan through a tunnel
+
+    ssh -D 9050 user@localhost -p <port on kali used for tunnel> 
+
+Then running scans through proxychains 
+
+    proxychains nmap -sV <target> 
  ## Chisel 
 [Chisel](https://github.com/jpillora/chisel)   
 [Pivoting with Chisel Guide](https://ap3x.github.io/posts/pivoting-with-chisel/)  
