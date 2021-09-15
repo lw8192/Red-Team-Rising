@@ -13,9 +13,21 @@ HTTP and HTTPS Checklist
 
 Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
 [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
-**Scan for sub directories and pages** 	
-	
-	
+## Scan for sub directories and pages** 	
+### Wordlists 
+Common Wordlists to use for Web Directory Scanning: 
+
+    /usr/share/wordlists/dirb/common.txt
+    /usr/share/wordlists/dirbuster/*.txt
+    /usr/share/wordlists/wfuzz/general/*.txt
+    /usr/share/seclists/Discovery/Web-Content/
+
+Common Wordlists to use for User Enumeration Scanning: 
+
+    /usr/share/seclists/Usernames
+    /usr/share/wordlists/dirbuster/apache-user-enum-2.0
+### Scanning Tools
+
     nmap http scripts     
     nikto -h http://127.0.0.1:80/     
     dirb http://127.0.0.1/   (default word list: common.txt)     
