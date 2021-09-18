@@ -88,16 +88,18 @@ Can I ...
 	nmap -sV -Pn -vv -p 21 --script=ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221     
     hydra -C ftp/usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt -u 127.0.0.1 ftp    
 	
-### Port 25: SMTP
+### TCP Port 25: SMTP
 	
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
+
+### TCP POrt 88: Kerberos
+see active directory cheatsheet
 	
-### Port 389: LDAP 
+### TCP Port 389: LDAP 
+see Active Directory Cheat Sheet 
 	
-	ldapsearch -h 127.0.0.1 -p 389 -x -s base
-	
-### Port 139, 445: SMB 
+### TCP Port 445: SMB 
 	
 Can I...
 Enum with smbmap, enum4linux, nmap, crackmapexec, check for anon log in
@@ -147,7 +149,7 @@ Impacket:
      python3 samdump.py SMB 172.21.0.0
 
 
-### Port 2049: NFS 
+### TCP Port 2049: NFS 
 	
 [Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
 [No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)
@@ -156,9 +158,67 @@ Impacket:
     mkdir /mnt/share   
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
-### Port 3306: MySQL
+### TCP Port 3306: MySQL
 	
 	mysql -h 10.10.10.10 -u root -p   
+	
+### UDP Port 161: SNMP 
+	
+SNMP Walk: 
+
+    snmpwalk -c public -v1 ipaddress 1
+    snmpwalk -c private -v1 ipaddress 1
+    snmpwalk -c manager -v1 ipaddress 1
+
+Nmap: 
+
+    nmap 172.21.0.0 -Pn -sU -p 161 --script=
+
+	/usr/share/nmap/scripts/snmp-brute.nse
+	/usr/share/nmap/scripts/snmp-hh3c-logins.nse
+	/usr/share/nmap/scripts/snmp-info.nse
+	/usr/share/nmap/scripts/snmp-interfaces.nse
+	/usr/share/nmap/scripts/snmp-ios-config.nse
+	/usr/share/nmap/scripts/snmp-netstat.nse
+	/usr/share/nmap/scripts/snmp-processes.nse
+	/usr/share/nmap/scripts/snmp-sysdescr.nse
+	/usr/share/nmap/scripts/snmp-win32-services.nse
+	/usr/share/nmap/scripts/snmp-win32-shares.nse
+	/usr/share/nmap/scripts/snmp-win32-software.nse
+	/usr/share/nmap/scripts/snmp-win32-users.nse
+
+Metasploit aux modules: 
+
+ 	auxiliary/scanner/misc/oki_scanner                                    
+ 	auxiliary/scanner/snmp/aix_version                                   
+ 	auxiliary/scanner/snmp/arris_dg950                                   
+ 	auxiliary/scanner/snmp/brocade_enumhash                               
+ 	auxiliary/scanner/snmp/cisco_config_tftp                               
+ 	auxiliary/scanner/snmp/cisco_upload_file                              
+ 	auxiliary/scanner/snmp/cnpilot_r_snmp_loot                             
+ 	auxiliary/scanner/snmp/epmp1000_snmp_loot                             
+ 	auxiliary/scanner/snmp/netopia_enum                                    
+ 	auxiliary/scanner/snmp/sbg6580_enum                                 
+ 	auxiliary/scanner/snmp/snmp_enum                                 
+ 	auxiliary/scanner/snmp/snmp_enum_hp_laserjet                           
+ 	auxiliary/scanner/snmp/snmp_enumshares                                
+ 	auxiliary/scanner/snmp/snmp_enumusers                                 
+ 	auxiliary/scanner/snmp/snmp_login                                     
+
+
+Onesixtyone: 
+
+- onesixtyone -c /usr/share/doc/onesixtyone/dict.txt 172.21.0.X
+
+Snmp-check
+
+
+- snmp-check 172.21.0.0 -c public
+
+
+Impacket: 
+
+- python3 samdump.py SNMP 172.21.0.0
 	
 	
 ## Resources  
