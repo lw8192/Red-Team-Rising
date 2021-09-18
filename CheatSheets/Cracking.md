@@ -17,8 +17,12 @@ Passwords, login pages, etc.
 Make your own wordlist: [Crunch](https://sourceforge.net/projects/crunch-wordlist/)  [Cewl](https://github.com/digininja/cewl)  
 
 # Cracking Services   
+## Default Credentials
+    Check Web Enumeration checklist for default CMS creds
+    https://cirt.net/passwords
+    https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials
 
-### Hydra
+## Hydra
 [Brute Force Login Pages with Hydra](https://infinitelogins.com/2020/02/22/how-to-brute-force-websites-using-hydra/)   
 ftp, ssh, http-post, http-get 
 
@@ -31,11 +35,11 @@ http-post
     intercept request in burp - see body. No response - :S=302    
     hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
     
-### RDP with Crowbar 
+## RDP with Crowbar 
 
     crowbar -b rdp -s 10.10.10.10 -u admin -C rockyou.txt -n 1
     
-### Misc Service Crackers  
+## Misc Service Crackers  
 wpscan: crack wordpress logins 
 [pwn Jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins): crack Jenkins service  
 
