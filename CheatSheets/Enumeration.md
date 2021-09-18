@@ -2,18 +2,24 @@
 
 ## Contents 
 - [Enumeration Quick Reference](#enumeration-quick-reference)
+  * [Contents](#contents)
   * [Checklist](#checklist)
   * [Recon](#recon)
     + [OSINT](#osint)
     + [DNS Look Up](#dns-look-up)
   * [Network Enum:](#network-enum-)
+    + [NetDiscover (ARP Scanning):](#netdiscover--arp-scanning--)
   * [Host enum](#host-enum)
   * [Service Enum](#service-enum)
-    + [Port 21: FTP](#port-21--ftp)
-    + [Port 25: SMTP](#port-25--smtp)
-    + [Port 389: LDAP](#port-389--ldap)
-    + [Port 139, 445: SMB](#port-139--445--smb)
-    + [Port 2049: NFS](#port-2049--nfs)
+    + [TCP Port 21: FTP](#port-21--ftp)
+    + [TCP Port 25: SMTP](#tcp-port-25--smtp)
+    + [TCP Port 88: Kerberos](#tcp-port-88--kerberos)
+    + [TCP Port 389: LDAP](#tcp-port-389--ldap)
+    + [TCP Port 445: SMB](#tcp-port-445--smb)
+    + [TCP Port 2049: NFS](#tcp-port-2049--nfs)
+    + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)
+    + [UDP Port 161: SNMP](#udp-port-161--snmp)
+  * [Resources](#resources)
 
 
 ## Checklist   
@@ -73,7 +79,7 @@ Dierce, DNSenum, DNSrecon <-automated tools
 nmap scripts: /usr/share/nmap/scripts   
 nmap --script <name>    --script-help 
 	
-### Port 21: FTP 
+### TCP Port 21: FTP 
 	
 [Enumerating ftp](https://book.hacktricks.xyz/pentesting/pentesting-ftp)   
 Can I ...
@@ -93,7 +99,7 @@ Can I ...
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
 
-### TCP POrt 88: Kerberos
+### TCP Port 88: Kerberos
 see active directory cheatsheet
 	
 ### TCP Port 389: LDAP 
@@ -208,17 +214,17 @@ Metasploit aux modules:
 
 Onesixtyone: 
 
-- onesixtyone -c /usr/share/doc/onesixtyone/dict.txt 172.21.0.X
+	onesixtyone -c /usr/share/doc/onesixtyone/dict.txt 172.21.0.X
 
 Snmp-check
 
 
-- snmp-check 172.21.0.0 -c public
+	snmp-check 172.21.0.0 -c public
 
 
 Impacket: 
 
-- python3 samdump.py SNMP 172.21.0.0
+	python3 samdump.py SNMP 172.21.0.0
 	
 	
 ## Resources  
