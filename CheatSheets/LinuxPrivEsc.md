@@ -1,9 +1,51 @@
   
 # Linux Host Enumeration   
 ## Contents 
+- [Linux Host Enumeration](#linux-host-enumeration)
+  * [Contents](#contents)
+  * [Checklist](#checklist)
+  * [Upgrade to a fully functional TTY](#upgrade-to-a-fully-functional-tty)
+    + [Check](#check)
+    + [Upgrade](#upgrade)
+  * [Quick Enumeration Commands](#quick-enumeration-commands)
+    + [Important Files to Check](#important-files-to-check)
+  * [File Transfer](#file-transfer)
+  * [Scripts](#scripts)
+    + [General Linux Enum](#general-linux-enum)
+    + [Specialized Scripts](#specialized-scripts)
+  * [Sudo exploits](#sudo-exploits)
+  * [Sudo LD_PRELOAD](#sudo-ld-preload)
+  * [CVE-2019-14287](#cve-2019-14287)
+  * [CVE-2019-16634 Buffer Overflow](#cve-2019-16634-buffer-overflow)
+  * [CVE-2021-3156 - Baron Samedit Heap Buffer Overflow](#cve-2021-3156---baron-samedit-heap-buffer-overflow)
+  * [Misc sudo binaries](#misc-sudo-binaries)
+  * [Cronjobs](#cronjobs)
+  * [PATH variable](#path-variable)
+    + [Rootbash script](#rootbash-script)
+    + [Wildcards](#wildcards)
+  * [SUID Binaries](#suid-binaries)
+    + [Custom Executable](#custom-executable)
+    + [Shared Object Injection](#shared-object-injection)
+    + [PATH Enviromental Variables](#path-enviromental-variables)
+    + [SUID Binary Function Replace](#suid-binary-function-replace)
+    + [Misc SUID binaries](#misc-suid-binaries)
+  * [Services Running as Root / Services Only Running Locally](#services-running-as-root---services-only-running-locally)
+  * [Passwords / config files](#passwords---config-files)
+    + [SSH Keys](#ssh-keys)
+  * [Capabilities](#capabilities)
+  * [Container Escapes](#container-escapes)
+  * [NFS No Root Squashing](#nfs-no-root-squashing)
+  * [Sequoia (CVE-2021-33909)](#sequoia--cve-2021-33909-)
+  * [Kernel Exploits](#kernel-exploits)
+    + [Cross compile](#cross-compile)
+  * [Further Access into a Network](#further-access-into-a-network)
+    + [Network Enumeration](#network-enumeration)
+- [Resources](#resources)
+  * [Learn More](#learn-more)
 
 
-## Checklists / What to look for
+
+## Checklist
 - [ ] Get a fully functional TTY  
 - [ ] General host enum 
 - [ ] Transfer files and run scripts 
@@ -27,6 +69,7 @@
 ## Upgrade to a fully functional TTY 
 ### Check 
     if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi 
+    
 ### Upgrade 
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash') 
