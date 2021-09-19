@@ -48,6 +48,7 @@ https://github.com/meirwah/awesome-incident-response
 https://www.dfir.training/      
 https://www.nextron-systems.com/2021/03/25/antivirus-event-analysis-cheat-sheet-v1-8/      
 https://github.com/fireeye/red_team_tool_countermeasures
+https://www.sans.org/tools/ez-tools/ 
 
 ## Bug Bounty    
 [Bug Bounty Basics](https://docs.google.com/presentation/d/1MWWXXRvvesWL8V-GiwGssvg4iDM58_RMeI_SZ65VXwQ/edit#slide=id.p)     
