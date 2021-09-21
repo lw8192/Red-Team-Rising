@@ -99,3 +99,19 @@ on victim, transfer file then import into Bloodhound and run queries
 [Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
 
 
+
+## Active Directory Enumeration | ATTL4S
+https://attl4s.github.io/assets/pdf/Understanding_Active_Directory_Enumeration.pdf
+
+## Adsecurity Blog
+https://adsecurity.org/
+
+## RedTeam Security Live Hacking Demonstration 
+https://www.youtube.com/watch?v=k6EOhO3JKCQ
+
+## Pentesting AD CheatSheet
+https://i.ibb.co/TKYNCNP/Pentest-ad.png
+
+
+## NetNTLMtoSilverTicket | NotMedic's Github
+https://github.com/NotMedic/NetNTLMtoSilverTicket
