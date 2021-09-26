@@ -59,6 +59,7 @@ Large wordlist - use google colab projects: [colabcat](https://github.com/somesh
 [One rule to rule them all](https://github.com/NotSoSecure/password_cracking_rules)  
 
     hashcat -m [mode] hashes wordlist   
+    
 ### Benchmark Test (Hash Type)
 
     hashcat -b -m #type
@@ -109,6 +110,8 @@ Increment Max Lenth
 Session Restore 
 
     hashcat -a 0 -m #type --restore --session <uniq_name> hash.txt wordlist.txt
+
+### Cracking /etc/passwd $6 
 
 
 ### Cracking krb5ts Keys
