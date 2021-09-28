@@ -21,6 +21,8 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 **CTFs**   
 https://academy.hackthebox.eu/  
 https://hackthebox.eu/  
+https://tryhackme.com/
+
 https://overthewire.org/wargames/  
 https://pwn.college/  
 https://picoctf.com/
