@@ -23,6 +23,7 @@ https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/
 https://www.offensive-security.com/offsec/powershell-obfuscation/       
 https://aptw.tf/2021/08/21/killing-defender.html  
 https://roberreigada.github.io/posts/playing_with_an_edr/  
+https://labs.f-secure.com/blog/bypassing-windows-defender-runtime-scanning/
 
 ## Videos 
 https://www.youtube.com/watch?v=F_BvtXzH4a4  
