@@ -32,7 +32,7 @@
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true   
-    
+
 ## Scripts 
 **You might want to check for AV first!**  
 
@@ -45,6 +45,15 @@
 [Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system
 
 [Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
+
+### Impacket 
+https://github.com/SecureAuthCorp/impacket
+
+    apt install impacket-scripts
+
+Local Locations:
+
+    /usr/share/doc/python3-impacket/examples
 
 ## Checklists    
 [HackTricks](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)  
