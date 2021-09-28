@@ -173,6 +173,7 @@ Possible misconfigurations and attack vectors
 **Powershell**  
 [PS 101](https://grimmie.net/ps-101-an-intro-to-powershell/)  
 [Learning Powershell](https://github.com/PowerShell/PowerShell/tree/master/docs/learning-powershell)  
+[Powershell for Pentesters Videos]( https://www.youtube.com/watch?v=_EXHGtaxDew)  
 **Assembly 101**    
 [Hacking the Metal: Intro to Assembly](https://github.com/eigentourist/defcon29) 
 Security Tube:  
@@ -186,8 +187,8 @@ Security Tube:
 [Modern Binary Exploitation](http://security.cs.rpi.edu/courses/binexp-spring2015/)  
 
 
-**Privilige Escalation**  
-Privilige Escalation     
+**Privilege Escalation**  
+Privilege Escalation     
 [This challenge was built to promote the Windows / Linux Local Privilege](https://github.com/sagishahar/challenges#k2)        
 [MySQL Root to System Root with lib_mysqludf_sys for Windows and Linux](https://www.adampalmer.me/iodigitalsec/2013/08/13/mysql-root-to-system-root-with-udf-for-windows-and-linux/)   
 
