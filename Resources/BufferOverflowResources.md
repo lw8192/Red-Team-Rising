@@ -15,6 +15,7 @@ http://0xdeadcode.se/archives/178 <-- minishare
 [PWK OSCP Stack Overflow Practice](https://www.vortex.id.au/2017/05/pwkoscp-stack-buffer-overflow-practice/)   
 [Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf)   
 [Identifying bad characters](https://www.ins1gn1a.com/identifying-bad-characters/)   
+[OSCP Buffer Overflows](https://strongcourage.github.io/2020/04/19/bof.html)  
 
 
 Examples: 
