@@ -136,8 +136,9 @@ Possible misconfigurations and attack vectors
 
 **Metasploit**   
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
-[Creating Metasploit Payloads](https://netsec.ws/?p=331)  )  
-[AV Evasion With Metasploit paper](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf/)  
+[Creating Metasploit Payloads](https://netsec.ws/?p=331)  
+[AV Evasion With Metasploit paper](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf/) [Porting Ruby to Python](https://ivanitlearning.wordpress.com/2019/09/01/rewriting-a-ruby-msf-exploit-in-python/)
+[Converting a Metasploit Module](https://www.shellcode.it/article/convert-msf-module/) 
 
 **Recon-NG**  
 [Recon cheat sheet](https://pentester.land/cheatsheets/2019/04/15/recon-resources.html) 
