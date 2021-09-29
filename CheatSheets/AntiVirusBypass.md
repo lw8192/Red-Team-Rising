@@ -1,21 +1,13 @@
 # AV Bypass
-## Notes 
-2 primary types:   
-
-on disk: file saved on target then executed 
-in memory: preferred for evasion, import script into memory and then executed.  
-
-Windows AMSI (Anti Malware Scan Interface): evaluates commands at runtime, scans scripts as they are imported into memory, makes evasion harder. VBA, Powershell, JavaScript. 
- AV agnostic: API any anti-virus product can use. "Identify fileless threats - at runtime most of obfuscation is removed" defeat: obfuscate code. 
-
 
 ## Tools     
 
 ### Veil Framework:
 
-Install on Kali: 
-- apt install veil
-- /usr/share/veil/config/setup.sh --force --silent
+Install on Kali
+
+    apt install veil
+    /usr/share/veil/config/setup.sh --force --silent
 
 Reference: https://github.com/Veil-Framework/Veil
 
