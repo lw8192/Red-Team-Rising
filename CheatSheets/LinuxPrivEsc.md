@@ -75,10 +75,10 @@
     echo os.system('/bin/bash') 
     /bin/sh -i 
     
-[Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst) 
-[Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells) 
-[Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf) 
-
+[Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst)  
+[Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells)   
+[Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)   
+ 
 
 ## Quick Enumeration Commands  
     hostname; ip addr;    
@@ -101,7 +101,10 @@
     
 ## Scripts   
 ### General Linux Enum 
-run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels, [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS), [linenum](https://github.com/rebootuser/LinEnum) 
+run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels
+[linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)
+[linenum](https://github.com/rebootuser/LinEnum) 
+[unix-privesc-cecker](https://github.com/pentestmonkey/unix-privesc-check) 
 ### Specialized Scripts 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [SUDO Killer: sudo exploits](https://github.com/TH3xACE/SUDO_KILLER)  
