@@ -39,14 +39,20 @@ Common wordlists to use for user enumeration scanning:
     wfuzz -c --hc=404 -R 2 -w /usr/share/dirb/wordlists/common.txt http://target/fuzz   
     
 Other Tools: 
-    Burp Suite
-    OWASP Zap
-    Cadaver
-    SQLMap
-    Joomscan
-    Feroxbuster	
+    Burp Suite 
+    OWASP Zap 
+    Cadaver 
+    SQLMap 
+    Joomscan 
+    Feroxbuster	 
+    
 	
 # Web app specific  
+### Default Creds 
+
+    https://cirt.net/passwords
+    https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials
+    
 ### Adobe Coldfusion 
 https://nets.ec/Coldfusion_hacking   
 https://www.drchaos.com/post/a-walk-down-adversary-lane-coldfusion-v8
