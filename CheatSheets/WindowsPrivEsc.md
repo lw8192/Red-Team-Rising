@@ -43,10 +43,6 @@
 [PrivEscCheck](https://github.com/itm4n/PrivescCheck)   
 [Windows Exploit Suggester (Next-Generation)](https://github.com/bitsadmin/wesng) 
 [Sherlock](https://github.com/rasta-mouse/Sherlock)
-- Powersploit: https://github.com/PowerShellMafia/PowerSploit
-- WinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS
-- PrivescCheck: https://github.com/itm4n/PrivescCheck 
-
 [Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system
 
 [Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
