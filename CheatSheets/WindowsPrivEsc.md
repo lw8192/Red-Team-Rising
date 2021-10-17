@@ -17,7 +17,14 @@
     netstat -ano    
     netsh firewall show state 
     netsh firewall show config
-    
+ 
+### Windows Kernel Versions 
+Kernel 6.1 - Windows 7 / Windows Server 2008 R2 
+Kernel 6.2 - Windows 8 / Windows Server 2012
+Kernel 6.3 - Windows 8.1 / Windows Server 2012 R2
+Kernel 10 - Windows 10 / Windows Server 2016 / Windows Server 2019 / Windows 11 / Windows Server 2022
+ 
+
 ### Important Files  
 
     %SYSTEMROOT%\System32\drivers\etc\hosts                   #local DNS entries 
