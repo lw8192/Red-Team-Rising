@@ -1,7 +1,21 @@
 # Active Directory Cheatsheet     
 ## Quick Commands  
 
-    net group /domain  
+    net users
+    net users /domain
+    net localgroup
+    net groups /domain
+    net groups /domain "Domain Admins"
+
+PowerShell Active Directory Module (on DC)
+
+    Get-ADUser
+    Get-Domain
+    Get-DomainUser
+    Get-DomainGroup
+    Get-DomainGroupMember -identity "Domain Admins" -Domain m0chanAD.local -DomainController 10.10.14.10
+    Find-DomainShare
+ 
 ### Files to Check  
     %SYSTEMROOT%\System32\ntds.dit             #AD database
     %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup 
