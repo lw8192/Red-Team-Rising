@@ -10,10 +10,9 @@
 PowerShell Active Directory Module (on DC)
 
     Get-ADUser
-    Get-Domain
-    Get-DomainUser
-    Get-DomainGroup
-    Get-DomainGroupMember -identity "Domain Admins" -Domain m0chanAD.local -DomainController 10.10.14.10
+    Get-ADDomain
+    Get-ADGroup
+    Get-ADGroupMember -identity "Domain Admins" -Domain test.local -DomainController 10.10.10.10
     Find-DomainShare
  
 ### Files to Check  
