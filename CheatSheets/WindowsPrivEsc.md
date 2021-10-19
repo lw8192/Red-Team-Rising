@@ -1,7 +1,7 @@
 # Quick Enum    
 ## Command line
     systeminfo 
-    whoami /priv
+    whoami /priv      
     ipconfig /all  
     route print  
     net users   
@@ -74,20 +74,21 @@ ____
 # Manual Enum 
 https://lolbas-project.github.io/#   
 
-## Privilige Exploits 
+## Privilege Exploits 
 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 
-    whoami /priv
-    SeImpersonatePrivilige -> PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
-    SeAssignPrimaryToken -> Juicy Potato 
-    SeTakeOwnership ->  become the owner of any object and modify the DACL to grant access.
+    whoami /priv running process, can enable for different process if user has priv
+    #State: disabled for running process, can enable for different process depending on access
+    SeImpersonatePrivilege -> PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
+    SeAssignPrimaryTokenPrivilege -> Juicy Potato 
+    SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
     If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
 
 ### PrintSpoofer 
-SeImpersonatePrivilige. Windows Server 2016, Server 2019, and Windows 10. 
+SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10. 
 [Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
 [Compiled exe](https://github.com/dievus/printspoofer)  
 
