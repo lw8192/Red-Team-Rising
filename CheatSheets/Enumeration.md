@@ -48,6 +48,7 @@
 ### DNS Look Up 
 whois, nslookup, dig, host <-manual tools   
 Dierce, DNSenum, DNSrecon <-automated tools  
+[DNSDumpster](https://dnsdumpster.com/) <- online tool
 
     nslookup -type=any <DOMAIN>   
     whois <DOMAIN> 
