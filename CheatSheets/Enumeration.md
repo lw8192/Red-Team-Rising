@@ -50,8 +50,10 @@ whois, nslookup, dig, host <-manual tools
 Dierce, DNSenum, DNSrecon <-automated tools  
 [DNSDumpster](https://dnsdumpster.com/) <- online tool
 
-    nslookup -type=any <DOMAIN>   
-    whois <DOMAIN> 
+    #Record types: MX - mail server, TXT - text, A 
+    
+    nslookup -type=any <DOMAIN>          
+    whois <DOMAIN>     
     host -t axfr -l <DOMAIN> <DNSSERVER>   
     dig -t mx <DOMAIN>  
     dig -t any <DOMAIN>
