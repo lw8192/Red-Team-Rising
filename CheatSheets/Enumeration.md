@@ -98,7 +98,9 @@ More scan types:
 ## Service Enum   
 
 nmap scripts: /usr/share/nmap/scripts   
-nmap --script <name>    --script-help 
+	
+    nmap --script <name>    --script-help 
+    -sV --version-intensity
 	
 ### TCP Port 21: FTP 
 	
