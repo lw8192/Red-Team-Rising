@@ -74,8 +74,26 @@ Dierce, DNSenum, DNSrecon <-automated tools
     autorecon 127.0.0.1 --only-scans-dir -v      
     nmap -A -sV -T 4 -vv 127.0.0.1    
     nmap -sV -sT -p- --min-rate 200 -vv 127.0.0.1     
+    
+    OSCP common scan types: -A, -sU, -sS, sV, 
+    debug: -vv, -d, --reason
 
     nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
+
+More scan types: 
+
+    -T0 or T1 (evade IDS or firewall detection)  
+    -sN (TCP NULL scan - no response if open or blocked by firewall)  
+    -sF (TCP FIN scan - no response if open or blocked by firewall)
+    -sX (TCP XMAS scan - FINE/PSH/URG - no response if open or blocked by firewall)
+    
+    -sA (TCP ACK scan - see what ports are not filtered by a firewall) 
+    -sW (TCP Window / ACK scan - what ports are not filtered 
+    --scanflags (custom scan)
+  
+   -S <spoof ip>, --spoof-mac <spoof MAC>, 
+   -D <decoy ip>, <own ip>
+   -sI <Zombie ip> 
 
 ## Service Enum   
 
