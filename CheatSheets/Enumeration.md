@@ -75,7 +75,7 @@ Dierce, DNSenum, DNSrecon <-automated tools
     nmap -A -sV -T 4 -vv 127.0.0.1    
     nmap -sV -sT -p- --min-rate 200 -vv 127.0.0.1     
     
-    OSCP common scan types: -A, -sU, -sS, sV, 
+    OSCP common scan types: -A, -sU, -sS, sV, -sC, -O
     debug: -vv, -d, --reason
 
     nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
@@ -98,7 +98,7 @@ More scan types:
 
 ## Service Enum   
 
-nmap scripts: /usr/share/nmap/scripts   
+nmap scripts: /usr/share/nmap/scripts, -sC, -sV 
 	
     nmap --script <name>    --script-help 
     -sV --version-intensity
