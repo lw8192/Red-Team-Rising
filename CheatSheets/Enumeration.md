@@ -99,9 +99,27 @@ More scan types:
 ## Service Enum   
 
 nmap scripts: /usr/share/nmap/scripts, -sC, -sV 
-	
+
     nmap --script <name>    --script-help 
     -sV --version-intensity
+    
+script categories: 
+
+    auth        Authentication related 
+    broadcast   Host Discovery thu broadcast scanning 
+    brute       Brute force login
+    default     Default scripts, same as -sC 
+    discovery   Enum info (ex. database tables and DNS names) 
+    dos 	Detects servers vulnerable to Denial of Service (DoS)
+    exploit 	Tries to exploit vulnerable services
+    external 	Uses third-party service (like Geoplugin and Virustotal) 
+    fuzzer 	Fuzzing attacks
+    intrusive 	Intrusive scripts (brute-force attacks and exploitation) 
+    malware 	Looks for backdoors
+    safe 	Won’t crash the target
+    version 	Retrieve service versions
+    vuln        Checks for vulnerabilities against database 
+	
 	
 ### TCP Port 21: FTP 
 	
