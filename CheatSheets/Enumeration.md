@@ -94,6 +94,7 @@ More scan types:
    -S <spoof ip>, --spoof-mac <spoof MAC>, 
    -D <decoy ip>, <own ip>
    -sI <Zombie ip> 
+   --traceroute 
 
 ## Service Enum   
 
