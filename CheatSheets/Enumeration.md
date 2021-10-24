@@ -91,10 +91,10 @@ More scan types:
     -sW (TCP Window / ACK scan - what ports are not filtered 
     --scanflags (custom scan)
   
-   -S <spoof ip>, --spoof-mac <spoof MAC>, 
-   -D <decoy ip>, <own ip>
-   -sI <Zombie ip> 
-   --traceroute 
+    -S <spoof ip>, --spoof-mac <spoof MAC>
+    -D <decoy ip>, <own ip> 
+    -sI <Zombie ip>  
+    --traceroute 
 
 ## Service Enum   
 
