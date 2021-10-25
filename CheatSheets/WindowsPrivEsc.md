@@ -295,7 +295,9 @@ ____
     arp -a  
     C:\Windows\System32\drivers\etc\host        Windows DNS entries  
  ____
- # Persistence
+ # Persistence 
+ Methods: registry keys, startup folders, scheduled tasks, WMI permanent events.
+ 
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
      net localgroup "Remote Management Users" USERNAME /add    
