@@ -271,6 +271,8 @@ Allows you to mount drive onto attack box, create a SUID binary that you can run
 
 
 ## Kernel Exploits 
+[Linux Kernel CVEs Site](https://www.linuxkernelcves.com/cves) 
+
     uname -a  
     cat /etc/*-release
     
