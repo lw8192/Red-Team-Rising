@@ -183,6 +183,9 @@ WAR
 ## Command Injection 
 [Payloads](https://github.com/payloadbox) 
 
+## XSS
+
+     <script>alert("XSS")</script>
 
 ## SQL Injection 
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
