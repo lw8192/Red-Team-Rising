@@ -83,7 +83,7 @@ Dierce, DNSenum, DNSrecon <-automated tools
 More scan types: 
 
     -T0 or T1 (evade IDS or firewall detection)  
-    -sN (TCP NULL scan - no response if open or blocked by firewall)  
+    -sN (TCP NULL scan - no response if open or blocked by firewall, stealthiest)  
     -sF (TCP FIN scan - no response if open or blocked by firewall)
     -sX (TCP XMAS scan - FINE/PSH/URG - no response if open or blocked by firewall)
     
@@ -95,6 +95,7 @@ More scan types:
     -D <decoy ip>, <own ip> 
     -sI <Zombie ip>  
     --traceroute 
+    -f   fragment packets
 
 ## Service Enum   
 
