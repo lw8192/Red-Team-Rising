@@ -44,6 +44,7 @@ systeminfo
 
 ## Scripts 
 **You might want to check for AV first!**  
+[Scripts Reference](https://www.hackingarticles.in/window-privilege-escalation-automated-script/) 
 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
 [nishang](https://github.com/samratashok/nishang)  
@@ -54,7 +55,7 @@ systeminfo
 [Sherlock](https://github.com/rasta-mouse/Sherlock)
 [Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system
 
-[Other scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
+[Compiled scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
 
 ### Impacket 
 https://github.com/SecureAuthCorp/impacket
