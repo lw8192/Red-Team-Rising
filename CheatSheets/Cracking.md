@@ -8,6 +8,7 @@ Passwords, login pages, etc.
 [CyberChef](https://gchq.github.io/CyberChef/)  
 
 ## Wordlists   
+
 [Seclists](https://github.com/danielmiessler/SecLists)   
 [Have I Been Pwned Passwords](https://haveibeenpwned.com/Passwords)   
 [Rainbow Crack, Rainbow Tables](http://project-rainbowcrack.com/table.htm)   
@@ -24,16 +25,17 @@ Make your own wordlist: [Crunch](https://sourceforge.net/projects/crunch-wordlis
 
 ## Hydra
 [Brute Force Login Pages with Hydra](https://infinitelogins.com/2020/02/22/how-to-brute-force-websites-using-hydra/)   
-ftp, ssh, http-post, http-get 
+[Brute Forcing Services with Hydra](https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/)  
+ftp, ssh, rdp, http-post, http-get 
 
-    hydra -e nsr -l username -P wordlist 10.10.10.10 service   
+    hydra -e nsr -l username -P wordlist 10.10.10.10 service -s [port if not default]     
     -e nsr: tries no pass, same pass as usernames, passwords as backwords username  
-    hydra -L user.txt -P wordlist.txt 10.10.10.10 http-get /directory  
+    hydra -L user.txt -P wordlist.txt 10.10.10.10 http-get /directory_path  
     
 http-post
 
     intercept request in burp - see body. No response - :S=302    
-    hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
+    hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN MSG" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
     
 ## RDP with Crowbar 
 
@@ -45,7 +47,9 @@ wpscan: crack wordpress logins
 
 
 # Cracking Offline Passwords  
-[Crackstation](https://crackstation.net/): try first esp. with NTLM / Windows hashes      
+[Crackstation](https://crackstation.net/): try first esp. with Windows hashes      
+Then hashcat with: darkweb2017 lists from SecLists, then rockyou.txt. 
+
 [Name That Hash](https://nth.skerritt.blog/)   
 [Search that Hash](https://github.com/HashPals/Search-That-Hash)
  
