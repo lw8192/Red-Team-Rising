@@ -40,6 +40,7 @@ PowerShell Active Directory Module (on DC)
 [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
 [Kerberos Tickets](https://www.optiv.com/insights/source-zero/blog/kerberos-domains-achilles-heel)   
 [Kerberos Cheat Sheet](https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a)  
+[How Kerberos Works](https://www.tarlogic.com/blog/how-kerberos-works/)  
 
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
