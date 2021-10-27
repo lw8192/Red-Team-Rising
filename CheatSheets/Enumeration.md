@@ -11,7 +11,7 @@
     + [NetDiscover (ARP Scanning):](#netdiscover--arp-scanning--)
   * [Host enum](#host-enum)
   * [Service Enum](#service-enum)
-    + [TCP Port 21: FTP](#port-21--ftp)
+    + [TCP Port 21: FTP](#tcp-port-21--ftp)
     + [TCP Port 25: SMTP](#tcp-port-25--smtp)
     + [TCP Port 88: Kerberos](#tcp-port-88--kerberos)
     + [TCP Port 389: LDAP](#tcp-port-389--ldap)
@@ -20,6 +20,7 @@
     + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)
     + [UDP Port 161: SNMP](#udp-port-161--snmp)
   * [Resources](#resources)
+
 
 
 ## Checklist   
