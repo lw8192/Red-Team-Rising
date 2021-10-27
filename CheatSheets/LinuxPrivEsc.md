@@ -44,7 +44,6 @@
   * [Learn More](#learn-more)
 
 
-
 ## Checklist
 - [ ] Get a fully functional TTY  
 - [ ] General host enum 
