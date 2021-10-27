@@ -119,6 +119,7 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V    
 ## Sudo LD_PRELOAD   
+[Reference](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) 
 sudo -l, see env_keep+=LD_PRELOAD. apache2
 
     #include <stdio.h> 
