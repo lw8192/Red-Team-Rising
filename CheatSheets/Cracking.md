@@ -35,7 +35,11 @@ ftp, ssh, rdp, http-post, http-get
 http-post
 
     intercept request in burp - see body. No response - :S=302    
-    hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN MSG" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
+    hydra 10.10.10.10 http-form-post "/index.php:user=admin&pass=^PASS^:INVALID LOGIN MSG" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f  
+    
+## Burp Suite 
+[Brute forcing web login pages with intruder](https://portswigger.net/support/using-burp-to-brute-force-a-login-page)  
+Look for change in status code or change in length of header
     
 ## RDP with Crowbar 
 
