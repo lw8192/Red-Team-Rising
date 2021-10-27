@@ -242,8 +242,34 @@ Mimikatz:
      
 
 ## Kernel exploits   
+Check system architechure:
+
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"     
+    
+Check for Hotfixes: 
     wmic qfe get Caption,Description,HotFixID,InstalledOn     
+    
+### Kernel Exploit Isn't Working
+[x32-bit vs x64-bit](https://spencerdodd.github.io/2017/07/20/WOW64/) 
+Check arch of running Powershell process (could get a 32 bit process on 64 bit machine if payload uses relative path)
+
+    #32 bit 
+    [IntPtr]::size -eq 4       
+    
+    #64 bit
+    [IntPtr]::size -eq 8
+    [Environment]::Is64BitProcess
+    
+Absolute PowerShell executable paths:
+
+    #32-bit (x86)
+    C:\Windows\SysWow64\WindowsPowerShell\v1.0\powershell.exe
+    C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+
+    #64-bit (x64) 
+    C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+    C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe
+    
 ### Tools
 https://github.com/bitsadmin/wesng   
 https://github.com/rasta-mouse/Watson   
