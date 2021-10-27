@@ -31,6 +31,7 @@
     + [Misc SUID binaries](#misc-suid-binaries)
   * [Services Running as Root / Services Only Running Locally](#services-running-as-root---services-only-running-locally)
   * [Passwords / config files](#passwords---config-files)
+    + [Writeable /etc/passwd or /etc/shadow](#writeable--etc-passwd-or--etc-shadow)
     + [SSH Keys](#ssh-keys)
   * [Capabilities](#capabilities)
   * [Container Escapes](#container-escapes)
