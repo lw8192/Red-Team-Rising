@@ -93,14 +93,19 @@ LFI
 
 ### Joomla 
 
-	admin page: /administrator
-	other pages: configuration.php, diagnostics.php, joomla.inc.php, config.inc.php
+    admin page: /administrator
+    other pages: configuration.php, diagnostics.php, joomla.inc.php, config.inc.php   
+    
+### PHPMyAdmin
+
+    Default password root:root, pma:
+    Brute force with Burp or phpmyadmin python script
 
 ### Tomcat 
 
     Usually port 8080, /manager
     default creds tomcat:s3cret
-    generate war reverse shell payload, upload and deploy 
+    generate WAR reverse shell payload, upload and deploy 
     
 ### Wordpress
 wpscan 
