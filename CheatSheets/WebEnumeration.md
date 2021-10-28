@@ -107,13 +107,20 @@ LFI
     default creds tomcat:s3cret
     generate WAR reverse shell payload, upload and deploy 
     
-### Wordpress
+### Wordpress  
+
+    admin pages:  /wp-admin    /wp-login
+    config files:  /setup-config.php   /wp-config.php
+		
 wpscan 
 
     wpscan --url <domain>
     wpscan --url <domain> --enumerate ap at (All Plugins, All Themes)
-    wpscan --url <domain> --enumerate u (Usernames)
+    wpscan --url <domain> --enumerate u (Usernames)       #or zoom.py 
     wpscan --url <domain> --enumerate v 
+    
+    wpscan -u 192.168.0.15 --enumerate -t --enumerate u --enumerate p
+    Bruteforce login page       wpscan –u ipaddress --username name --wordlist wordlist
 
 # Login pages   
 	
