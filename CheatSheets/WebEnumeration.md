@@ -38,6 +38,11 @@ Common wordlists to use for user enumeration scanning:
     whatweb http://target  
     wfuzz -c --hc=404 -R 2 -w /usr/share/dirb/wordlists/common.txt http://target/fuzz   
     
+### Curl 
+
+    curl -v -X OPTIONS http://<targetip>/test/  
+    curl --upload-file <file name> -v --url <url> -0 --http1.0
+    
 Other Tools: 
     Burp Suite 
     OWASP Zap 
