@@ -76,10 +76,25 @@ LFI
     default login are admin:admin at /vtigercrm/
     able to upload shell in profile-photo
     Examine configuration files - Generic
-    Examine httpd.conf/ windows config files
+    Examine httpd.conf/ windows config files 
+    
+### Drupal
+[droopsescan](https://github.com/droope/droopescan) 
+
+    /CHANGELOG.txt to find version
+
+### JBoss
+
+    JMX Console http://IP:8080/jmxconcole/
+    WAR File payload   
 
 ### Jenkins
-[pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)  
+[pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)   
+
+### Joomla 
+
+	admin page: /administrator
+	other pages: configuration.php, diagnostics.php, joomla.inc.php, config.inc.php
 
 ### Tomcat 
 
