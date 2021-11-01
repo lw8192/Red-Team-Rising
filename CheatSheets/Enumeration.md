@@ -22,7 +22,6 @@
   * [Resources](#resources)
 
 
-
 ## Checklist   
 
 - [ ] Recon 
