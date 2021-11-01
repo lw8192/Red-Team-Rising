@@ -1,7 +1,12 @@
 # Shells 
-- [ ] Web shell 
-- [ ] Reverse shell commands 
-- [ ] Upgrading shells 
+## Contents
+- [Shells](#shells)
+  * [Contents](#contents)
+  * [Web shells](#web-shells)
+  * [Debugging Shells](#debugging-shells)
+  * [Reverse shell commands](#reverse-shell-commands)
+  * [Msfvenom Payloads](#msfvenom-payloads)
+  * [Upgrading to a pseudo terminal / TTY](#upgrading-to-a-pseudo-terminal---tty)
 
 ## Web shells 
 [phpbash web shell](https://github.com/Arrexel/phpbash)  
