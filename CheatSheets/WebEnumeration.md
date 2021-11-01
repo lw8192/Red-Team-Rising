@@ -1,5 +1,43 @@
 # Web Enum Quick Reference  
-HTTP and HTTPS Checklist   
+## Contents 
+- [Web Enum Quick Reference](#web-enum-quick-reference)
+  * [Contents](#contents)
+  * [HTTP and HTTPS Checklist](#http-and-https-checklist)
+  * [Scan for sub directories and pages](#scan-for-sub-directories-and-pages)
+    + [Wordlists](#wordlists)
+    + [Scanning Tools](#scanning-tools)
+    + [Curl](#curl)
+- [Web app specific](#web-app-specific)
+    + [Default Creds](#default-creds)
+    + [Adobe Coldfusion](#adobe-coldfusion)
+    + [Elastix](#elastix)
+    + [Drupal](#drupal)
+    + [JBoss](#jboss)
+    + [Jenkins](#jenkins)
+    + [Joomla](#joomla)
+    + [PHPMyAdmin](#phpmyadmin)
+    + [Tomcat](#tomcat)
+    + [Wordpress](#wordpress)
+- [Login pages](#login-pages)
+- [File Inclusion](#file-inclusion)
+  * [Local File Inclusion](#local-file-inclusion)
+    + [File Upload Pages](#file-upload-pages)
+    + [LFI Testing](#lfi-testing)
+    + [Interesting Files](#interesting-files)
+  * [Remote File Inclusion](#remote-file-inclusion)
+  * [Web Payloads](#web-payloads)
+    + [Testing](#testing)
+- [Command Injection](#command-injection)
+  * [XSS](#xss)
+  * [SQL Injection](#sql-injection)
+    + [SQLMAP (Not allowed on OSCP exam but good for labs!)](#sqlmap--not-allowed-on-oscp-exam-but-good-for-labs--)
+    + [Manual Testing](#manual-testing)
+- [Resources](#resources)
+  * [Cheat Sheets](#cheat-sheets)
+  * [Further Reading](#further-reading)
+  * [Sources](#sources)
+
+## HTTP and HTTPS Checklist   
 - [ ] Look for service name and version - searchsploit / google for exploits   
 - [ ] Service specific scanners: wpscan, sqlmap     
 - [ ] Check for a robots.txt page    
