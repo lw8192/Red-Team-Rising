@@ -1,4 +1,23 @@
-# Windows Shells 
+# Windows Reverse Shells 
+## Contents
+- [Windows Reverse Shells](#windows-reverse-shells)
+  * [Contents](#contents)
+  * [Checklist](#checklist)
+  * [Test Connection with ping](#test-connection-with-ping)
+  * [Web Shells](#web-shells)
+  * [Reverse Shell Commands](#reverse-shell-commands)
+    + [File Transfers](#file-transfers)
+    + [Msfvenom](#msfvenom)
+    + [Netcat](#netcat)
+    + [Powershell](#powershell)
+    + [Powercat](#powercat)
+    + [Socat](#socat)
+    + [Python](#python)
+    + [Perl](#perl)
+  * [Antivirus Evasion](#antivirus-evasion)
+  * [Resources](#resources)
+
+## Checklist 
 Remember to check for AV before uploading common payloads! 
 - [ ] Can you exec .NET commands or Powershell as well? 
 - [ ] Web Shells 
