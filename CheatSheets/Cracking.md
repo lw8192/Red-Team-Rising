@@ -1,4 +1,28 @@
 # Cracking Resources 
+## Contents
+- [Cracking Resources](#cracking-resources)
+  * [Contents](#contents)
+  * [References](#references)
+  * [Tools](#tools)
+  * [Wordlists](#wordlists)
+- [Cracking Services](#cracking-services)
+  * [Default Credentials](#default-credentials)
+  * [Hydra](#hydra)
+  * [Burp Suite](#burp-suite)
+  * [RDP with Crowbar](#rdp-with-crowbar)
+  * [Misc Service Crackers](#misc-service-crackers)
+- [Cracking Offline Passwords](#cracking-offline-passwords)
+  * [Hashcat](#hashcat)
+    + [Benchmark Test (Hash Type)](#benchmark-test--hash-type-)
+    + [Show Example Hash](#show-example-hash)
+    + [Dictionary Attack](#dictionary-attack)
+    + [Mask Attack](#mask-attack)
+    + [Increment](#increment)
+    + [Cracking /etc/passwd $6](#cracking--etc-passwd--6)
+    + [Cracking krb5ts Keys](#cracking-krb5ts-keys)
+    + [Cracking Asrep keys](#cracking-asrep-keys)
+  * [John](#john)
+
 ## References 
 [Cracking the Hashes](https://zweilosec.gitbook.io/hackers-rest/os-agnostic/password-cracking/cracking-the-hashes)   
 
