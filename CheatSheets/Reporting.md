@@ -1,4 +1,12 @@
-# Tips   
+# Reporting
+## Contents 
+- [Reporting](#reporting)
+  * [Contents](#contents)
+  * [Tips](#tips)
+  * [Resources](#resources)
+  * [Sample Report](#sample-report)
+
+## Tips   
 1. Who is the target audience?
 2. A non-technical person should be able to understand (most of) the report.  
 3. Report should include the following: 
@@ -8,7 +16,7 @@
 	4. Recommendations for remediation (if possible)
 
 
-# Resources
+## Resources
 - https://blog.zsec.uk/ltr101-pentest-reporting/
 - https://github.com/juliocesarfort/public-pentesting-reports
 
@@ -16,7 +24,7 @@ Public Pentesting Reports:
 - https://github.com/juliocesarfort/public-pentesting-reports
 
 
-# Sample Report 
+## Sample Report 
 From TJ Null's Note Taking Template [here](https://github.com/tjnull/TJ-JPT) 
 
 # <div align="center"> Offensive Security Lab/Exam Penetration Test Report </div>
