@@ -1,11 +1,19 @@
-**Buffer Overflows**     
-Start Here:   
+# Buffer Overflows
+## Contents 
+- [Buffer Overflows](#buffer-overflows)
+  * [Contents](#contents)
+  * [Start Here:](#start-here-)
+  * [Basics](#basics)
+  * [Examples](#examples)
+  * [Advanced](#advanced)
+
+## Start Here:   
 [The Cyber Mentor Buffer Overflow Video](https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G)    
 [Walkthrough Guide for TCM Videos](https://github.com/johnjhacking/Buffer-Overflow-Guide)   
 [Buffer overflow for Dummies Whitepaper](https://www.sans.org/white-papers/481/)  
 
 
-Basics:
+## Basics
 [Buffer Overflow Attack - Computerphile](https://www.youtube.com/watch?v=1S0aBV-Waeo)  
 [Exploit writing tutorial part 1 : Stack Based Overflows](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/)  
 [Useful resources for Learning and Hands on practice for buffer overflows](https://github.com/security-prince/PWK-OSCP-Preparation-Roadmap/blob/master/BOF)  
@@ -18,7 +26,7 @@ http://0xdeadcode.se/archives/178 <-- minishare
 [OSCP Buffer Overflows](https://strongcourage.github.io/2020/04/19/bof.html)  
 
 
-Examples: 
+## Examples
 http://camelinc.info/blog/2014/05/Aviosoft-Digital-TV-Player-Professional-1.0-Stack-Buffer-Overflow/   
 https://www.phillips321.co.uk/2012/08/02/writing-my-first-exploit-freefloat-ftp/    
 https://royleekiat.com/2016/01/15/buffer-overflow-attack-on-pcman-ftp-server-2-07-using-the-metasploit-framework-and-corelan-teams-mona-script/ *using msf*
@@ -26,7 +34,7 @@ https://www.mattandreko.com/2013/04/06/buffer-overflow-in-hexchat-294/
 http://rgolebiowski.blogspot.in/2016/02/brain-pain.html
 
 
-Advanced:
+## Advanced
 http://tekwizz123.blogspot.in/2014/02/bypassing-aslr-and-dep-on-windows-7.html?m=1   
 https://bogner.sh/2016/04/the-hard-life-of-exploit-developers/    
 http://netsec.ws/?p=180     
@@ -40,8 +48,5 @@ https://rootisthelimit.com/first-buffer-overflow/ <-- Ability 2.34
 64 bit buffer overflows:   
 https://blog.techorganic.com/2015/04/10/64-bit-linux-stack-smashing-tutorial-part-1/     
 
-
-
-**Heap Overflows**   
-
+Heap Overflows 
 [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/) 
