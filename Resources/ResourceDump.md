@@ -18,7 +18,7 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
   * [Cyber Career](#cyber-career)
 
 ## Practice 
-**CTFs**   
+### CTFs   
 https://academy.hackthebox.eu/  
 https://hackthebox.eu/  
 https://tryhackme.com/
@@ -27,7 +27,7 @@ https://overthewire.org/wargames/
 https://pwn.college/  
 https://picoctf.com/
 
-**Coding**    
+### Coding   
 https://www.codewars.com/  
 https://www.sololearn.com/home   
 https://www.codecademy.com/   
@@ -77,15 +77,15 @@ https://www.codecademy.com/
 [What is Enumeration?](http://resources.infosecinstitute.com/what-is-enumeration/)    
 [Common services](http://www.opsschool.org/common_services.html)  
 
-**FTP Port 21**  
+### FTP Port 21
 look for: anon log in, vulnerable versions  
 [Pen Testing FTP](https://book.hacktricks.xyz/pentesting/pentesting-ftp)  
 
-**SMTP Port 25**   
+### SMTP Port 25 
 Possible misconfigurations and attack vectors  
 [SMTP User Enumeration](https://pentestlab.blog/2012/11/20/smtp-user-enumeration/) 
 
-**DNS Port 53 (Basics of DNS and DNS enum, DNS Zone Transfers)**  
+### DNS Port 53 (Basics of DNS and DNS enum, DNS Zone Transfers) 
 Possible misconfigurations and attack vectors  
 [DNS 101](http://www.opsschool.org/dns_101.html)  
 [DNS 201](http://www.opsschool.org/dns_201.html)  
@@ -93,7 +93,7 @@ Possible misconfigurations and attack vectors
 [An Intro to DNS](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts)   
 [ENS Enum](https://resources.infosecinstitute.com/topic/dns-enumeration-techniques-in-linux/#gref)  
 
-**SMB Ports 139, 445 (SMB Enumeration,Null Session Enumeration, NetBIOS)**  
+### SMB Ports 139, 445 (SMB Enumeration,Null Session Enumeration, NetBIOS) 
 Null sessions, smb vulns, other info gained
 [Just what is SMB?](https://www.samba.org/cifs/docs/what-is-smb.html)  
 [SMB enumeration with Kali Linux – enum4linux, acccheck and smbmap](https://hackercool.com/2016/07/smb-enumeration-with-kali-linux-enum4linuxacccheck-smbmap/)  
@@ -103,7 +103,7 @@ Null sessions, smb vulns, other info gained
 [Windows Account info via Authenticated SMB](https://www.sans.org/blog/plundering-windows-account-info-via-authenticated-smb-sessions/) 
 [nbtscan Cheat Sheet](https://highon.coffee/blog/nbtscan-cheat-sheet/) 
 
-**SNMP  (ENUMERATION, MIB Tree)**  
+### SNMP Port 161 (ENUMERATION, MIB Tree) 
 Possible misconfigurations and attack vectors  
 [SNMP enumeration with snmpenum and snmpwalk](http://carnal0wnage.attackresearch.com/2007/07/over-in-lso-chat-we-were-talking-about.html)  
 
@@ -111,21 +111,21 @@ Possible misconfigurations and attack vectors
 **Password Cracking**  
 [DEF CON Password Cracking Village - Password Cracking 101](https://passwordvillage.org/general.html#hashing_vs_encryption)   
 
-**NMAP 101 Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)**   
+### NMAP Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)   
 /usr/share/nmap/scripts 
 [Hacking Articles:NMAP](http://www.hackingarticles.in/category/nmap/)  
 [NMAP - Port-Scanning: A Practical Approach Modified for better](https://www.exploit-db.com/papers/35425/)   
 [nmap cheat sheet](https://highon.coffee/blog/nmap-cheat-sheet/) 
 [nmap: RTFM](https://blog.zsec.uk/nmap-rtfm/)   
 
-**Wireshark 101(Capture and display filters, filters)**    
+### Wireshark (Capture and display filters, filters)    
 [Network Hacking 101](https://www.notion.so/Network-Hacking-101-f9137337b4854b6894753df338a3942f)   
 
-**TCPDump (Filtering Traffic, Advanced header filtering)**  
+### TCPDump (Filtering Traffic, Advanced header filtering) 
 [tcpdump cheat sheet](https://packetlife.net/media/library/12/tcpdump.pdf) 
 [Tcpdump tutorial](https://danielmiessler.com/study/tcpdump/)   
 
-**Reverse and Bind shell, Transferring Files, Types of shells(tty,pty)**  
+### Reverse and Bind shell, Transferring Files, Types of shells(tty,pty)  
 [Netcat Tutorials for Beginner](http://www.hackingarticles.in/netcat-tutorials-beginner/)  
 [Reverse Shell Cheat Sheet](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)  
 [Reverse Shell Cheat Sheet](https://highon.coffee/blog/reverse-shell-cheat-sheet/)  
@@ -136,48 +136,49 @@ Possible misconfigurations and attack vectors
 [Netcat without -e? No Problem!](https://pen-testing.sans.org/blog/2013/05/06/netcat-without-e-no-problem/)  
 [Socat cheat sheet](https://www.redhat.com/sysadmin/getting-started-socat) 
 
-**Metasploit**   
+### Metasploit  
 [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)  
 [Creating Metasploit Payloads](https://netsec.ws/?p=331)  
 [AV Evasion With Metasploit paper](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf/) [Porting Ruby to Python](https://ivanitlearning.wordpress.com/2019/09/01/rewriting-a-ruby-msf-exploit-in-python/)
 [Converting a Metasploit Module](https://www.shellcode.it/article/convert-msf-module/) 
 
-**Recon-NG**  
+### Recon-NG   
 [Recon cheat sheet](https://pentester.land/cheatsheets/2019/04/15/recon-resources.html) 
 [Intro to Recon-ng](https://warroom.securestate.com/recon-ng-tutorial/)  
 [Recon-ng: Usage Guide](https://bitbucket.org/LaNMaSteR53/recon-ng/wiki/Usage%20Guide)    
 
-**Other OSINT Tools** 
+### OtherOSINT Tools 
 [Tool Collection](https://cipher387.github.io/osint_stuff_tool_collection/)    
+[OSINT Resources](http://bib.opensourceintelligence.biz/?mc_cid=35d30a0dff&mc_eid=4ab251d459) 
 
 ## Web App Pentesting   
 [OWASP Top 10](https://owasp.org/www-project-web-security-testing-guide/)   
 [Art of Web App Pen Testing](https://github.com/The-Art-of-Hacking/h4cker/tree/master/web_application_testing)   
 
-**1. LFI(LFI to RCE)**  
+### 1. LFI(LFI to RCE)  
 [LFI Cheat Sheet](https://highon.coffee/blog/lfi-cheat-sheet/)  
 [Upgrade from LFI to RCE via PHP Sessions](https://www.rcesecurity.com/2017/08/from-lfi-to-rce-via-php-sessions/)  
 [5 ways to Exploit LFi Vulnerability](http://www.hackingarticles.in/5-ways-exploit-lfi-vulnerability/)  
-**2. RFI(RFI to RCE)**  
-**3. SQL Injection (SQLi to RCE)**  
+### 2. RFI(RFI to RCE) 
+### 3. SQL Injection (SQLi to RCE)  
 [Full SQL Injection Tutorial (MySQL)](https://www.exploit-db.com/papers/13045/)  
 [Client Side Attacks](https://www.offensive-security.com/metasploit-unleashed/client-side-attacks/)  
 
 ## Programming
-**Bash 101**  
+### Bash 
 [Bash Handbook](https://github.com/denysdovhan/bash-handbook)  
 [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
-**Python 101**  
+### Python
 [Python for Pentesters](http://www.pentesteracademy.com/course?id=1)  
 [learnpythonthehardway](https://learnpythonthehardway.org/)  
 [Practical Python](https://dabeaz-course.github.io/practical-python/)   
-**Ruby 101**  
+### Ruby
 [Ruby Fu](https://rubyfu.net/)  
-**Powershell**  
+### PowerShell
 [PS 101](https://grimmie.net/ps-101-an-intro-to-powershell/)  
 [Learning Powershell](https://github.com/PowerShell/PowerShell/tree/master/docs/learning-powershell)  
 [Powershell for Pentesters Videos]( https://www.youtube.com/watch?v=_EXHGtaxDew)  
-**Assembly 101**    
+### Assembly
 [Hacking the Metal: Intro to Assembly](https://github.com/eigentourist/defcon29) 
 Security Tube:  
 [Assembly Language Megaprimer for Linux](http://www.securitytube.net/groups?operation=view&groupId=5)  
@@ -190,8 +191,7 @@ Security Tube:
 [Modern Binary Exploitation](http://security.cs.rpi.edu/courses/binexp-spring2015/)  
 
 
-**Privilege Escalation**  
-Privilege Escalation     
+### Privilege Escalation     
 [This challenge was built to promote the Windows / Linux Local Privilege](https://github.com/sagishahar/challenges#k2)        
 [MySQL Root to System Root with lib_mysqludf_sys for Windows and Linux](https://www.adampalmer.me/iodigitalsec/2013/08/13/mysql-root-to-system-root-with-udf-for-windows-and-linux/)   
 
@@ -214,13 +214,13 @@ Windows Privilige Escalation
 [Evading Detecting: A Begineer's Guide to Obfuscation](https://www.youtube.com/watch?v=lP2KF7_Kwxk)   
 [Active Directory](https://adsecurity.org/)  
 			 
-**Pivoting / Tunneling**  	   
+### Pivoting / Tunneling      
 [SSH Tunneling Explained](https://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/)      
 [Port Forwarding in Windows](http://woshub.com/port-forwarding-in-windows/)    
 [Tunneling, Pivoting, and Web Application Penetration Testing](https://www.sans.org/white-papers/36117/) 
 
 
-**Post Exploitation**  
+### Post Exploitation   
 [PwnWiki.io is a collection TTPs (tools, tactics, and procedures) for what to do after access has been gained.](http://pwnwiki.io)    
 [Mimikatz whitepaper](https://sansorg.egnyte.com/dl/XMHRwR5lRO/?)   
 
