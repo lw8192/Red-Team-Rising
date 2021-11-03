@@ -169,6 +169,8 @@ Powershell Script
 
     
 # Resources
+[Active Directory Security 101 Class](https://github.com/cfalta/adsec) 
+ 
 [Understanding Windows Lateral Movement](https://attl4s.github.io/assets/pdf/Understanding_Windows_Lateral_Movements.pdf)  
 
 [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)
