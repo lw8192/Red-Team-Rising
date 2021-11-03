@@ -2,8 +2,11 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 # Resources  
 ## Contents  
+- [Resources](#resources)
   * [Contents](#contents)
   * [Practice](#practice)
+    + [CTFs](#ctfs)
+    + [Coding](#coding)
   * [Repos](#repos)
   * [Books](#books)
   * [Blogs](#blogs)
@@ -11,11 +14,35 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
   * [Videos](#videos)
   * [Cheat sheets](#cheat-sheets)
   * [Services](#services)
+    + [FTP Port 21](#ftp-port-21)
+    + [SMTP Port 25](#smtp-port-25)
+    + [DNS Port 53 (Basics of DNS and DNS enum, DNS Zone Transfers)](#dns-port-53--basics-of-dns-and-dns-enum--dns-zone-transfers-)
+    + [SMB Ports 139, 445 (SMB Enumeration,Null Session Enumeration, NetBIOS)](#smb-ports-139--445--smb-enumeration-null-session-enumeration--netbios-)
+    + [SNMP Port 161 (ENUMERATION, MIB Tree)](#snmp-port-161--enumeration--mib-tree-)
   * [Tools](#tools)
+    + [NMAP Port Scanning (TCP Connect Scan, UDP Scanning, Using NSE Scripts)](#nmap-port-scanning--tcp-connect-scan--udp-scanning--using-nse-scripts-)
+    + [Wireshark (Capture and display filters, filters)](#wireshark--capture-and-display-filters--filters-)
+    + [TCPDump (Filtering Traffic, Advanced header filtering)](#tcpdump--filtering-traffic--advanced-header-filtering-)
+    + [Reverse and Bind shell, Transferring Files, Types of shells(tty,pty)](#reverse-and-bind-shell--transferring-files--types-of-shells-tty-pty-)
+    + [Metasploit](#metasploit)
+    + [Recon-NG](#recon-ng)
+    + [OtherOSINT Tools](#otherosint-tools)
   * [Web App Pentesting](#web-app-pentesting)
+    + [1. LFI(LFI to RCE)](#1-lfi-lfi-to-rce-)
+    + [2. RFI(RFI to RCE)](#2-rfi-rfi-to-rce-)
+    + [3. SQL Injection (SQLi to RCE)](#3-sql-injection--sqli-to-rce-)
   * [Programming](#programming)
+    + [Bash](#bash)
+    + [Python](#python)
+    + [Ruby](#ruby)
+    + [PowerShell](#powershell)
+    + [Assembly](#assembly)
   * [Post Shell](#post-shell)
+    + [Privilege Escalation](#privilege-escalation)
+    + [Pivoting / Tunneling](#pivoting---tunneling)
+    + [Post Exploitation](#post-exploitation)
   * [Cyber Career](#cyber-career)
+
 
 ## Practice 
 ### CTFs   
