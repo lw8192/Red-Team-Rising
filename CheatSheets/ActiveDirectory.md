@@ -188,7 +188,4 @@ Powershell Script
 
 [RedTeam Security Live Hacking Demonstration](https://www.youtube.com/watch?v=k6EOhO3JKCQ) 
 
-
-
-## NetNTLMtoSilverTicket | NotMedic's Github
-https://github.com/NotMedic/NetNTLMtoSilverTicket
+[NetNTLMtoSilverTicket | NotMedic's Github](https://github.com/NotMedic/NetNTLMtoSilverTicket) 
