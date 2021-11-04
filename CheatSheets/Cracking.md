@@ -76,6 +76,7 @@ wpscan: crack wordpress logins
 
 
 # Cracking Offline Passwords  
+[Identify Hash Type](https://www.tunnelsup.com/hash-analyzer/) 
 [Crackstation](https://crackstation.net/): try first esp. with Windows hashes      
 Then hashcat with: darkweb2017 lists from SecLists, then rockyou.txt. 
 
