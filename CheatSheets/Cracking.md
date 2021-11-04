@@ -161,4 +161,6 @@ Session Restore
 
 ## John   
  
+- cp /etc/passwd and shadow
+- unshadow passwd shadow 
 
