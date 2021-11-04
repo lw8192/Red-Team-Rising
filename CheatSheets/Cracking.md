@@ -1,4 +1,5 @@
-# Cracking Resources 
+# Cracking 
+Cracking services logins and password files. 
 ## Contents
 - [Cracking Resources](#cracking-resources)
   * [Contents](#contents)
