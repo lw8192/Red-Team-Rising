@@ -85,9 +85,9 @@ uploading static binaries from [here](https://github.com/andrew-d/static-binarie
 
 ### Linux 
 
-   arp -a
-   cat /etc/hosts
-   /etc/resolv.conf  
+    arp -a
+    cat /etc/hosts
+    cat /etc/resolv.conf  
    
-   for x in {1..254};do (ping -c 1 10.1.1.$x | grep "bytes from" &); done | cut -d " " 
+    for x in {1..254};do (ping -c 1 10.1.1.$x | grep "bytes from" &); done | cut -d " " 
 
