@@ -80,6 +80,7 @@ https://www.codecademy.com/
 
 ## Blogs  
 [Trusted Security](https://www.trustedsec.com/blog/)   
+[Hacking Passion](https://hackingpassion.com/) 
 
 ## Podcasts    
 [Hack the Planet](https://www.youtube.com/watch?v=xewv122qxnk)   
