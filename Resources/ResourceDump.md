@@ -191,7 +191,9 @@ Possible misconfigurations and attack vectors
 [Full SQL Injection Tutorial (MySQL)](https://www.exploit-db.com/papers/13045/)  
 [Client Side Attacks](https://www.offensive-security.com/metasploit-unleashed/client-side-attacks/)  
 
-## Programming
+## Programming 
+[Free Scripting Books](https://goalkicker.com/)  
+[Developer Reference](https://devhints.io/) 
 ### Bash 
 [Bash Handbook](https://github.com/denysdovhan/bash-handbook)  
 [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
