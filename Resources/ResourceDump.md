@@ -195,6 +195,7 @@ Possible misconfigurations and attack vectors
 ### Bash 
 [Bash Handbook](https://github.com/denysdovhan/bash-handbook)  
 [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
+[Advanced Bash](https://tldp.org/LDP/abs/abs-guide.pdf) 
 ### Python
 [Python for Pentesters](http://www.pentesteracademy.com/course?id=1)  
 [learnpythonthehardway](https://learnpythonthehardway.org/)  
