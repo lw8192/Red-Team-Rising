@@ -237,7 +237,10 @@ Windows XP SP1 - upnphost service and dependant service. [Ref](https://sohvaxus.
 ### Autoruns   
 Search
 
-    reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+    reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run  
+    reg query HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce  
+    reg query HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+    reg query HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce
 
 Confirm perms - overwrite the program? (May need to upload accesschk) 
 
