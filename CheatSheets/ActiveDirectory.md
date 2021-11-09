@@ -135,6 +135,9 @@ Windapsearch:
 https://github.com/ropnop/windapsearch 
 
     python3 windapsearch.py -d host.domain -u domain\\ldapbind -p PASSWORD -U
+## Other Exploits
+[Print Nightmare Walkthrough](https://themayor.notion.site/341cf3705cc64752b466046584de45b8?v=4f2173ad749249b293a89ab5391805ec&p=ef69c17e82c5471fb4648ccabbf5c937) 
+
 
 
 ## Post Exploitation    
