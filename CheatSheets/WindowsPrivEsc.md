@@ -352,6 +352,7 @@ https://github.com/SecWiki/windows-kernel-exploits
 ## Misc  
 [Print Demon](https://windows-internals.com/printdemon-cve-2020-1048/)  
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
+[Print Nightmare Walkthrough](https://themayor.notion.site/341cf3705cc64752b466046584de45b8?v=4f2173ad749249b293a89ab5391805ec&p=ef69c17e82c5471fb4648ccabbf5c937) 
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
 ____   
 
