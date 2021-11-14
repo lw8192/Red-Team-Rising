@@ -383,6 +383,9 @@ Example SQLi on Windows:
 [Bypassing File Upload Restrictions ](http://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html)      
 [Web vulnerabilities to gain access to the system - paper](https://www.exploit-db.com/papers/13017/)     
 
+File Inclusion
+[RFI to LFI](https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1) 
+
 Basic SQLi 
 http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html  
 
