@@ -19,14 +19,15 @@
 
 ## SSH 
 ### Local Tunnels 
-Local tunnel from Kali attack box through a pivot to a service on target 
+Local tunnel from Kali attack box through a pivot to a service on target. Default local ip is 0.0.0.0
 
-    ssh -p <port> user@pivot -L <local port on attack box>:<target host>:<target port> 
+    ssh -p <port> user@pivot -L <local ip for specific interface>:<local port on attack box>:<target host>:<target port> 
     
 ### Remote Tunnels
 Remote tunnel to Kali through a pivot from target (may need to join tunnels depending on config)  
 
     ssh -R <Kali port>:localhost:<target port> user@<pivot ip> 
+    
 ### Dynamic Tunnels 
 To scan through a tunnel
 
@@ -61,16 +62,27 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
       apt-get install sshuttle 
       sshuttle -r user@10.10.10.10 --ssh-cmd "ssh -i id_rsa" 10.10.0.0/24 -x [pivot ip]
  
+ ## IPTables 
  
+     iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.0.20:22 
+
  
  # Windows Port Forwarding 
      netsh firewall show config 
-     netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT      
+     netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT    
+## Portproxy
+
+    netsh interface portproxy add <type> listenport=<port in> connectport=<port out> connectaddress=<destination>  
+    
+    <type> can be v4tov4, v4tov6, v6tov4, v6tov6 
+
+
 ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
      ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS 
 ## Plink.exe
-     [upload plink.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
+[upload plink.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
+
      plink.exe -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS   <-note entering in your password on a victim box is a bad idea
      
      [generate ssh keys on kali, convert to putty keys and then upload with plink.exe to target ] 
