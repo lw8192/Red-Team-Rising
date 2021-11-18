@@ -18,6 +18,8 @@
   * [Plink.exe](#plinkexe)
 
 ## SSH 
+In SSH session: ~C to append more tunnels to command 
+
 ### Local Tunnels 
 Local tunnel from Kali attack box through a pivot to a service on target. Default local ip is 0.0.0.0
 
