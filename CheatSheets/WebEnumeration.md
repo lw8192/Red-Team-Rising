@@ -196,6 +196,14 @@ Check for client side scripts
 	can you include a remote file?
 	?test=php://filter/convert.base64-encode/resource=/filepath      -> base64 encode /decode  
 	
+	
+Vulnerable PHP functions
+
+    include
+    require
+    include_once 
+    require_once 
+	
 ### Interesting Files 
 Linux 
 
