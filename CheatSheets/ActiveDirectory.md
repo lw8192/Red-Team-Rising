@@ -69,7 +69,22 @@ PowerShell Active Directory Module (only on DC by default)
 [Pentesting AD CheatSheet](https://i.ibb.co/TKYNCNP/Pentest-ad.png) 
 [Integratio IT Cheat Sheet](https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet)  
 
-## General Tools  
+## Tools  
+### Tools allowed on the new exam 
+
+    BloodHound
+    SharpHound
+    PowerShell Empire
+    Covenant 
+    Powerview
+    Rubeus
+    evil-winrm
+    Responder (Spoofing is not allowed in the labs or on the exam)
+    Crackmapexec
+    Mimikatz
+
+## General Tools 
+
 [Impacket](https://github.com/SecureAuthCorp/impacket)   
 
     apt install impacket-scripts  
