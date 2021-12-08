@@ -177,6 +177,8 @@ Powershell Script
     
 # Resources
 [Active Directory Security 101 Class](https://github.com/cfalta/adsec) 
+
+https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse
  
 [Understanding Windows Lateral Movement](https://attl4s.github.io/assets/pdf/Understanding_Windows_Lateral_Movements.pdf)  
 
