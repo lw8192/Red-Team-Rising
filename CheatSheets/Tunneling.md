@@ -25,10 +25,11 @@ Local tunnel from Kali attack box through a pivot to a service on target. Defaul
 
     ssh -p <port> user@pivot -L <local ip for specific interface>:<local port on attack box>:<target host>:<target port> 
     
-### Remote Tunnels
+### Reverse Tunnels
 Remote tunnel to Kali through a pivot from target (may need to join tunnels depending on config)  
 
-    ssh -R <Kali port>:localhost:<target port> user@<pivot ip> 
+    open up pivot pivot to forward traffic back to local Kali box 
+    ssh -R <pivot port>:localhost:<local port> user@<pivot ip> 
     
 ### Dynamic Tunnels 
 To scan through a tunnel
