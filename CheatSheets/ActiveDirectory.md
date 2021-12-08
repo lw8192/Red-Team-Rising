@@ -29,7 +29,10 @@
     net users /domain
     net localgroup
     net groups /domain
-    net groups /domain "Domain Admins"
+    net groups /domain "Domain Admins"   
+    
+Reference: 
+https://wadcoms.github.io/ 
 
 PowerShell Active Directory Module (on DC)
 
