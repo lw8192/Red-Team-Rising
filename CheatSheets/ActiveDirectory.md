@@ -23,18 +23,31 @@
   * [Pentesting AD CheatSheet](#pentesting-ad-cheatsheet)
   * [NetNTLMtoSilverTicket | NotMedic's Github](#netntlmtosilverticket---notmedic-s-github)
 
+## Active Directory Overview 
+Gain control over a domain: 
+Compromise member of Domain Admin group.
+Compromise domain ctronller -> can modify all domain-joined computers or execute applications on them. 
+
+AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain. 
+
+Typical AD pen test:
+- Exploit and gain access to host on domain as a domain user 
+- Privilige escalate if needed, to local admin group at least. 
+- Enumerate domain users and groups  
 ## Quick Commands  
 
-    net users
-    net users /domain
+    net user
+    net user /domain
+    net user [username] /domain
+    
     net localgroup
-    net groups /domain
-    net groups /domain "Domain Admins"   
+    net group /domain
+    net group /domain "Domain Admins"   
     
 Reference: 
 https://wadcoms.github.io/ 
 
-PowerShell Active Directory Module (on DC)
+PowerShell Active Directory Module (only on DC by default)
 
     Get-ADUser
     Get-ADDomain
