@@ -198,6 +198,16 @@ Impacket:
 
      python3 samdump.py SMB 172.21.0.0
 
+### TCP POrt 1433: MsSQL
+If open:
+To connect
+
+    sqsh -S 10.10.10.10 -U user -P password 
+    
+To run shell commands if enabled: 
+
+    xp_cmdshell 'whoami';
+
 
 ### TCP Port 2049: NFS 
 	
