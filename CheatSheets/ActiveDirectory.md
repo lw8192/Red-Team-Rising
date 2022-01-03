@@ -24,8 +24,8 @@
   * [NetNTLMtoSilverTicket | NotMedic's Github](#netntlmtosilverticket---notmedic-s-github)
 
 ## Active Directory Overview 
-Gain control over a domain: 
-Compromise member of Domain Admin group.
+To gain control over a domain:  
+Compromise member of Domain Admin group.   
 Compromise domain ctronller -> can modify all domain-joined computers or execute applications on them. 
 
 AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain. 
