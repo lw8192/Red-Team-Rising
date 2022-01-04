@@ -26,14 +26,16 @@
 ## Active Directory Overview 
 To gain control over a domain:  
 Compromise member of Domain Admin group.   
-Compromise domain ctronller -> can modify all domain-joined computers or execute applications on them. 
+Compromise domain controller -> can modify all domain-joined computers or execute applications on them. 
 
 AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain. 
 
 Typical AD pen test:
 - Exploit and gain access to host on domain as a domain user 
-- Privilige escalate if needed, to local admin group at least. 
-- Enumerate domain users and groups  
+- Enumerate domain users and groups.  
+- Privilege escalate or move laterally. 
+- Get Domain Admin access, pwn domin controller. 
+
 ## Quick Commands  
 
     net user
