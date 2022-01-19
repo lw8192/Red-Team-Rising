@@ -1,7 +1,7 @@
 # OSCPprep 
 ## Cheatsheets
 ### Enumeration
-[Start with Basic Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/Enumeration.md)   
+[Start with Basic Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration/Basic_Enum.md)   
 [Web Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WebEnumeration.md)    
 
 ### Exploitation 
