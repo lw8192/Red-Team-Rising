@@ -2,7 +2,7 @@
 ## Cheatsheets
 ### Enumeration
 [Start with Basic Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration/Basic_Enum.md)   
-[Web Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WebEnumeration.md)    
+[Web Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration/Web_Enumeration.md)    
 
 ### Exploitation 
 [Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/BufferOverflow.md)  
