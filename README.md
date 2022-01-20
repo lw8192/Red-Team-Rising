@@ -9,12 +9,12 @@
 [Cracking Passwords](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Exploitation/Cracking.md)  
 [Finding and working with public exploits](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Exploitation/Public_Exploits.md) 
 
-[Linux Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/LinuxReverseShells.md)     
-[Windows Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WindowsReverseShells.md)    
+[Linux Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Unix/Unix_Reverse_Shells.md)     
+[Windows Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Windows/Windows_Reverse_Shells.md)    
 
 ### Privilege Escalation 
-[Linux Privilege Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/LinuxPrivEsc.md)     
-[Windows Privilege Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WindowsPrivEsc.md) 
+[Linux Privilege Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Unix/Unix_Priv_Esc.md)     
+[Windows Privilege Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Windows/Windows_Priv_Esc.md) 
 
 ### Post Exploitation 
 [End with Reporting](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/Reporting.md) 
