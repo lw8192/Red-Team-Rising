@@ -109,6 +109,7 @@ systeminfo
 [Scripts Reference](https://www.hackingarticles.in/window-privilege-escalation-automated-script/) 
 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
+[Other compiled binaries](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries)  
 [nishang](https://github.com/samratashok/nishang)  
 [JAWS](https://github.com/411Hall/JAWS)   
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
