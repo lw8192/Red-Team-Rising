@@ -138,15 +138,19 @@ ____
 # Manual Enum 
 https://lolbas-project.github.io/#   
 
-## Privilege Exploits 
+Windows 10 Exploits 
+https://github.com/nu11secur1ty/Windows10Exploits
 
+## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 
     whoami /priv running process, can enable for different process if user has priv
     #State: disabled for running process, can enable for different process depending on access
     SeImpersonatePrivilege -> PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
     SeAssignPrimaryTokenPrivilege -> Juicy Potato 
-    SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.
+    SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.  
+    SeBackup-> 
+    Se
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
     If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
