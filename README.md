@@ -17,7 +17,7 @@
 [Windows Privilege Escalation](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Windows/Windows_Priv_Esc.md) 
 
 ### Post Exploitation 
-[End with Reporting](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/Reporting.md) 
+[End with Reporting](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Post_Exploitation/Reporting.md) 
 
 ### Misc Topics (useful for PWK labs) 
 [Active Directory](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/ActiveDirectory.md)    
