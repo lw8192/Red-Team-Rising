@@ -5,9 +5,9 @@
 [Web Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration/Web_Enumeration.md)    
 
 ### Exploitation 
-[Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/BufferOverflow.md)  
-[Cracking Passwords](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/Cracking.md)  
-[Finding and working with public exploits](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/PublicExploits.md) 
+[Buffer Overflow](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Exploitation/Buffer_overflow.md)  
+[Cracking Passwords](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Exploitation/Cracking.md)  
+[Finding and working with public exploits](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Exploitation/Public_Exploits.md) 
 
 [Linux Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/LinuxReverseShells.md)     
 [Windows Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/CheatSheets/WindowsReverseShells.md)    
