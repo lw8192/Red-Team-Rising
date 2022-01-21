@@ -1,6 +1,15 @@
 # OSCPprep 
 Start with running newKali.sh to download tools needed. 
 
+OSCP 2022 Exam: 
+Active Directory set of 2 host and domain controller (40 points, no partial points) 
+Box 1 (20 points)
+Box 2 (20 points)
+Box 3 (20 points)
+Lab report (10 points)
+*One of the standalone boxes may be a buffer overflow
+
+
 ## Cheatsheets
 ### Enumeration
 [Start with Basic Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Enumeration/Basic_Enum.md)   
