@@ -36,6 +36,8 @@ wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpe
 wget https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh -o /home/kali/PEScripts/Linux/lse.sh 
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -o /home/kali/PEScripts/Linux/LinEnum.sh
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -o /home/kali/PEScripts/Linux/les.sh
+wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -o /home/kali/PEScripts/Linux/linuxprivchecker.py
+wget https://raw.githubusercontent.com/jondonas/linux-exploit-suggester-2/master/linux-exploit-suggester-2.pl -o /home/kali/PEScripts/Linux/linux-exploit-suggester-2.pl
 
 mkdir /home/kali/PEScripts/Windows 
 wget https://raw.githubusercontent.com/bitsadmin/wesng/master/wes.py -o /home/kali/PEScripts/Windows/wes.py 
