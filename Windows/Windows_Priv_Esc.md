@@ -7,7 +7,6 @@
     + [Windows Kernel Versions](#windows-kernel-versions)
     + [Important Files](#important-files)
   * [Scripts](#scripts)
-    + [Impacket](#impacket)
   * [Checklists](#checklists)
 - [Manual Enum](#manual-enum)
   * [Privilege Exploits](#privilege-exploits)
@@ -120,14 +119,6 @@ systeminfo
 
 [Compiled scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
 
-### Impacket 
-https://github.com/SecureAuthCorp/impacket
-
-    apt install impacket-scripts
-
-Local Locations:
-
-    /usr/share/doc/python3-impacket/examples
 
 ## Checklists    
 [HackTricks](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)  
