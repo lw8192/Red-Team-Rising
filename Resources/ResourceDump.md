@@ -178,6 +178,7 @@ Possible misconfigurations and attack vectors
 ### OtherOSINT Tools 
 [Tool Collection](https://cipher387.github.io/osint_stuff_tool_collection/)    
 [OSINT Resources](http://bib.opensourceintelligence.biz/?mc_cid=35d30a0dff&mc_eid=4ab251d459) 
+[Shodan Cheatsheet](https://thedarksource.com/shodan-cheat-sheet/) 
 
 ## Web App Pentesting   
 [OWASP Top 10](https://owasp.org/www-project-web-security-testing-guide/)   
