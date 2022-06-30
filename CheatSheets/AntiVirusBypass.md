@@ -111,6 +111,8 @@ View Windows Defender logs
 https://github.com/sinfulz/JustEvadeBro   
 https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell 
 
+[AV Payloads](https://github.com/RoseSecurity/Anti-Virus-Evading-Payloads)    
+
 
 ## Workshops 
 https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation 
