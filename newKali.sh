@@ -1,6 +1,8 @@
 #!/bin/bash 
 #run script as sudo in new Kali to download tools needed 
 apt-get update && apt-get upgrade
+apt install python3
+apt install pip3
 
 #download pimpmykali - impacket, seclists, etc
 wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmykali.sh |bash    
