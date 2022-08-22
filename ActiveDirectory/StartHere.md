@@ -1,27 +1,6 @@
 # Active Directory Cheatsheet     
 ## Contents 
-- [Active Directory Cheatsheet](#active-directory-cheatsheet)
-  * [Contents](#contents)
-  * [Quick Commands](#quick-commands)
-    + [Files to Check](#files-to-check)
-  * [Resources](#resources)
-  * [Cheat Sheets](#cheat-sheets)
-  * [General Tools](#general-tools)
-  * [Kerberos (Port 88)](#kerberos--port-88-)
-    + [Kerberoasting with Impacket](#kerberoasting-with-impacket)
-  * [GetUserSPNs](#getuserspns)
-  * [Using TGT key to excute remote commands from the following impacket scripts:](#using-tgt-key-to-excute-remote-commands-from-the-following-impacket-scripts-)
-  * [LDAP (Port 636)](#ldap--port-636-)
-  * [Post Exploitation](#post-exploitation)
-    + [PowerView](#powerview)
-  * [Bloodhound](#bloodhound)
-  * [Mimikatz](#mimikatz)
-- [Resources](#resources-1)
-  * [Active Directory Enumeration | ATTL4S](#active-directory-enumeration---attl4s)
-  * [Adsecurity Blog](#adsecurity-blog)
-  * [RedTeam Security Live Hacking Demonstration](#redteam-security-live-hacking-demonstration)
-  * [Pentesting AD CheatSheet](#pentesting-ad-cheatsheet)
-  * [NetNTLMtoSilverTicket | NotMedic's Github](#netntlmtosilverticket---notmedic-s-github)
+
 
 ## Active Directory Overview 
 To gain control over a domain:  
@@ -37,10 +16,8 @@ Typical AD pen test:
 - Privilege escalate or move laterally. 
 - Get Domain Admin or Service Account access and onto the domain controller. 
 
-## Planned AD Cheatsheets (coming soon) 
-Enumeration   
-Exploitation   
-Lateral Movement  
+## AD Cheatsheets
+[Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Enumeration.md)    
 
 ## Quick Commands  
 
@@ -70,7 +47,7 @@ PowerShell Active Directory Module (only on DC by default)
 ## Resources      
 [WADComs](https://wadcoms.github.io/)    
 
-## Cheat Sheets
+## Other Cheat Sheets
 [AD Cheat Sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)     
 [AD Lateral Movement and Persistence Cheatsheet](https://bhanusnotes.blogspot.com/2020/12/ad-pentest-lateral-movement-persistance.html)  
 [AD Cheat sheet](https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference/)   
