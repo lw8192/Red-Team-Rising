@@ -37,6 +37,11 @@ Typical AD pen test:
 - Privilege escalate or move laterally. 
 - Get Domain Admin or Service Account access and onto the domain controller. 
 
+## Planned AD Cheatsheets (coming soon) 
+Enumeration   
+Exploitation   
+Lateral Movement  
+
 ## Quick Commands  
 
     net user
