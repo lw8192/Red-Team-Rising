@@ -27,14 +27,14 @@
 - [ ] Recon 
 - [ ] (If given a range): what hosts are on the network
 - [ ] Open well known ports (0-1023)
-- [ ] What are these ports used for (banner grab) 
-- [ ] Open high ports (12024-65535) 
+- [ ] What are these ports used for (banner grab if needed) 
+- [ ] Open high ports (1024-65535) 
 - [ ] Operating system 
+- [ ] Identify open services 
 - [ ] FTP or SMB anon log in 
-- [ ] Exploitable services versions (searchsploit, github, google) 
-- [ ] Web enum (see WebEnumeration.md cheatsheet)   
-- [ ] Service specific exploits 
-- [ ] Brute force any services / log in pages   
+- [ ] Identify versions of services, look for vulns / exploits (searchsploit, github, google) 
+- [ ] HTTP / HTPPS services -> Web enum (see WebEnumeration.md cheatsheet), look for web vulns on pages 
+- [ ] Brute force any services log ons / log in pages   
 
 [Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
 
@@ -78,7 +78,9 @@ Dierce, DNSenum, DNSrecon <-automated tools
     OSCP common scan types: -A, -sU, -sS, sV, -sC, -O
     debug: -vv, -d, --reason
 
-    nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open       
+    nc -nvzw1 192.168.53.120 1-65535 2>&1 | grep open     
+    
+    Run autorecon then open results folder in atom.    
 
 More scan types: 
 
@@ -145,6 +147,12 @@ Can I ...
 
 ### TCP Port 88: Kerberos
 see active directory cheatsheet
+
+### TCP Port 139: NetBIOS
+Usually SMB will be open as well. 
+Scan network for NetBIOS name info: 
+
+    sudo nbtscan -v -s : 192.168.1.0/24
 	
 ### TCP Port 389: LDAP 
 see Active Directory Cheat Sheet 
@@ -152,7 +160,8 @@ see Active Directory Cheat Sheet
 ### TCP Port 445: SMB 
 	
 Can I...
-Enum with smbmap, enum4linux, nmap, crackmapexec, check for anon log in
+- [ ] Enum with smbmap, enum4linux, nmap, crackmapexec
+- [ ] check for anon log in
 [Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
 	
@@ -200,11 +209,11 @@ Impacket:
 
 ### TCP POrt 1433: MsSQL
 If open:
-To connect
+To connect   
 
     sqsh -S 10.10.10.10 -U user -P password 
     
-To run shell commands if enabled: 
+To run shell commands if enabled:   
 
     xp_cmdshell 'whoami';
 
