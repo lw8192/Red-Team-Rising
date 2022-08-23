@@ -1,6 +1,5 @@
 # Windows Resources 
-## Cheatsheets 
-[Active Directory](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Cheatsheet.md)  
+Use this folder for compromising a standalone Windows box. For domain compromising, see Active_Directory folder.   
 
 [Windows Reverse Shells](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/Windows/Windows_Reverse_Shells.md)  
 
