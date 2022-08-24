@@ -6,9 +6,9 @@ Active Directory set of 2 host and domain controller (40 points, no partial poin
 Box 1 (20 points)    
 Box 2 (20 points)   
 Box 3 (20 points)    
-Lab report (10 points)    
+Bonus Points (10 points)    
 *One of the standalone boxes may be a buffer overflow
-
+*Bonus points: complete 80% of the topic exercises for each topic, submit proof.txt for at least 30 lab machines.       
 
 ## Cheatsheets
 ### Enumeration
