@@ -10,6 +10,7 @@ Bonus Points (10 points)
 *One of the standalone boxes may be a buffer overflow
 *Bonus points: complete 80% of the topic exercises for each topic, submit proof.txt for at least 30 lab machines.       
 
+[My first OSCP exam attempt overview](https://firewitch.medium.com/oscp-exam-2022-my-experience-c1f78fb5601e)   
 
 ## Exploits 
 blank template to write a customer encoder 
