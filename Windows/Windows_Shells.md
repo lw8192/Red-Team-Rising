@@ -1,6 +1,6 @@
-# Windows Reverse Shells 
+# Windows Shells 
 ## Contents
-- [Windows Reverse Shells](#windows-reverse-shells)
+- [Windows Shells](#windows-shells)
   * [Contents](#contents)
   * [Checklist](#checklist)
   * [Test Connection with ping](#test-connection-with-ping)
