@@ -10,6 +10,7 @@ Courses to do:
 TCM Security Practical Ethical Hacking Course  
 TCM Windows Priv Esc   
 TCM Linux Priv Esc   
+TCM Movement, Pivoting and Persistence  
 Go back thru Tiberius Win / Lin priv esc courses  
 
 Boxes to do: 
