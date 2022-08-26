@@ -12,4 +12,7 @@ TCM Windows Priv Esc
 TCM Linux Priv Esc   
 Go back thru Tiberius Win / Lin priv esc courses  
 
+Boxes to do: 
 Go back through TryHackMe offensive pentesting path  
+Hack the Box - [TJ_Nulls OSCP Prep List Walkthroughs](https://www.youtube.com/playlist?list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)     
+TryHackMe - Vulnnet, Raz0rblack, Enterprise   
