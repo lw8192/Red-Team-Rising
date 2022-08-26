@@ -1,4 +1,6 @@
-# Active Directory Cheatsheet     
+# Active Directory Cheatsheet  
+AD Overview and tools.   
+
 ## Active Directory Overview 
 To gain control over a domain:  
 Compromise member of Domain Admin group.   
@@ -15,6 +17,9 @@ Typical AD pen test:
 - Get Domain Admin or Service Account access and onto the domain controller. 
 
 ## My AD Cheatsheets
+[Attacks](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Attacks.md)  
+[Lateral Movement](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/LateralMovement.md)   
+
  
 ## Other Cheat Sheets
 [AD Cheat Sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)     
@@ -33,17 +38,17 @@ Typical AD pen test:
 ## Tools  
 ### Tools allowed on the new exam 
 All tools that do not perform any restricted actions are allowed on the exam (no commercial tools like Burp Pro, no automated exploits like SQLmap, etc).   
+C2 Frameworks:
+[PowerShell Empire](https://github.com/BC-SECURITY/Empire), Covenant    
 
-[BloodHound](https://github.com/BloodHoundAD/BloodHound)     
-[SharpHound](https://github.com/BloodHoundAD/SharpHound)    
-[PowerShell Empire](https://github.com/BC-SECURITY/Empire)    
-Covenant 
-Powerview
-Rubeus
 [evil-winrm](https://github.com/nubix/evil-winrm): access Windows RM, TCP port 5985 or 5986 open.   
-Responder (Spoofing is not allowed in the labs or on the exam)
-Crackmapexec
-Mimikatz
+Responder (Spoofing is not allowed in the labs or on the exam)   
+Crackmapexec  
+
+[BloodHound](https://github.com/BloodHoundAD/BloodHound), [SharpHound](https://github.com/BloodHoundAD/SharpHound)    
+Rubeus   
+[Powerview](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1 )   
+[Mimikatz](https://github.com/gentilkiwi/mimikatz), [Mimikatz Cheatsheet](https://offsec.red/mimikatz-cheat-sheet/)      
 
 ## General Tools 
 
