@@ -5,7 +5,9 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 - [Resources](#resources)
   * [Contents](#contents)
   * [Practice](#practice)
+    + [Boxes](#boxes)
     + [CTFs](#ctfs)
+    + [Wargames](#wargames)
     + [Coding](#coding)
   * [Repos](#repos)
   * [Books](#books)
@@ -45,14 +47,22 @@ Original at https://ishaqmohammed.me/posts/pwk-oscp-preparation-roadmap/, update
 
 
 ## Practice 
-### CTFs   
+### Boxes     
 https://academy.hackthebox.eu/  
 https://hackthebox.eu/  
 https://tryhackme.com/
-
-https://overthewire.org/wargames/  
 https://pwn.college/  
-https://picoctf.com/
+
+### CTFs
+https://picoctf.com/    
+https://ctftime.org/event/list/upcoming   
+http://captf.com/calendar/   
+
+### Wargames 
+[Micro Corruption](https://microcorruption.com/login)      
+[SmashTheStack](http://www.smashthestack.org/)    
+[OverTheWire](https://overthewire.org/wargames/)   
+[Exploit Exercises](http://exploit-exercises.com/)    
 
 ### Coding   
 https://www.codewars.com/  
