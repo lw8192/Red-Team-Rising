@@ -13,6 +13,7 @@ TCM Windows Priv Esc
 TCM Linux Priv Esc   
 TCM Movement, Pivoting and Persistence  
 Go back thru Tiberius Win / Lin priv esc courses  
+John Hammond Active Directory youtube videos - https://www.youtube.com/watch?v=pKtDQtsubio&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp   
 
 Boxes to do: 
 Go back through TryHackMe offensive pentesting path  
