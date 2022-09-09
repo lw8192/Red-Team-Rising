@@ -6,6 +6,7 @@ Tunneling - https://github.com/opsdisk/the_cyber_plumbers_handbook
 https://github.com/sdcampbell/Internal-Network-Pentest-MindMap/blob/main/Internal%20Network%20Pentest%20MindMap.pdf   
 https://github.com/ihebski/A-Red-Teamer-diaries    
 https://github.com/t3l3machus/pentest-pivoting  
+https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/Active_Directory.md   
 
 Courses to do:  
 TCM Security Practical Ethical Hacking Course  
