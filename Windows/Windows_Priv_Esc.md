@@ -62,24 +62,27 @@
 
 ## Commands
     systeminfo 
-    whoami /priv      
+    wmic qfe get Caption, Description   #installed updates 
+    whoami /priv  
+    whoami /groups   
+    net user   
+    qwinsta                          #is anyone else logged in?   
+    net localgroup  
     ipconfig /all  
     route print  
-    net users   
-    qwinsta                          #is anyone else logged in?   
-    net localgroup    
     dir /r    
     tree /a /f                        #dir walk 
-    set                               #enviromental variables
+    set                               #enviromental variables  
     net use                           #connected drives  
     net share                         #shared folders
     netstat -ano    
     tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
-    wmic product get name,version       #installed apps and versions 
+    wmic product get name,version, vendor       #installed apps and versions 
+ 
 Services 
 
-    net start                         #running services 
-    PS > wmic service where "name like 'service'" get Name,PathName        #more info on a service 
+    net start                         #installed and started services 
+    wmic service where "name like 'service'" get Name,PathName        #more info on a service 
     PS > Get-Process -Name service  
 
     
