@@ -8,6 +8,7 @@ https://github.com/ihebski/A-Red-Teamer-diaries
 https://github.com/t3l3machus/pentest-pivoting  
 https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/Active_Directory.md   
 https://github.com/S3cur3Th1sSh1t/Pentest-Tools   
+https://github.com/0x4D31/awesome-oscp   
 
 Courses to do:  
 TCM Security Practical Ethical Hacking Course  
