@@ -15,9 +15,9 @@
     + [TCP Port 25: SMTP](#tcp-port-25--smtp)
     + [TCP Port 88: Kerberos](#tcp-port-88--kerberos)
     + [TCP Port 389: LDAP](#tcp-port-389--ldap)
-    + [TCP Port 445: SMB](#tcp-port-445--smb)
+    + [TCP Port 445: SMB](#tcp-port-445--smb)   
     + [TCP Port 2049: NFS](#tcp-port-2049--nfs)
-    + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)
+    + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)    
     + [UDP Port 161: SNMP](#udp-port-161--snmp)
   * [Resources](#resources)
 
@@ -140,10 +140,16 @@ Can I ...
 	nmap -sV -Pn -vv -p 21 --script=ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221     
     hydra -C ftp/usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt -u 127.0.0.1 ftp    
 	
-### TCP Port 25: SMTP
-	
+### TCP Port 25: SMTP (Webmail)  
+Identify Mail Server version and search for exploits on searchsploit / Google. 
+Enumerate usernames. 
+Attempt brute forcing. 
+
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
+
+### TCP Port 53: DNS    
+conduct zone transfer   
 
 ### TCP Port 88: Kerberos
 see active directory cheatsheet
@@ -207,7 +213,7 @@ Impacket:
 
      python3 samdump.py SMB 172.21.0.0
 
-### TCP POrt 1433: MsSQL
+### TCP Port 1433: MsSQL
 If open:
 To connect   
 
@@ -228,8 +234,11 @@ To run shell commands if enabled:
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
 	
 ### TCP Port 3306: MySQL
+Attempt to brute force login.   
+Look for http or https sites - might be SQLi vulnerability.  
 	
 	mysql -h 10.10.10.10 -u root -p   
+	
 	
 ### UDP Port 161: SNMP 
 	
