@@ -240,8 +240,17 @@ Look for http or https sites - might be SQLi vulnerability.
 	mysql -h 10.10.10.10 -u root -p   
 	
 	
-### UDP Port 161: SNMP 
-	
+### UDP Port 161, 162: SNMP 
+Simple Network Management Protcol: used to monitor different devices in a network.   	
+MIB: Management Information Base. Stores device information. Object Identifier: idenitifes a specific object (or category) of data in a MIB.   
+OID info can be found here: http://oid-info.com/index.htm   
+SNMP versions:   
+SNMPv1 /2 / 2c:  the authentication is based on a string (community string), data travels in plain-text.    
+SNMPv3: uses username / password and community string. Data is encrypted.    
+Public (RO) and private (RW) are default community strings. If you know a valid community string you can use snmpwalk or snmp-check to access the MIB and query an OID. Community strings are RO (read only) or RW (Read write). Actions that can be taken depend on the type of string.       
+SNMP has data on: network interfaces (ipv4 and ipv6 adresses), usernames, uptime, server / OS version, processes running. It can be used to c   
+If 
+
 SNMP Walk: 
 
     snmpwalk -c public -v1 ipaddress 1
@@ -271,20 +280,20 @@ Metasploit aux modules:
  	auxiliary/scanner/snmp/aix_version                                   
  	auxiliary/scanner/snmp/arris_dg950                                   
  	auxiliary/scanner/snmp/brocade_enumhash                               
- 	auxiliary/scanner/snmp/cisco_config_tftp                               
+ 	auxiliary/scanner/snmp/cisco_config_tftp   #RW  community string, default is private                                
  	auxiliary/scanner/snmp/cisco_upload_file                              
  	auxiliary/scanner/snmp/cnpilot_r_snmp_loot                             
  	auxiliary/scanner/snmp/epmp1000_snmp_loot                             
  	auxiliary/scanner/snmp/netopia_enum                                    
  	auxiliary/scanner/snmp/sbg6580_enum                                 
- 	auxiliary/scanner/snmp/snmp_enum                                 
+ 	auxiliary/scanner/snmp/snmp_enum    #need RO or RW communit string, public or private                                     
  	auxiliary/scanner/snmp/snmp_enum_hp_laserjet                           
  	auxiliary/scanner/snmp/snmp_enumshares                                
  	auxiliary/scanner/snmp/snmp_enumusers                                 
  	auxiliary/scanner/snmp/snmp_login                                     
 
 
-Onesixtyone: 
+Onesixtyone: brute force community strings     
 
 	onesixtyone -c /usr/share/doc/onesixtyone/dict.txt 172.21.0.X
 
