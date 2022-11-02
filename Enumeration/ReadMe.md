@@ -153,10 +153,16 @@ Attempt brute forcing of usernames, then passwords.
 	VRFY root     #manually verify username, after connecting over telnet   
 
 ### TCP Port 53: DNS    
+DNS is commonly open on Windows domain controllers, not usually other devices.    
+Reverse (PTR) lookup to resolve an IP to a domain name: 
 
-    dig +noall +answer @10.10.10.10 -x 10.10.10.10    #reverse lookup to get domain name 
+    dig +noall +answer @10.10.10.10 -x 10.10.10.10     
+Zone Transfer:   
     dig -t axfr #zone transfer     
-    dig +noall +answer @10.10.10.10 axfr domain.com        
+    dig +noall +answer @10.10.10.10 axfr domain.com       
+    
+Brute force for subdomains:    
+    wfuzz -u http://10.10.10.10 -H "Host: FUZZ.site.com" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt      
 
 ### TCP Port 88: Kerberos
 see active directory cheatsheet
