@@ -151,6 +151,7 @@ Attempt brute forcing of usernames, then passwords.
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1    
 	VRFY root     #manually verify username, after connecting over telnet   
+	swaks --to root --from hacker --header "Subject: Test" --body "msg" --server 10.10.10.10     #send mail using swaks   
 
 ### TCP Port 53: DNS    
 DNS is commonly open on Windows domain controllers, not usually other devices.    
