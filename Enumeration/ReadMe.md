@@ -146,13 +146,17 @@ Can I ...
 ### TCP Port 25: SMTP (Webmail)  
 Identify Mail Server version and search for exploits on searchsploit / Google. 
 Enumerate usernames. 
-Attempt brute forcing. 
+Attempt brute forcing of usernames, then passwords.   
 
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
-	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1  
+	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1    
+	VRFY root     #manually verify username, after connecting over telnet   
 
 ### TCP Port 53: DNS    
+
+    dig +noall +answer @10.10.10.10 -x 10.10.10.10    #reverse lookup to get domain name 
     dig -t axfr #zone transfer     
+    dig +noall +answer @10.10.10.10 axfr domain.com        
 
 ### TCP Port 88: Kerberos
 see active directory cheatsheet
