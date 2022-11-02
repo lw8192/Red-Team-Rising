@@ -269,6 +269,12 @@ Append to /etc/passwd or /etc/shadow
 check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities) 
 
     getcap -r / 2>/dev/null  
+    getcap /usr/bin/binary   
+ Also check for special permissions:    
+ 
+    ls -l /usr/bin/binary   
+    lsattr /usr/bin/binary   
+    
 
 ## Container Escapes 
 docker, lxd, 
