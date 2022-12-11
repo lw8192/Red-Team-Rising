@@ -116,7 +116,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [unix-privesc-cecker](https://github.com/pentestmonkey/unix-privesc-check)   
 [Lin Priv Checker](https://github.com/linted/linuxprivchecker) 
 
-### Specialized Scripts 
+### Specialized Scripts    
+Verify web app is running in a Docker container - look for .dockerenv file in root of filesystem.     
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [SUDO Killer: sudo exploits](https://github.com/TH3xACE/SUDO_KILLER)  
 [Uptux - Specialized priv esc checks](https://github.com/initstring/uptux) 
