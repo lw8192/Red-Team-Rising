@@ -253,6 +253,8 @@ use binary to exec /bin/bash -p
 search for strings (search for username if scripts aren't picking up creds):
 
     grep -rwl "password" /var     
+    find . -iname 'config' -type f    #find config files     
+
    
 ### Writeable /etc/passwd or /etc/shadow
 
