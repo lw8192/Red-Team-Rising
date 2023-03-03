@@ -109,13 +109,14 @@ systeminfo
  
 
 ### Important Files  
+[File Inclusion Wordlist](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt)    
 
     %SYSTEMROOT%\System32\drivers\etc\hosts                   #local DNS entries 
     %SYSTEMROOT%\System32\drivers\etc\networks                #network config
     %SYSTEMROOT%\Prefetch                                     #prefetch dir, exe logs
     %WINDIR%\system32\config\AppEvent.Evt                     #application logs
     %WINDIR%\system32\config\SecEvent.Evt                     #security logs
-
+    
 
 ## Scripts 
 **You might want to check for AV first!**  
