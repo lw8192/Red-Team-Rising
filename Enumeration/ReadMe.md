@@ -251,7 +251,17 @@ To run shell commands if enabled:
 Attempt to brute force login.   
 Look for http or https sites - might be SQLi vulnerability.  
 	
-	mysql -h 10.10.10.10 -u root -p   
+	mysql -h 10.10.10.10 -u root -p    
+	nmap -sV -p 3306 --script mysql-audit,mysql-databases,mysql-dump-hashes,mysql-empty-password,mysql-enum,mysql-info,mysql-query,mysql-users,mysql-variables,mysql-vuln-cve2012-2122 <IP>   
+	
+
+Once connected to a SQL server through a CLI:    
+
+       show databases;    
+       use db_name;    
+       show tables;    
+       show columns from table_name;    
+       select * from table_name;    
 	
 	
 ### UDP Port 161, 162: SNMP 
