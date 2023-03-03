@@ -255,7 +255,7 @@ Look for http or https sites - might be SQLi vulnerability.
 	
 	
 ### UDP Port 161, 162: SNMP 
-Simple Network Management Protcol: used to monitor different devices in a network.   	  
+Simple Network Management Protocol: used to monitor different devices in a network.   	  
 MIB: Management Information Base. Stores device information. Object Identifier: idenitifes a specific object (or category) of data in a MIB.     
 OID info can be found here: http://oid-info.com/index.htm       
 SNMP versions:   
