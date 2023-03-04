@@ -14,4 +14,12 @@ https://github.com/SecureAuthCorp/impacket
 
 Local Locations:
 
-    /usr/share/doc/python3-impacket/examples
+    /usr/share/doc/python3-impacket/examples   
+    
+### Responder (not allowed on the OSCP exam, but a common pen testing tool)   
+Install:   
+
+    git clone https://github.com/lgandx/Responder   
+ Usage:   
+
+    sudo python3 Responder.py -I eth0      
