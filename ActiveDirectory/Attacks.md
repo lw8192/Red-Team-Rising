@@ -20,9 +20,12 @@ Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't ne
 Responder is not allowed on the OSCP exam. Allows you to spoof various services then capture hashes from devices that try to authenticate to those.    
 Start responder:    
 
-     sudo responder.py -I eth0   #start on specified interface        
+     sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.           
+     
+Captured hashes will be stored in the logs folder, in a .txt file named for the protcol-hash type- and IP captured from.     
 Crack Hashes from responder:     
 
+    john hashes.txt   #John the Ripper willa utomatically detect the format of hashes collected by Responder.    
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)  
 
