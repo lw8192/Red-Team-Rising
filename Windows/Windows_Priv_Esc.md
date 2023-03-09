@@ -61,6 +61,7 @@
   * [Learn More](#learn-more)
 
 ## Commands
+    ver    #OS version    
     systeminfo 
     wmic qfe get Caption, Description   #installed updates 
     whoami /priv  
