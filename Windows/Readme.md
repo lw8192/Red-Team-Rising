@@ -31,4 +31,7 @@ Crack Hashes from responder:
 
     john hashes.txt   #John the Ripper willa utomatically detect the format of hashes collected by Responder.    
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
-    hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder) 
+    hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
+    
+### Evil-WinRM
+Access port 5985. Use with a username / password or username / hash. $ evil-winrm -u Administrator -p password -i 10.10.10.10    
