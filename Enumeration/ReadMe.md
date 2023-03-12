@@ -229,9 +229,10 @@ Impacket:
 
 ### TCP Port 1433: MsSQL
 If open:
-To connect   
+To connect:   
 
-    sqsh -S 10.10.10.10 -U user -P password 
+    sqsh -S 10.10.10.10 -U user -P password    
+    /usr/share/doc/python3-impacket/examples/mssqlclient.py   #use impacket script to connect    
     
 To run shell commands if enabled:   
 
