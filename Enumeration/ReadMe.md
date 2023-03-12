@@ -227,8 +227,10 @@ Impacket:
 
      python3 samdump.py SMB 172.21.0.0
 
-### TCP Port 1433: MsSQL
-If open:
+### TCP Port 1433: MSSQL
+Scanning: 
+    
+    nmap --script ms-sql-info,ms-sql-empty-password,ms-sql-xp-cmdshell,ms-sql-config,ms-sql-ntlm-info,ms-sql-tables,ms-sql-hasdbaccess,ms-sql-dac,ms-sql-dump-hashes --script-args mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 <IP>      
 To connect:   
 
     sqsh -S 10.10.10.10 -U user -P password    
