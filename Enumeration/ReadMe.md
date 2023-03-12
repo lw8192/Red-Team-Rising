@@ -233,6 +233,7 @@ To connect:
 
     sqsh -S 10.10.10.10 -U user -P password    
     /usr/share/doc/python3-impacket/examples/mssqlclient.py   #use impacket script to connect    
+    /usr/share/doc/python3-impacket/examples/mssqlclient.py HOST/username:password@10.10.10.10 -windows-auth  #log onto a Windows box  
     
 To run shell commands if enabled:   
 
