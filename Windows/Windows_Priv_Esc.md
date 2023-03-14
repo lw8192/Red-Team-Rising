@@ -267,7 +267,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
 Hidden Files  
 
     PS > Get-ChildItem -Hidden -Path C:\Users\admin\Desktop\     
-Run from C:\ (recursive search). C:\Windows\Panther\Unattend.xml: base64 password    
+Run from C:\ (recursive search).  
 
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
     dir /s *pass* == *vnc* == *.config* 2>nul    
@@ -277,6 +277,14 @@ Run from C:\ (recursive search). C:\Windows\Panther\Unattend.xml: base64 passwor
 DMP Files (possible base64 passwords)  - find or create from processes
 
     strings /root/Desktop/iexplore.DMP | grep "Authorization: Basic"    
+    
+Unattend files (could contain base64 encoded passwords):   
+
+    C:\unattend.xml
+    C:\Windows\Panther\Unattend.xml
+    C:\Windows\Panther\Unattend\Unattend.xml
+    C:\Windows\system32\sysprep.inf
+    C:\Windows\system32\sysprep\sysprep.xml
     
 ### Saved creds
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword" 
