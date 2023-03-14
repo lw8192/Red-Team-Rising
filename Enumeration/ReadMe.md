@@ -239,6 +239,7 @@ To connect:
     
 To run shell commands if enabled:   
 
+    SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
     xp_cmdshell 'whoami';
 
 See who can exec xp_cmdshell:   
