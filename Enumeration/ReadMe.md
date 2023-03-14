@@ -238,7 +238,7 @@ To connect:
     /usr/share/doc/python3-impacket/examples/mssqlclient.py   #use impacket script to connect    
     /usr/share/doc/python3-impacket/examples/mssqlclient.py HOST/username:password@10.10.10.10 -windows-auth  #log onto a Windows box  
     
-To run shell commands if enabled:   
+Running shell commands using xp_cmdshell (reference article [here](https://www.hackingarticles.in/mssql-for-pentester-command-execution-with-xp_cmdshell/):      
 
     enable_xp_cmdshell  #enable if using mssqlclient.py    
     SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
