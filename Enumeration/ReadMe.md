@@ -241,6 +241,9 @@ To run shell commands if enabled:
 
     xp_cmdshell 'whoami';
 
+See who can exec xp_cmdshell:   
+
+    Use master
 
 ### TCP Port 2049: NFS 
 	
