@@ -1,6 +1,13 @@
 # Windows Resources 
 Use this folder for compromising a standalone Windows box. For domain compromising, see [Active_Directory](https://github.com/Scr1ptK1ddie/OSCPprep/tree/main/ActiveDirectory) folder.   
-
+## Contents 
+- [Windows Resources](#windows-resources)
+  * [Contents](#contents)
+  * [Tools](#tools)
+    + [Impacket](#impacket)
+    + [Responder (not allowed on the OSCP exam, but a common pen testing tool)](#responder--not-allowed-on-the-oscp-exam--but-a-common-pen-testing-tool-)
+    + [Evil-WinRM](#evil-winrm)
+    + [Metasploit and Meterpreter](#metasploit-and-meterpreter)
 
 ## Tools
 ### Impacket 
@@ -25,7 +32,7 @@ You might be able to use a LFI vulnerability to request a resource and capture a
 Captured hashes will be stored in the logs folder, in a .txt file named for the protcol-hash type- and IP captured from.     
 Crack Hashes from responder:     
 
-    john hashes.txt   #John the Ripper willa utomatically detect the format of hashes collected by Responder.    
+    john hashes.txt   #John the Ripper will automatically detect the format of hashes collected by Responder.    
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
     
