@@ -45,6 +45,3 @@ mkdir /home/kali/PEScripts/Windows
 wget https://raw.githubusercontent.com/bitsadmin/wesng/master/wes.py -o /home/kali/PEScripts/Windows/wes.py 
 wget https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1 -o /home/kali/PEScripts/Windows/PowerUp.ps1
 
-
-#download binaries 
-mkdir /home/kali/bins 
