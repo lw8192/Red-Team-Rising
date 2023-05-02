@@ -14,7 +14,7 @@ pip install search-that-hash
 #download web tools 
 apt-get install feroxbuster sshuttle chisel gobuster nikto  
 
-#dowload compiler tools 
+#download compiler tools 
 apt-get install gcc-multilib mingw-w64
 pipx ensurepath
 pipx install crackmapexec  
@@ -28,12 +28,13 @@ wget https://addons.mozilla.org/firefox/downloads/file/3819588/wappalyzer-6.7.13
 firefox wappalyzer-6.7.13-fx.xpi 
 
 #download shells
-mkdir /home/kali/shells
+mkdir ~/shells
 wget https://raw.githubusercontent.com/flozz/p0wny-shell/blob/master/shell.php -o /home/kali/shells/p0wneyWebshell.php 
 wget https://raw.githubusercontent.com/WhiteWinterWolf/wwwolf-php-webshell/master/webshell.php -o /home/kali/shells/wwwWebshell.php
 
 #download scripts
-mkdir /home/kali/PEScripts/Linux 
+mkdir ~/PEScripts
+mkdir ~/PEScripts/Linux 
 wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh -o /home/kali/PEScripts/Linux/linpeas.sh
 wget https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh -o /home/kali/PEScripts/Linux/lse.sh 
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -o /home/kali/PEScripts/Linux/LinEnum.sh
@@ -41,7 +42,7 @@ wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linu
 wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -o /home/kali/PEScripts/Linux/linuxprivchecker.py
 wget https://raw.githubusercontent.com/jondonas/linux-exploit-suggester-2/master/linux-exploit-suggester-2.pl -o /home/kali/PEScripts/Linux/linux-exploit-suggester-2.pl
 
-mkdir /home/kali/PEScripts/Windows 
+mkdir ~/PEScripts/Windows 
 wget https://raw.githubusercontent.com/bitsadmin/wesng/master/wes.py -o /home/kali/PEScripts/Windows/wes.py 
 wget https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1 -o /home/kali/PEScripts/Windows/PowerUp.ps1
 
