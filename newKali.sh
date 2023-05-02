@@ -5,7 +5,7 @@ apt-get install python3
 apt-get install pip3
 
 #download pimpmykali - impacket, seclists, etc
-wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/blob/master/pimpmykali.sh |bash    
+wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/master/pimpmykali.sh |bash    
 
 #download search that hash 
 python3 -m pip install pipx
@@ -20,22 +20,22 @@ pipx ensurepath
 pipx install crackmapexec  
 
 #download foxy proxy, user agent switcer and wapp analyzer 
-wget https://addons.mozilla.org/firefox/downloads/file/3616824/foxyproxy_standard-7.5.1-an+fx.xpi
-firefox ./foxyproxy_standard-7.5.1-an+fx.xpi
-wget https://addons.mozilla.org/firefox/downloads/file/3769639/user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi
-firefox ./user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi  
-wget https://addons.mozilla.org/firefox/downloads/file/3819588/wappalyzer-6.7.13-fx.xpi 
-firefox wappalyzer-6.7.13-fx.xpi 
+wget https://addons.mozilla.org/firefox/downloads/file/3616824/foxyproxy_standard-7.5.1-an+fx.xpi -o /tmp/foxyproxy_standard-7.5.1-an+fx.xpi
+firefox /tmp/foxyproxy_standard-7.5.1-an+fx.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/4098688/user_agent_string_switcher-0.5.0.xpi -o /tmp/user_agent_string_switcher-0.5.0.xpi
+firefox /tmp/user_agent_string_switcher-0.5.0.xpi 
+wget https://addons.mozilla.org/firefox/downloads/file/4095500/wappalyzer-6.10.62.xpi -o /tmp/wappalyzer-6.10.62.xpi 
+firefox /tmp/wappalyzer-6.10.62.xpi 
 
 #download shells
 mkdir ~/shells
-wget https://raw.githubusercontent.com/flozz/p0wny-shell/blob/master/shell.php -o /home/kali/shells/p0wneyWebshell.php 
-wget https://raw.githubusercontent.com/WhiteWinterWolf/wwwolf-php-webshell/master/webshell.php -o /home/kali/shells/wwwWebshell.php
+wget https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php -o ~/shells/p0wneyWebshell.php 
+wget https://raw.githubusercontent.com/WhiteWinterWolf/wwwolf-php-webshell/master/webshell.php -o ~/shells/wwwWebshell.php
 
 #download scripts
 mkdir ~/PEScripts
 mkdir ~/PEScripts/Linux 
-wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh -o /home/kali/PEScripts/Linux/linpeas.sh
+curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
 wget https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh -o /home/kali/PEScripts/Linux/lse.sh 
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -o /home/kali/PEScripts/Linux/LinEnum.sh
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -o /home/kali/PEScripts/Linux/les.sh
