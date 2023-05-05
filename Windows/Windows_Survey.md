@@ -60,3 +60,10 @@ Services: common persistence method.
     PS > Get-NetFirewallProfile | Format-Table Name, Enabled  
     PS > Get-NetFirewallRule | select DisplayName, Enabled, Description #firewall rules 
     PS > Set-NetFirewallProfile -Profile Domain, Public, Private -Enabled False       #disable firewall (if admin)   
+    
+## Binary Analysis 
+Pull binary and associated files for further analysis in a sandbox. Collect memory (if able / applicable).   
+
+   PS > Get-FileHash file     #sha256 hash  
+   PS > strings file          #using SysInternals tool 
+   PS > winpmem_mini.exe image.raw     #perform a memory capture 
