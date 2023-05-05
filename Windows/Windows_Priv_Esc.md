@@ -60,7 +60,7 @@
   * [Cheat Sheets and Guides](#cheat-sheets-and-guides)
   * [Learn More](#learn-more)
 
-## Commands
+## Commands  
     ver    #OS version    
     systeminfo 
     wmic qfe get Caption, Description   #installed updates 
