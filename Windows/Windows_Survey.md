@@ -1,5 +1,6 @@
 # Windows Survey Commands   
 Commands to survey a box or look for malicious activity.    
+Common persistence methods: services, scheduled tasks, autoruns, startup folders, WMI events.   
 
 ## Network Usage    
 Suspicious connections: look for multiple outbound connections, strange behavior, long HTTP or HTTPS sessions, techniques or known malicious IOCS. 
@@ -52,8 +53,11 @@ Services: common persistence method.
      PS > Get-ScheduledTask *Name* | Select-Object -Property TaskName    
      PS > Export-ScheduledTask -TaskName 'Name'   #get more info 
      PS > Get-ScheduledTaskInfo -TaskName 'Name' | select-object LastRunTime    #see last time ran
-     
- ## Firewalls    
+## WMI Events  
+
+    PS > Get-WMIObject -Namespace root\Subscription -Class __EventFilter | fl -propertyquery #look for WMI persistence mechanisms     
+    
+## Firewalls    
  
     netsh firewall show state 
     netsh firewall show config   
