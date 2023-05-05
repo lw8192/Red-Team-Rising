@@ -80,20 +80,6 @@
     tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
     wmic product get name,version, vendor       #installed apps and versions 
  
-Services 
-
-    net start                         #installed and started services 
-    wmic service where "name like 'service'" get Name,PathName        #more info on a service 
-    PS > Get-Process -Name service  
-
-    
- Firewalls    
- 
-    netsh firewall show state 
-    netsh firewall show config   
-    PS > Get-NetFirewallProfile | Format-Table Name, Enabled  
-    PS > Get-NetFirewallRule | select DisplayName, Enabled, Description #firewall rules 
-    PS > Set-NetFirewallProfile -Profile Domain, Public, Private -Enabled False       #disable firewall (if admin)   
 ## Powershell
     powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
@@ -157,7 +143,6 @@ https://github.com/nu11secur1ty/Windows10Exploits
     SeAssignPrimaryTokenPrivilege -> Juicy Potato 
     SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.  
     SeBackup-> 
-    Se
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
     If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
