@@ -64,6 +64,6 @@ Services: common persistence method.
 ## Binary Analysis 
 Pull binary and associated files for further analysis in a sandbox. Collect memory (if able / applicable).   
 
-   PS > Get-FileHash file     #sha256 hash  
-   PS > strings file          #using SysInternals tool 
-   PS > winpmem_mini.exe image.raw     #perform a memory capture 
+    PS > Get-FileHash file     #sha256 hash  
+    PS > strings file          #using SysInternals tool 
+    PS > winpmem_mini.exe image.raw     #perform a memory capture 
