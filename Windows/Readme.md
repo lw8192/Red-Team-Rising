@@ -1,5 +1,5 @@
 # Windows Resources 
-Use this folder for compromising a standalone Windows box. For domain compromising, see [Active_Directory](https://github.com/Scr1ptK1ddie/OSCPprep/tree/main/ActiveDirectory) folder.   
+Use this folder for triaging and compromising a standalone Windows box. For domain compromising, see [Active_Directory](https://github.com/Scr1ptK1ddie/OSCPprep/tree/main/ActiveDirectory) folder.   
 ## Contents 
 - [Windows Resources](#windows-resources)
   * [Contents](#contents)
