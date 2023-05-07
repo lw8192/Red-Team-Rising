@@ -52,7 +52,8 @@ Nmap is not ideal for lots of IPs. Masscan: seperates SYN send from ACK receive 
     for x in {1..254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
     sudo nmap -sn 192.168.1.1-254     #-sn host discovery only, best w/ root privs, --reason to see why hosts is up   
     nmap -v -s 192.168.0.0/24   
-    nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt         
+    nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt 
+    smbeagle -c out.csv -n 10.10.10.0/24 -u user -p password   #look for SMB shares     
 ### Traceroute and Ping   
 Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Windows), 255 (networking devices).   
 
@@ -194,6 +195,7 @@ Access with smbclient or rpcclient
     smbclient -L 10.10.10.10  
     smbclient -U <HOST> -L 10.10.10.10
     smbclient \\\\10.10.10.10\\share  
+    smbclient -L //10.10.10.10 -U user -m SMB2   
 
 if getting error "protocol negotiation failed: NT_STATUS_CONNECTION_DISCONNECTED or box is running SMB1	
 	
@@ -226,8 +228,15 @@ Impacket SmbClient:
 	
 Impacket: 
 
-     python3 samdump.py SMB 172.21.0.0
+     python3 samdump.py SMB 172.21.0.0   
+SMB Exploits  
 
+     CVE-2022-24500: RCE from Github.       
+     CVE-2021-36972: unauth info disclosure.     
+     CVE-2020-1206:SMBleed, limited Win10 version applicability. 
+     CVE-2020-0796: SMBGhost / CoronaBlue, widespread use.      
+     CVE-2017-0144: Eternal Blue, WannaCry ransomware.    
+     
 ### TCP Port 1433: MSSQL 
 [MSSQL Injection Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)    
 Scanning: 
