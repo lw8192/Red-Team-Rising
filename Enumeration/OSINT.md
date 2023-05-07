@@ -31,7 +31,11 @@ HaveIBeenPwned.com
 Usually you can't use breached data on a pen test - makes sure to confirm with legal!   
 
 ## Site Enum   
-cewl -m 8 -w out_list.txt -a --meta-file list-meta.txt -e --email_file list_email.txt https://site.com/
+Info gathering: https://www.sec.gov/edgar/search-and-access, job networking sites, xxlek.com, namechk.com, whatsmyname.app     
+Sites to use: shodan.io, network-tools.com, viewdns.info, securityspace.com    
+Crawl site for a WordList:     
+
+    cewl -m 8 -w out_list.txt -a --meta-file list-meta.txt -e --email_file list_email.txt https://site.com/
 ### Google Dorks  
 Google Hacking db: collect of dorks. FGDS (Fast Google Dorks Scan) can automate but also get you banned.    
 
