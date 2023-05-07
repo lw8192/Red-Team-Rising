@@ -71,3 +71,33 @@ Pull binary and associated files for further analysis in a sandbox. Collect memo
     PS > Get-FileHash file     #sha256 hash  
     PS > strings file          #using SysInternals tool 
     PS > winpmem_mini.exe image.raw     #perform a memory capture 
+    
+## SMB Shares   
+View remote shares:   
+
+     PS > Get-WmiObject -Class win32_share -ComputerName ip         
+     net view /all \\server 
+View local shares: 
+
+     PS > Get-SMBShare                                                                               
+     net share 
+Connect SMB share:    
+
+    PS:> New-SmbMapping -LocalPath X: -RemotePath \\server\sharename     
+    net use \\server\sharename 
+View inbound connections:   
+
+    PS:> Get-SmbSession                                                             
+    net session 
+Drop inbound connections:   
+
+    PS:> Close-SmbSession                                                               
+    net session \\server /del   
+View outbound SMB mapped connections: 
+
+    PS:> Get-SmbMapping                                        
+    net use 
+Drop outbound SMB connections:    
+
+    PS:> Remove-SmbMapping -Force                                     
+    net use * /del
