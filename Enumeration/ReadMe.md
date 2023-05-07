@@ -37,7 +37,12 @@
 
 [Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
   
-## Network Enum:  
+### Masscan   
+Nmap is not ideal for lots of IPs. Masscan: seperates SYN send from ACK receive code, ids open/closed from response, less function but faster. Can be hard to get accurate results.     
+  
+    masscan 192.168.1.1/24 -p 22,25,80,443,3389            
+    --rate 50000   #fastest scan
+### Network Enum:  
     for x in {1..254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
     sudo nmap -sn 192.168.1.1-254     #-sn host discovery only, best w/ root privs, --reason to see why hosts is up   
     nmap -v -s 192.168.0.0/24   
