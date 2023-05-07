@@ -42,7 +42,11 @@
     sudo nmap -sn 192.168.1.1-254     #-sn host discovery only, best w/ root privs, --reason to see why hosts is up   
     nmap -v -s 192.168.0.0/24   
     nmap -Pn -vv -F -sSU -T4 -oG /kali/192.168.15.200-254.xml 192.168.15.200-254 | grep -v 'filtered|closed' > /kali/quick_recon.txt         
+### Traceroute and Ping   
+Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Windows), 255 (networking devices).   
 
+     ping -c3 10.10.10.10    #Linux will run ping process indefinetly   
+     tracert 10.10.10.10  
 ### NetDiscover (ARP Scanning):
 
     netdiscover -i eth0
