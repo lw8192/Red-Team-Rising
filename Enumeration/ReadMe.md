@@ -81,7 +81,7 @@ Nmap scan types:
 
     -T0 or T1 (evade IDS or firewall detection)  
     -sN (TCP NULL scan - no response if open or blocked by firewall, stealthiest)  
-    -sS (SYN scan, default if running as root))   
+    -sS (SYN scan, default if running as root, not logged by most targets)   
     -sT (TCP 3 way handshake, default if nmap is running without root privileges)   
     -sF (TCP FIN scan - no response if open or blocked by firewall)
     -sX (TCP XMAS scan - FINE/PSH/URG - no response if open or blocked by firewall)
@@ -177,13 +177,17 @@ see Active Directory Cheat Sheet
 ### TCP Port 445: SMB 
 	
 Can I...
+- [ ] Identify a version
 - [ ] Enum with smbmap, enum4linux, nmap, crackmapexec
 - [ ] check for anon log in
 [Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
 	
-    SAMBA 3.x-4.x #  vulnerable to linux/samba/is_known_pipename
-    SAMBA 3.5.11 # vulnerable to linux/samba/is_known_pipename
+    SAMBA 3.x-4.x  #vulnerable to linux/samba/is_known_pipename
+    SAMBA 3.5.11   #vulnerable to linux/samba/is_known_pipename
+    Windows SMBv1  #vulnerable to MITM, not encrypted. 
+    Windows SMBv2  #Adds message intergrity signing. 
+    Windows SMBv3  #Supports encryption, resists MITM, message integrity signing.    
 
 Access with smbclient or rpcclient
 	
