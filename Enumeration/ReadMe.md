@@ -1,30 +1,25 @@
 # Enumeration Quick Reference   
 
 ## Contents 
-<!-- TOC start -->
-- [Contents ](#contents)
-- [Checklist   ](#checklist)
-- [Recon   ](#recon)
-  * [OSINT   ](#osint)
-  * [DNS Look Up   ](#dns-look-up)
-- [Network Enum:  ](#network-enum)
-  * [NetDiscover (ARP Scanning):](#netdiscover-arp-scanning)
-- [Host enum ](#host-enum)
-- [Service Enum   ](#service-enum)
-  * [TCP Port 21: FTP ](#tcp-port-21-ftp)
-  * [TCP Port 25: SMTP (Webmail)  ](#tcp-port-25-smtp-webmail)
-  * [TCP Port 53: DNS    ](#tcp-port-53-dns)
-  * [TCP Port 88: Kerberos](#tcp-port-88-kerberos)
-  * [TCP Port 139: NetBIOS](#tcp-port-139-netbios)
-  * [TCP Port 389: LDAP ](#tcp-port-389-ldap)
-  * [TCP Port 445: SMB ](#tcp-port-445-smb)
-  * [TCP Port 1433: MSSQL ](#tcp-port-1433-mssql)
-  * [TCP Port 2049: NFS ](#tcp-port-2049-nfs)
-  * [TCP Port 3306: MySQL](#tcp-port-3306-mysql)
-  * [UDP Port 161, 162: SNMP ](#udp-port-161-162-snmp)
-- [Resources  ](#resources)
-<!-- TOC end -->
-
+- [Enumeration Quick Reference](#enumeration-quick-reference)
+  * [Contents](#contents)
+  * [Checklist](#checklist)
+  * [Network Enum:](#network-enum-)
+    + [NetDiscover (ARP Scanning):](#netdiscover--arp-scanning--)
+  * [Host enum](#host-enum)
+  * [Service Enum](#service-enum)
+    + [TCP Port 21: FTP](#tcp-port-21--ftp)
+    + [TCP Port 25: SMTP (Webmail)](#tcp-port-25--smtp--webmail-)
+    + [TCP Port 53: DNS](#tcp-port-53--dns)
+    + [TCP Port 88: Kerberos](#tcp-port-88--kerberos)
+    + [TCP Port 139: NetBIOS](#tcp-port-139--netbios)
+    + [TCP Port 389: LDAP](#tcp-port-389--ldap)
+    + [TCP Port 445: SMB](#tcp-port-445--smb)
+    + [TCP Port 1433: MSSQL](#tcp-port-1433--mssql)
+    + [TCP Port 2049: NFS](#tcp-port-2049--nfs)
+    + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)
+    + [UDP Port 161, 162: SNMP](#udp-port-161--162--snmp)
+  * [Resources](#resources)
 
 ## Checklist   
 
