@@ -66,12 +66,16 @@ Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Window
     
     Run autorecon then open results folder in atom.    
 
-More scan types: 
+Nmap scan types: 
 
     -T0 or T1 (evade IDS or firewall detection)  
     -sN (TCP NULL scan - no response if open or blocked by firewall, stealthiest)  
+    -sS (SYN scan, default if running as root))   
+    -sT (TCP 3 way handshake, default if nmap is running without root privileges)   
     -sF (TCP FIN scan - no response if open or blocked by firewall)
     -sX (TCP XMAS scan - FINE/PSH/URG - no response if open or blocked by firewall)
+    -sP, -Pn (ping sweeps) 
+    -sU (UDP scan) 
     
     -sA (TCP ACK scan - see what ports are not filtered by a firewall) 
     -sW (TCP Window / ACK scan - what ports are not filtered 
@@ -82,10 +86,11 @@ More scan types:
     -sI <Zombie ip>  
     --traceroute 
     -f   fragment packets
+    -6 (IPv6 scan) 
 
 ## Service Enum   
 
-nmap scripts: /usr/share/nmap/scripts, -sC, -sV 
+nmap scripts: /usr/share/nmap/scripts, -sC. Use with -sV for best results.         
 
     nmap --script <name>    --script-help 
     -sV --version-intensity
