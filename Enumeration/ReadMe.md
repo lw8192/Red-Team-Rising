@@ -42,7 +42,7 @@ Nmap is not ideal for lots of IPs. Masscan: seperates SYN send from ACK receive 
   
     masscan 192.168.1.1/24 -p 22,25,80,443,3389            
     --rate 50000   #fastest scan
-    openssl s_client -connect 10.10.10.10:443 2>/dev/null | openssl x509 -text | grep Subject:   #get TLS cert info 
+    openssl s_client -connect 10.10.10.10:443 2>/dev/null | openssl x509 -text | grep Subject:   #get TLS cert info to id domain 
 ### Network Enum:  
     for x in {1..254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " "     
     sudo nmap -sn 192.168.1.1-254     #-sn host discovery only, best w/ root privs, --reason to see why hosts is up   
