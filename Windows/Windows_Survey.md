@@ -2,6 +2,18 @@
 Commands to survey a box or look for malicious activity.    
 Common persistence methods: services, scheduled tasks, autoruns, startup folders, WMI events.   
 
+- [Windows Survey Commands](#windows-survey-commands)
+  * [Network Usage](#network-usage)
+  * [Processes](#processes)
+  * [Services](#services)
+  * [Registry](#registry)
+  * [User Accounts](#user-accounts)
+  * [Scheduled Tasks](#scheduled-tasks)
+  * [WMI Events](#wmi-events)
+  * [Firewalls](#firewalls)
+  * [Binary Analysis](#binary-analysis)
+  * [SMB Shares](#smb-shares)
+  
 ## Network Usage    
 Suspicious connections: look for multiple outbound connections, strange behavior, long HTTP or HTTPS sessions, techniques or known malicious IOCS. 
 
