@@ -20,7 +20,7 @@ Modify malware to evade signature analysis, encode using obfuscation tools, leve
 
 IronPython:    
 Execute obfuscated Python natively in a C# program, encode it as a variable then execute (no Python interpreter needed). Source: https://www.willhackforsushi.com/sec504/csharp_py.cs     
-'''
+"""
 // This is the excellent work of Chris Davis of Counter Hack
 // Small edits by Joshua Wright for clarity
 
@@ -65,7 +65,7 @@ namespace csharp_py
         }
     }
 }
-'''
+"""
 
 ## Tools     
 
