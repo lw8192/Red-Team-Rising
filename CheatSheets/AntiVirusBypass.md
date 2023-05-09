@@ -20,7 +20,7 @@ Modify malware to evade signature analysis, encode using obfuscation tools, leve
 
 IronPython:    
 Execute obfuscated Python natively in a C# program, encode it as a variable then execute (no Python interpreter needed). Source: https://www.willhackforsushi.com/sec504/csharp_py.cs     
-"""
+~~~
 // This is the excellent work of Chris Davis of Counter Hack
 // Small edits by Joshua Wright for clarity
 
@@ -65,7 +65,7 @@ namespace csharp_py
         }
     }
 }
-"""
+~~~
 
 ## Tools     
 
@@ -157,6 +157,15 @@ View Windows Defender logs
     Get-WinEvent 'Microsoft-Windows-Windows Defender/Operational' MaxEvents 10 | Where-Object Id -e 1116 | Format-List 
 
 
+# Living Off the Land   
+https://lolbas-project.github.io/    
+Typical binaries used: Rundll32, Regsvr32, Msiexec, Mshta, Certutil, MSBuild, WMI command line utility (WMIC), WMI provider host (WmiPrvSe)      
+Bitsadmin: exfil data   
+Certutil: download data    
+## Use Microsoft .NET InstallUtil to Evade AppLocker   
+Execute code in program's local memory via reflection.    
+
+    PS > InstallUtil /U mal.exe     #put malicious code in Uninstall routine of a program 
 # Resources  
 ## Cheat sheets 
 https://github.com/sinfulz/JustEvadeBro   
