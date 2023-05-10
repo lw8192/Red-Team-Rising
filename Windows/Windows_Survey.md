@@ -15,7 +15,8 @@ Common persistence methods: services, scheduled tasks, autoruns, startup folders
   * [SMB Shares](#smb-shares)
   
 ## Network Usage    
-Suspicious connections: look for multiple outbound connections, strange behavior, long HTTP or HTTPS sessions, techniques or known malicious IOCS. 
+Suspicious connections: look for multiple outbound connections, strange behavior, long HTTP or HTTPS sessions, techniques or known malicious IOCS.     
+Network traffic indicators: long connections, consistent packet intervals, consistent data sizes (heartbeat checking), consistent packet intervals within a jitter metric (skew)       
 
     netstat.exe -nao
     PS > Get-NetTCPConnection -State Listen | Select-Object -Property LocalAddress, LocalPort, OwningProcess   
@@ -112,4 +113,7 @@ View outbound SMB mapped connections:
 Drop outbound SMB connections:    
 
     PS:> Remove-SmbMapping -Force                                     
-    net use * /del
+    net use * /del    
+    
+ ## Logging 
+ Event Ids to check for persistence: 4624, 4634, 4672, 4732, 4688, 4697   
