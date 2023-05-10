@@ -267,7 +267,10 @@ use binary to exec /bin/bash -p
 ## Passwords / config files 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
-    cat ~/.bash_history | grep -i passw  
+    cat ~/.*history | grep -i passw    #check .bash_history, .mysql_history 
+    last -f /var/log/btmp    #failed logins, look for password as username    
+    cat /home/*/.aws/credentials   #AWS creds       
+    cat /home/*/.azure/accessTokens.json    #Azure login token    
     
 search for strings (search for username if scripts aren't picking up creds):
 
@@ -297,16 +300,13 @@ check gtfobins, [capabilities reference](https://book.hacktricks.xyz/linux-unix/
     ls -l /usr/bin/binary   
     lsattr /usr/bin/binary   
     
-
 ## Container Escapes 
 docker, lxd, 
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)    
 [Docker for pen testers](https://blog.ropnop.com/docker-for-pentesters/)   
 
-
     docker ps -a 
-
 
 ## NFS No Root Squashing   
 Allows you to mount drive onto attack box, create a SUID binary that you can run on the victim.  
