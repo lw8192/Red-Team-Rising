@@ -19,9 +19,9 @@ Suspicious connections: look for multiple outbound connections, strange behavior
 Network traffic indicators: long connections, consistent packet intervals, consistent data sizes (heartbeat checking), consistent packet intervals within a jitter metric (skew)       
 
     netstat.exe -nao
-    PS > Get-NetTCPConnection -State Listen | Select-Object -Property LocalAddress, LocalPort, OwningProcess   
+    PS > Get-NetTCPConnection -State Listen | Select-Object -Property LocalAddress, LocalPort, State, OwningProcess   
     PS > Get-NetTCPConnection -RemoteAddress 192.168.10.0 | Select-Object CreationTime, LocalAddress, LocalPort, Remote Address, RemotePort, OwningProcess, State    #info from a remote system   
-    PS > Get-Process -ID pid    #get PID from netstat then lookup process   
+    PS > Get-Process | Select-Object -Property Path, Name, Id | Where-Object -Property Id -eq 1111    #get PID from netstat then lookup process   
     
 ## Processes    
 Suspicious processes: look for weird names or activity, non-standard path, weird parent / child relationships, base64 encoded command line options.         
@@ -29,7 +29,9 @@ Suspicious processes: look for weird names or activity, non-standard path, weird
     wmic.exe process   
     PS > Get-Process 'name*' | select -object *   
     PS > Get-Process -ComputerName Remote     #get process info from a remote computer   
-    PS > Get-CimInstance -Class win32_process | select-object ProcessId, ProcessName,CommandLine   #more detailed info 
+    PS > Get-Process | Select-Object -Property Path, Name, Id    #look for IOCs   
+    PS > Get-Process | Select-Object -Property Path, Name, Id | Where-Object -Property Name -eq name   #look at specific process    
+    PS > Get-CimInstance -Class win32_process | select-object ProcessId, ProcessName,CommandLine   #more detailed info - command used to run    
     PS > Get-CimInstance -Class win32_process | Where-Object -Property ParentProcessID -EQ 644  #parent proc info  
     
 ## Services 
@@ -42,7 +44,8 @@ Services: common persistence method.
     PS > Get-CimInstance -ClassName win32_service | Format-List Name,Caption,Description,PathName   #get path to program
     #view logs: new service installed
     wevutil.exe  
-    PS > Get-WinEvent -LogName System | Where-Object -Property Id -EQ 7045 | Format-List -Property TimeCreated, Message
+    PS > Get-WinEvent -LogName System | Where-Object -Property Id -EQ 7045 | Format-List -Property TimeCreated, Message   
+    
  ## Registry   
  HKLM and HKCU are hives on disk. Look for autoruns (ASEP) and startup folders.      
  
@@ -64,7 +67,7 @@ Services: common persistence method.
  
      schtasks.exe 
      PS > Get-ScheduledTask *Name* | Select-Object -Property TaskName    
-     PS > Export-ScheduledTask -TaskName 'Name'   #get more info 
+     PS > Export-ScheduledTask -TaskName 'Name'   #get more info and see XML file    
      PS > Get-ScheduledTaskInfo -TaskName 'Name' | select-object LastRunTime    #see last time ran
 ## WMI Events  
 
