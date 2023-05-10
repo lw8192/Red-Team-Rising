@@ -56,9 +56,9 @@ Overpass the Hash / Pass the Key (PTK)
 
 Pass the Ticket (Access to user on the domain needed)  
 
-Golden/Silver Ticket Attacks (Domain admin needed / Service hash needed) 
+Golden/Silver Ticket Attacks (krbtgt or domain admin hash needed / Service hash needed) 
 
-Skeleton key attacks using mimikatz (Domain Admin needed) 
+Skeleton key attacks using mimikatz (Domain Admin hneeded) 
 
 ### Kerbrute Enumeration 
 No domain access needed 
@@ -99,7 +99,7 @@ ASREPRoast with Impacket:
 ASREP Roast with Rubeus:
 
 ### Golden / Silver Ticket Attacks: 
-
+Golden ticket: use krbtgt password hash to form a Ticket Granting Ticket (allows authentication to any Kerberos service)   
 ### Overpass The Hash/Pass The Key (PTK):
 Impacket 
 
