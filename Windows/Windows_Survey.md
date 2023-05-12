@@ -1,6 +1,7 @@
 # Windows Survey Commands   
 Commands to survey a box or look for malicious activity.    
-Common persistence methods: services, scheduled tasks, autoruns, startup folders, WMI events.   
+Common persistence methods: services, scheduled tasks, autoruns, startup folders, WMI events.  
+Reference Windows_Forensics.md for more in depth host analysis.    
 
 - [Windows Survey Commands](#windows-survey-commands)
   * [Network Usage](#network-usage)
@@ -119,6 +120,13 @@ Drop outbound SMB connections:
     net use * /del    
     
  ## Logging 
- Event Ids to check for persistence: 4624, 4634, 4672, 4732, 4688, 4697      
+ Event Ids to check for persistence: 4624, 4634, 4672, 4732, 4688, 4697     
+ 4624: successful logon to local computer, Security log.     
+	4634: Account was logged off, Security log.     
+	4672: User with administrator privileges logs on, Security log.     
+	4732: User added to a security-enabled local group, Security log.    
+	4688: New process created.     
+	4697: Service installed on the system (possible persistence).     
+
  
      PS> Get-WinEvent -LogName System | Where-Object -Property Id -EQ 7045 | Format-List -Property TimeCreated, Message #new service installed      
