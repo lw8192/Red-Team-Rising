@@ -119,4 +119,6 @@ Drop outbound SMB connections:
     net use * /del    
     
  ## Logging 
- Event Ids to check for persistence: 4624, 4634, 4672, 4732, 4688, 4697   
+ Event Ids to check for persistence: 4624, 4634, 4672, 4732, 4688, 4697      
+ 
+     PS> Get-WinEvent -LogName System | Where-Object -Property Id -EQ 7045 | Format-List -Property TimeCreated, Message #new service installed      
