@@ -48,3 +48,36 @@ AMSI: scans script prior to execution in newer versions of Windows
    
 ## Windows Logging   
 Event IDs to monitor for possible malware: 4624, 4634, 4672, 4732, 4688, 4697     
+AppLocker: application allow listing in Windows. Event ID 8004: executables blocked by AppLocker.        
+    
+    PS > Get-WinEvent -LogName 'Microsoft-Windows-AppLocker/EXE and DLL' | Where-Object -Property Id -EQ 8004	
+## RDP History    
+
+    PS > qwinsta        #current remote sessions     
+    PS > get-winevent -logname "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"    
+    
+Registry RDP Connection Cache 
+
+    HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client
+    2 registry keys in this section: Default (history of the last 10 RDP connections) and Servers (all RDP servers and usernames used previously to login)     
+    
+## USB Devices   
+Ref: https://www.sciencedirect.com/topics/computer-science/window-registry    
+All USB devices ever plugged in    
+
+    PS > gci HKLM:\SYSTEM\CURRENTCONTROLSET\ENUM\usbstor	   
+Drives mounted to NTFS file system   
+
+    PS > gi HKLM:\SYSTEM\MOUNTEDDEVICES	      
+User logged in when specific device was plugged in       
+
+    PS > gci HKCU:\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER\MOUNTPOINTS2			
+USB device interface GUID, hardware ID, device class information about your device, and the last time this USB was connected to the current machine    
+    
+    PS > gci HKLM:\SYSTEM\CURRENTCONTROLSET\ENUM\USB    
+ Newer Windows, search for USB serial number to see when connected     
+ 
+    C:\Windows\inf\setupapi.dev.log    
+    PS > type C:\Windows\inf\setupapi.dev.log | findstr Section   #search for string 
+  
+  
