@@ -44,4 +44,7 @@ Transcript Logging (logging location can change)
 
 AMSI: scans script prior to execution in newer versions of Windows     
 
-    Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' -FilterXPath "*[System[((EventID=1116) or (EventID=1117))]]" -MaxEvents 5 | Format-Table TimeCreated, Message -Wrap 
+    Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' -FilterXPath "*[System[((EventID=1116) or (EventID=1117))]]" -MaxEvents 5 | Format-Table TimeCreated, Message -Wrap      
+   
+## Windows Logging   
+Event IDs to monitor for possible malware: 4624, 4634, 4672, 4732, 4688, 4697     
