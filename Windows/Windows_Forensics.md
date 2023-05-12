@@ -80,4 +80,16 @@ USB device interface GUID, hardware ID, device class information about your devi
     C:\Windows\inf\setupapi.dev.log    
     PS > type C:\Windows\inf\setupapi.dev.log | findstr Section   #search for string 
   
-  
+## Timestomping   
+Find possible malware by looking for timestamps that were changed.    
+Key indicators of timestomping on Windows: 
+- When the subseconds in the $MFT’s 0x10 timestamps is .000000. Some automated tools do not change these (like Metasploit). 
+- If the 0x10 timestamp appears to occur before a 0x30 $MFT timestamp
+- If the context of a file relating to its name, parent folder or other file details is inconsistent
+- Comparing the $STANDARD_INFORMATION timestamps vs the $FILE_NAME timestamps in the Master File Table (MFT). 
+C - creation. CreationTime and CreationTimeUtc    
+W - last modified. LastWriteTime, LastWriteTimeUtc      
+A - last accessed. LastAccessTimeUtc, LastAccessTime       
+ 
+    PS > (Get-Item c:\file.txt).lastwritetime | select *     
+    PS > Get-Item file.txt | select name,lastwritetime, lastaccesstime, lastcreationtime    
