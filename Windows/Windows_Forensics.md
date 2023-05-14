@@ -47,6 +47,11 @@ AMSI: scans script prior to execution in newer versions of Windows
     Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' -FilterXPath "*[System[((EventID=1116) or (EventID=1117))]]" -MaxEvents 5 | Format-Table TimeCreated, Message -Wrap      
    
 ## Windows Logging   
+Windows: event logs as evtx files (open in Event Viewer or use PowerShell to query).     
+%System32%/Winevt/Log    
+Application Log    
+System and Security Logs     
+
 Event IDs to monitor for possible malware: 4624, 4634, 4672, 4732, 4688, 4697     
 AppLocker: application allow listing in Windows. Event ID 8004: executables blocked by AppLocker.        
     
