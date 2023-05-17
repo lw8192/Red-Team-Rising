@@ -1,5 +1,10 @@
 # Windows Forensics   
 ## PowerShell Reference    
+Helpful Cmdlets     
+
+    Get-Help   
+    Get-Content    
+    Get-ChildItem     
 Output Modifiers   
 
     Out-GridView   
