@@ -1,11 +1,13 @@
 # Windows Forensics   
 ## PowerShell Reference    
-Out-GridView   
-ConvertTo-Csv    
-Format-Table    
-ConvertTo-Html    
-ConvertTo-Json   
-ConvertTo-Xml      
+Output Modifiers   
+
+    Out-GridView   
+    ConvertTo-Csv    
+    Format-Table    
+    ConvertTo-Html    
+    ConvertTo-Json   
+    ConvertTo-Xml      
 ## Memory Analysis with Volatility     
 Run strings on a memory image:   
 
