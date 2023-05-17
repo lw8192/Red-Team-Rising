@@ -13,6 +13,14 @@ Output Modifiers
     ConvertTo-Html    
     ConvertTo-Json   
     ConvertTo-Xml      
+## Sysinternals    
+Process explorer: running processes.      
+Autoruns: autostart extensibility points (ASEP).     
+Process monitor: files, registry, network, proc info.     
+Sysmon: event info for system monitoring and analysis.     
+TCPview: view TCP and UDP activity of programs.    
+ProcDump: capture memory of a running process for analysis.    
+
 ## Memory Analysis with Volatility     
 Run strings on a memory image:   
 
@@ -110,5 +118,6 @@ C - creation. CreationTime and CreationTimeUtc
 W - last modified. LastWriteTime, LastWriteTimeUtc      
 A - last accessed. LastAccessTimeUtc, LastAccessTime       
  
-    PS > (Get-Item c:\file.txt).lastwritetime | select *     
-    PS > Get-Item file.txt | select name,lastwritetime, lastaccesstime, lastcreationtime    
+ 
+    PS > (Get-Item c:\file.txt).lastwritetime | select *      
+    PS > Get-Item file.txt | select name,lastwritetime, lastaccesstime, lastcreationtime     
