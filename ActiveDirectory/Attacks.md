@@ -99,7 +99,8 @@ ASREPRoast with Impacket:
 ASREP Roast with Rubeus:
 
 ### Golden / Silver Ticket Attacks: 
-Golden ticket: use krbtgt password hash to form a Ticket Granting Ticket (allows authentication to any Kerberos service)   
+Golden ticket: use krbtgt password hash to form a Ticket Granting Ticket (allows authentication to any Kerberos service). Abuses root of trust in Kerberos network.    
+
 ### Overpass The Hash/Pass The Key (PTK):
 Impacket 
 
