@@ -1,0 +1,22 @@
+# Linux Forensics    
+For most Linux distros (Debian, Ubuntu etc)    
+## Linux Logs
+Logs: /var/log     
+log config: /etc/syslog.conf, /etc/rsyslog.conf     
+
+Can clean plaintext logs, not binary (usually).          
+
+/var/log/btmp: failed logins    
+/var/log/wtmp: historical data of logins    
+btmp and wtmp are both binary logs, read using last    
+
+every user that logins in on Linux host - logs in auth log    
+/var/log/auth.log    
+
+Syslog: messages recorded by host about system activity, different logging levels.    
+/var/log/syslog   
+
+## Command History    
+sudo commands - stored in auth log    
+any commands other then sudo - stored in user's bash history in home dir      
+Vim text editor - stores logs for opened files in vim in ~/.viminfo      
