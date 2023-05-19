@@ -1,6 +1,6 @@
 # Windows Forensics   
-[DFIR Cheatsheet](url)https://www.13cubed.com/downloads/dfir_cheat_sheet.pdf    
-
+[DFIR Cheatsheet](https://www.13cubed.com/downloads/dfir_cheat_sheet.pdf)     
+[Registry Key Quick Find Chart](https://www.offsec.com/wp-content/uploads/2015/04/wp.Registry_Quick_Find_Chart.en_us.pdf)    
 ## PowerShell Reference    
 Helpful Cmdlets     
 
@@ -71,6 +71,7 @@ AMSI: scans script prior to execution in newer versions of Windows
     Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' -FilterXPath "*[System[((EventID=1116) or (EventID=1117))]]" -MaxEvents 5 | Format-Table TimeCreated, Message -Wrap      
    
 ## Windows Logging   
+[Collection of Event IDs](https://github.com/stuhli/awesome-event-ids)    
 Windows: event logs as evtx files (open in Event Viewer or use PowerShell to query).     
 %System32%/Winevt/Log    
 Application Log    
@@ -85,11 +86,16 @@ AppLocker: application allow listing in Windows. Event ID 8004: executables bloc
     PS > qwinsta        #current remote sessions     
     PS > get-winevent -logname "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"    
     
-Registry RDP Connection Cache 
+Registry RDP Connection Cache     
 
     HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client
     2 registry keys in this section: Default (history of the last 10 RDP connections) and Servers (all RDP servers and usernames used previously to login)     
-    
+
+RDP Cache    
+Cache files are created containing the sections of the server machine screen. Use a tool to extract images stored in file.     
+
+    C:\Users\XXX\AppData\Local\Microsoft\Terminal Server Client\Cache
+
 ## USB Devices   
 Ref: https://www.sciencedirect.com/topics/computer-science/window-registry    
 All USB devices ever plugged in    
