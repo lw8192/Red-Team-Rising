@@ -1,4 +1,6 @@
 # Windows Forensics   
+[DFIR Cheatsheet](url)https://www.13cubed.com/downloads/dfir_cheat_sheet.pdf    
+
 ## PowerShell Reference    
 Helpful Cmdlets     
 
