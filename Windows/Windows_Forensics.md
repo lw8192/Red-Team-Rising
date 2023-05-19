@@ -15,6 +15,7 @@ Output Modifiers
     ConvertTo-Html    
     ConvertTo-Json   
     ConvertTo-Xml      
+    
 ## Sysinternals    
 Process explorer: running processes.      
 Autoruns: autostart extensibility points (ASEP).     
@@ -73,10 +74,11 @@ AMSI: scans script prior to execution in newer versions of Windows
 ## Windows Logging   
 [Collection of Event IDs](https://github.com/stuhli/awesome-event-ids)    
 Windows: event logs as evtx files (open in Event Viewer or use PowerShell to query).     
-%System32%/Winevt/Log    
-Application Log    
-System and Security Logs     
-
+System Log: %systemroom%\System32\WinEvt\Logs\System.evtx    
+Security Log: %systemroot%\System32\WinEvt\Logs\Security.evtx    
+Application Log: %systemroot%\System32\WinEvt\Logs\Application.evtx    
+Setup Logs: %systemroot%\System32\WinEvt\Logs\Setup.evtx     
+   
 Event IDs to monitor for possible malware: 4624, 4634, 4672, 4732, 4688, 4697     
 AppLocker: application allow listing in Windows. Event ID 8004: executables blocked by AppLocker.        
     
