@@ -17,8 +17,9 @@ To gain control over a domain:
 Compromise member of Domain Admin group.   
 Compromise domain controller -> can modify all domain-joined computers or execute applications on them. 
 
-AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain. 
-Authentication mechanisms: Kerberos or NTLM 
+AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain.    
+Account types: domain admins, service accounts (can be domain admins), local admins (can't access the DC), domain users.     
+Authentication mechanisms: Kerberos (uses ticket granting tickets and services to authenticate users) or NTLM (traditional Windows authentication).     
 
 [PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise) 
 Typical AD pen test:
@@ -43,7 +44,7 @@ Typical AD pen test:
 [WADComs](https://wadcoms.github.io/)    
     
 ### Important Files to Check on the DC
-    %SYSTEMROOT%\System32\ntds.dit             #AD database
+    %SYSTEMROOT%\System32\ntds.dit             #AD database with user password hashes   
     %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup
 
 ## Tools  
