@@ -102,6 +102,15 @@ Registry hives located on disk in C:\Windows\System32\Config
 Amcache Hive      
 
 C:\Windows\AppCompat\Programs\Amcache.hve. Windows creates this hive to save information on programs that were recently run on the system.      
+Some Important Registry Keys      
+Computer Name        
+SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName     
+
+Time Zone Info      
+SYSTEM\CurrentControlSet\Control\TimeZoneInformation        
+
+Network Interfaces and Past Networks     
+SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces        
 
 ## RDP History    
 
