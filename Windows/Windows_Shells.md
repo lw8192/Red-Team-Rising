@@ -39,7 +39,7 @@ Remember to check for AV before uploading common payloads!
 ## Reverse Shell Commands 
 Most likely you will need an exe payload as other payloads aren't usually stable / powershell Execution-Policy is often restricted. 
 Generate exe with msfvenom, upload nc, socat, powercat. Find upload point / code execution point to download and execute. 
-
+[Reverse Shell Cheatsheet](https://github.com/d4t4s3c/Offensive-Reverse-Shell-Cheat-Sheet)    
 ### File Transfers 
 Upload pages, certutil, powershell
 
