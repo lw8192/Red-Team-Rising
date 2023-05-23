@@ -21,12 +21,19 @@ AD: depends on DNS server, typical DC hosts DNS server that is authoritative for
 Account types: domain admins, service accounts (can be domain admins), local admins (can't access the DC), domain users.     
 Authentication mechanisms: Kerberos (uses ticket granting tickets and services to authenticate users) or NTLM (traditional Windows authentication).     
 
-[PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise) 
+[PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)       
 Typical AD pen test:
 - Exploit host on domain and gain access  as a domain user 
 - Enumerate domain users and groups.  
 - Privilege escalate or move laterally. 
-- Get Domain Admin or Service Account access and onto the domain controller. 
+- Get Domain Admin or Service Account access and onto the domain controller.     
+
+Common Ways to Get AD Creds:    
+- NTLM Authenticated Services  
+- LDAP Bind Credentials    
+- Authentication Relays      
+- Microsoft Deployment Toolkit   
+- Configuration Files       
 
 ## My AD Cheatsheets
 [Attacks](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Attacks.md)  
