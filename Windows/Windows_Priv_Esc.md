@@ -114,12 +114,13 @@ systeminfo
 [nishang](https://github.com/samratashok/nishang)  
 [JAWS](https://github.com/411Hall/JAWS)   
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
-[PrivEscCheck](https://github.com/itm4n/PrivescCheck)   
-[Windows Exploit Suggester (Next-Generation)](https://github.com/bitsadmin/wesng) 
-[Sherlock](https://github.com/rasta-mouse/Sherlock)
-[Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system
+[PrivEscCheck](https://github.com/itm4n/PrivescCheck)    
+[Windows Exploit Suggester (Next-Generation)](https://github.com/bitsadmin/wesng)        
+[Sherlock](https://github.com/rasta-mouse/Sherlock)         
+[Seatbelt](https://github.com/GhostPack/Seatbelt)      
+[Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system     
 
-[Compiled scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries) 
+[Compiled scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries)   
 
 
 ## Checklists    
