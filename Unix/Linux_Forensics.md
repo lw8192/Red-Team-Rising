@@ -17,6 +17,15 @@ Syslog: messages recorded by host about system activity, different logging level
 /var/log/syslog   
 
 ## Command History    
-sudo commands - stored in auth log    
+sudo commands - stored in auth log     
+
+    cat/var/log/auth.log* |grep-i COMMAND | tail   
+
 any commands other then sudo - stored in user's bash history in home dir      
 Vim text editor - stores logs for opened files in vim in ~/.viminfo      
+
+.bashrc file that runs when bash shell is spawned     
+Systemwide settings
+/etc/bash.bashrc     
+/etc/profile    
+
