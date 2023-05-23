@@ -99,6 +99,9 @@ Registry hives located on disk in C:\Windows\System32\Config
     SECURITY (mounted on HKEY_LOCAL_MACHINE\Security)     
     SOFTWARE (mounted on HKEY_LOCAL_MACHINE\Software)     
     SYSTEM (mounted on HKEY_LOCAL_MACHINE\System)     
+Amcache Hive      
+
+C:\Windows\AppCompat\Programs\Amcache.hve. Windows creates this hive to save information on programs that were recently run on the system.      
 
 ## RDP History    
 
