@@ -83,6 +83,12 @@ Event IDs to monitor for possible malware: 4624, 4634, 4672, 4732, 4688, 4697
 AppLocker: application allow listing in Windows. Event ID 8004: executables blocked by AppLocker.        
     
     PS > Get-WinEvent -LogName 'Microsoft-Windows-AppLocker/EXE and DLL' | Where-Object -Property Id -EQ 8004	
+    
+## Registry    
+5 root keys:HKEY_CURRENT_USER, HKEY_USERS, HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT, HKEY_CURRENT_CONFIG       
+HKCU: config info for currently logged in user. Subkey of HKU.         
+HKU: all actively loaded user profiles.     
+
 ## RDP History    
 
     PS > qwinsta        #current remote sessions     
