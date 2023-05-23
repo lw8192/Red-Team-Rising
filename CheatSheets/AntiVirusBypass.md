@@ -2,23 +2,30 @@
 ## Contents
 - [AV Bypass](#av-bypass)
   * [Contents](#contents)
+  * [Techniques](#techniques)
+    + [Targeting Processes to Evade Detection](#targeting-processes-to-evade-detection)
+    + [IronPython](#ironpython)
   * [Tools](#tools)
     + [Veil Framework:](#veil-framework-)
     + [Shellter](#shellter)
     + [Sharpshooter](#sharpshooter)
-  * [Donut:](#donut-)
-  * [Vulcan](#vulcan)
-  * [Scarecrow](#scarecrow)
-  * [Sharpshooter](#sharpshooter-1)
+    + [Donut:](#donut-)
+    + [Vulcan](#vulcan)
+    + [Scarecrow](#scarecrow)
+    + [Sharpshooter](#sharpshooter-1)
   * [Commands](#commands)
+- [Living Off the Land](#living-off-the-land)
+  * [Use Microsoft .NET InstallUtil to Evade AppLocker](#use-microsoft-net-installutil-to-evade-applocker)
 - [Resources](#resources)
   * [Cheat sheets](#cheat-sheets)
   * [Workshops](#workshops)
 
-## Bypassing AV     
+## Techniques         
 Modify malware to evade signature analysis, encode using obfuscation tools, leverage permitted tools (Living Off the Land)    
+### Targeting Processes to Evade Detection     
+Process Injection, Process Hollowing, Process Masquerading     
 
-IronPython:    
+### IronPython         
 Execute obfuscated Python natively in a C# program, encode it as a variable then execute (no Python interpreter needed). Source: https://www.willhackforsushi.com/sec504/csharp_py.cs     
 ~~~
 // This is the excellent work of Chris Davis of Counter Hack
@@ -101,16 +108,16 @@ Staged VBS:
 
 Reference: https://github.com/mdsecactivebreach/SharpShooter
 
-## Donut: 
+### Donut: 
 
 Source: https://github.com/TheWover/donut
 
-## Vulcan
+### Vulcan
 
 Source: https://github.com/praetorian-code/vulcan
 
 
-## Scarecrow
+### Scarecrow
 
 Source: https://github.com/optiv/ScareCrow
 
@@ -126,7 +133,7 @@ In Kali:
 
     ./ScareCrow
 
-## Sharpshooter
+### Sharpshooter
 [SharpShooter](https://github.com/mdsecactivebreach/SharpShooter)   
 
 Javascript Payload Stageless:   
@@ -162,10 +169,12 @@ https://lolbas-project.github.io/
 Typical binaries used: Rundll32, Regsvr32, Msiexec, Mshta, Certutil, MSBuild, WMI command line utility (WMIC), WMI provider host (WmiPrvSe)      
 Bitsadmin: exfil data   
 Certutil: download data    
+
 ## Use Microsoft .NET InstallUtil to Evade AppLocker   
 Execute code in program's local memory via reflection.    
 
-    PS > InstallUtil /U mal.exe     #put malicious code in Uninstall routine of a program 
+    PS > InstallUtil /U mal.exe     #put malicious code in Uninstall routine of a program    
+    
 # Resources  
 ## Cheat sheets 
 https://github.com/sinfulz/JustEvadeBro   
