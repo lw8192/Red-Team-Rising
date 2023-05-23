@@ -184,6 +184,7 @@ Can I...
 - [ ] check for anon log in
 [Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
+[crackmapexec](https://www.ivoidwarranties.tech/posts/pentesting-tuts/cme/crackmapexec-cheatsheet/)    
 	
     SAMBA 3.x-4.x  #vulnerable to linux/samba/is_known_pipename
     SAMBA 3.5.11   #vulnerable to linux/samba/is_known_pipename
