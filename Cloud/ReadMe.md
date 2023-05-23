@@ -25,7 +25,7 @@ Resources
     https://www.hackthebox.com/blog/aws-pentesting-guide    
     
 ## Azure    
-Built in security with Azure Sentinel.     
+Built in security with Azure Sentinel. Azure acts as a middleman between the AD network and user sign on - makes lots of traditional AD acts ineffective.         
 
 ## Google Cloud   
 GCP Cloud Armor for security.   
