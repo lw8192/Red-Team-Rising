@@ -87,7 +87,18 @@ AppLocker: application allow listing in Windows. Event ID 8004: executables bloc
 ## Registry    
 5 root keys:HKEY_CURRENT_USER, HKEY_USERS, HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT, HKEY_CURRENT_CONFIG       
 HKCU: config info for currently logged in user. Subkey of HKU.         
-HKU: all actively loaded user profiles.     
+HKU: all actively loaded user profiles.    
+HKLM: config info for the machine.      
+HKCR: subkey of HKEY_LOCAL_MACHINE\Software, config info for programs to be opened.      
+HKCC: hardware profile used by the computer at startup.    
+
+Registry hives located on disk in C:\Windows\System32\Config      
+
+    DEFAULT (mounted on HKEY_USERS\DEFAULT)      
+    SAM (mounted on HKEY_LOCAL_MACHINE\SAM)          
+    SECURITY (mounted on HKEY_LOCAL_MACHINE\Security)     
+    SOFTWARE (mounted on HKEY_LOCAL_MACHINE\Software)     
+    SYSTEM (mounted on HKEY_LOCAL_MACHINE\System)     
 
 ## RDP History    
 
