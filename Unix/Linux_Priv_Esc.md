@@ -259,11 +259,19 @@ set PATH variable to current directory and run suid binary
 use binary to exec /bin/bash -p 
 
     pkexec --user root /bin/sh  
-## Services Running as Root / Services Only Running Locally
+## Services Running as Root / Services Only Running Locally   
+mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)  
+
     ps -aux | grep root 
     netstat -etulp 
-    mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)  
-    ftp, telnet - tcpdump to sniff creds??
+    ftp, telnet - tcpdump to sniff creds??    
+  
+Service running locally:      
+Can use Proxychains to access:        
+If the service is MySQL or another database - can you just pull the database file?       
+  
+    config file: /etc/proxychains.conf    
+  
 ## Passwords / config files 
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
