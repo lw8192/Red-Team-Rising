@@ -36,6 +36,7 @@ Search for files with keywords in buckets using bucket_finder:
 Built in security with Azure Sentinel. Azure acts as a middleman between the AD network and user sign on - makes lots of traditional AD acts ineffective.         
 Azure Blob: https://{account}.blob.core.windows.net/{container}     
 
+
 ### Enumerate Azure Blobs   
 [Azure-CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)     
 [AZ-Blob-Attacker](https://github.com/VitthalS/Az-Blob-Attacker)    
