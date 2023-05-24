@@ -268,7 +268,7 @@ mysql running as root [exploit](https://www.exploit-db.com/exploits/1518)
     ftp, telnet - tcpdump to sniff creds??    
   
 Service running locally:      
-Can use Proxychains to access:        
+Can use Proxychains to access, socat, https://github.com/fatedier/frp to make a reverse proxy, make a firewall rule etc.     
 If the service is MySQL or another database - can you just pull the database file?       
   
     config file: /etc/proxychains.conf    
