@@ -20,7 +20,7 @@ Compromise domain controller -> can modify all domain-joined computers or execut
 AD: depends on DNS server, typical DC hosts DNS server that is authoritative for a given domain.    
 Account types: domain admins, service accounts (can be domain admins), local admins (can't access the DC), domain users.     
 Authentication mechanisms: Kerberos (uses ticket granting tickets and services to authenticate users) or NTLM (traditional Windows authentication).     
-
+Kerberos: default authentication service that uses ticket-granting tickets and service tickets to authenticate users and give users access to other resources across the domain. Intended to be more secure than NTLM (uses 3rd party ticket authorization and stronger encryption).      
 [PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)       
 Typical AD pen test:
 - Exploit host on domain and gain access  as a domain user 
