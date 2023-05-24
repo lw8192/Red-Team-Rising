@@ -29,8 +29,8 @@ Search for files with keywords in buckets using bucket_finder:
     bucket_finder.rb search_term --download         
     
 ### Resources      
-
-    https://www.hackthebox.com/blog/aws-pentesting-guide    
+https://www.hackthebox.com/blog/aws-pentesting-guide    
+https://cloud.hacktricks.xyz/pentesting-cloud/aws-security     
     
 ## Azure    
 Built in security with Azure Sentinel. Azure acts as a middleman between the AD network and user sign on - makes lots of traditional AD acts ineffective.         
