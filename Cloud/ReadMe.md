@@ -5,8 +5,9 @@ Use masscan to scan a large IP range:
     $ masscan 10.10.0.1/24 -p 22,25,80,443,3389            
     --rate 50000   #fastest scan    
 ## AWS     
-AWS GuardDuty for security.    
-Tools      
+AWS GuardDuty for security.     
+[Pacu](https://github.com/RhinoSecurityLabs/pacu): AWS exploit framework   
+Commands         
 
     https://aws.amazon.com/cli/   #AWS CLI    
    
