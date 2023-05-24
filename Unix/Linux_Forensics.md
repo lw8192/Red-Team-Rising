@@ -29,3 +29,11 @@ Systemwide settings
 /etc/bash.bashrc     
 /etc/profile    
 
+## Timestomping     
+Changing timestamps of files on Linux to blend in.    
+Mtime - last data modification.    
+Atime - last data access.   
+Ctime - last file status change.     
+Use touch to change the modify or access time.     
+Better: change system time, 'touch' the file, then change the system time back to change the ctime.    
+https://www.inversecos.com/2022/08/detecting-linux-anti-forensics.html     
