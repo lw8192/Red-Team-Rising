@@ -36,8 +36,8 @@ Common Ways to Get AD Creds:
 - Configuration Files       
 
 ## My AD Cheatsheets
-[Attacks](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/Attacks.md)  
-[Lateral Movement](https://github.com/Scr1ptK1ddie/OSCPprep/blob/main/ActiveDirectory/LateralMovement.md)   
+[Attacks](https://github.com/lw8192/Red-Team-Rising/blob/main/ActiveDirectory/Attacks.md)        
+[Lateral Movement](https://github.com/lw8192/Red-Team-Rising/blob/main/ActiveDirectory/LateralMovement.md)   
 
  
 ## Other Cheat Sheets
