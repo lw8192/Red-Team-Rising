@@ -25,6 +25,7 @@ TCPview: view TCP and UDP activity of programs.
 ProcDump: capture memory of a running process for analysis.    
 
 ## Memory Analysis with Volatility     
+https://infosecwriteups.com/forensics-memory-analysis-with-volatility-6f2b9e859765    
 Run strings on a memory image:   
 
     strings image.mem > img.strings-asc.txt	            #ASCII strings    
