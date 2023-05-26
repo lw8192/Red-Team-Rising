@@ -26,6 +26,7 @@ ProcDump: capture memory of a running process for analysis.
 
 ## Memory Analysis with Volatility     
 https://infosecwriteups.com/forensics-memory-analysis-with-volatility-6f2b9e859765    
+[Volatility Usage](https://github.com/volatilityfoundation/volatility/wiki/Volatility-Usage)    
 Run strings on a memory image:   
 
     strings image.mem > img.strings-asc.txt	            #ASCII strings    
@@ -36,14 +37,16 @@ Usage:
 
     vol -q -f image.mem module > output.txt   
     #then analyze text files as you normally would with a live machine (ie look at the process list)   
+    vol.py -f memdump.elf --profile=Win7SP1x64 filescan > filescan.txt     #example with profile   
+
 Useful Volatility modules:     
 
 	 windows.netscan.NetScan	#netsat info    
-	 windows.pstree.PsTree	#process tree info    
+	 windows.pstree.PsTree	        #process tree info    
 	 windows.pslist.PsList		#pslist    
 	 windows.cmdline.CmdLine	#command line ran of process    
 	 windows.filescan.FileScan	#file objects    
-	 windows.dlllist.DllList		#loaded DLLs      
+	 windows.dlllist.DllList	#loaded DLLs      
 	
 ## Command History on Windows   
 Logging turned on by default: PSReadline command history, Script block logging (limited), AntiMalware Scan Interface (AMSI)   
