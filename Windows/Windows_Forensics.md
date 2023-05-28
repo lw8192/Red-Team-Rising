@@ -164,3 +164,10 @@ A - last accessed. LastAccessTimeUtc, LastAccessTime
  
     PS > (Get-Item c:\file.txt).lastwritetime | select *      
     PS > Get-Item file.txt | select name,lastwritetime, lastaccesstime, lastcreationtime     
+    
+## Analyzing Microsoft Word Docs   
+
+    oledump.py file.doc     
+    oledump.py -s 3 -S file.doc                #string dump of OLE object      
+    oledump.py -s 3 --vbadecompresscorrupt file.doc       #recover macro    
+
