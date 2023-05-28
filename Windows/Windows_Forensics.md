@@ -165,8 +165,9 @@ A - last accessed. LastAccessTimeUtc, LastAccessTime
     PS > (Get-Item c:\file.txt).lastwritetime | select *      
     PS > Get-Item file.txt | select name,lastwritetime, lastaccesstime, lastcreationtime     
     
-## Analyzing Microsoft Word Docs   
-
+## Analyzing Malicious Documents     
+[SANS Oledump Cheatsheet](https://www.sans.org/posters/oledump-py-quick-reference/)    
+[Analyzing Malicious Docs Cheatsheet](https://zeltser.com/analyzing-malicious-documents/)   
     oledump.py file.doc     
     oledump.py -s 3 -S file.doc                #string dump of OLE object      
     oledump.py -s 3 --vbadecompresscorrupt file.doc       #recover macro    
