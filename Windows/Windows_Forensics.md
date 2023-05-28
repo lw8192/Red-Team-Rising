@@ -168,7 +168,15 @@ A - last accessed. LastAccessTimeUtc, LastAccessTime
 ## Analyzing Malicious Documents     
 [SANS Oledump Cheatsheet](https://www.sans.org/posters/oledump-py-quick-reference/)    
 [Analyzing Malicious Docs Cheatsheet](https://zeltser.com/analyzing-malicious-documents/)   
-    oledump.py file.doc     
-    oledump.py -s 3 -S file.doc                #string dump of OLE object      
-    oledump.py -s 3 --vbadecompresscorrupt file.doc       #recover macro    
+Binary Microsoft Office document files (.doc, .xls, etc.) use the OLE2 (a.k.a. Structured Storage) format.   
+OOXML document files (.docx, .xlsm, etc.) supported by Microsoft Office are compressed zip archives.    
+VBA macros in OOXML documents are stored inside an OLE2 binary file, which is within the zip archive.     
 
+    oledump.py file.doc -i   #list OLE2 streams. M - means stream is a macro          
+    oledump.py -s 3 -S file.doc                #string dump of OLE stream  
+    oledump.py -s 11 -v file.doc  #extract VBA code from stream 11
+    oledump.py -s 3 --vbadecompresscorrupt file.doc       #recover macro    
+    
+Extract:    
+
+ rename to .zip, extract. docx - zip files with stream docs inside for further analysis.    
