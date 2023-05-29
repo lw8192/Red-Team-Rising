@@ -12,6 +12,7 @@ Bonus Points (10 points)
 
 
 Go through and add to notes:   
+https://raphaelrichard-sec.fr/learning-notes   
 Windows - https://github.com/bertvv/cheat-sheets/blob/master/docs/Windows.md   
 Tunneling - https://github.com/opsdisk/the_cyber_plumbers_handbook   
 https://github.com/sdcampbell/Internal-Network-Pentest-MindMap/blob/main/Internal%20Network%20Pentest%20MindMap.pdf   
@@ -31,10 +32,7 @@ Go back thru Tiberius Win / Lin priv esc courses
 John Hammond Active Directory youtube videos - https://www.youtube.com/watch?v=pKtDQtsubio&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp   
 
 Boxes to do: 
-Go back through TryHackMe offensive pentesting path  
 Hack the Box - [TJ_Nulls OSCP Prep List Walkthroughs](https://www.youtube.com/playlist?list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)     
-TryHackMe - Vulnnet, Raz0rblack, Enterprise   
-
 Scratch notes (organize):    
 Win persistence - https://in.security/2019/04/03/an-intro-into-abusing-and-identifying-wmi-event-subscriptions-for-persistence/  (WMI events)    
 Article series - https://pentestlab.blog/category/red-team/persistence/   
