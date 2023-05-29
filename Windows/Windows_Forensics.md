@@ -46,7 +46,8 @@ Useful Volatility modules:
 	 windows.pslist.PsList		#pslist    
 	 windows.cmdline.CmdLine	#command line ran of process    
 	 windows.filescan.FileScan	#file objects    
-	 windows.dlllist.DllList	#loaded DLLs      
+	 windows.dlllist.DllList	#loaded DLLs     
+	 pslist, psscan, pstree, psxview     #processes   
 	
 ## Command History on Windows   
 Logging turned on by default: PSReadline command history, Script block logging (limited), AntiMalware Scan Interface (AMSI)   
