@@ -41,6 +41,7 @@ Usage:
     vol.py -f memdump.elf --profile=Win7SP1x64 filescan > filescan.txt     #example with profile   
 
 Useful Volatility modules:     
+[Truecrypt Modules](https://volatility-labs.blogspot.com/2014/01/truecrypt-master-key-extraction-and.html)    
 
 	 windows.netscan.NetScan	#netsat info    
 	 windows.pstree.PsTree	        #process tree info    
@@ -48,7 +49,8 @@ Useful Volatility modules:
 	 windows.cmdline.CmdLine	#command line ran of process    
 	 windows.filescan.FileScan	#file objects    
 	 windows.dlllist.DllList	#loaded DLLs     
-	 pslist, psscan, pstree, psxview     #processes   
+	 pslist, psscan, pstree, psxview     #processes  
+	 truecryptsummary, truecryptpassphrase, truecryptmaster   #truecrypt plugins   
 	
 ## Command History on Windows   
 Logging turned on by default: PSReadline command history, Script block logging (limited), AntiMalware Scan Interface (AMSI)   
