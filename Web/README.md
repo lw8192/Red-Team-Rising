@@ -8,16 +8,6 @@
     + [Scanning Tools](#scanning-tools)
     + [Curl](#curl)
 - [Web app specific](#web-app-specific)
-    + [Default Creds](#default-creds)
-    + [Adobe Coldfusion](#adobe-coldfusion)
-    + [Elastix](#elastix)
-    + [Drupal](#drupal)
-    + [JBoss](#jboss)
-    + [Jenkins](#jenkins)
-    + [Joomla](#joomla)
-    + [PHPMyAdmin](#phpmyadmin)
-    + [Tomcat](#tomcat)
-    + [Wordpress](#wordpress)
 - [Login pages](#login-pages)
 - [Shellshock and Heartbleed](#shellshock-and-heartbleed)
   * [Heartbleed](#heartbleed)
@@ -110,7 +100,7 @@ Other Tools:
     
 	
 # Web app specific  
-See CMS_vulns.md     
+See [CMS.md](https://github.com/lw8192/Red-Team-Rising/blob/main/Web/CMS.md)        
 
 # Login pages   
 	
