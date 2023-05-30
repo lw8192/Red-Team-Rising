@@ -1,5 +1,5 @@
 # Red Team Rising 
-A collection of notes for red teamers sourced from various courses and self study. Topics include Penetration Testing, Digital Forensics, Exploit Development and Malware Analysis.     
+A collection of notes for red and purple teamers sourced from various courses and self study. Topics include Penetration Testing, Digital Forensics, Exploit Development and Malware Analysis.     
 
 ## Study Resources   
 [Hack the Box](https://www.hackthebox.com/)    
