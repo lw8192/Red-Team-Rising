@@ -34,7 +34,7 @@
 - [ ] Identify open services 
 - [ ] FTP or SMB anon log in 
 - [ ] Identify versions of services, look for vulns / exploits (searchsploit, github, google) 
-- [ ] HTTP / HTPPS services -> Web enum (see WebEnumeration.md cheatsheet), look for web vulns on pages 
+- [ ] HTTP / HTPPS services -> Web enum (see Web folder), look for web vulns on pages 
 - [ ] Brute force any services log ons / log in pages   
 
 [Enumeration Mind Map](https://github.com/theonlykernel/enumeration/wiki)     
