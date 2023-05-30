@@ -65,6 +65,13 @@ Create a wordlist with CeWL:
 
     cewl http://www.site.org -w wordlist.txt    
 
+CeWL sometimes misses directories so use these steps to create a dir list for CeWL to crawl:     
+
+    feroxbuster -eknr --wordlist /usr/share/seclists/Discovery/Web-Content/big.txt -u http://10.10.10.10 -o ferox.txt   
+    cat ferox.txt | grep 200 | grep -v "png\|\.js" | cut -d "h" -f2-100 | sed "s/^/h/g" >> urls.txt          
+    for url in $(cat urls.txt); do echo $url && cewl -d 5 $url >> temp_cewl.txt;done           
+    cat temp_cewl.txt | sort -u >> cewl.txt && rm temp_cewl.txt      
+    #then use the CeWL wordlist for password guessing   
     
 ### Scanning Tools
 Web Scanning:     
