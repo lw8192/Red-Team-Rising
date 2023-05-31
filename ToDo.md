@@ -31,7 +31,7 @@ TCM Movement, Pivoting and Persistence
 Go back thru Tiberius Win / Lin priv esc courses  
 John Hammond Active Directory youtube videos - https://www.youtube.com/watch?v=pKtDQtsubio&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp   
 
-Boxes to do: 
+OSCP Boxes to do:    
 Hack the Box - [TJ_Nulls OSCP Prep List Walkthroughs](https://www.youtube.com/playlist?list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)     
 Scratch notes (organize):    
 Win persistence - https://in.security/2019/04/03/an-intro-into-abusing-and-identifying-wmi-event-subscriptions-for-persistence/  (WMI events)    
