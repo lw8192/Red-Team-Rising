@@ -273,7 +273,8 @@ If the service is MySQL or another database - can you just pull the database fil
   
     config file: /etc/proxychains.conf    
   
-## Passwords / config files 
+## Passwords / config files  
+[LaZagne](https://github.com/AlessandroZ/LaZagne/tree/master): search for creds    
     /etc/passwd, /etc/shadow, /etc/sudoers  read or write?? 
     cat ~/.ssh  
     cat ~/.*history | grep -i passw    #check .bash_history, .mysql_history 
