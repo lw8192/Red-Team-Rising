@@ -64,15 +64,21 @@ Embed a payload within a legitimate binary:
     
 ### Useful Meterpreter Commands      
     
-    help
-	   hashdump    
+    help    
+Survey    
+
     getuid   
-    ps   
-    migrate <pid>    	
-    search -f <file name>
-	   Shell
-	   getsystem
-    Load python (or other extension), kiwi      
+    ps      	
+    search -f flag.txt   
+    shell     
+    runkill av     #turn off AV   
+    load python (or other extension), kiwi    
+Dump Hashes   
+
+    migrate -N lsass.exe   
+    migrate <pid>    
+    hashdump    
+  
 
 ### Netcat
 upload static binary nc.exe and invoke 
@@ -123,9 +129,6 @@ cmd.exe,pipes
 
 ## Resources  
 
-[Tiberius Reverse Shells](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/reverse-shells.rst) 
-
-[Payload All the Things Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) 
-
-[Reverse Shell Cheatsheet](https://github.com/d4t4s3c/Reverse-Shell-Cheat-Sheet)  
-
+[Tiberius Reverse Shells](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/reverse-shells.rst)     
+[Payload All the Things Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)          
+[Reverse Shell Cheatsheet](https://github.com/d4t4s3c/Reverse-Shell-Cheat-Sheet)           
