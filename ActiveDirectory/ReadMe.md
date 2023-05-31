@@ -54,9 +54,7 @@ Common Ways to Get AD Creds:
     %SYSTEMROOT%\System32\ntds.dit             #AD database with user password hashes   
     %SYSTEMROOT%\NTDS\ntds.dit                 #AD backup
 
-## Tools  
-### Tools allowed on the new exam 
-All tools that do not perform any restricted actions are allowed on the exam (no commercial tools like Burp Pro, no automated exploits like SQLmap, etc).   
+## Tools   
 C2 Frameworks:
 [PowerShell Empire](https://github.com/BC-SECURITY/Empire), Covenant    
 
