@@ -24,9 +24,12 @@ Is privilege escalation needed?
     net localgroup
     net group /domain
     net group /domain "Domain Admins"  
-    
-PowerShell Active Directory Module (only on DC by default)
+         
+### PowerShell Active Directory Module (only on DC by default)
+List all hosts on the domain      
 
+    Get-ADComputer -Filter * -Properties ipv4Address, OperatingSystem, OperatingSystemServicePack | Format-List name, ipv4*, oper*      
+    
     Get-ADUser
     Get-ADDomain
     Get-ADGroup
