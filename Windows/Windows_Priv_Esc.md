@@ -431,12 +431,8 @@ Failed to connect, CredSSP required by server.""
 Add this reg key:
 
     reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
-     
-     
-## Remote Scripts  
-[lsassy](https://github.com/PowerShellMafia/PowerSploit): script to extract creds remotely using impacket  
-
- ## AV Evasion  
+    
+## AV Evasion  
  ### Check for AV  
  
  Check on Workstations
@@ -454,7 +450,6 @@ Add this reg key:
      PS > Get-CimInstance win32_service -Filter "Description = 'System Monitor service'"  
      reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon/Operational   
      findstr /si '<ProcessCreate onmatch="exclude">' C:\tools\*      #if sysmon is installed, try to read config file    
- 
  ____
  
 # Resources
