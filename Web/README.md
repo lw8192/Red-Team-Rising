@@ -113,10 +113,10 @@ See [CMS.md](https://github.com/lw8192/Red-Team-Rising/blob/main/Web/CMS.md)
 
 # Login pages   
 	
-	Default creds - admin: admin, admin:password, service specific default creds   
-	Register a new user  
-	Brute force log in  
-	SQL injection  
+Default creds - admin: admin, admin:password, service specific default creds   
+Register a new user  
+Brute force log in [use hydra or Burp Suite](https://github.com/lw8192/Red-Team-Rising/blob/main/Exploitation/Cracking.md)    
+SQL injection  
 # Shellshock and Heartbleed    
 ## Heartbleed   
 Testing: scan using nmap heartbleed script   
