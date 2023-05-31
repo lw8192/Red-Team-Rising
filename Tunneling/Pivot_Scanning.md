@@ -1,4 +1,11 @@
 # Scanning though a pivot    
+## Contents    
+- [Scanning though a pivot](#scanning-though-a-pivot)
+  * [Contents](#contents)
+  * [Subnet Enumeration Commands](#subnet-enumeration-commands)
+  * [ProxyChains](#proxychains)
+  * [Uploading Static Binaries](#uploading-static-binaries)    
+  
 ## Subnet Enumeration Commands    
 Linux  
  
