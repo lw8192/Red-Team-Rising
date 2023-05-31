@@ -22,6 +22,8 @@
 
 ## Techniques         
 Modify malware to evade signature analysis, encode using obfuscation tools, leverage permitted tools (Living Off the Land)    
+Use wrapper files to call static executables (such as nc) 
+
 ### Targeting Processes to Evade Detection     
 Process Injection, Process Hollowing, Process Masquerading     
 
@@ -75,6 +77,8 @@ namespace csharp_py
 ~~~
 
 ## Tools     
+### Chamelon    
+[Chameleon](https://github.com/klezVirus/chameleon): Powershell script obfuscator  
 
 ### Veil Framework:
 
@@ -174,7 +178,8 @@ Certutil: download data
 Execute code in program's local memory via reflection.    
 
     PS > InstallUtil /U mal.exe     #put malicious code in Uninstall routine of a program    
-    
+
+
 # Resources  
 ## Cheat sheets 
 https://github.com/sinfulz/JustEvadeBro   
