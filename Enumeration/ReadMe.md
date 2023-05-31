@@ -148,6 +148,7 @@ Can I ...
 Identify Mail Server version and search for exploits on searchsploit / Google. 
 Enumerate usernames. 
 Attempt brute forcing of usernames, then passwords.   
+[SMTP User Enumeration](https://pentestlab.blog/2012/11/20/smtp-user-enumeration/)       
 
 	smtp-user-enum -M VRF -u <user.txt> -t 127.0.0.1   
 	nmap --script=smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cve2011-1720,smtp-vuln-cve2011-1764 -p 25 127.0.0.1    
@@ -155,6 +156,8 @@ Attempt brute forcing of usernames, then passwords.
 	swaks --to root --from hacker --header "Subject: Test" --body "msg" --server 10.10.10.10     #send mail using swaks   
 
 ### TCP Port 53: DNS    
+[DNS Hacking (Beginner to Advanced)](http://resources.infosecinstitute.com/dns-hacking/)    
+[DNS Enum](https://resources.infosecinstitute.com/topic/dns-enumeration-techniques-in-linux/#gref)      
 DNS is commonly open on Windows domain controllers, not usually other devices.    
 Reverse (PTR) lookup to resolve an IP to a domain name: 
 
@@ -179,7 +182,13 @@ Scan network for NetBIOS name info:
 see Active Directory Cheat Sheet 
 	
 ### TCP Port 445: SMB 
-	
+[SMB enumeration with Kali Linux – enum4linux, acccheck and smbmap](https://hackercool.com/2016/07/smb-enumeration-with-kali-linux-enum4linuxacccheck-smbmap/)  
+[Windows Null Session Enumeration](https://www.adampalmer.me/iodigitalsec/2013/08/10/windows-null-session-enumeration/)  
+[NetBIOS Enumeration And Null Session](http://nrupentheking.blogspot.com/2011/02/netbios-enumeration-and-null-session.html)  
+[NetBIOS and SMB Penetration Testing on Windows](http://www.hackingarticles.in/netbios-and-smb-penetration-testing-on-windows/)  
+[Windows Account info via Authenticated SMB](https://www.sans.org/blog/plundering-windows-account-info-via-authenticated-smb-sessions/) 
+[nbtscan Cheat Sheet](https://highon.coffee/blog/nbtscan-cheat-sheet/)      
+
 Can I...
 - [ ] Identify a version
 - [ ] Enum with smbmap, enum4linux, nmap, crackmapexec
@@ -292,6 +301,7 @@ Once connected to a SQL server through a CLI:
 	
 	
 ### UDP Port 161, 162: SNMP 
+[SNMP enumeration with snmpenum and snmpwalk](http://carnal0wnage.attackresearch.com/2007/07/over-in-lso-chat-we-were-talking-about.html)          
 Simple Network Management Protocol: used to monitor different devices in a network.   	  
 MIB: Management Information Base. Stores device information. Object Identifier: idenitifes a specific object (or category) of data in a MIB.     
 OID info can be found here: http://oid-info.com/index.htm       
