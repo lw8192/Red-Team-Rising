@@ -13,7 +13,8 @@
 Post Initial Exploitation  
 Enumerate users and groups on the host.     
 What privilege level does your user have?       
-Is privilege escalation needed?       
+Is privilege escalation needed?    
+Check user home folders (including command history, browser history, zipped archives)   
 
 ## Quick Commands  
 
