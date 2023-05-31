@@ -57,18 +57,15 @@ Common Ways to Get AD Creds:
 ## Tools   
 C2 Frameworks:
 [PowerShell Empire](https://github.com/BC-SECURITY/Empire), Covenant    
-
 [evil-winrm](https://github.com/nubix/evil-winrm): access Windows RM, TCP port 5985 or 5986 open.   
 Responder (Spoofing is not allowed in the labs or on the exam)   
 Crackmapexec  
-
-[BloodHound](https://github.com/BloodHoundAD/BloodHound), [SharpHound](https://github.com/BloodHoundAD/SharpHound)    
+[BloodHound](https://github.com/BloodHoundAD/BloodHound), [SharpHound](https://github.com/BloodHoundAD/SharpHound) 
 Rubeus   
 [Powerview](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1 )   
 [Mimikatz](https://github.com/gentilkiwi/mimikatz), [Mimikatz Cheatsheet](https://offsec.red/mimikatz-cheat-sheet/)      
 
 ## General Tools 
-
 [Impacket](https://github.com/SecureAuthCorp/impacket): collection on Python classes for working with network protocols.       
 
     #if not properly installed 
