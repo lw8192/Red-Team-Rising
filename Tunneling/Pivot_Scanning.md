@@ -21,6 +21,9 @@ Windows
 ## ProxyChains    
 Use tools like ProxyChains to scan new hosts without dropping tools to disk.     
 /etc/proxychains.conf #config file. Specify SOCKS4/5 proxy    
+Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet using creds:      
+
+    ssh -D 9050 user@bastion -N -f         
 Nmap scan through a dynamic SOCKS proxy (only -sT will work):    
 
     proxychains nmap 10.10.10.10 -sT -p 80, 443     
