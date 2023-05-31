@@ -34,16 +34,13 @@ Token impersonation
  
 ## Windows Reference   
 ### Windows Kernel Versions 
-systeminfo
 
     Kernel 6.1 - Windows 7 / Windows Server 2008 R2  
     Kernel 6.2 - Windows 8 / Windows Server 2012  
     Kernel 6.3 - Windows 8.1 / Windows Server 2012 R2  
     Kernel 10 - Windows 10 / Windows Server 2016 / Windows Server 2019 / Windows 11 / Windows Server 2022
  
-
-### Important Files  
-[File Inclusion Wordlist](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt)    
+### Files to Check       
 
     %SYSTEMROOT%\System32\drivers\etc\hosts                   #local DNS entries 
     %SYSTEMROOT%\System32\drivers\etc\networks                #network config
@@ -51,11 +48,9 @@ systeminfo
     %WINDIR%\system32\config\AppEvent.Evt                     #application logs
     %WINDIR%\system32\config\SecEvent.Evt                     #security logs
     
-
 ## Scripts 
 **You might want to check for AV first!**  
-[Scripts Reference](https://www.hackingarticles.in/window-privilege-escalation-automated-script/) 
-
+[Scripts Reference](https://www.hackingarticles.in/window-privilege-escalation-automated-script/)     
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
 [Other compiled binaries](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries)  
 [nishang](https://github.com/samratashok/nishang)  
@@ -66,9 +61,7 @@ systeminfo
 [Sherlock](https://github.com/rasta-mouse/Sherlock)         
 [Seatbelt](https://github.com/GhostPack/Seatbelt)      
 [Priv2Admin](https://github.com/gtworek/Priv2Admin)    OS priviliges to system     
-
 [Compiled scripts here](https://github.com/Scr1ptK1ddie/WindowsBinaries)   
-
 
 ## Checklists    
 [HackTricks](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)  
