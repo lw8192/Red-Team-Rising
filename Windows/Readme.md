@@ -8,7 +8,6 @@ Use this folder for triaging and compromising a standalone Windows box. For doma
     + [Responder (not allowed on the OSCP exam, but a common pen testing tool)](#responder--not-allowed-on-the-oscp-exam--but-a-common-pen-testing-tool-)
     + [Evil-WinRM](#evil-winrm)
     + [Metasploit and Meterpreter](#metasploit-and-meterpreter)
-
 ## Tools
 ### Impacket 
 https://github.com/SecureAuthCorp/impacket
