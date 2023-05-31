@@ -1,73 +1,15 @@
 # Windows Privilege Escalation
 ## Contents 
-- [Windows Privilege Escalation](#windows-privilege-escalation)
-  * [Contents](#contents)
-  * [Command s](#commands)
-  * [Powershell](#powershell)
-    + [Windows Kernel Versions](#windows-kernel-versions)
-    + [Important Files](#important-files)
-  * [Scripts](#scripts)
-  * [Checklists](#checklists)
-- [Manual Enum](#manual-enum)
-  * [Privilege Exploits](#privilege-exploits)
-    + [PrintSpoofer](#printspoofer)
-    + [Hot Potato (Original)](#hot-potato--original-)
-    + [Juicy Potato](#juicy-potato)
-    + [Rogue Potato](#rogue-potato)
-  * [Service Exploits](#service-exploits)
-    + [Insecure Service Properties](#insecure-service-properties)
-    + [Unquoted Service Paths](#unquoted-service-paths)
-    + [Weak Registry Permissions](#weak-registry-permissions)
-    + [Insecure Service Executables](#insecure-service-executables)
-    + [Scheduled Tasks](#scheduled-tasks)
-    + [DLL Search Order Hijacking](#dll-search-order-hijacking)
-    + [Binpath](#binpath)
-  * [Registry Exploits](#registry-exploits)
-    + [Autoruns](#autoruns)
-    + [AlwaysInstallElevated](#alwaysinstallelevated)
-  * [Passwords](#passwords)
-    + [Saved creds](#saved-creds)
-    + [Creds in Registry](#creds-in-registry)
-    + [SAM and SYSTEM Files](#sam-and-system-files)
-    + [Extracting SAM and SYSTEM](#extracting-sam-and-system)
-  * [Kernel exploits](#kernel-exploits)
-    + [Kernel Exploit Isn't Working](#kernel-exploit-isn-t-working)
-    + [Tools](#tools)
-    + [Precompiled Kernel Exploits](#precompiled-kernel-exploits)
-  * [Misc](#misc)
-- [Transferring Files](#transferring-files)
-    + [Certutil](#certutil)
-    + [Old Boxes (Windows XP and before)](#old-boxes--windows-xp-and-before-)
-  * [Impacket](#impacket-1)
-  * [Powershell](#powershell-1)
-  * [VBS](#vbs)
-  * [XM File Creation (Using copy and paste)](#xm-file-creation--using-copy-and-paste-)
-  * [Windows 10 - curl](#windows-10---curl)
-  * [Network Scanning / Enum](#network-scanning---enum)
-- [Persistence](#persistence)
-  * [Access](#access)
-- [Post Exploitation](#post-exploitation)
-  * [Checklist](#checklist)
-  * [Access](#access-1)
-    + [Pass the Hash with winexe](#pass-the-hash-with-winexe)
-    + [WinRM](#winrm)
-    + [Enabling RDP](#enabling-rdp)
-  * [Remote Scripts](#remote-scripts)
-  * [AV Evasion](#av-evasion)
-    + [Check for AV](#check-for-av)
-    + [Obfuscate Payloads](#obfuscate-payloads)
-- [Resources](#resources)
-  * [Cheat Sheets and Guides](#cheat-sheets-and-guides)
-  * [Learn More](#learn-more)
+
 
 ## Commands  
-    ver    #OS version    
-    systeminfo 
+    ver                                 #OS version    
+    systeminfo                          #system information   
     wmic qfe get Caption, Description   #installed updates 
-    whoami /priv  
-    whoami /groups   
-    net user   
-    qwinsta                          #is anyone else logged in?   
+    whoami /priv                        #check privs: if user has priv might be able to use even if disabled  
+    whoami /groups                      #groups  
+    net user                            #users 
+    qwinsta                             #is anyone else logged in?   
     net localgroup  
     ipconfig /all  
     route print  
@@ -79,13 +21,18 @@
     netstat -ano    
     tasklist /v /fi "username eq system"      #tasks running as SYSTEM  
     wmic product get name,version, vendor       #installed apps and versions 
- 
-## Powershell
+### Meterpreter   
+Token impersonation    
+
+    load incognito
+    list_tokens -u
+### Powershell
     powershell.exe -nop -ep bypass    
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true   
  
+## Windows Reference   
 ### Windows Kernel Versions 
 systeminfo
 
