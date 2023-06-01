@@ -28,7 +28,7 @@ Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet u
 Nmap scan through a dynamic SOCKS proxy (only -sT will work):    
 
     proxychains nmap 10.10.10.10 -sT -p 80, 443     
-    proxychains nmap -iL -sT ips  
+    proxychains nmap -iL ips.txt -sT -sV   
 Use WinRM through proxychains:    
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
