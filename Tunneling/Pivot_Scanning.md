@@ -29,6 +29,9 @@ Nmap scan through a dynamic SOCKS proxy (only -sT will work):
 
     proxychains nmap 10.10.10.10 -sT -p 80, 443     
     proxychains nmap -iL ips.txt -sT -sV   
+Web access:    
+
+    Use FoxyProxy Firefox extension and add a SOCKS5 proxy 127.0.0.1:9050 to access a site through a dynamic tunnel   
 Use WinRM through proxychains:    
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
