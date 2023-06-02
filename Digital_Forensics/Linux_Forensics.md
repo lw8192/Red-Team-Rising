@@ -45,3 +45,4 @@ check profiles.ini for profile names
 then go to the profile name folder   
 places.sqlite      #history, bookmarks, downloads   
 bookmarkbackups     #bookmarks   
+download places.sqlite and openw ith sqlitebrowser. Check tables: moz_origins, moz_places    
