@@ -61,6 +61,7 @@ For most CTFS all you should need is winPEAS
 [JAWS](https://github.com/411Hall/JAWS)   
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)   
 [PrivEscCheck](https://github.com/itm4n/PrivescCheck)    
+[Privesc.ps1](https://github.com/enjoiz/Privesc/blob/master/privesc.ps1)    
 [Windows Exploit Suggester (Next-Generation)](https://github.com/bitsadmin/wesng)        
 [Sherlock](https://github.com/rasta-mouse/Sherlock)         
 [Seatbelt](https://github.com/GhostPack/Seatbelt)      
