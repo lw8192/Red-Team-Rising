@@ -37,3 +37,11 @@ Ctime - last file status change.
 Use touch to change the modify or access time.     
 Better: change system time, 'touch' the file, then change the system time back to change the ctime.    
 https://www.inversecos.com/2022/08/detecting-linux-anti-forensics.html     
+
+## Browser Forensics   
+### Firefox   
+~/.mozilla/firefox   
+check profiles.ini for profile names   
+then go to the profile name folder   
+places.sqlite      #history, bookmarks, downloads   
+bookmarkbackups     #bookmarks   
