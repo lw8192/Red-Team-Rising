@@ -45,4 +45,6 @@ check profiles.ini for profile names
 then go to the profile name folder   
 places.sqlite      #history, bookmarks, downloads   
 bookmarkbackups     #bookmarks   
-download places.sqlite and openw ith sqlitebrowser. Check tables: moz_origins, moz_places    
+download places.sqlite and open with sqlitebrowser. Check tables: moz_origins, moz_places    
+[Tool to decrypt Firefox and Thunderbird Creds](https://github.com/unode/firefox_decrypt)   
+[Dumpzilla Tool](https://github.com/Busindre/dumpzilla)   
