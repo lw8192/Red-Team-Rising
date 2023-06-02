@@ -45,6 +45,15 @@ check profiles.ini for profile names
 then go to the profile name folder   
 places.sqlite      #history, bookmarks, downloads   
 bookmarkbackups     #bookmarks   
-download places.sqlite and open with sqlitebrowser. Check tables: moz_origins, moz_places    
+logins.json         #saved logins (passwords are encrypted)      
+
+    #download file then examine using the below command   
+    cat logins.json | python -m json.tool > formatted.json  
+download places.sqlite and open with [sqlitebrowser](https://www.kali.org/tools/sqlitebrowser/). Check tables: moz_origins, moz_places    
+logins.json
 [Tool to decrypt Firefox and Thunderbird Creds](https://github.com/unode/firefox_decrypt)   
-[Dumpzilla Tool](https://github.com/Busindre/dumpzilla)   
+[Dumpzilla Tool](https://github.com/Busindre/dumpzilla)     
+
+Thunderbird     
+Folder: /home/[username]/.thunderbird/$PROFILE.default/    
+global-messages.db.sqlite    #look at tables contacts, identities, messages, messagesText_content    
