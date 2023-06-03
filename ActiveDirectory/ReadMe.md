@@ -93,3 +93,4 @@ Crack Hashes from responder:
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
 
+Use [NTLMRelay](https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py) to relay the credentials to any SMB server which has SMB signing disabled (can't relay the creds back to the source computer).    
