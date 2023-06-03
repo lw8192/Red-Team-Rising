@@ -276,12 +276,11 @@ If the service is MySQL or another database - can you just pull the database fil
 ## Passwords / config files  
 [LaZagne](https://github.com/AlessandroZ/LaZagne/tree/master): search for creds    
 
-   git clone https://github.com/AlessandroZ/LaZagne.git   
-   pip install -r requirements.txt   
-   #compile Lazagne (move into OS folder)   
-   pip install pyinstaller     
-   pyinstaller --onefile -w laZagne.py   
-   
+  git clone https://github.com/AlessandroZ/LaZagne.git   
+  pip install -r requirements.txt   
+  #compile Lazagne (move into OS folder)   
+  pip install pyinstaller     
+  pyinstaller --onefile -w laZagne.py     
   
 Files to check:  
   
