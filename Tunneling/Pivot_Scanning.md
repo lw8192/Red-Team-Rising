@@ -26,6 +26,7 @@ Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet u
 
     ssh -D 9050 user@bastion -N -f      
 Set up a reverse tunnel using [Chisel](https://github.com/jpillora/chisel):    
+(For CTFs you will most likely need the AMD64/x86_64 binary)       
 
     ./chisel server -p 8001 --reverse        #start Chisel server on attack box   
     ./chisel client 10.10.10.10:8001 R:1080:socks    #connect from to it from a client target server  
