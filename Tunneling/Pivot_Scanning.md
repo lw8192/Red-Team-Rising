@@ -39,6 +39,11 @@ Web access:
 
     Use FoxyProxy Firefox extension and add a SOCKS5 proxy 127.0.0.1:9050 to access a site through a dynamic tunnel   
 [Using Burp Through a SOCKS5 Proxy](https://dev.to/adamkatora/how-to-use-burp-suite-through-a-socks5-proxy-with-proxychains-and-chisel-507e)    
+
+    Use Burp Upstream Proxies feature to add SOCKS5 proxy - set FoxyProxy Firefox addon to Burp proxy     
+    Burp -> Settings (upper right corner) -> Network -> SOCKS Proxy Section      
+    Select the option 'Override options for this project only'. Options: 127.0.0.1, 1080, use SOCKS proxy     
+
 Use WinRM through proxychains:    
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
