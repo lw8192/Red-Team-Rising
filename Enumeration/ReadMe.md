@@ -68,9 +68,13 @@ Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Window
     netdiscover -r 172.21.10.0/24
 
 ## Host enum 
-**Identify os, services/ports/versions. Save results to text files. **   
+**Identify os, services/ports/versions. Save results to text files. **      
+
+[Fscan](https://github.com/shadow1ng/fscan/blob/main/README_EN.md)    
+[Autorecon](https://github.com/Tib3rius/AutoRecon)             
 
     autorecon 127.0.0.1 --only-scans-dir -v      
+
     nmap -A -sV -T 4 -vv 127.0.0.1    
     nmap -sV -sT -p- --min-rate 200 -vv 127.0.0.1     
     
