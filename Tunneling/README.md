@@ -129,3 +129,9 @@ Local Port Forwarding
  # DNS Tunneling    
  [DNSCat2](https://github.com/iagox86/dnscat2)     
  [DNSCat2 - PowerShell](https://github.com/lukebaggett/dnscat2-powershell)      
+ 
+ # ICMP Tunneling   
+ [Ptunnel-ng](https://github.com/utoni/ptunnel-ng)    
+ 
+ [SOCKS Over RDP](https://github.com/nccgroup/SocksOverRDP)     
+ [Proxifier](https://www.proxifier.com/download/#win-tab)     
