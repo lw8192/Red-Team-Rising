@@ -52,6 +52,7 @@ LFI
 [pwn jenkins](https://github.com/Scr1ptK1ddie/pwn_jenkins)   
 
 ### Joomla 
+Use [joomscan](https://github.com/OWASP/joomscan) to find vulns and misconfigs.   
 
     admin page: /administrator
     other pages: configuration.php, diagnostics.php, joomla.inc.php, config.inc.php   
