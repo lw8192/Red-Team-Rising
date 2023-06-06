@@ -41,7 +41,7 @@ Web access:
 [Using Burp Through a SOCKS5 Proxy](https://dev.to/adamkatora/how-to-use-burp-suite-through-a-socks5-proxy-with-proxychains-and-chisel-507e)    
 
     Use Burp Upstream Proxies feature to add SOCKS5 proxy - set FoxyProxy Firefox addon to Burp proxy     
-    Burp -> Settings (upper right corner) -> Network -> SOCKS Proxy Section      
+    Burp -> Settings (upper right corner) -> Network -> Connections -> SOCKS Proxy             
     Select the option 'Override options for this project only'. Options: 127.0.0.1, 1080, use SOCKS proxy     
 
 Use WinRM through proxychains:    
