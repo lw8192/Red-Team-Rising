@@ -87,12 +87,11 @@ Page and Directory Fuzzing:
     curl --upload-file <file name> -v --url <url> -0 --http1.0
     
 Other Tools: 
-    Burp Suite 
-    OWASP Zap 
-    Cadaver 
-    SQLMap 
-    Joomscan 
-    Feroxbuster	 
+    Burp Suite         
+    OWASP Zap            
+    Cadaver            
+    SQLMap             
+    Feroxbuster	           
     
 	
 # Web app specific  
