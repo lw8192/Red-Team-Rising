@@ -13,7 +13,8 @@ Bypass header check:
 
 ### LFI Testing    
 Check for client side scripts     
-Use a [LFI wordlist](https://github.com/Karmaz95/crimson/blob/master/words/exp/LFI) or [this](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt) to fuzz.     
+Use a [LFI wordlist](https://github.com/Karmaz95/crimson/blob/master/words/exp/LFI) to fuzz.     
+More wordlists: [file inclusion Linux](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_linux.txt) and [file inclusion Windows](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt)     
 
     http://example.com/index.php?page=../../../etc/passwd  
     http://example.com/index.php?page=../../../etc/passwd%00                  #PHP below v. 5.3.4 bypass
