@@ -62,10 +62,9 @@
 - [ ] Further access into the network / post exploitation 
 
 [Tiberius Linux Privilige Escalation](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux.rst)     
-[PayloadAllTheThings Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)   
-
-[Linux Explain Shell](https://www.explainshell.com/)   
-[Static Binaries](https://github.com/andrew-d/static-binaries)  
+[PayloadAllTheThings Linux Priv Esc Checklist](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)          
+[Linux Explain Shell](https://www.explainshell.com/)        
+[Static Binaries](https://github.com/andrew-d/static-binaries)          
 
 ## Upgrade to a fully functional TTY 
 ### Check 
@@ -79,7 +78,6 @@
 [Gaining TTY](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/gaining-tty.rst)  
 [Breaking out of shellcatraz](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells)   
 [Restricted Shell Bypass](https://www.exploit-db.com/docs/english/44592-linux-restricted-shell-bypass-guide.pdf)   
- 
 
 ## Quick Enumeration Commands  
     hostname; ip addr;    
@@ -115,7 +113,8 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)
 [linenum](https://github.com/rebootuser/LinEnum) 
 [unix-privesc-cecker](https://github.com/pentestmonkey/unix-privesc-check)   
-[Lin Priv Checker](https://github.com/linted/linuxprivchecker) 
+[Lin Priv Checker](https://github.com/linted/linuxprivchecker)      
+[Traitor](https://github.com/liamg/traitor)    
 
 ### Specialized Scripts    
 Verify web app is running in a Docker container - look for .dockerenv file in root of filesystem.     
