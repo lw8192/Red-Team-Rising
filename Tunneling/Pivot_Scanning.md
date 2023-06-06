@@ -52,9 +52,6 @@ Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel
     Use Burp Upstream Proxies feature to add SOCKS5 proxy - set FoxyProxy Firefox addon to Burp proxy     
     Burp -> Settings (upper right corner) -> Network -> Connections -> SOCKS Proxy             
     Select the option 'Override options for this project only'. Options: 127.0.0.1, 1080, use SOCKS proxy     
-    
-    Drop out of scope requests so bad DNS requests don't cause pages to load forever    
-    settings -> Project -> Scope -> Drop all out of scope requests    
 
 ### Use WinRM through proxychains         
 
