@@ -89,10 +89,7 @@ Page and Directory Fuzzing:
 Other Tools: 
     Burp Suite         
     OWASP Zap            
-    Cadaver            
-    SQLMap             
-    Feroxbuster	           
-    
+    Cadaver                
 	
 # Web app specific  
 See [CMS.md](https://github.com/lw8192/Red-Team-Rising/blob/main/Web/CMS.md)        
