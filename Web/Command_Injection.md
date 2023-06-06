@@ -1,5 +1,14 @@
 # Command Injection 
-[Payloads](https://github.com/payloadbox)    
+[Payloads](https://github.com/payloadbox)  
+## Contents 
+- [Command Injection](#command-injection)
+  * [Contents](#contents)
+  * [Inject Input for Code Execution](#inject-input-for-code-execution)
+  * [Stored XSS](#stored-xss)
+  * [SQL Injection](#sql-injection)
+    + [SQLMAP (Not allowed on OSCP exam but good for labs!)](#sqlmap--not-allowed-on-oscp-exam-but-good-for-labs--)
+    + [Manual Testing](#manual-testing)
+
 ## Inject Input for Code Execution     
 
      text;echo test   #Unix only     
