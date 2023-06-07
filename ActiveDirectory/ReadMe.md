@@ -74,13 +74,17 @@ Rubeus
     
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
- ## Responder (not allowed on the OSCP exam, but a common pen testing tool)   
+## Responder 
+Not allowed on the OSCP exam, but a common pen testing tool.                
 Allows you to spoof various services then capture hashes from devices that try to authenticate to those.  
 Common use: poison responses during NetNTLM authentication to capture credentials. Might be able to relay the challenge instead of just capturing it (if SMB signing is not enforced). Ref: https://0xdf.gitlab.io/2019/01/13/getting-net-ntlm-hases-from-windows.html       
   
 Install:   
 
     git clone https://github.com/lgandx/Responder   
+ Recon: RunFinger.py to identify hosts, OS and SMB info          
+ 
+    /opt/Responder/tools $ python3 RunFinger.py -i 172.16.1.1/24       
  Usage:   
 
      sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.               
