@@ -197,7 +197,8 @@ see Active Directory Cheat Sheet
 Can I...
 - [ ] Identify a version
 - [ ] Enum with smbmap, enum4linux, nmap, crackmapexec
-- [ ] check for anon log in
+- [ ] check for anon log in    
+- [ ] check for common CVEs or exploits? (See below)        
 [Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
 [crackmapexec](https://www.ivoidwarranties.tech/posts/pentesting-tuts/cme/crackmapexec-cheatsheet/)    
@@ -251,10 +252,12 @@ SMB Exploits
 
      CVE-2022-24500: RCE from Github.       
      CVE-2021-36972: unauth info disclosure.     
-     CVE-2020-1206:SMBleed, limited Win10 version applicability. 
-     CVE-2020-0796: SMBGhost / CoronaBlue, widespread use.      
+     CVE-2020-1206: SMBleed, limited Win10 and Win Server 1903, 1909, and 2004. 
+     CVE-2020-0796: SMBGhost / CoronaBlue, widespread use. SMBv3compression exploit on Windows 10 / Server.         
      CVE-2017-0144: Eternal Blue, WannaCry ransomware.    
-     
+
+[Chain SMBLeed and SMBGhost to get RCE](https://pentest-tools.com/blog/smbleedingghost-exploit)    
+
 ### TCP Port 1433: MSSQL 
 [MSSQL Injection Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)    
 Scanning: 
