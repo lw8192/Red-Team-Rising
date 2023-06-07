@@ -258,7 +258,7 @@ SMB Exploits
      CVE-2017-0144: Eternal Blue, WannaCry ransomware.    
 
 [Chain SMBLeed and SMBGhost to get RCE](https://pentest-tools.com/blog/smbleedingghost-exploit)    
-
+[SMBBleedingGhost Python Script](https://github.com/jamf/CVE-2020-0796-RCE-POC/tree/master)    
 ### TCP Port 1433: MSSQL 
 [MSSQL Injection Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)    
 Scanning: 
