@@ -21,7 +21,8 @@
     + [TCP Port 2049: NFS](#tcp-port-2049--nfs)
     + [TCP Port 3306: MySQL](#tcp-port-3306--mysql)
     + [UDP Port 161, 162: SNMP](#udp-port-161--162--snmp)
-  * [Resources](#resources)
+  * [Resources](#resources)  
+  
 
 ## Checklist   
 
