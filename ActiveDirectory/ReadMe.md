@@ -38,8 +38,6 @@ Common Ways to Get AD Creds:
 ## My AD Cheatsheets
 [Attacks](https://github.com/lw8192/Red-Team-Rising/blob/main/ActiveDirectory/Attacks.md)        
 [Lateral Movement](https://github.com/lw8192/Red-Team-Rising/blob/main/ActiveDirectory/LateralMovement.md)   
-
- 
 ## Other Cheat Sheets
 [AD Cheat Sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)     
 [AD Lateral Movement and Persistence Cheatsheet](https://bhanusnotes.blogspot.com/2020/12/ad-pentest-lateral-movement-persistance.html)  
@@ -67,7 +65,7 @@ Rubeus
 
 ## General Tools 
 [Impacket](https://github.com/SecureAuthCorp/impacket): collection on Python classes for working with network protocols.       
-Can be finicky - you may need to uninstall / reinstall when updating.    
+Can be finicky - you may need to uninstall / reinstall when updating if the default Kali Impacket library is being used.    
 
     #if not properly installed 
     apt install impacket-scripts  
