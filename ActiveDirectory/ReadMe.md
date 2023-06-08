@@ -10,7 +10,7 @@ AD Overview and tools.
     + [Important Files to Check on the DC](#important-files-to-check-on-the-dc)
   * [Tools](#tools)
   * [General Tools](#general-tools)
-  * [Responder (not allowed on the OSCP exam, but a common pen testing tool)](#responder--not-allowed-on-the-oscp-exam--but-a-common-pen-testing-tool-)
+  * [Responder](#responder)   
   
 ## Active Directory Overview 
 To gain control over a domain:  
