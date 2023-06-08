@@ -40,6 +40,7 @@ https://www.inversecos.com/2022/08/detecting-linux-anti-forensics.html
 
 ## Browser Forensics   
 ### Firefox   
+Metasploit: post/multi/gather/firefox_creds    
 ~/.mozilla/firefox   
 check profiles.ini for profile names   
 then go to the profile name folder   
@@ -55,5 +56,6 @@ download places.sqlite and open with [sqlitebrowser](https://www.kali.org/tools/
 [Dumpzilla Tool](https://github.com/Busindre/dumpzilla)     
 
 Thunderbird     
+Metasploit: post/multi/gather/thunderbird_creds    
 Folder: /home/[username]/.thunderbird/$PROFILE.default/    
 global-messages.db.sqlite    #look at tables contacts, identities, messages, messagesText_content    
