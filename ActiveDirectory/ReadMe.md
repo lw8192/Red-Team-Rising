@@ -88,8 +88,9 @@ Common use: poison responses during NetNTLM authentication to capture credential
 Install:   
 
     git clone https://github.com/lgandx/Responder   
- Responder Usage:   
- Config file: edit responder.conf to disable SMB / HTTP servers, change RespondTo arguement to target a specific host     
+Responder Usage:   
+Config file: edit responder.conf to disable SMB / HTTP servers, change RespondTo arguement to target a specific host     
+Past sessions are logged to Responder/logs    
 
      sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.               
      sudo responder.py -I eth0 -A    #analyze / listen mode, no active poisoning    
