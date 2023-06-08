@@ -46,11 +46,11 @@ then go to the profile name folder
 places.sqlite      #history, bookmarks, downloads   
 bookmarkbackups     #bookmarks   
 logins.json         #saved logins (passwords are encrypted)      
+signons.sqlite      #also saved logins    
 
     #download file then examine using the below command   
     cat logins.json | python -m json.tool > formatted.json  
 download places.sqlite and open with [sqlitebrowser](https://www.kali.org/tools/sqlitebrowser/). Check tables: moz_origins, moz_places    
-logins.json
 [Tool to decrypt Firefox and Thunderbird Creds](https://github.com/unode/firefox_decrypt)   
 [Dumpzilla Tool](https://github.com/Busindre/dumpzilla)     
 
