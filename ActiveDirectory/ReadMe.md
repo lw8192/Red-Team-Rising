@@ -10,7 +10,9 @@ AD Overview and tools.
     + [Important Files to Check on the DC](#important-files-to-check-on-the-dc)
   * [Tools](#tools)
   * [General Tools](#general-tools)
-  * [Responder](#responder)   
+  * [Responder](#responder)
+    + [Crack Hashes from Responder](#crack-hashes-from-responder)
+    + [NTLM Relay Attack](#ntlm-relay-attack)
   
 ## Active Directory Overview 
 To gain control over a domain:  
@@ -23,9 +25,9 @@ Authentication mechanisms: Kerberos (uses ticket granting tickets and services t
 Kerberos: default authentication service that uses ticket-granting tickets and service tickets to authenticate users and give users access to other resources across the domain. Intended to be more secure than NTLM (uses 3rd party ticket authorization and stronger encryption).      
 [PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)       
 Typical AD pen test:
-- Exploit host on domain and gain access  as a domain user 
+- Exploit host on domain and gain access as a domain user 
 - Enumerate domain users and groups.  
-- Privilege escalate or move laterally. 
+- Privilege escalate or move laterally.     
 - Get Domain Admin or Service Account access and onto the domain controller.     
 
 Common Ways to Get AD Creds:    
@@ -56,10 +58,10 @@ Common Ways to Get AD Creds:
 C2 Frameworks:
 [PowerShell Empire](https://github.com/BC-SECURITY/Empire), Covenant    
 [evil-winrm](https://github.com/nubix/evil-winrm): access Windows RM, TCP port 5985 or 5986 open.   
-Responder (Spoofing is not allowed in the labs or on the exam)   
+Responder             
 Crackmapexec  
 [BloodHound](https://github.com/BloodHoundAD/BloodHound), [SharpHound](https://github.com/BloodHoundAD/SharpHound) 
-Rubeus   
+[Rubeus](https://github.com/GhostPack/Rubeus)       
 [Powerview](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1 )   
 [Mimikatz](https://github.com/gentilkiwi/mimikatz), [Mimikatz Cheatsheet](https://offsec.red/mimikatz-cheat-sheet/)      
 
