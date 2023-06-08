@@ -35,6 +35,13 @@ Reference: [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTh
 Firefox addons: script to add ons [here](https://github.com/mazen160/Firefox-Security-Toolkit)               
 [Wappanalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/), [Foxy Proxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) and [user agent switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/)                 
 [Pen Testing Web Checklist](https://pentestbook.six2dez.com/others/web-checklist)    
+
+HTTP Status Codes     
+1xx - Informational    
+2xx - Success     
+3xx - Redirection     
+4xx - Client Error    
+5xx - Server Error   
 ## Scan for sub directories and pages	
 ### Wordlists 
 Common wordlists to use for web directory scanning: 
@@ -110,6 +117,7 @@ SQL injection
 
 # Shellshock and Heartbleed    
 ## Heartbleed   
+Bug in OpenSSL crypto software library. Allows an attacker to steal info normally protected by SSL/TLS encryption.      
 Testing: scan using nmap heartbleed script   
 
     nmap -p 443 -sV --script ssl-heartbleed www.site.org    
@@ -122,8 +130,8 @@ Save a local copy of the RAM contents that are disclosed via heartbleed. By defa
     strings /home/student/dump.bin    -> look for creds / cookie    
 
 ## Shellshock   
-Metasploit module or 34900.py ("Apache mod_cgi - 'Shellshock' Remote Command Injection")   
 Bug in Bash shell itself incorrectly executing trailing commands when it imports a function definition stored in an enviroment variable. Commonly found in CGI-based webservers, which use user input to define enviromental variables.     
+Metasploit module or 34900.py ("Apache mod_cgi - 'Shellshock' Remote Command Injection")   
 Syntax: () { :; }   
 Manual test for CGI based webservers: 
     
