@@ -74,7 +74,7 @@ Can be finicky - you may need to uninstall / reinstall when updating if the defa
     /usr/share/doc/python3-impacket/examples  
 
 If running inside a lab network:     
-[Use Impacket static binaries](https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.22.dev-binaries), compile your own or manually install      
+[Use Impacket static binaries](https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.22.dev-binaries) or binaries [here](https://github.com/Qazeer/OffensivePythonPipeline/tree/main), compile your own or manually install      
 
     #manual install (recommend trying to compile a binary before doing this)       
     upload Impacket files to target and run install script    
