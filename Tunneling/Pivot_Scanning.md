@@ -56,6 +56,9 @@ Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel
 ### Use WinRM through proxychains         
 
     proxychains crackmapexec winrm 10.10.10.10 -u "USERNAME" -p "PASSWORD" -x "command"    
+### MSSQL     
+ 
+    proxychains sqsh -S 172.16.1.5 -U user -P password    
 ### RDP through ProxyChains       
 
     proxychains xfreerdp /u:DOMAIN\\username /p:password /v:ip      
