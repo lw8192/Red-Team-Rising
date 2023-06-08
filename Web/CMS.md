@@ -40,7 +40,7 @@ LFI
     
 ### Drupal
 [droopsescan](https://github.com/droope/droopescan) 
-
+CVE-2018-7600 - Drupalgeddon 2: RCE for Drupal 7.x and 8.x    
     /CHANGELOG.txt to find version
 
 ### JBoss
