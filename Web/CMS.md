@@ -12,7 +12,7 @@
     + [PHPMyAdmin](#phpmyadmin)
     + [Tomcat](#tomcat)
     + [Wordpress](#wordpress)
-    
+ 
 ### Default Creds 
 
     https://cirt.net/passwords
@@ -73,6 +73,7 @@ https://github.com/wpscanteam/wpscan/wiki/WordPress-Plugin-Security-Testing-Chea
 https://raphaelrichard-sec.fr/learning-notes/hacking-wordpress     
 [Hacking Wordpress Notes](https://github.com/cyberteach360/Hacking-Wordpress)    
 .wp-config.php.swp exploit - https://ritcsec.wordpress.com/2020/04/28/how-i-accidentally-discovered-cve-2017-17087-2/         
+[Wordpress Fuzzing List](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt)      
 
     admin and login pages:  /wp-admin    /wp-login     /wp-admin/login.php   /login.php    /wp-login.php     
     config files:  /setup-config.php   /wp-config.php    
