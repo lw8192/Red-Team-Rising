@@ -148,15 +148,15 @@ For most CTFS all you should need is winPEAS
     list_tokens -u       
     impersonate_token domain\\username   #impersonate a domain user   
 ### PrintSpoofer 
-SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10. 
-[Print Spoofer](https://github.com/itm4n/PrintSpoofer)  
-[Compiled exe](https://github.com/dievus/printspoofer)  
+SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10.          
+[Print Spoofer](https://github.com/itm4n/PrintSpoofer)       
+[Compiled exe](https://github.com/dievus/printspoofer)          
 
      PrintSpoofer.exe -i -c cmd
 
 ### Hot Potato (Original)    
-SeImpersonatePrivilige
-Windows 7, 8, 10, Server 2008, and Server 2012. Patched. 
+SeImpersonatePrivilige            
+Windows 7, 8, 10, Server 2008, and Server 2012. Patched.           
 exe: [Potato](https://github.com/foxglovesec/Potato/)     
 
      Potato.exe -ip -cmd [cmd to run] -disable_exhaust true -disable_defender true  
@@ -164,7 +164,8 @@ exe: [Potato](https://github.com/foxglovesec/Potato/)
 Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
      Import-Module Tater.ps1 
      Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
-
+### Rotten Potato      
+Works up to Windows 2016 and Windows 10 1803        
 ### Juicy Potato   
 Look for SeImpersonate or SeAssignPrimaryToken 
 [binaries](https://github.com/ohpe/juicy-potato)  
