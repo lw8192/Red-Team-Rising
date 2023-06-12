@@ -12,7 +12,8 @@
     + [PHPMyAdmin](#phpmyadmin)
     + [Tomcat](#tomcat)
     + [Wordpress](#wordpress)
- 
+
+[CMS RCE Techniques](https://github.com/p0dalirius/Awesome-RCE-techniques)    
 ### Default Creds 
 
     https://cirt.net/passwords
