@@ -8,10 +8,12 @@
     + [Drupal](#drupal)
     + [JBoss](#jboss)
     + [Jenkins](#jenkins)
-    + [Joomla](#joomla)
+    + [Joomla ](#joomla)
     + [PHPMyAdmin](#phpmyadmin)
     + [Tomcat](#tomcat)
+    + [Webmin](#webmin)
     + [Wordpress](#wordpress)
+
 
 [CMS RCE Techniques](https://github.com/p0dalirius/Awesome-RCE-techniques)    
 ### Default Creds 
