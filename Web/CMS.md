@@ -68,7 +68,11 @@ Use [joomscan](https://github.com/OWASP/joomscan) to find vulns and misconfigs.
     Usually port 8080, /manager
     default creds tomcat:s3cret
     generate WAR reverse shell payload, upload and deploy 
-    
+### Webmin    
+Port 10000, default creds are admin:admin   
+Version 1.890: authenticated RCE    
+Webmin version<2.37 is vulnerable to remote code execution, some versions may not be vulnerable in a default install.
+[CVE-2019-15107](https://github.com/MuirlandOracle/CVE-2019-15107)   
 ### Wordpress  
 https://github.com/wpscanteam/wpscan/wiki/WordPress-Plugin-Security-Testing-Cheat-Sheet    
 https://raphaelrichard-sec.fr/learning-notes/hacking-wordpress     
