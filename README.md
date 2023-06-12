@@ -9,6 +9,7 @@ A collection of notes for red and purple teamers sourced from various courses an
 [TCM Academy](https://academy.tcm-sec.com/)    
 [Taggart Institute](https://taggartinstitute.org/p/home)     
 [HackTricks](https://book.hacktricks.xyz/welcome/readme)      
+[Pwncollege](https://pwn.college/)    
 
 ## OS Variants and Distros      
 [Kali Linux](https://www.kali.org/): Classic pen test          
