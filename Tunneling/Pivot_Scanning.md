@@ -28,10 +28,10 @@ Windows
 ## ProxyChains    
 Use tools like ProxyChains to scan new hosts without dropping tools to disk.     
 /etc/proxychains.conf #config file. Specify SOCKS4/5 proxy    
-Edit the below values in proxychains.conf or proxychains4.conf to get faster scan results:     
+Edit the below values in proxychains.conf or proxychains4.conf to get faster scan results (adjust based on quality of the connection and the baseline TCP response time):     
 
- tcp_read_time_out 1200       
- tcp_connect_time_out 800  
+   tcp_read_time_out 1200       
+   tcp_connect_time_out 800  
 ### SSH Dynamic Tunnels     
 Set up an SSH dynamic tunnel through a bastion host to scan an internal subnet using creds:      
 
