@@ -75,7 +75,8 @@ Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Window
 [Autorecon](https://github.com/Tib3rius/AutoRecon)             
 
     ./fscan -h 10.10.10.10     #scan a host or network   
-    autorecon 127.0.0.1 --only-scans-dir -v      
+    autorecon 127.0.0.1 --only-scans-dir -v    
+    sudo $(which autorecon) 10.10.10.10          #run autorecon with UDP scanning    
 
     nmap -A -sV -T 4 -vv 127.0.0.1    
     nmap -sV -sT -p- --min-rate 200 -vv 127.0.0.1     
