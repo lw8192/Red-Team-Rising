@@ -103,7 +103,16 @@ Installed apps
     ls -al /etc/passwd   
     /etc/group  
     /etc/sudoers
-    /etc/hosts               #local DNS entries 
+    /etc/hosts               #local DNS entries     
+    /home/user/flag.txt      #For CTFs!   
+Command History files:    
+
+    /home/user/.bash_history    
+    /home/user/.bashrc   
+    /home/user/.viminfo        #vim history file   
+    /home/user/.vimrc          #Vim profile    
+    /home/user/.nano_history    
+    /home/user/.python_history   
     
 ## File Transfer 
     which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null 
