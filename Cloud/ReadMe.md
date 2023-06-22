@@ -5,6 +5,7 @@ Use masscan to scan a large IP range:
 
     $ masscan 10.10.0.1/24 -p 22,25,80,443,3389            
     --rate 50000   #fastest scan    
+    #Most devices won't log half open SYN scans (nmap -sS and masscan) or TLS scan to web ports              
 ## AWS     
 AWS GuardDuty for security. [AWS IP ranges](https://ip-ranges.amazon.aws/ip-ranges.json)         
 [Pacu](https://github.com/RhinoSecurityLabs/pacu): AWS exploit framework      
@@ -50,6 +51,6 @@ Google Hacks:
 https://www.inversecos.com/2022/01/how-to-detect-and-compromise-azure.html      
 
 ## Google Cloud   
-GCP Cloud Armor for security.      
+GCP Cloud Armor for security. [List of Buckets by IPS](https://www.gstatic.com/ipranges/cloud.json)           
 GCP: https://www.googleapis.com/storage/v1/b/{bucketname}      
 [GCPBucketBrute](https://github.com/RhinoSecurityLabs/GCPBucketBrute): search for Google Storage Buckets and check accesses.     
