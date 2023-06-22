@@ -72,10 +72,16 @@ Use [joomscan](https://github.com/OWASP/joomscan) to find vulns and misconfigs.
     generate WAR reverse shell payload, upload and deploy 
 ### Webmin    
 Port 10000, default creds are admin:admin   
-Version 1.890: authenticated RCE    
+Without creds:        
 Webmin version<2.37 is vulnerable to remote code execution, some versions may not be vulnerable in a default install.
-[CVE-2019-15107](https://github.com/MuirlandOracle/CVE-2019-15107)            
-Authenticated RCE through v1.920 [CVE-2019-15642](https://github.com/jas502n/CVE-2019-15642)        
+[CVE-2019-15107](https://github.com/MuirlandOracle/CVE-2019-15107)     
+
+With creds:      
+Authenticated RCE through v1.920 [CVE-2019-15642](https://github.com/jas502n/CVE-2019-15642)  
+Webmin 1.900 - Authenticated RCE Metasploit module   
+
+    Use "Java File Manager" > /updown/upload.cgi to upload a .cgi file        
+            
 ### Wordpress  
 https://github.com/wpscanteam/wpscan/wiki/WordPress-Plugin-Security-Testing-Cheat-Sheet    
 https://raphaelrichard-sec.fr/learning-notes/hacking-wordpress     
@@ -104,7 +110,6 @@ Xmlrpc method is usually faster (if enabled), but is not as reliable.
 
     wpscan --url ipaddress --usernames name_list --passwords wordlist    
     wpscan --password-attack xmlrpc -t 20 -U admin, username -P passwords.txt --url http://10.10.10.10           
-
 
 Xmlrpc.php - if enabled you may be able to use this to brute force creds. Send the below request to check    
 If wp.getUserBlogs, wp.getCategories or metaWeblog.getUsersBlogs are available - can brute force    
