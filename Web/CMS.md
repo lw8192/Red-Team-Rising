@@ -75,6 +75,7 @@ Port 10000, default creds are admin:admin
 Without creds:        
 Webmin version<2.37 is vulnerable to remote code execution, some versions may not be vulnerable in a default install.
 [CVE-2019-15107](https://github.com/MuirlandOracle/CVE-2019-15107)     
+Webmin 1.882 to 1.921: Remote Command Execution CVE-2019-15231 
 
 With creds:      
 Authenticated RCE through v1.920 [CVE-2019-15642](https://github.com/jas502n/CVE-2019-15642)  
