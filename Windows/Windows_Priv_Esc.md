@@ -139,7 +139,7 @@ For most CTFS all you should need is winPEAS
     SeImpersonatePrivilege -> GodPotato, PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
     SeAssignPrimaryTokenPrivilege -> Juicy Potato 
     SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.  
-    SeBackup-> 
+    SeBackup or SeRestore-> provides full read permissions and ability to make backups   
 
     If the machine is >= Windows 10 1809 & Windows Server 2019 - Try God Potato
     If the machine is < Windows 10 1809 & < Windows Server 2019 - Try Juicy Potato
@@ -148,6 +148,8 @@ For most CTFS all you should need is winPEAS
     load incognito    
     list_tokens -u       
     impersonate_token domain\\username   #impersonate a domain user   
+### SeBackupPrivilege      
+[DLLs to enable and exploit](https://github.com/giuliano108/SeBackupPrivilege)     
 ### GodPotato    
 https://github.com/BeichenDream/GodPotato     
 
