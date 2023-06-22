@@ -133,6 +133,7 @@ For most CTFS all you should need is winPEAS
 
 ## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
+[Token Priv Research](https://github.com/hatRiot/token-priv/tree/master)      
 
     whoami /priv running process, can enable for different process if user has priv
     #State: disabled for running process, can enable for different process depending on access.
