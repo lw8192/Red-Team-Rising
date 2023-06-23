@@ -29,7 +29,8 @@ might be able to upload a php web shell
 Search for files with keywords in buckets using [bucket_finder](https://github.com/FishermansEnemy/bucket_finder):     
 
     bucket_finder.rb search_term --download         
-    
+AWS Lambda: can have vulns and be used to steal AWS keys via command injection.            
+Denonia cryptominer malware targeted Lambda.     
 ### Resources      
 https://www.hackthebox.com/blog/aws-pentesting-guide    
 https://cloud.hacktricks.xyz/pentesting-cloud/aws-security     
