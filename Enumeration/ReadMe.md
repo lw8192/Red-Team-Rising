@@ -287,8 +287,12 @@ Get a reverse shell using xp_cmdshell (host rev.ps1 file on attack box webserver
 ### TCP Port 2049: NFS 
 	
 [Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
-[No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)
-	
+[No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)     
+nmap scripts     
+
+    nfs-ls #List NFS exports and check permissions      
+    nfs-showmount #Like showmount -e    
+    nfs-statfs #disk statistics and info   
     showmount -e 127.0.0.1
     mkdir /mnt/share   
     sudo mount -t nfs -o v2 127.0.0.1/share /mnt/share -o nolock 
