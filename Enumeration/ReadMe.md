@@ -1,5 +1,4 @@
 # Enumeration Quick Reference   
-
 ## Contents 
 - [Enumeration Quick Reference](#enumeration-quick-reference)
   * [Contents](#contents)
@@ -25,7 +24,6 @@
   
 
 ## Checklist   
-
 - [ ] Recon (OSINT)
 - [ ] (If given a range): what hosts are on the network
 - [ ] Open well known ports (0-1023)
@@ -70,7 +68,6 @@ Identify router and sat hops. Typical TTLs / hop limits: 64 (Linux), 128 (Window
 
 ## Host enum 
 **Identify os, services/ports/versions. Save results to text files. **      
-
 [Fscan](https://github.com/shadow1ng/fscan/blob/main/README_EN.md)    
 [Autorecon](https://github.com/Tib3rius/AutoRecon)             
 
@@ -110,8 +107,7 @@ Nmap scan types:
     -f   fragment packets
     -6 (IPv6 scan) 
 
-## Service Enum   
-
+## Service Enum    
 nmap scripts: /usr/share/nmap/scripts, -sC. Use with -sV for best results.         
 
     nmap --script <name>    --script-help 
@@ -135,8 +131,7 @@ script categories:
     vuln        Checks for vulnerabilities against database 
 	
 	
-### TCP Port 21: FTP 
-	
+### TCP Port 21: FTP         	
 [Enumerating ftp](https://book.hacktricks.xyz/pentesting/pentesting-ftp)   
 Can I ...
 - [ ] Anonymously log in or use known creds?  
@@ -145,12 +140,21 @@ Can I ...
 - [ ] Upload a webshell?   
 - [ ] Find FTP exploits on searchsploit / Google? 
 - [ ] Crack creds with hydra? 
-	
+- [ ] FTP bounce attack?
+[FTP Bounce Attack](https://book.hacktricks.xyz/network-services-pentesting/pentesting-ftp/ftp-bounce-attack)     
+Logging In 	
 	
 	anon log in: ftp / no password	or 	Anonymous: asdfasdf           
 	nmap -sV -Pn -vv -p 21 --script=ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221     
     hydra -C ftp/usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt -u 127.0.0.1 ftp    
-	
+Helpful FTP Commands    
+
+    list -r     #list folder contents recursively (if allowed)
+Downloading files    
+
+    wget -m ftp://anonymous:anonymous@10.10.10.10     #downloading all files 
+    wget -m --no-passive ftp://anonymous:anonymous@10.10.10.10       #downloading all files without passive mode   
+
 ### TCP Port 25: SMTP (Webmail)  
 Identify Mail Server version and search for exploits on searchsploit / Google. 
 Enumerate usernames. 
@@ -260,6 +264,7 @@ SMB Exploits
 
 [Chain SMBLeed and SMBGhost to get RCE](https://pentest-tools.com/blog/smbleedingghost-exploit)    
 [SMBBleedingGhost Python Script](https://github.com/jamf/CVE-2020-0796-RCE-POC/tree/master)    
+
 ### TCP Port 1433: MSSQL 
 [MSSQL Injection Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)    
 Scanning: 
