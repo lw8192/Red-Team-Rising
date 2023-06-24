@@ -96,3 +96,9 @@ Upload nmap binary to a Linux target (through meterpreter and scan)
     chmod +x run-nmap.sh   
     ./run-nmap.sh   
     
+## Exploiting Through a Tunnel    
+Web exploits in Python - you probably need to proxy the traffic through a tunnel (probably socks5) using requests:    
+
+    proxies = {
+      "http": "socks5://127.0.0.1:1080",
+    }
