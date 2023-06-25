@@ -1,16 +1,19 @@
 # Scanning though a pivot    
 ## Contents    
-- [Scanning though a pivot](#scanning-though-a-pivot)
-  * [Contents](#contents)
-  * [Subnet Enumeration Commands](#subnet-enumeration-commands)
-  * [ProxyChains](#proxychains)
-    + [SSH Dynamic Tunnels](#ssh-dynamic-tunnels)
-    + [Chisel](#chisel)
-    + [Nmap scan through a dynamic SOCKS proxy](#nmap-scan-through-a-dynamic-socks-proxy)
-    + [Web access:](#web-access-)
-    + [Use WinRM through proxychains](#use-winrm-through-proxychains)
-    + [RDP through ProxyChains](#rdp-through-proxychains)
-  * [Uploading Static Binaries](#uploading-static-binaries)
+- [Contents    ](#contents)
+- [Subnet Enumeration Commands    ](#subnet-enumeration-commands)
+- [ProxyChains    ](#proxychains)
+  * [SSH Dynamic Tunnels     ](#ssh-dynamic-tunnels)
+  * [Chisel   ](#chisel)
+  * [Nmap scan through a dynamic SOCKS proxy  ](#nmap-scan-through-a-dynamic-socks-proxy)
+  * [Web access:    ](#web-access)
+  * [Use WinRM through proxychains         ](#use-winrm-through-proxychains)
+  * [MSSQL Access Through Proxychains       ](#mssql-access-through-proxychains)
+  * [RDP through ProxyChains       ](#rdp-through-proxychains)
+  * [SMBExec Through Proxychains      ](#smbexec-through-proxychains)
+  * [Brute Force a Service Through Proxychains    ](#brute-force-a-service-through-proxychains)
+- [Uploading Static Binaries    ](#uploading-static-binaries)
+- [Exploiting Through a Tunnel    ](#exploiting-through-a-tunnel)
   
 ## Subnet Enumeration Commands    
 Build an IP list then scan using nmap over proxychains    
@@ -68,9 +71,10 @@ Only -sT will work - can be a bit slow with an SSH tunnel so setting up a Chisel
 
     proxychains xfreerdp /u:DOMAIN\\username /p:password /v:ip      
 ### SMBExec Through Proxychains      
-Using Impacket SMBexec.py script - often caught by AV so be careful        
+Using Impacket SMBexec.py script - often caught by AV so be careful. Smbexec has limited commands, so you will want to execute a payload to get a shell.            
 
-    proxychains4 -q smbexec.py test/admin:test@192.168.1.10         
+    proxychains -q smbexec.py test/admin:test@192.168.1.10         
+    proxychains -q /usr/share/doc/python3-impacket/examples/smbexec.py domain/user:'password'@172.16.1.5    
     
 ### Brute Force a Service Through Proxychains    
 
