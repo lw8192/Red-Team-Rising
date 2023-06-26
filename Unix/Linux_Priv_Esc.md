@@ -361,6 +361,9 @@ No compilers on host: use gcc-multilib -m32 (32 bit OS) or -m64 (64 bit OS) then
 
     gcc -m32 -o output32 exploit.c     #(32 bit) 
     gcc -m64 -o output exploit.c       #(64 bit)  
+Compile with debugging symbols    
+
+    gcc -ggdb -o out exploit.c   
 
 # Resources 
 ## Learn More 

@@ -270,6 +270,11 @@ SMB Exploits
 Scanning: 
     
     nmap --script ms-sql-info,ms-sql-empty-password,ms-sql-xp-cmdshell,ms-sql-config,ms-sql-ntlm-info,ms-sql-tables,ms-sql-hasdbaccess,ms-sql-dac,ms-sql-dump-hashes --script-args mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 <IP>      
+Metasploit Modules:     
+
+    auxiliary/scanner/mssql/mssql_login   #brute force login      
+    auxiliary/admin/mssql/mssql_enum      #enum info   
+    exploit/windows/mssql/mssql_payload   #get shell using creds    
 To connect:   
 
     sqsh -S 10.10.10.10 -U user -P password    
