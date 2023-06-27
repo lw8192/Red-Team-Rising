@@ -17,16 +17,19 @@ Access
      Web: management web portal access.      
 Pen Testing on a web server:     
 
-     check for web requests to s3 buckets at https://s3.amazonaws.com/{bucketname} or https://s3-{region}.amazonaws.com/{Org}           
+     check for web requests to s3 buckets at https://s3.amazonaws.com/{bucketname} or https://s3-{region}.amazonaws.com/{Org}         
+     Config issues:   
 
 Commands         
 
     https://aws.amazon.com/cli/   #AWS CLI    
    
     aws configure     #set up, can put temp in all values   
-    aws s3 ls bucket.site.com    #list contents of a bucket    
-    aws --endpoint=http://s3.site.com s3 ls      
-    aws --endpoint=http://s3.site.com s3 ls s3://site.com   #list objects and common prefixes   
+    aws s3 ls s3://bucket.site.com    #list contents of a bucket    
+    aws sl ls s3://bucket --region      
+    aws --endpoint=http://site.com s3 ls s3://site.com   #list objects and common prefixes    
+    aws s3api get-bucket-acl --bucket bucket       
+    aws s3 cp file.txt s3://bucket --profile user_profile    
   
 might be able to upload a php web shell      
 
@@ -36,6 +39,10 @@ might be able to upload a php web shell
 Search for files with keywords in buckets using [bucket_finder](https://github.com/FishermansEnemy/bucket_finder):     
 
     bucket_finder.rb search_term --download         
+Instance Metadata     
+
+    "Metadata" endpoint: 169.254.169.254. Vulns might allow remote attacks to access it.         
+    http://169.254.169.254/latest/meta-data/iam/security-credentials/     #IAM creds     
 AWS Lambda: can have vulns and be used to steal AWS keys via command injection.            
 Denonia cryptominer malware targeted Lambda.     
 ### Resources      
