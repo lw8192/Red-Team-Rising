@@ -41,7 +41,7 @@ Search for files with keywords in buckets using [bucket_finder](https://github.c
     bucket_finder.rb search_term --download         
 Instance Metadata     
 
-    "Metadata" endpoint: 169.254.169.254. Vulns might allow remote attacks to access it.         
+    "Metadata" endpoint: 169.254.169.254, should only be accessible from localhost. SSRF or other vulns might allow remote attacks to access it.         
     http://169.254.169.254/latest/meta-data/iam/security-credentials/     #IAM creds     
 AWS Lambda: can have vulns and be used to steal AWS keys via command injection.            
 Denonia cryptominer malware targeted Lambda.     
