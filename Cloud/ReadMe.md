@@ -10,8 +10,15 @@ Use masscan to scan a large IP range:
 AWS GuardDuty for security. No logging or versioning on by default.         
 [AWS IP ranges](https://ip-ranges.amazon.aws/ip-ranges.json)         
 [Pacu](https://github.com/RhinoSecurityLabs/pacu): AWS exploit framework      
-S3 Buckets: https://s3.amazonaws.com/{bucketname}        
 [bucketfinder](https://github.com/FishermansEnemy/bucket_finder/tree/master): look for interesting files on Amazon S3 buckets.       
+Access     
+     
+     CLI: using AWS access key and AWS secret key. Set as enviromental variables.     
+     Web: management web portal access.      
+Pen Testing on a web server:     
+
+     check for web requests to s3 buckets at https://s3.amazonaws.com/{bucketname} or https://s3-{region}.amazonaws.com/{Org}           
+
 Commands         
 
     https://aws.amazon.com/cli/   #AWS CLI    
