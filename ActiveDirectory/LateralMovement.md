@@ -1,13 +1,16 @@
 # Lateral Movement  
 ## Contents 
-- [Lateral Movement](#lateral-movement)
-  * [Contents](#contents)
-  * [What to Look For](#what-to-look-for)
-  * [Quick Commands](#quick-commands)
-  * [Post Exploitation Enumeration](#post-exploitation-enumeration)
-    + [PowerView](#powerview)
-  * [Bloodhound](#bloodhound)
-  * [Mimikatz](#mimikatz)
+- [Lateral Movement  ](#lateral-movement)
+  * [Contents ](#contents)
+  * [What to Look For ](#what-to-look-for)
+  * [Quick Commands  ](#quick-commands)
+    + [PowerShell Active Directory Module (only on DC by default)](#powershell-active-directory-module-only-on-dc-by-default)
+  * [Post Exploitation Enumeration      ](#post-exploitation-enumeration)
+    + [PowerView   ](#powerview)
+  * [Bloodhound    ](#bloodhound)
+  * [Mimikatz  ](#mimikatz)
+  * [AD Password Files  ](#ad-password-files)
+  * [Crackmapexec     ](#crackmapexec)
   
 ## What to Look For 
 Post Initial Exploitation  
