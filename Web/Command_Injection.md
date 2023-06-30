@@ -9,6 +9,13 @@
   * [Manual Testing](#manual-testing)
 
 ## Inject Input for Code Execution     
+Command seperation / redirection operators:  
+
+     ; | || & && > >>  
+Substitute operators: 
+
+    ' $ ()   
+Examples:   
 
      text;echo test   #Unix only     
      echo test|     #Perl inject when open file     
@@ -20,7 +27,16 @@
      'echo test'    #Unix process substitute     
      >(echo test)    #Unix, process substitute     
     
+Non blind command injection: 
+
+    read /etc/passwd or world readables dirs, look for passwords, SSH keys, installed apps.     
+Blind command injection:      
+
+    run tcpdump on your attack box and inject a ping command (use -c3 for Linux targets so ping doesn't run forever)      
+    Use Burp Collaborator and inject an nslookup command: https://www.tevora.com/threat-blog/blind-command-injection-testing-with-burp-collaborator/     
+
 Vulnerable PHP functions: system, exec, shell_exec, popen, proc_open, passthru, pcntl_exec    
+
 ## Stored XSS    
 Stored XSS: Victim gets malicious code after view a webpage.    
 Reflected XSS: code output is reflected in response to a user, common vuln in URL params (GET or POST). Usually needs social engineering as a delivery mechanism.     
