@@ -77,6 +77,10 @@ Log Poisoning
 ### LFI to RCE via PHP Filters        
 If you think the input is being passed to a PHP include or require function.      
 [Hacktricks LFI to RCE Using PHP Filters](https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters)    	
+Script: [lfi2rce_via_php_filters.py](https://github.com/lw8192/Red-Team-Rising/blob/main/Web/lfi2rce_via_php_filters.py)       
+If you find an LFI at http://site.php/nav.php?include=       
+
+    python3 lfi2rce_via_php_filters.py http://site.php/nav.php -p include -c pwd            
 ## Remote File Inclusion 
 Turning LFI to RFI: https://l.avala.mp/?p=241
 [Reference](https://sushant747.gitbooks.io/total-oscp-guide/content/remote_file_inclusion.html)     
