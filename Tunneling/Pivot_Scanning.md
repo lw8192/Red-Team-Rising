@@ -106,3 +106,8 @@ Web exploits in Python - you probably need to proxy the traffic through a tunnel
     proxies = {
       "http": "socks5://127.0.0.1:1080",
     }
+
+    proxies ={'http':'http://127.0.0.1:8080','https': 'https://127.0.0.1:8080'}      #burp proxy   
+
+    r = requests.get(url, proxies=proxies)        
+    
