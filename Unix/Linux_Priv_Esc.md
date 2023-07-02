@@ -175,7 +175,7 @@ sudo su root, type password, see ******: pwfeedback enabled in /etc/sudoers. Buf
 
 any unpatched version of the sudo program from 1.8.2-1.8.31p2 and 1.9.0-1.9.5p1
 
-    sudoedit -s '\' $(python3 -c 'print("A"*1000)')                  #check to see if machine is exploitable 
+    sudoedit -s '\' $(python3 -c 'print("A"*1000)')                  #check to see if machine is exploitable, shouldn't see usage    
 
 ### Misc sudo binaries  
 nmap 
@@ -192,6 +192,7 @@ Matching Defaults entries for user on x:
     env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin      
 
 User may run the following commands on x:   
+
     (root) NOPASSWD: /usr/bin/ruby /sample.rb   
 
     def list_from_file   
@@ -207,7 +208,7 @@ look for scripts you can write to running as a cronjob, writeable cron directory
     cat /etc/crontab  
     crontab -l    
     ls -al /etc/cron* 
-### PATH variable 
+### PATH variable      
 If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it is executed. 
 default /usr/bin:/bin 
 
