@@ -125,6 +125,9 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 [Lin Priv Checker](https://github.com/linted/linuxprivchecker)      
 [Traitor](https://github.com/liamg/traitor)    
 
+    traitor -p      #if user password is known     
+    traitor -a      #try to exploit any identified vulnerabilities    
+
 ### Specialized Scripts    
 Verify web app is running in a Docker container - look for .dockerenv file in root of filesystem.     
 [Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
@@ -350,6 +353,8 @@ Allows you to mount drive onto attack box, create a SUID binary that you can run
 ## Sequoia (CVE-2021-33909)  
 [Qualys blog post](https://blog.qualys.com/vulnerabilities-threat-research/2021/07/20/sequoia-a-local-privilege-escalation-vulnerability-in-linuxs-filesystem-layer-cve-2021-33909)  
 
+## CVE-2022-0847 (DirtyPipe)    
+[CVE-2022-0847 scripts](https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits)    
 
 ## Kernel Exploits 
 [Linux Kernel CVEs Site](https://www.linuxkernelcves.com/cves) 
