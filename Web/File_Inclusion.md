@@ -12,7 +12,6 @@
   * [Web Payloads](#web-payloads)
     + [Testing](#testing)
 
- 
 ## Local File Inclusion 
 [Local File Inclusion](http://resources.infosecinstitute.com/local-file-inclusion-code-execution/#gref)   
 [Guide to LFI](http://www.securityidiots.com/Web-Pentest/LFI/guide-to-lfi.html)    
