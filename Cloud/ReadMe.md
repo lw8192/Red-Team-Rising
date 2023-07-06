@@ -1,5 +1,6 @@
 # Cloud Pentesting    
 Main Cloud platforms: Amazon Web Services, Microsoft Azure, Google Cloud. Most cloud providers have miminal logging by default.        
+[Hacking the Cloud](https://hackingthe.cloud/)    
 [Grey Hat Warfare](https://buckets.grayhatwarfare.com/): search public buckets       
 Use masscan to scan a large IP range:      
 
@@ -21,19 +22,31 @@ Access
      
      CLI: using AWS access key and AWS secret key. Set as enviromental variables.     
      Web: management web portal access.      
+    AWS_ACCESS_KEY_ID = AKIA{REST OF KEY}     #long term key with no expiration date     
+    AWS_ACCESS_KEY_ID = ASIS{REST OF KEY}     #short term access key     
+    ACCESS KEY (long or short term) + secret access key = API authentication     
+
 Pen Testing on a web server:     
 
      check for web requests to s3 buckets at https://s3.amazonaws.com/{bucketname} or https://s3-{region}.amazonaws.com/{Org}         
      Config issues:   
 
-Commands         
+Set up enivromental variables to use AWS CLI       
+
+    export AWS_ACCESS_KEY=AKIA{KEY}    
+    export AWS_SECRET_ACCESS_KEY= {KEY}     
+    #or use the below command and input the keys as values    
+    aws configure     #set up, can put temp in all values   
+
+AWS CLI Usage    
+[AWS CLI Docs](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)    
 
     https://aws.amazon.com/cli/   #AWS CLI    
    
-    aws configure     #set up, can put temp in all values   
     aws s3 ls s3://bucket.site.com    #list contents of a bucket    
     aws sl ls s3://bucket --region      
     aws --endpoint=http://site.com s3 ls s3://site.com   #list objects and common prefixes    
+    aws sts get-caller-identity --endpoint-url http://bucket/    #user id, account and ARN    
     aws s3api get-bucket-acl --bucket bucket       
     aws s3 cp file.txt s3://bucket --profile user_profile    
   
