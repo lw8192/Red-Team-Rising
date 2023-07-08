@@ -125,6 +125,18 @@ For most CTFS all you should need is winPEAS
 [Fuzzy security](http://www.fuzzysecurity.com/tutorials/16.html)    
 [Windows 10 Exploits](https://github.com/nu11secur1ty/Windows10Exploits)    
 
+## UAC (User Account Control)    
+[Hacktricks - UAC](https://book.hacktricks.xyz/windows-hardening/authentication-credentials-uac-and-efs/uac-user-account-control)    
+Check for UAC (if value is 1, UAC is activated, 0 or key doesn't exist it isn't):  
+
+    REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA     
+Check UAC Level:    
+
+    REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v ConsentPromptBehaviorAdmin    
+    whoami /groups | findstr Level    #check level of your user    
+Turn off UAC (with admin creds):  
+
+    C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f    
 ## Privilege Exploits 
 [Reference](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)   
 [Token Priv Research](https://github.com/hatRiot/token-priv/tree/master)      
