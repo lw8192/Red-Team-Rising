@@ -1,49 +1,49 @@
 # Linux Host Enumeration   
 ## Contents 
-- [Linux Host Enumeration](#linux-host-enumeration)
-  * [Contents](#contents)
+- [Linux Host Enumeration   ](#linux-host-enumeration)
+  * [Contents ](#contents)
   * [Checklist](#checklist)
-  * [Upgrade to a fully functional TTY](#upgrade-to-a-fully-functional-tty)
-    + [Check](#check)
-    + [Upgrade](#upgrade)
-  * [Quick Enumeration Commands](#quick-enumeration-commands)
-    + [Important Files to Check](#important-files-to-check)
-  * [File Transfer](#file-transfer)
-  * [Scripts](#scripts)
-    + [General Linux Enum](#general-linux-enum)
-    + [Specialized Scripts](#specialized-scripts)
-  * [Sudo exploits](#sudo-exploits)
-  * [Sudo LD_PRELOAD](#sudo-ld-preload)
-  * [CVE-2019-14287](#cve-2019-14287)
-  * [CVE-2019-16634 Buffer Overflow](#cve-2019-16634-buffer-overflow)
-  * [CVE-2021-3156 - Baron Samedit Heap Buffer Overflow](#cve-2021-3156---baron-samedit-heap-buffer-overflow)
-  * [Misc sudo binaries](#misc-sudo-binaries)
-- [Code Execution Through Yaml Using Ruby](#code-execution-through-yaml-using-ruby)
-  * [Cronjobs](#cronjobs)
-    + [PATH variable](#path-variable)
-    + [Rootbash script](#rootbash-script)
-    + [Wildcards](#wildcards)
-  * [SUID Binaries](#suid-binaries)
+  * [Upgrade to a fully functional TTY ](#upgrade-to-a-fully-functional-tty)
+    + [Check ](#check)
+    + [Upgrade ](#upgrade)
+  * [Quick Enumeration Commands  ](#quick-enumeration-commands)
+    + [Important Files to Check ](#important-files-to-check)
+  * [File Transfer ](#file-transfer)
+  * [Scripts and Tools   ](#scripts-and-tools)
+    + [General Linux Enum ](#general-linux-enum)
+    + [Container Escapes    ](#container-escapes)
+  * [Sudo exploits ](#sudo-exploits)
+    + [Sudo LD_PRELOAD   ](#sudo-ld_preload)
+    + [CVE-2019-14287 ](#cve-2019-14287)
+    + [CVE-2019-16634 Buffer Overflow ](#cve-2019-16634-buffer-overflow)
+    + [CVE-2021-3156 - Baron Samedit Heap Buffer Overflow ](#cve-2021-3156-baron-samedit-heap-buffer-overflow)
+    + [Misc sudo binaries  ](#misc-sudo-binaries)
+    + [Sudo - Code Execution Through Yaml Using Ruby   ](#sudo-code-execution-through-yaml-using-ruby)
+  * [Cronjobs    ](#cronjobs)
+    + [PATH variable      ](#path-variable)
+    + [Rootbash script ](#rootbash-script)
+    + [RootPython Script    ](#rootpython-script)
+    + [Privilege Escalation Through Python Module Hijacking   ](#privilege-escalation-through-python-module-hijacking)
+    + [Wildcards ](#wildcards)
+  * [SUID Binaries ](#suid-binaries)
     + [Custom Executable](#custom-executable)
-    + [Shared Object Injection](#shared-object-injection)
-    + [PATH Enviromental Variables](#path-enviromental-variables)
-    + [SUID Binary Function Replace](#suid-binary-function-replace)
-    + [Misc SUID binaries](#misc-suid-binaries)
-  * [Services Running as Root / Services Only Running Locally](#services-running-as-root---services-only-running-locally)
-  * [Passwords / config files](#passwords---config-files)
-    + [Writeable /etc/passwd or /etc/shadow](#writeable--etc-passwd-or--etc-shadow)
-    + [SSH Keys](#ssh-keys)
-  * [Capabilities](#capabilities)
-  * [Container Escapes](#container-escapes)
-  * [NFS No Root Squashing](#nfs-no-root-squashing)
-  * [Sequoia (CVE-2021-33909)](#sequoia--cve-2021-33909-)
-  * [Kernel Exploits](#kernel-exploits)
-    + [Cross compile](#cross-compile)
-  * [Further Access into a Network](#further-access-into-a-network)
-    + [Network Enumeration](#network-enumeration)
-- [Resources](#resources)
-  * [Learn More](#learn-more)
-
+    + [Shared Object Injection ](#shared-object-injection)
+    + [PATH Enviromental Variables ](#path-enviromental-variables)
+    + [SUID Binary Function Replace  ](#suid-binary-function-replace)
+    + [Misc SUID binaries ](#misc-suid-binaries)
+  * [Services Running as Root / Services Only Running Locally   ](#services-running-as-root-services-only-running-locally)
+  * [Passwords / config files  ](#passwords-config-files)
+    + [Writeable /etc/passwd or /etc/shadow](#writeable-etcpasswd-or-etcshadow)
+    + [SSH Keys   ](#ssh-keys)
+  * [Capabilities ](#capabilities)
+  * [Container Escapes ](#container-escapes-1)
+  * [NFS No Root Squashing   ](#nfs-no-root-squashing)
+  * [Sequoia (CVE-2021-33909)  ](#sequoia-cve-2021-33909)
+  * [CVE-2022-0847 (DirtyPipe)    ](#cve-2022-0847-dirtypipe)
+  * [Kernel Exploits ](#kernel-exploits)
+    + [Cross compile ](#cross-compile)
+- [Resources ](#resources)
+  * [Learn More ](#learn-more)
 
 ## Checklist
 - [ ] Get a fully functional TTY  
@@ -116,7 +116,7 @@ Command History files:
 ## File Transfer 
     which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null 
     
-## Scripts   
+## Scripts and Tools   
 ### General Linux Enum 
 run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with increasing run levels
 [linpeas.sh](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)
@@ -127,12 +127,15 @@ run [lse.sh](https://github.com/diego-treitos/linux-smart-enumeration) with incr
 
     traitor -p      #if user password is known     
     traitor -a      #try to exploit any identified vulnerabilities    
-
-### Specialized Scripts    
-Verify web app is running in a Docker container - look for .dockerenv file in root of filesystem.     
-[Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
+[3snake](https://github.com/blendin/3snake): dump sshd and sudo credential related strings   
+[pspy](https://github.com/DominicBreuker/pspy): monitor Linux processes    
+[Lazagne](https://github.com/AlessandroZ/LaZagne): search for credentials      
 [SUDO Killer: sudo exploits](https://github.com/TH3xACE/SUDO_KILLER)  
 [Uptux - Specialized priv esc checks](https://github.com/initstring/uptux) 
+
+### Container Escapes    
+Verify web app is running in a Docker container - look for .dockerenv file in root of filesystem.     
+[Docker and Container escapes - DEEPCE](https://github.com/stealthcopter/deepce)   
 
 ## Sudo exploits 
 [SUDO_KILLER enum script](https://github.com/TH3xACE/SUDO_KILLER)  
