@@ -3,6 +3,7 @@
 [Registry Key Quick Find Chart](https://www.offsec.com/wp-content/uploads/2015/04/wp.Registry_Quick_Find_Chart.en_us.pdf)   
 [DFIR iBlue Wiki](https://www.iblue.team/)    
 [Forensics Wiki](https://forensics.wiki/)       
+[Windows Forensics Cheatsheet](https://github.com/bluecapesecurity/PWF/blob/main/Resources/PracticalWindowsForensics-cheat-sheet.pdf)    
 
 ## PowerShell Reference    
 Helpful Cmdlets     
