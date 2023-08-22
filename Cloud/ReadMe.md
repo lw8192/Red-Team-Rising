@@ -77,6 +77,7 @@ Post Compromise:
 ### Resources      
 https://www.hackthebox.com/blog/aws-pentesting-guide    
 https://cloud.hacktricks.xyz/pentesting-cloud/aws-security     
+https://github.com/RhinoSecurityLabs/AWS-IAM-Privilege-Escalation    
     
 ## Azure    
 Built in security with Azure Sentinel. Azure acts as a middleman between the AD network and user sign on - makes lots of traditional AD acts ineffective.         
