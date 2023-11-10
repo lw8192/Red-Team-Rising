@@ -24,6 +24,7 @@ Account types: domain admins, service accounts (can be domain admins), local adm
 Authentication mechanisms: Kerberos (uses ticket granting tickets and services to authenticate users) or NTLM (traditional Windows authentication).     
 Kerberos: default authentication service that uses ticket-granting tickets and service tickets to authenticate users and give users access to other resources across the domain. Intended to be more secure than NTLM (uses 3rd party ticket authorization and stronger encryption).      
 [PayloadAllTheThings - Most Common Paths to AD Compromise](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#most-common-paths-to-ad-compromise)       
+[Pentest AD Mindmap](https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg)    
 Typical AD pen test:
 - Exploit host on domain and gain access as a domain user 
 - Enumerate domain users and groups.  
