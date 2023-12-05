@@ -32,3 +32,17 @@ A collection of notes for red and purple teamers sourced from various courses an
 [Commando VM](https://github.com/mandiant/commando-vm): Windows based, useful for Active Directory enviroments    
 [Flare VM](https://github.com/mandiant/flare-vm): Windows box for malware analysis    
 [REMnux](https://remnux.org/): Linux box for malware analysis    
+
+### Kali Linux     
+Update & upgrade without breaking anything:     
+```
+#run as root or use sudo 
+apt-get update && apt-get full-upgrade && apt-get autoremove && apt-get autoclean -y
+```
+Fixing VMWare tools    
+```
+sudo restart-vm-tools     #run restart script
+
+sudo apt install -y --reinstall open-vm-tools-desktop fuse && reboot    #reinstall and reboot   
+```
+
