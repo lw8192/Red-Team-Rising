@@ -45,4 +45,8 @@ sudo restart-vm-tools     #run restart script
 
 sudo apt install -y --reinstall open-vm-tools-desktop fuse && reboot    #reinstall and reboot   
 ```
+Search for a file in a package:    
+```
+apt-file search execstack  
+```
 
