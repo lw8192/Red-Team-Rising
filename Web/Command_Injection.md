@@ -59,7 +59,17 @@ Record Keys Entered
 
 ## SQL Injection 
 [SQL Injection Cheatsheet](https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md) 
-[Pentestmonkey Cheatsheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)  
+[Pentestmonkey Cheatsheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)     
+
+Most SQL injection - WHERE clause of a SELECT query. Other places: UPDATE, INSERT, SELECT statements in a table / column name, SELECT statements with ORDER BY.   
+What you can do: bypass authentication, retrieve hidden data, mess with application logic, UNION attacks, blind SQL injection.       
+Blind SQL injection: don't see results of query or database errrors. Is it possible to trigger a time delay? Out of bound netwok interaction?   
+Second order SQL injection (stored SQL injection): user input is stored for later use.   
+SQL syntax is different based on the database type.   
+Bypass blocking: encode or escape certain words / characters?   
+
+Prevent SQL injection: parameterized queries instead of string concatenation.       
+
 Enum using nmap
 
     nmap -sV --script=http-sql-injection <target>  
@@ -101,6 +111,7 @@ try single quote, then double quote, then try with comments
 Comment chars    
 
     ' " % %% -- /* */ // ) ;   
+    {}  
 Bypassing login:   
     password' or 1=1;--   
     ' or 1--  
